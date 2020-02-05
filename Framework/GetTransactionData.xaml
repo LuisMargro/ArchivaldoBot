@@ -1,17 +1,17 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetTransactionData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property Name="out_TransactionItem" Type="OutArgument(sd:DataRow)" />
     <x:Property Name="out_TransactionField1" Type="OutArgument(x:String)" />
     <x:Property Name="out_TransactionField2" Type="OutArgument(x:String)" />
     <x:Property Name="out_TransactionID" Type="OutArgument(x:String)" />
     <x:Property Name="io_TransactionData" Type="InOutArgument(sd:DataTable)" />
+    <x:Property Name="io_TransactionNumber" Type="InOutArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>818,1234</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860,1234</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetTransactionData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -65,16 +65,17 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Get data from spreadsheets, databases, email, web API or UiPath server queues. If no new data, set out_TransactionItem to Nothing. &#xA;&#xA;For a linear process (not repetitive), set out_TransactionItem only for in_TransactionNumber 1 - first and only transaction. &#xA;&#xA;If the process is repeatable, set io_TransactionData once for in_TransactionNumber 1, then assign a new out_TransactionItem by using the in_TransactionNumber to index io_TransactionData. Be aware that, at the end of the io_TransactionData collection, it is your responsibility to set out_TransactionItem to Nothing, thus ending the process." DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="798,1174" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Get data from spreadsheets, databases, email, web API or UiPath server queues. If no new data, set out_TransactionItem to Nothing. &#xA;&#xA;For a linear process (not repetitive), set out_TransactionItem only for in_TransactionNumber 1 - first and only transaction. &#xA;&#xA;If the process is repeatable, set io_TransactionData once for in_TransactionNumber 1, then assign a new out_TransactionItem by using the in_TransactionNumber to index io_TransactionData. Be aware that, at the end of the io_TransactionData collection, it is your responsibility to set out_TransactionItem to Nothing, thus ending the process." DisplayName="GetTransactionData" sap:VirtualizedContainerService.HintSize="840,1174" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[io_TransactionData is nothing]" DisplayName="¿TransactionData esta vacia?" sap:VirtualizedContainerService.HintSize="756,235" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[io_TransactionData is nothing]" DisplayName="¿TransactionData esta vacia?" sap:VirtualizedContainerService.HintSize="798,235" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ObtenerCasos workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\ObtenerCasos.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -83,9 +84,9 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <If Condition="[io_TransactionData isnot Nothing]" DisplayName="¿Se extrajeron resultados?" sap:VirtualizedContainerService.HintSize="756,690" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[io_TransactionData isnot Nothing]" DisplayName="¿Se extrajeron resultados?" sap:VirtualizedContainerService.HintSize="798,690" sap2010:WorkflowViewState.IdRef="If_3">
       <If.Then>
-        <If Condition="[in_TransactionNumber&lt;=io_TransactionData.Rows.Count]" DisplayName="¿transactionNumber&lt;TransactionData.rows?" sap:VirtualizedContainerService.HintSize="611,542" sap2010:WorkflowViewState.IdRef="If_1">
+        <If Condition="[io_TransactionNumber&lt;=io_TransactionData.Rows.Count]" DisplayName="¿transactionNumber&lt;TransactionData.rows?" sap:VirtualizedContainerService.HintSize="653,542" sap2010:WorkflowViewState.IdRef="If_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -105,7 +106,7 @@
                   <OutArgument x:TypeArguments="sd:DataRow">[out_TransactionItem]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="sd:DataRow">[io_TransactionData.Rows(in_TransactionNumber-1)]</InArgument>
+                  <InArgument x:TypeArguments="sd:DataRow">[io_TransactionData.Rows(io_TransactionNumber-1)]</InArgument>
                 </Assign.Value>
               </Assign>
               <Assign DisplayName="Assign TransactionID" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -127,14 +128,29 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <Assign DisplayName="limpiar TransactionData" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-              <Assign.To>
-                <OutArgument x:TypeArguments="sd:DataTable">[io_TransactionData]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="sd:DataTable">[Nothing]</InArgument>
-              </Assign.Value>
-            </Assign>
+            <Sequence DisplayName="Limpiar variables utilizadas" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="limpiar TransactionData" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="sd:DataTable">[io_TransactionData]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="sd:DataTable">[Nothing]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Reiniciar contador de transaccion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[io_TransactionNumber]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
           </If.Else>
         </If>
       </If.Then>
