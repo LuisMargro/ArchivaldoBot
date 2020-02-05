@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MainAnalisisDocumentos" this:MainAnalisisDocumentos.in_PathDocumentos="C:\Users\Beecker\Documents\UiPath\BotValidadorDocumentos\Data\Documentos" this:MainAnalisisDocumentos.in_Direccion="[&quot;blablabla&quot;.ToLower]" this:MainAnalisisDocumentos.in_Nombre="[&quot;luis hd&quot;.ToLower]" this:MainAnalisisDocumentos.in_Curp="[&quot;GAAB971029HMSRDR07&quot;.ToLower]" this:MainAnalisisDocumentos.in_Rfc="[&quot;GAAB971029956&quot;.ToLower]" this:MainAnalisisDocumentos.in_MensajeCorreo="[&quot;GAAB971029HMSRDR07   GAAB971029956rt&quot;.ToLower]" this:MainAnalisisDocumentos.In_LayoutCorreo="Estimado {cliente}, un gusto poder saludale.&#xA;&#xA;&#xA;El motivo de este correo es para comentarle que  tuvimos algunos problemas con la documentacion que envio, dichos problemas se enlistan a continuación." this:MainAnalisisDocumentos.in_FaltanDocumentos="Faltan los siguientes documentos:" this:MainAnalisisDocumentos.in_DoctosInvalidos="Los siguientes documentos son ilegible o invalidos:" this:MainAnalisisDocumentos.in_CambioDireccion="El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?" this:MainAnalisisDocumentos.in_Parentesco="El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MainAnalisisDocumentos" this:MainAnalisisDocumentos.in_PathDocumentos="C:\Users\88891\Documents\UiPath\Archivaldo\Documentos\" this:MainAnalisisDocumentos.in_Direccion="[&quot;blablabla&quot;.ToLower]" this:MainAnalisisDocumentos.in_Nombre="[&quot;bernabe garcia adame&quot;.ToLower]" this:MainAnalisisDocumentos.in_Curp="[&quot;GAAB971029HMSRDR07&quot;.ToLower]" this:MainAnalisisDocumentos.in_Rfc="[&quot;GAAB971029956&quot;.ToLower]" this:MainAnalisisDocumentos.in_MensajeCorreo="[&quot;GAAB971029HMSRDR07   GAAB971029956rt&quot;.ToLower]" this:MainAnalisisDocumentos.In_LayoutCorreo="Estimado {cliente}, un gusto poder saludale.&#xA;&#xA;&#xA;El motivo de este correo es para comentarle que  tuvimos algunos problemas con la documentacion que envio, dichos problemas se enlistan a continuación." this:MainAnalisisDocumentos.in_FaltanDocumentos="Faltan los siguientes documentos:" this:MainAnalisisDocumentos.in_DoctosInvalidos="Los siguientes documentos son ilegible o invalidos:" this:MainAnalisisDocumentos.in_CambioDireccion="El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?" this:MainAnalisisDocumentos.in_Parentesco="El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_PathDocumentos" Type="InArgument(x:String)" />
     <x:Property Name="in_Direccion" Type="InArgument(x:String)" />
@@ -15,7 +15,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>702,1618</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>702,1616</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MainAnalisisDocumentos_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -68,7 +68,7 @@
       <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="El siguiente workflow se encarga de extraer info de documentos, evaluar que los documentos sean validos y se encarga de construir los mensajes para el usuario" DisplayName="Main cotejacion de documentos" sap:VirtualizedContainerService.HintSize="682,1558" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+  <Flowchart sap2010:Annotation.AnnotationText="El siguiente workflow se encarga de extraer info de documentos, evaluar que los documentos sean validos y se encarga de construir los mensajes para el usuario" DisplayName="Main cotejacion de documentos" sap:VirtualizedContainerService.HintSize="682,1556" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:String[]" Name="ArrayDocumentos" />
       <Variable x:TypeArguments="sd1:DataTable" Name="DTClient_Tmp" />
@@ -131,12 +131,12 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID21" Condition="[ArrayDocumentos.Length=0]" DisplayName="ArrayDocumentos" sap:VirtualizedContainerService.HintSize="101,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID21" Condition="[ArrayDocumentos.Length=0]" DisplayName="ArrayDocumentos" sap:VirtualizedContainerService.HintSize="102,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">249,346.5</av:Point>
-              <av:Size x:Key="ShapeSize">101,87</av:Size>
+              <av:Size x:Key="ShapeSize">102,87</av:Size>
               <av:PointCollection x:Key="TrueConnector">249,390 100,390 100,414.5</av:PointCollection>
               <av:PointCollection x:Key="FalseConnector">351,390 480,390 480,424.5</av:PointCollection>
               <x:String x:Key="TrueLabel">ArrayVacio</x:String>
@@ -148,10 +148,10 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,414.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Pedir documentacion" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AnalisisDocumentos\EnviarRespuestaCliente.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Pedir documentacion" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AnalisisDocumentos\EnviarRespuestaCliente.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <scg:Dictionary x:TypeArguments="x:String, Argument" />
                 </ui:InvokeWorkflowFile.Arguments>
@@ -168,11 +168,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">380,424.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">480,476.5 480,506.5 130,506.5 130,524</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Extraer y cotejar info doctos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ArrayDocumentos]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Extraer y cotejar info doctos" sap:VirtualizedContainerService.HintSize="760,1220" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[ArrayDocumentos]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
@@ -207,11 +207,11 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">70,244.5</av:Point>
-                            <av:Size x:Key="ShapeSize">200,52</av:Size>
+                            <av:Size x:Key="ShapeSize">200,51</av:Size>
                             <av:PointCollection x:Key="ConnectorLocation">70,270 50,270 50,496.5 110,496.5 110,526.5</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:ReadPDFWithOCR DegreeOfParallelism="-1" DisplayName="Extraer info PDF" FileName="[PathDocumento]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_1" ImageDpi="150" Range="All" Text="[StringDocumento]">
+                        <ui:ReadPDFWithOCR DegreeOfParallelism="-1" DisplayName="Extraer info PDF" FileName="[PathDocumento]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_1" ImageDpi="150" Range="All" Text="[StringDocumento]">
                           <ui:ReadPDFWithOCR.OCREngine>
                             <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
                               <ActivityFunc.Argument>
@@ -227,12 +227,12 @@
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ReadPDFWithOCR>
                         <FlowStep.Next>
-                          <FlowDecision x:Name="__ReferenceID1" Condition="[String.IsNullOrEmpty(StringDocumento)]" DisplayName="StringDocumento" sap:VirtualizedContainerService.HintSize="99,87" sap2010:WorkflowViewState.IdRef="FlowDecision_37">
+                          <FlowDecision x:Name="__ReferenceID1" Condition="[String.IsNullOrEmpty(StringDocumento)]" DisplayName="StringDocumento" sap:VirtualizedContainerService.HintSize="100,87" sap2010:WorkflowViewState.IdRef="FlowDecision_37">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <av:Point x:Key="ShapeLocation">60,526.5</av:Point>
-                                <av:Size x:Key="ShapeSize">99,87</av:Size>
+                                <av:Size x:Key="ShapeSize">100,87</av:Size>
                                 <x:String x:Key="TrueLabel">Empty</x:String>
                                 <x:String x:Key="FalseLabel">Not Empty</x:String>
                                 <av:PointCollection x:Key="FalseConnector">160,570 222.5,570 222.5,491.04 400,491.04 400,460 470,460</av:PointCollection>
@@ -266,7 +266,7 @@
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <av:Point x:Key="ShapeLocation">339,540</av:Point>
                                         <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                        <av:PointCollection x:Key="ConnectorLocation">470,600 470,614</av:PointCollection>
+                                        <av:PointCollection x:Key="ConnectorLocation">470,600 470,630 240,630 240,674.5</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <Assign DisplayName="Guardar StringDocumento sin acentos" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_33">
@@ -286,12 +286,12 @@
                                       <FlowStep x:Name="__ReferenceID4">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">370,614</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">470,666 470,696 460,696 460,706.5</av:PointCollection>
+                                            <av:Point x:Key="ShapeLocation">140,674.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                            <av:PointCollection x:Key="ConnectorLocation">240,725.5 240,736.5 110,736.5 110,646.5 460,646.5 460,706.5</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invocar Validar documentos correctos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidarDocumentosCorrectos.xaml">
+                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invocar Validar documentos correctos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidarDocumentosCorrectos.xaml">
                                           <ui:InvokeWorkflowFile.Arguments>
                                             <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[StringDocumento]</InArgument>
                                             <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">[in_Nombre]</InArgument>
@@ -320,7 +320,7 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <FlowDecision.True>
-                                              <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID6" DisplayName="Cambio de flujo" Expression="[MensajeTmp]" sap:VirtualizedContainerService.HintSize="90,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+                                              <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID6" DisplayName="Cambio de flujo" Expression="[MensajeTmp]" sap:VirtualizedContainerService.HintSize="91,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
                                                 <FlowSwitch.Default>
                                                   <FlowStep x:Name="__ReferenceID9">
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -347,7 +347,7 @@
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <av:Point x:Key="ShapeLocation">55,866.5</av:Point>
-                                                    <av:Size x:Key="ShapeSize">90,87</av:Size>
+                                                    <av:Size x:Key="ShapeSize">91,87</av:Size>
                                                     <av:PointCollection x:Key="Cambio de direcciónConnector">145,888.25 175,888.25 175,850 349,850</av:PointCollection>
                                                     <av:PointCollection x:Key="Definir parentescoConnector">145,910 175,910 175,940 359,940</av:PointCollection>
                                                     <av:PointCollection x:Key="Default">122.5,953.5 122.5,1020 359,1020</av:PointCollection>
@@ -433,11 +433,11 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">80,314.5</av:Point>
-                                    <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                    <av:Size x:Key="ShapeSize">200,51</av:Size>
                                     <av:PointCollection x:Key="ConnectorLocation">180,365.5 180,394.5</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:LoadImage ContinueOnError="True" DisplayName="Cargar imagen." FileName="[PathDocumento]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[Imagen]">
+                                <ui:LoadImage ContinueOnError="True" DisplayName="Cargar imagen." FileName="[PathDocumento]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[Imagen]">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -449,11 +449,11 @@
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <av:Point x:Key="ShapeLocation">80,394.5</av:Point>
-                                        <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                        <av:Size x:Key="ShapeSize">200,51</av:Size>
                                         <av:PointCollection x:Key="ConnectorLocation">180,445.5 180,475.5 110,475.5 110,526.5</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <TryCatch DisplayName="catch error extrayendo info de imagenes" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                    <TryCatch DisplayName="catch error extrayendo info de imagenes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -506,12 +506,12 @@
                       <x:Reference>__ReferenceID9</x:Reference>
                       <x:Reference>__ReferenceID10</x:Reference>
                       <x:Reference>__ReferenceID11</x:Reference>
-                      <FlowDecision x:Name="__ReferenceID16" Condition="[Cliente_Tmp(3).ToString.Contains(&quot;CambioDireccion&quot;) And in_MensajeCorreo.Contains(&quot;direccion&quot;) And  (in_MensajeCorreo.Contains(&quot;cambiar&quot;) Or in_MensajeCorreo.Contains(&quot;actualizar&quot;)) And (in_MensajeCorreo.Contains(&quot;si&quot;) Or in_MensajeCorreo.Contains(&quot;deseo&quot;))]" DisplayName="ActualizarDomici" sap:VirtualizedContainerService.HintSize="95,87" sap2010:WorkflowViewState.IdRef="FlowDecision_44">
+                      <FlowDecision x:Name="__ReferenceID16" Condition="[Cliente_Tmp(3).ToString.Contains(&quot;CambioDireccion&quot;) And in_MensajeCorreo.Contains(&quot;direccion&quot;) And  (in_MensajeCorreo.Contains(&quot;cambiar&quot;) Or in_MensajeCorreo.Contains(&quot;actualizar&quot;)) And (in_MensajeCorreo.Contains(&quot;si&quot;) Or in_MensajeCorreo.Contains(&quot;deseo&quot;))]" DisplayName="ActualizarDomici" sap:VirtualizedContainerService.HintSize="96,87" sap2010:WorkflowViewState.IdRef="FlowDecision_44">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <av:Point x:Key="ShapeLocation">182,26.5</av:Point>
-                            <av:Size x:Key="ShapeSize">95,87</av:Size>
+                            <av:Size x:Key="ShapeSize">96,87</av:Size>
                             <av:PointCollection x:Key="TrueConnector">182,70 139.895,70 139.895,150</av:PointCollection>
                             <av:PointCollection x:Key="FalseConnector">278,70 370,70 370,86.5</av:PointCollection>
                           </scg:Dictionary>
@@ -565,11 +565,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">30,524</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">230,550 290,550 290,586.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VerificarDocumentacion workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/VerificarDocumentacion.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VerificarDocumentacion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/VerificarDocumentacion.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[in_Curp]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[in_Rfc]</InArgument>
@@ -579,14 +579,14 @@
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID26" Condition="[String.IsNullOrEmpty(DoctosFaltantes) And String.IsNullOrEmpty(CambioDireccion) And String.IsNullOrEmpty(Parentesco) And String.IsNullOrEmpty(Invalido)]" DisplayName="Documentacion completa" sap:VirtualizedContainerService.HintSize="142,87" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
+                    <FlowDecision x:Name="__ReferenceID26" Condition="[String.IsNullOrEmpty(DoctosFaltantes) And String.IsNullOrEmpty(CambioDireccion) And String.IsNullOrEmpty(Parentesco) And String.IsNullOrEmpty(Invalido)]" DisplayName="Documentacion completa" sap:VirtualizedContainerService.HintSize="144,87" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">219,586.5</av:Point>
-                          <av:Size x:Key="ShapeSize">142,87</av:Size>
+                          <av:Size x:Key="ShapeSize">144,87</av:Size>
                           <av:PointCollection x:Key="TrueConnector">219,630 100,630 100,684</av:PointCollection>
-                          <av:PointCollection x:Key="FalseConnector">361,630 460,630 460,686.5</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">363,630 460,630 460,686.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
@@ -594,10 +594,10 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">0,684</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Mensaje correcto (Temporal)" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;info completa&quot;]">
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Mensaje correcto (Temporal)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;info completa&quot;]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -607,12 +607,12 @@
                         </FlowStep>
                       </FlowDecision.True>
                       <FlowDecision.False>
-                        <FlowDecision x:Name="__ReferenceID29" Condition="[Not String.IsNullOrEmpty(DoctosFaltantes)]" DisplayName="DocumentosFaltantes" sap:VirtualizedContainerService.HintSize="120,87" sap2010:WorkflowViewState.IdRef="FlowDecision_41">
+                        <FlowDecision x:Name="__ReferenceID29" Condition="[Not String.IsNullOrEmpty(DoctosFaltantes)]" DisplayName="DocumentosFaltantes" sap:VirtualizedContainerService.HintSize="121,87" sap2010:WorkflowViewState.IdRef="FlowDecision_41">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">400,686.5</av:Point>
-                              <av:Size x:Key="ShapeSize">120,87</av:Size>
+                              <av:Size x:Key="ShapeSize">121,87</av:Size>
                               <x:String x:Key="TrueLabel">Si</x:String>
                               <x:String x:Key="FalseLabel">No</x:String>
                               <av:PointCollection x:Key="TrueConnector">400,730 370,730 370,770 139.895,770 139.895,800</av:PointCollection>
@@ -805,11 +805,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,104.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,155.5 300,180</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BuildDataTable DataTable="[DTClient_Tmp]" DisplayName="Crear tabla tmp de clientes" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;200&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;NumContrato&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;1000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Ine&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Comprobante&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;EdoCuenta&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Rfc&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Curp&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ActEcono&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;FIngresos&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable DataTable="[DTClient_Tmp]" DisplayName="Crear tabla tmp de clientes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;200&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;NumContrato&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;1000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Ine&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Comprobante&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;EdoCuenta&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Rfc&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Curp&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ActEcono&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;FIngresos&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
