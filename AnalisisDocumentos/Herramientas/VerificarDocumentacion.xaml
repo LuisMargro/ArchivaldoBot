@@ -29,7 +29,7 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">660</x:Double>
         <x:Double x:Key="Height">1526.0129101876823</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">270,40 124,40 124,76.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">270,40 110,40 110,56.5</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -437,11 +437,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">85,76.5</av:Point>
+          <av:Point x:Key="ShapeLocation">71,56.5</av:Point>
           <av:Size x:Key="ShapeSize">78,87</av:Size>
-          <av:PointCollection x:Key="TrueConnector">85,120 55,120 55,180 140,180 140,210</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">71,100 50,100 50,180 140,180 140,210</av:PointCollection>
           <x:String x:Key="TrueLabel">Empty</x:String>
-          <av:PointCollection x:Key="FalseConnector">163,120 400.5,120 400.5,156.5</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">149,100 400.5,100 400.5,156.5</av:PointCollection>
           <x:String x:Key="FalseLabel">Not Empty</x:String>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
