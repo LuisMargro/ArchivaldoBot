@@ -614,7 +614,7 @@
             <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TransactionItem IsNot Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
           </Transition.Condition>
         </Transition>
-        <Transition DisplayName="No Data" sap:VirtualizedContainerService.HintSize="450,505" sap2010:WorkflowViewState.IdRef="Transition_8">
+        <Transition DisplayName="No Data" sap:VirtualizedContainerService.HintSize="479,608" sap2010:WorkflowViewState.IdRef="Transition_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:PointCollection x:Key="ConnectorLocation">364.9,342.5 364.9,371.6 234.5,371.6 234.5,251.6 264.5,251.6</av:PointCollection>
@@ -626,7 +626,15 @@
             <x:Reference>__ReferenceID0</x:Reference>
           </Transition.To>
           <Transition.Action>
-            <Delay DisplayName="Esperar a limpiar los datos" Duration="00:05:00" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <Sequence sap:VirtualizedContainerService.HintSize="376,213" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;espera&quot;]" />
+              <Delay DisplayName="Esperar a limpiar los datos" Duration="00:05:00" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            </Sequence>
           </Transition.Action>
           <Transition.Condition>
             <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TransactionItem is Nothing" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
