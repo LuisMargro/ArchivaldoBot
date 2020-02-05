@@ -59,6 +59,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="El presente workflow se encarga de recibir el texto plano de algunos documentos, clasificarlos, y validar que dichos documentos le pertenecen" DisplayName="ValidarDocumentosCorrectos" sap:VirtualizedContainerService.HintSize="670,911" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -80,7 +81,7 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID6</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID2" Condition="[in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) or in_StringDocumento.Contains(&quot;instituto federal elec&quot;) or in_StringDocumento.Contains(&quot;pasaporte&quot;) or in_StringDocumento.Contains(&quot;cedula profesional&quot;)]" DisplayName="¿Es Iidentificaion?" sap:VirtualizedContainerService.HintSize="99,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+    <FlowDecision x:Name="__ReferenceID2" Condition="[(in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) or in_StringDocumento.Contains(&quot;instituto federal elec&quot;) or in_StringDocumento.Contains(&quot;pasaporte&quot;) or in_StringDocumento.Contains(&quot;cedula profesional&quot;)) and not io_Cliente(2).ToString.Equals(&quot;Validado&quot;)]" DisplayName="¿Es Iidentificaion?" sap:VirtualizedContainerService.HintSize="99,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -106,12 +107,13 @@
               <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[ArregloDireccion]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </FlowStep>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowDecision x:Name="__ReferenceID0" Condition="[in_StringDocumento.Contains(&quot;total a pagar&quot;) or in_StringDocumento.Contains(&quot;predial&quot;)]" DisplayName="¿Es comprobante?" sap:VirtualizedContainerService.HintSize="102,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID0" Condition="[(in_StringDocumento.Contains(&quot;total a pagar&quot;) or in_StringDocumento.Contains(&quot;predial&quot;)) and not io_Cliente(3).ToString.Equals(&quot;validado&quot;)]" DisplayName="¿Es comprobante?" sap:VirtualizedContainerService.HintSize="102,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

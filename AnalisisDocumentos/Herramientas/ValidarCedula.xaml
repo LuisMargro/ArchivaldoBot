@@ -2,11 +2,12 @@
   <x:Members>
     <x:Property Name="in_StringDocumento" Type="InArgument(x:String)" />
     <x:Property Name="io_Cliente" Type="InOutArgument(sd:DataRow)" />
+    <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>809,1371</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1001,1429</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidarCedula_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -57,19 +58,19 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ValidarCedula" sap:VirtualizedContainerService.HintSize="789,1311" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ValidarCedula" sap:VirtualizedContainerService.HintSize="981,1369" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach cedula profesional" sap:VirtualizedContainerService.HintSize="747,1219" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0cea44df3425ca2716d8e98391c36b60" Selector="&lt;html app='chrome.exe' title='Registro Nacional de Profesionistas' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach cedula profesional" sap:VirtualizedContainerService.HintSize="939,1277" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="0cea44df3425ca2716d8e98391c36b60" Selector="&lt;html app='chrome.exe' title='Registro Nacional de Profesionistas' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Flowchart DisplayName="Proceso de validacion de la cedula" sap:VirtualizedContainerService.HintSize="713,1073" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+          <Flowchart DisplayName="Proceso de validacion de la cedula" sap:VirtualizedContainerService.HintSize="905,1131" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <Flowchart.Variables>
               <Variable x:TypeArguments="x:String" Name="NumeroCedula" />
               <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="NumeroCedulaM" />
@@ -82,12 +83,12 @@
                 <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
                 <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,124.5</av:PointCollection>
-                <x:Double x:Key="Width">679</x:Double>
-                <x:Double x:Key="Height">1037</x:Double>
+                <x:Double x:Key="Width">871.15957446808511</x:Double>
+                <x:Double x:Key="Height">1095.0320000000002</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID9</x:Reference>
+              <x:Reference>__ReferenceID11</x:Reference>
             </Flowchart.StartNode>
             <FlowStep x:Name="__ReferenceID0">
               <sap:WorkflowViewStateService.ViewState>
@@ -288,7 +289,7 @@
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">9,880</av:Point>
                                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">680,810 680,860</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">140,940 140,980</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Assign DisplayName="Assign Cedula invalida" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
@@ -296,7 +297,7 @@
                                       <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">["Cedula invalida"]</InArgument>
+                                      <InArgument x:TypeArguments="x:String">["Encontrado"]</InArgument>
                                     </Assign.Value>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -304,6 +305,29 @@
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                   </Assign>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID10">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">9,980</av:Point>
+                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign DisplayName="Assign mensaje de salida cedula invalida" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[out_Mensaje]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Environment.NewLine+"     - La cedula que proporciono no se encuentra en el registro nacional de profesionistas.."]</InArgument>
+                                        </Assign.Value>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Assign>
+                                    </FlowStep>
+                                  </FlowStep.Next>
                                 </FlowStep>
                               </FlowStep.Next>
                             </FlowStep>
@@ -339,7 +363,7 @@
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>
-            <FlowStep x:Name="__ReferenceID9">
+            <FlowStep x:Name="__ReferenceID11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,124.5</av:Point>
@@ -371,7 +395,7 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">389,370</av:Point>
                           <av:Size x:Key="ShapeSize">262,60</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">680,810 680,860</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">520,430 520,490</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Assign DisplayName="Assign Cedula no legible" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
@@ -379,7 +403,7 @@
                           <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">["Cedula no legible"]</InArgument>
+                          <InArgument x:TypeArguments="x:Object">["Encontrado"]</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -387,6 +411,29 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">389,490</av:Point>
+                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="Assign mensaje de salida cedula no legible" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[out_Mensaje]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String" xml:space="preserve">[System.Environment.NewLine+"     - La cedula que proporciono no es legible.."]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                        </FlowStep>
+                      </FlowStep.Next>
                     </FlowStep>
                   </FlowDecision.False>
                 </FlowDecision>
@@ -400,6 +447,8 @@
             <x:Reference>__ReferenceID6</x:Reference>
             <x:Reference>__ReferenceID7</x:Reference>
             <x:Reference>__ReferenceID8</x:Reference>
+            <x:Reference>__ReferenceID9</x:Reference>
+            <x:Reference>__ReferenceID10</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:BrowserScope.Body>

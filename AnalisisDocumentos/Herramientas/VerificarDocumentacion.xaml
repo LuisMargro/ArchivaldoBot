@@ -6,7 +6,7 @@
     <x:Property Name="io_Cliente_Tmp" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="out_DoctosFaltantes" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>714,1704</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>714,1664</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -29,7 +29,7 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">660</x:Double>
         <x:Double x:Key="Height">1526.0129101876823</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">270,40 120,40 120,76.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">270,40 124,40 124,76.5</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -433,15 +433,15 @@
         <x:Reference>__ReferenceID19</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID21" Condition="[String.IsNullOrEmpty(io_Cliente_Tmp(2).ToString)]" DisplayName="INE" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_36" True="{x:Reference __ReferenceID20}" False="{x:Reference __ReferenceID19}">
+    <FlowDecision x:Name="__ReferenceID21" Condition="[String.IsNullOrEmpty(io_Cliente_Tmp(2).ToString)]" DisplayName="Identificacion" sap:VirtualizedContainerService.HintSize="78,87" sap2010:WorkflowViewState.IdRef="FlowDecision_36" True="{x:Reference __ReferenceID20}" False="{x:Reference __ReferenceID19}">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">85,76.5</av:Point>
-          <av:Size x:Key="ShapeSize">70,87</av:Size>
+          <av:Size x:Key="ShapeSize">78,87</av:Size>
           <av:PointCollection x:Key="TrueConnector">85,120 55,120 55,180 140,180 140,210</av:PointCollection>
           <x:String x:Key="TrueLabel">Empty</x:String>
-          <av:PointCollection x:Key="FalseConnector">155,120 217,120 217,106.773106776369 400,106.773106776369 400,156.5</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">163,120 400.5,120 400.5,156.5</av:PointCollection>
           <x:String x:Key="FalseLabel">Not Empty</x:String>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
