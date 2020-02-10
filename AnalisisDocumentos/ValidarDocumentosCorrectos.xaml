@@ -108,6 +108,7 @@
               <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[ArregloDireccion]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Curp">gaab971029hmsrdr07</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </FlowStep>

@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>396,311</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>420,438</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -58,16 +58,34 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked. If an application exception occurs, the current transaction can be retried. If a BRE is thrown, the transaction will be skipped. Can be a flowchart or sequence. " DisplayName="ProcessTransaction" sap:VirtualizedContainerService.HintSize="376,251" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked. If an application exception occurs, the current transaction can be retried. If a BRE is thrown, the transaction will be skipped. Can be a flowchart or sequence. " DisplayName="ProcessTransaction" sap:VirtualizedContainerService.HintSize="400,378" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraccionDocumentos workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\ExtraccionDocumentos.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraccionDocumentos workflow" sap:VirtualizedContainerService.HintSize="358,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\ExtraccionDocumentos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[in_TransactionItem(0).ToString]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainCotejarDocumentos workflow" sap:VirtualizedContainerService.HintSize="358,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\MainCotejarDocumentos.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PathDocumentos">C:\Users\88891\Documents\UiPath\Archivaldo\Documentos\</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Direccion">["blablabla".ToLower]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">["Luis Margarito Gonzalez casasanero".ToLower]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Curp">["GAAB971029HMSRDR07".ToLower]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">["GAAB971029956".ToLower]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_MensajeCorreo" xml:space="preserve">["GAAB971029HMSRDR07   GAAB971029956rt".ToLower]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_LayoutCorreo" xml:space="preserve">Estimado {cliente}, un gusto poder saludale.
+
+
+El motivo de este correo es para comentarle que  tuvimos algunos problemas con la documentacion que envio, dichos problemas se enlistan a continuación.</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_FaltanDocumentos">Faltan los siguientes documentos:</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DoctosInvalidos">Encontramos problemas con los siguientes documentos:</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CambioDireccion">El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Parentesco">El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
