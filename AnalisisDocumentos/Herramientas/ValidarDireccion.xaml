@@ -1,10 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ValidarDireccion" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="DireccionCoincide" Type="OutArgument(x:Boolean)" />
     <x:Property Name="in_StringDocumento" Type="InArgument(x:String)" />
     <x:Property Name="in_ArregloDireccion" Type="InArgument(s:String[])" />
+    <x:Property Name="out_DireccionCoincide" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>220,71</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>667,596</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -43,17 +43,17 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Para cada direccion" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[in_ArregloDireccion]">
+  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Para cada direccion" sap:VirtualizedContainerService.HintSize="647,496" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[in_ArregloDireccion]">
     <ui:ForEach.Body>
       <ActivityAction x:TypeArguments="x:String">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:String" Name="Dir" />
         </ActivityAction.Argument>
-        <If Condition="[in_StringDocumento.Contains(Dir)]" DisplayName="Si la direccion coincide" sap:VirtualizedContainerService.HintSize="611,364" sap2010:WorkflowViewState.IdRef="If_10">
+        <If Condition="[in_StringDocumento.Contains(Dir)]" DisplayName="Si la direccion coincide" sap:VirtualizedContainerService.HintSize="611,362" sap2010:WorkflowViewState.IdRef="If_10">
           <If.Then>
             <Assign DisplayName="Dir encontrado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_46">
               <Assign.To>
-                <OutArgument x:TypeArguments="x:Boolean">[DireccionCoincide]</OutArgument>
+                <OutArgument x:TypeArguments="x:Boolean">[out_DireccionCoincide]</OutArgument>
               </Assign.To>
               <Assign.Value>
                 <InArgument x:TypeArguments="x:Boolean">True</InArgument>
@@ -69,7 +69,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <Assign DisplayName="Dir no encontrado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_47">
                 <Assign.To>
-                  <OutArgument x:TypeArguments="x:Boolean">[DireccionCoincide]</OutArgument>
+                  <OutArgument x:TypeArguments="x:Boolean">[out_DireccionCoincide]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
                   <InArgument x:TypeArguments="x:Boolean">False</InArgument>
