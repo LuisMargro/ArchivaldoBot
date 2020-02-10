@@ -4,10 +4,12 @@
     <x:Property Name="io_Cliente" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
     <x:Property Name="in_ArregloNombre" Type="InArgument(s:String[])" />
-    <x:Property Name="in_ArregloDireccion" Type="InArgument(s:String[])" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
+    <x:Property Name="in_ArregloDireccion" Type="InArgument(s:String[])" />
+    <x:Property Name="in_DireccionFiscal" Type="InArgument(x:String)" />
+    <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>915,1977</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>915,1937</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -168,7 +170,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:InvokeWorkflowFile>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID9" Condition="[DireccionCoincide]" DisplayName="¿Direccion correcta?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_17">
+                        <FlowDecision x:Name="__ReferenceID9" Condition="[DireccionCoincide and in_DireccionFiscal.Equals(in_DireccionResidencial)]" DisplayName="¿Direccion correcta?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

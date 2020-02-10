@@ -73,7 +73,6 @@
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainCotejarDocumentos workflow" sap:VirtualizedContainerService.HintSize="358,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\MainCotejarDocumentos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_PathDocumentos">C:\Users\88891\Documents\UiPath\Archivaldo\Documentos\</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Direccion">["blablabla".ToLower]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">["Luis Margarito Gonzalez casasanero".ToLower]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Curp">["GAAB971029HMSRDR07".ToLower]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">["GAAB971029956".ToLower]</InArgument>
@@ -86,6 +85,10 @@ El motivo de este correo es para comentarle que  tuvimos algunos problemas con l
         <InArgument x:TypeArguments="x:String" x:Key="in_DoctosInvalidos">Encontramos problemas con los siguientes documentos:</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_CambioDireccion">El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Parentesco">El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DireccionFiscal">["NICOLAS BRAVO 15 VICENTE GUERRERO CUAUTLA MORELOS".ToLower]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_CPFiscal">62748</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CPResidencial" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

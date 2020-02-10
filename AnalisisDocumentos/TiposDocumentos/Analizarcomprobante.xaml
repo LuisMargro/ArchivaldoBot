@@ -3,9 +3,11 @@
     <x:Property Name="in_StringDocumento" Type="InArgument(x:String)" />
     <x:Property Name="io_Cliente" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
-    <x:Property Name="in_ArregloDireccion" Type="InArgument(s:String[])" />
     <x:Property Name="in_ArregloNombre" Type="InArgument(s:String[])" />
-    <x:Property Name="in_CodigoPostal" Type="InArgument(x:String)" />
+    <x:Property Name="in_ArregloDireccionFiscal" Type="InArgument(s:String[])" />
+    <x:Property Name="in_CPFiscal" Type="InArgument(x:String)" />
+    <x:Property Name="in_CPResidencial" Type="InArgument(x:String)" />
+    <x:Property Name="in_ArregloDireccionResidencial" Type="InArgument(s:String[])" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>785,1528</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -43,7 +45,7 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">731</x:Double>
         <x:Double x:Key="Height">1345</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">310,87.5 310,146.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">310,87.5 310,117.5 340,117.5 340,196.5</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -99,7 +101,7 @@
     <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">99,1120</av:Point>
+          <av:Point x:Key="ShapeLocation">9,1100</av:Point>
           <av:Size x:Key="ShapeSize">262,60</av:Size>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -120,9 +122,9 @@
     <FlowStep x:Name="__ReferenceID2">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">99,1020</av:Point>
+          <av:Point x:Key="ShapeLocation">9,1010</av:Point>
           <av:Size x:Key="ShapeSize">262,60</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">230,1080 230,1120</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">140,1070 140,1100</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign DisplayName="Assign Parentesco a la celda Comprobante" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_51">
@@ -142,7 +144,7 @@
         <x:Reference>__ReferenceID1</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID6" Condition="[DireccionCoincide]" DisplayName="¿Coincide Direccion?" sap:VirtualizedContainerService.HintSize="116,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15" True="{x:Reference __ReferenceID2}" False="{x:Reference __ReferenceID3}">
+    <FlowDecision x:Name="__ReferenceID6" Condition="[Not DireccionCoincide]" DisplayName="¿Coincide Direccion?" sap:VirtualizedContainerService.HintSize="116,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15" True="{x:Reference __ReferenceID2}" False="{x:Reference __ReferenceID3}">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -150,7 +152,7 @@
           <av:Size x:Key="ShapeSize">116,87</av:Size>
           <x:String x:Key="FalseLabel">No</x:String>
           <x:String x:Key="TrueLabel">Si</x:String>
-          <av:PointCollection x:Key="TrueConnector">402,880 372,880 372,1050 361,1050</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">402,880 372,880 372,1040 271,1040</av:PointCollection>
           <av:PointCollection x:Key="FalseConnector">518,880 600,880 600,1060</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -279,9 +281,9 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/ValidarDireccion.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="x:Boolean" x:Key="DireccionCoincide">[DireccionCoincide]</OutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
-              <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_ArregloDireccion]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_ArregloDireccionFiscal]</InArgument>
+              <OutArgument x:TypeArguments="x:Boolean" x:Key="out_DireccionCoincide">[DireccionCoincide]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
@@ -291,16 +293,16 @@
       </FlowStep.Next>
     </FlowStep>
     <x:Reference>__ReferenceID10</x:Reference>
-    <FlowDecision x:Name="__ReferenceID12" Condition="[in_StringDocumento.Contains(&quot;agua&quot;) Or in_StringDocumento.Contains(&quot;luz&quot;) Or in_StringDocumento.Contains(&quot;telefono&quot;) Or in_StringDocumento.Contains(&quot;predial&quot;) Or in_StringDocumento.Contains(&quot;tesoreria&quot;) AND in_StringDocumento.Contains(in_CodigoPostal)]" DisplayName="¿Es comprobante valido?" sap:VirtualizedContainerService.HintSize="137,87" sap2010:WorkflowViewState.IdRef="FlowDecision_18" True="{x:Reference __ReferenceID11}" False="{x:Reference __ReferenceID3}">
+    <FlowDecision x:Name="__ReferenceID12" Condition="[in_StringDocumento.Contains(&quot;agua&quot;) Or in_StringDocumento.Contains(&quot;luz&quot;) Or in_StringDocumento.Contains(&quot;telefono&quot;) Or in_StringDocumento.Contains(&quot;predial&quot;) Or in_StringDocumento.Contains(&quot;tesoreria&quot;) AND in_StringDocumento.Contains(in_CPFiscal)]" DisplayName="¿Es comprobante valido?" sap:VirtualizedContainerService.HintSize="137,87" sap2010:WorkflowViewState.IdRef="FlowDecision_18" True="{x:Reference __ReferenceID11}" False="{x:Reference __ReferenceID3}">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">241.5,146.5</av:Point>
+          <av:Point x:Key="ShapeLocation">271.5,196.5</av:Point>
           <av:Size x:Key="ShapeSize">137,87</av:Size>
           <x:String x:Key="FalseLabel">No</x:String>
           <x:String x:Key="TrueLabel">Si</x:String>
-          <av:PointCollection x:Key="TrueConnector">241.5,190 180,190 180,284.5</av:PointCollection>
-          <av:PointCollection x:Key="FalseConnector">378.5,190 600,190 600,1060</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">271.5,240 180,240 180,284.5</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">408.5,240 600,240 600,1060</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </FlowDecision>

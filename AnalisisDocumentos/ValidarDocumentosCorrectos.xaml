@@ -2,11 +2,13 @@
   <x:Members>
     <x:Property Name="in_StringDocumento" Type="InArgument(x:String)" />
     <x:Property Name="in_Nombre" Type="InArgument(x:String)" />
-    <x:Property Name="in_Direccion" Type="InArgument(x:String)" />
     <x:Property Name="in_CURP" Type="InArgument(x:String)" />
-    <x:Property Name="in_RFC" Type="InArgument(x:String)" />
     <x:Property Name="io_Cliente" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
+    <x:Property Name="in_DireccionFiscal" Type="InArgument(x:String)" />
+    <x:Property Name="in_CPFiscal" Type="InArgument(x:String)" />
+    <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
+    <x:Property Name="in_CPResidencial" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -65,7 +67,8 @@
   <Flowchart sap2010:Annotation.AnnotationText="El presente workflow se encarga de recibir el texto plano de algunos documentos, clasificarlos, y validar que dichos documentos le pertenecen" DisplayName="ValidarDocumentosCorrectos" sap:VirtualizedContainerService.HintSize="634,823" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:String[]" Name="ArregloNombre" />
-      <Variable x:TypeArguments="s:String[]" Name="ArregloDireccion" />
+      <Variable x:TypeArguments="s:String[]" Name="ArregloDireccionFiscal" />
+      <Variable x:TypeArguments="s:String[]" Name="ArregloDireccionResidencial" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -106,8 +109,10 @@
               <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
-              <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[ArregloDireccion]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Curp">gaab971029hmsrdr07</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[in_CURP]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[ArregloDireccionFiscal]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_DireccionFiscal">[in_DireccionFiscal]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial">[in_DireccionResidencial]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </FlowStep>
@@ -133,13 +138,16 @@
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarcomprobante workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarcomprobante.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarcomprobante workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarcomprobante.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
                   <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
-                  <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[ArregloDireccion]</InArgument>
                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
+                  <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccionFiscal">[ArregloDireccionFiscal]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_CPFiscal">[in_CPFiscal]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_CPResidencial">[in_CPResidencial]</InArgument>
+                  <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccionResidencial">[ArregloDireccionResidencial]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
             </FlowStep>
@@ -164,7 +172,7 @@
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarestadodecuenta workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarestadodecuenta.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarestadodecuenta workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarestadodecuenta.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
@@ -209,19 +217,52 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </Assign>
-        <Assign DisplayName="assign Direccion a ArregloDireccion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-          <Assign.To>
-            <OutArgument x:TypeArguments="s:String[]">[ArregloDireccion]</OutArgument>
-          </Assign.To>
-          <Assign.Value>
-            <InArgument x:TypeArguments="s:String[]">[in_Direccion.Split(" "C)]</InArgument>
-          </Assign.Value>
+        <If Condition="[Not String.IsNullOrEmpty(in_DireccionFiscal)]" DisplayName="Si la direccion fiscal no esta vacia" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-        </Assign>
+          <If.Then>
+            <Assign DisplayName="Tokenizar direccion fiscal" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[ArregloDireccionFiscal]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[in_DireccionFiscal.Split(" "C)]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+          </If.Then>
+        </If>
+        <If Condition="[Not String.IsNullOrEmpty(in_DireccionFiscal)]" DisplayName="Si la direccion Residencial no esta vacia" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If.Then>
+            <Assign DisplayName="Tokenizar direccion Residencial" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[ArregloDireccionResidencial]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[in_DireccionResidencial.Split(" "C)]</InArgument>
+              </Assign.Value>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </Assign>
+          </If.Then>
+        </If>
       </Sequence>
       <FlowStep.Next>
         <x:Reference>__ReferenceID2</x:Reference>

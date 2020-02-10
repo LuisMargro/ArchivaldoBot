@@ -4,7 +4,7 @@
     <x:Property Name="in_ArregloDireccion" Type="InArgument(s:String[])" />
     <x:Property Name="out_DireccionCoincide" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>709,787</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>709,648</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -42,26 +42,25 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Para cada direccion" sap:VirtualizedContainerService.HintSize="689,687" sap2010:WorkflowViewState.IdRef="ForEach`1_8" Values="[in_ArregloDireccion]">
-    <ui:ForEach.Body>
-      <ActivityAction x:TypeArguments="x:String">
-        <ActivityAction.Argument>
-          <DelegateInArgument x:TypeArguments="x:String" Name="Dir" />
-        </ActivityAction.Argument>
-        <Sequence sap:VirtualizedContainerService.HintSize="653,553" sap2010:WorkflowViewState.IdRef="Sequence_17">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="611,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Dir]" />
-          <If Condition="[in_StringDocumento.Contains(Dir)]" DisplayName="Si la direccion coincide" sap:VirtualizedContainerService.HintSize="611,362" sap2010:WorkflowViewState.IdRef="If_10">
+  <Sequence DisplayName="Validar documento" sap:VirtualizedContainerService.HintSize="689,588" sap2010:WorkflowViewState.IdRef="Sequence_18">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Para cada direccion" sap:VirtualizedContainerService.HintSize="647,496" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[in_ArregloDireccion]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="Dir" />
+          </ActivityAction.Argument>
+          <If Condition="[in_StringDocumento.Contains(Dir)]" DisplayName="Si la direccion coincide" sap:VirtualizedContainerService.HintSize="611,362" sap2010:WorkflowViewState.IdRef="If_11">
             <If.Then>
-              <Assign DisplayName="Dir encontrado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_46">
+              <Assign DisplayName="Dir encontrado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_48">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">[out_DireccionCoincide]</OutArgument>
                 </Assign.To>
@@ -71,13 +70,13 @@
               </Assign>
             </If.Then>
             <If.Else>
-              <Sequence DisplayName="secuencia nombre no encontrado" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_16">
+              <Sequence DisplayName="secuencia nombre no encontrado" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Dir no encontrado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_47">
+                <Assign DisplayName="Dir no encontrado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_49">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Boolean">[out_DireccionCoincide]</OutArgument>
                   </Assign.To>
@@ -85,17 +84,17 @@
                     <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:Break DisplayName="Interrumpir" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_6" />
+                <ui:Break DisplayName="Interrumpir" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_7" />
               </Sequence>
             </If.Else>
           </If>
-        </Sequence>
-      </ActivityAction>
-    </ui:ForEach.Body>
-    <sap:WorkflowViewStateService.ViewState>
-      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-      </scg:Dictionary>
-    </sap:WorkflowViewStateService.ViewState>
-  </ui:ForEach>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
 </Activity>
