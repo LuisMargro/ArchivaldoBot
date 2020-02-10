@@ -110,7 +110,7 @@
                 </ui:CursorPosition>
               </ui:Click.CursorPosition>
               <ui:Click.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0d8a2dce758717b2d17e076e04c4bb4c" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='GBM Escritorio de Aplicaciones v2.0' /&gt;&lt;ctrl automationid='mnuAccountManagement' /&gt;&lt;ctrl automationid='Preopening' /&gt;&lt;ctrl name='Microsoft.Windows.Controls.Ribbon.RibbonButton' role='list item' /&gt;&lt;ctrl name='Start Account Management' role='push button' /&gt;" TimeoutMS="60000" WaitForReady="INTERACTIVE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0d8a2dce758717b2d17e076e04c4bb4c" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='GBM Escritorio de Aplicaciones v2.0' /&gt;&lt;ctrl automationid='mnuAccountManagement' /&gt;&lt;ctrl automationid='Preopening' /&gt;&lt;ctrl name='Microsoft.Windows.Controls.Ribbon.RibbonButton' role='list item' /&gt;&lt;ctrl name='Start Account Management' role='push button' /&gt;" TimeoutMS="120000" WaitForReady="INTERACTIVE" />
               </ui:Click.Target>
             </ui:Click>
           </Sequence>
