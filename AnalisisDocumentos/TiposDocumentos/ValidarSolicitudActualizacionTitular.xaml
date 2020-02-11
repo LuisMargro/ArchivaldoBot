@@ -93,7 +93,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,225.5 300,240</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:WriteTextFile DisplayName="Write Text File" FileName="C:\Users\Beecker\Desktop\TextoDocumento.txt" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[TextoDocumento.Replace(Environment.NewLine, &quot;&quot;)]" />
+      <ui:WriteTextFile DisplayName="Write Text File" FileName="C:\Users\Beecker\Desktop\TextoDocumento.txt" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[TextoDocumento]" />
       <FlowStep.Next>
         <FlowStep x:Name="__ReferenceID109">
           <sap:WorkflowViewStateService.ViewState>
