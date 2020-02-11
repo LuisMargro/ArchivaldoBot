@@ -4,12 +4,11 @@
     <x:Property Name="io_Cliente" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
     <x:Property Name="in_ArregloNombre" Type="InArgument(s:String[])" />
+    <x:Property Name="in_ArregloDireccionFiscal" Type="InArgument(s:String[])" />
+    <x:Property Name="in_ArregloDireccionResidencial" Type="InArgument(s:String[])" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
-    <x:Property Name="in_ArregloDireccion" Type="InArgument(s:String[])" />
-    <x:Property Name="in_DireccionFiscal" Type="InArgument(x:String)" />
-    <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>915,1937</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>936,1482</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -39,30 +38,29 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="El precente workflow recibe una  identificacion(INE, IFE, cedula profesional ó pasaporte) escaneada y un nombre,  se determina si la INE recibida le pertenece al nombre que se le fue proporcionado, si el ine le pertenece a la persona recibida, se asignara &quot;Validado&quot; a la variable de control; En caso contrario se asignara &quot;Encontrado&quot; y se rellenara el mensaje" DisplayName="Analizar identificacion" sap:VirtualizedContainerService.HintSize="895,1877" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+  <Flowchart sap2010:Annotation.AnnotationText="El precente workflow recibe una  identificacion(INE, IFE, cedula profesional ó pasaporte) escaneada y un nombre,  se determina si la INE recibida le pertenece al nombre que se le fue proporcionado, si el ine le pertenece a la persona recibida, se asignara &quot;Validado&quot; a la variable de control; En caso contrario se asignara &quot;Encontrado&quot; y se rellenara el mensaje" DisplayName="Analizar identificacion" sap:VirtualizedContainerService.HintSize="916,1422" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:Boolean" Default="False" Name="NombreIneCoincide" />
       <Variable x:TypeArguments="x:String" Name="Vigencia" />
       <Variable x:TypeArguments="x:String" Name="AnioActual" />
-      <Variable x:TypeArguments="x:Boolean" Name="DireccionCoincide" />
       <Variable x:TypeArguments="scg1:IEnumerable(str:Match)" Name="Curps" />
       <Variable x:TypeArguments="x:String" Name="Curp" />
+      <Variable x:TypeArguments="x:Boolean" Name="NombreIneCoincide" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg1:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <x:Double x:Key="Height">1784</x:Double>
-        <x:Double x:Key="Width">861</x:Double>
+        <x:Double x:Key="Height">1326</x:Double>
+        <x:Double x:Key="Width">881.77093388730532</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,124</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID17</x:Reference>
+      <x:Reference>__ReferenceID21</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID3" Condition="[NombreIneCoincide]" DisplayName="¿Coincide Nombre?" sap:VirtualizedContainerService.HintSize="110,87" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
+    <FlowDecision x:Name="__ReferenceID8" Condition="[NombreIneCoincide]" DisplayName="¿Coincide Nombre?" sap:VirtualizedContainerService.HintSize="110,87" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -75,7 +73,7 @@
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
-        <FlowDecision x:Name="__ReferenceID4" Condition="[in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) or in_StringDocumento.Contains(&quot;instituto federal elec&quot;)]" DisplayName="¿INE ó IFE?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
+        <FlowDecision x:Name="__ReferenceID9" Condition="[in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) or in_StringDocumento.Contains(&quot;instituto federal elec&quot;)]" DisplayName="¿INE ó IFE?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -86,15 +84,15 @@
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
-            <FlowStep x:Name="__ReferenceID5">
+            <FlowStep x:Name="__ReferenceID10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,516.04</av:Point>
-                  <av:Size x:Key="ShapeSize">200,66</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">100,582.04 100,612.04 180,612.04 180,726.5</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,68</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">100,584.04 100,614.04 180.5,614.04 180.5,726.5</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Proceso de extraccion de vigencia" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_1">
+              <Sequence DisplayName="Proceso de extraccion de vigencia" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_1">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="scg1:IEnumerable(str:Match)" Name="NumeroExtraido" />
                 </Sequence.Variables>
@@ -138,140 +136,231 @@
                 </Assign>
               </Sequence>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID7" Condition="[CInt(Vigencia)&gt;=CInt(AnioActual)]" DisplayName="¿credencial vigente?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
+                <FlowDecision x:Name="__ReferenceID12" Condition="[CInt(Vigencia)&gt;=CInt(AnioActual)]" DisplayName="¿credencial vigente?" sap:VirtualizedContainerService.HintSize="113,87" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">124,726.5</av:Point>
-                      <av:Size x:Key="ShapeSize">112,87</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">124,770 100,770 100,854.5</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">113,87</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">124,770 110,770 110,1026.5 260,1026.5 260,1056.5</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">236,770 390,770 390,820</av:PointCollection>
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID8">
+                    <FlowDecision x:Name="__ReferenceID18" Condition="[in_StringDocumento.Contains(in_Curp)]" DisplayName="¿Cur valida?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_20">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">0,854.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">100,905.5 100,935.5 210,935.5 210,986.5</av:PointCollection>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">225,1056.5</av:Point>
+                          <av:Size x:Key="ShapeSize">70,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">225,1100 140,1100 140,1180</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">295,1100 430,1100 430,1190</av:PointCollection>
                         </scg1:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <OutArgument x:TypeArguments="x:Boolean" x:Key="DireccionCoincide">[DireccionCoincide]</OutArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_ArregloDireccion]</InArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg1:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:InvokeWorkflowFile>
-                      <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID9" Condition="[DireccionCoincide and in_DireccionFiscal.Equals(in_DireccionResidencial)]" DisplayName="¿Direccion correcta?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_17">
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID11">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <av:Point x:Key="ShapeLocation">154,986.5</av:Point>
-                              <av:Size x:Key="ShapeSize">112,87</av:Size>
-                              <av:PointCollection x:Key="TrueConnector">154,1030 140,1030 140,1110</av:PointCollection>
-                              <av:PointCollection x:Key="FalseConnector">266,1030 415.641666666667,1030 415.641666666667,1206.5</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">9,1180</av:Point>
+                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">140,1240 140,1274</av:PointCollection>
                             </scg1:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <FlowDecision.True>
-                            <FlowStep x:Name="__ReferenceID10">
+                          <Assign DisplayName="Assign Validado en la identificacion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_51">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">["Validado"]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg1:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                          <FlowStep.Next>
+                            <FlowStep x:Name="__ReferenceID20">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">9,1110</av:Point>
-                                  <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">271,1140 415.641666666667,1140 415.641666666667,1206.5</av:PointCollection>
+                                  <av:Point x:Key="ShapeLocation">40,1274</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
                                 </scg1:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign Validado en celda Comprobante" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_52">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Object">[io_Cliente(3)]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Object">["Validado"]</InArgument>
-                                </Assign.Value>
+                              <Flowchart DisplayName="Validar si cuenta como comprobante de domicilio" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                                <Flowchart.Variables>
+                                  <Variable x:TypeArguments="x:Boolean" Name="DirFiscal" />
+                                  <Variable x:TypeArguments="x:Boolean" Name="DirResidencial" />
+                                </Flowchart.Variables>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+                                    <av:Size x:Key="ShapeSize">60,75</av:Size>
+                                    <x:Double x:Key="Height">1170</x:Double>
+                                    <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,124</av:PointCollection>
                                   </scg1:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                              </Assign>
-                              <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID0" Condition="[in_StringDocumento.Contains(in_Curp)]" DisplayName="¿Cur valida?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_20">
+                                <Flowchart.StartNode>
+                                  <x:Reference>__ReferenceID5</x:Reference>
+                                </Flowchart.StartNode>
+                                <FlowStep x:Name="__ReferenceID5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <av:Point x:Key="ShapeLocation">380.641666666667,1206.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">70,87</av:Size>
-                                      <av:PointCollection x:Key="TrueConnector">380.641666666667,1250 160,1250 160,1410</av:PointCollection>
-                                      <av:PointCollection x:Key="FalseConnector">450.641666666667,1250 590,1250 590,1400</av:PointCollection>
+                                      <av:Point x:Key="ShapeLocation">200,124</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">300,176 300,216.5</av:PointCollection>
                                     </scg1:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <FlowDecision.True>
-                                    <FlowStep x:Name="__ReferenceID6">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion Fiscal" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
+                                      <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_ArregloDireccionFiscal]</InArgument>
+                                      <OutArgument x:TypeArguments="x:Boolean" x:Key="out_DireccionCoincide">[DirFiscal]</OutArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg1:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:InvokeWorkflowFile>
+                                  <FlowStep.Next>
+                                    <FlowDecision x:Name="__ReferenceID1" Condition="[DirFiscal]" DisplayName="DirFiscalCoincide" sap:VirtualizedContainerService.HintSize="96,87" sap2010:WorkflowViewState.IdRef="FlowDecision_21">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">29,1410</av:Point>
-                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <av:Point x:Key="ShapeLocation">252,216.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">96,87</av:Size>
+                                          <av:PointCollection x:Key="FalseConnector">348,260 460,260 460,444</av:PointCollection>
+                                          <av:PointCollection x:Key="TrueConnector">252,260 140,260 140,350</av:PointCollection>
                                         </scg1:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign DisplayName="Assign Validado en la identificacion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_51">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:Object">["Validado"]</InArgument>
-                                        </Assign.Value>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg1:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Assign>
-                                    </FlowStep>
-                                  </FlowDecision.True>
-                                  <FlowDecision.False>
-                                    <FlowStep x:Name="__ReferenceID16">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">459,1400</av:Point>
-                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                        </scg1:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <Assign DisplayName="Assign Validado en la identificacion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_60">
-                                        <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
-                                        </Assign.To>
-                                        <Assign.Value>
-                                          <InArgument x:TypeArguments="x:String">["La curp de la credencial de elector es invalida"]</InArgument>
-                                        </Assign.Value>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg1:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </Assign>
-                                    </FlowStep>
-                                  </FlowDecision.False>
-                                </FlowDecision>
-                              </FlowStep.Next>
+                                      <FlowDecision.True>
+                                        <FlowStep x:Name="__ReferenceID2">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">9,350</av:Point>
+                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">271,380 460,380 460,444</av:PointCollection>
+                                            </scg1:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign DisplayName="Comprobante fiscal validado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_61">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Object">[io_Cliente(3)]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Object">["Validado INE"]</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg1:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID0">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">360,444</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">460,496 460,526 320,526 320,536.5</av:PointCollection>
+                                                </scg1:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion Residencial" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
+                                                <ui:InvokeWorkflowFile.Arguments>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
+                                                  <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_ArregloDireccionResidencial]</InArgument>
+                                                  <OutArgument x:TypeArguments="x:Boolean" x:Key="out_DireccionCoincide">[DirResidencial]</OutArgument>
+                                                </ui:InvokeWorkflowFile.Arguments>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg1:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:InvokeWorkflowFile>
+                                              <FlowStep.Next>
+                                                <FlowDecision x:Name="__ReferenceID3" Condition="[DirResidencial]" DisplayName="Dir. Residen. coincide?" sap:VirtualizedContainerService.HintSize="124,87" sap2010:WorkflowViewState.IdRef="FlowDecision_22">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      <av:Point x:Key="ShapeLocation">258,536.5</av:Point>
+                                                      <av:Size x:Key="ShapeSize">124,87</av:Size>
+                                                      <av:PointCollection x:Key="TrueConnector">258,580 160,580 160,760</av:PointCollection>
+                                                    </scg1:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <FlowDecision.True>
+                                                    <FlowStep x:Name="__ReferenceID4">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">29,760</av:Point>
+                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">281,390 470,390 470,454</av:PointCollection>
+                                                        </scg1:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign DisplayName="Comprobante Residencial validado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_62">
+                                                        <Assign.To>
+                                                          <OutArgument x:TypeArguments="x:Object">[io_Cliente(5)]</OutArgument>
+                                                        </Assign.To>
+                                                        <Assign.Value>
+                                                          <InArgument x:TypeArguments="x:Object">["Validado INE"]</InArgument>
+                                                        </Assign.Value>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg1:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </Assign>
+                                                    </FlowStep>
+                                                  </FlowDecision.True>
+                                                </FlowDecision>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowDecision.True>
+                                      <FlowDecision.False>
+                                        <x:Reference>__ReferenceID0</x:Reference>
+                                      </FlowDecision.False>
+                                    </FlowDecision>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                                <x:Reference>__ReferenceID1</x:Reference>
+                                <x:Reference>__ReferenceID0</x:Reference>
+                                <x:Reference>__ReferenceID2</x:Reference>
+                                <x:Reference>__ReferenceID3</x:Reference>
+                                <x:Reference>__ReferenceID4</x:Reference>
+                              </Flowchart>
                             </FlowStep>
-                          </FlowDecision.True>
-                          <FlowDecision.False>
-                            <x:Reference>__ReferenceID0</x:Reference>
-                          </FlowDecision.False>
-                        </FlowDecision>
-                      </FlowStep.Next>
-                    </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <FlowStep x:Name="__ReferenceID19">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">299,1190</av:Point>
+                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                            </scg1:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="Assign Validado en la identificacion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_60">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["La curp de la credencial de elector es invalida"]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg1:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                        </FlowStep>
+                      </FlowDecision.False>
+                    </FlowDecision>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowStep x:Name="__ReferenceID11">
+                    <FlowStep x:Name="__ReferenceID13">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">259,820</av:Point>
@@ -293,7 +382,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID15">
+                        <FlowStep x:Name="__ReferenceID17">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">259,900</av:Point>
@@ -322,25 +411,25 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID12" Condition="[in_StringDocumento.Contains(&quot;cedula profesional&quot;)]" DisplayName="¿cedula profesional?" sap:VirtualizedContainerService.HintSize="113,87" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
+            <FlowDecision x:Name="__ReferenceID14" Condition="[in_StringDocumento.Contains(&quot;cedula profesional&quot;)]" DisplayName="¿cedula profesional?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">423.5,486.5</av:Point>
-                  <av:Size x:Key="ShapeSize">113,87</av:Size>
+                  <av:Size x:Key="ShapeSize">114,87</av:Size>
                   <av:PointCollection x:Key="TrueConnector">423.5,530 320,530 320,624.5</av:PointCollection>
                   <av:PointCollection x:Key="FalseConnector">536.5,530 570,530 570,620</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowStep x:Name="__ReferenceID13">
+                <FlowStep x:Name="__ReferenceID15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">220,624.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarCedula workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarCedula.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarCedula workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarCedula.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
@@ -355,7 +444,7 @@
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
-                <FlowStep x:Name="__ReferenceID14">
+                <FlowStep x:Name="__ReferenceID16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">439,620</av:Point>
@@ -382,7 +471,7 @@
         </FlowDecision>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowStep x:Name="__ReferenceID1">
+        <FlowStep x:Name="__ReferenceID6">
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">599,870</av:Point>
@@ -404,7 +493,7 @@
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID2">
+            <FlowStep x:Name="__ReferenceID7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">599,980</av:Point>
@@ -429,17 +518,17 @@
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
-    <x:Reference>__ReferenceID1</x:Reference>
-    <x:Reference>__ReferenceID2</x:Reference>
-    <FlowStep x:Name="__ReferenceID17">
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <FlowStep x:Name="__ReferenceID21">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,124</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,175 300,226.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/ValidarNombre.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/ValidarNombre.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_CoincideNombre">[NombreIneCoincide]</OutArgument>
@@ -447,14 +536,9 @@
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID3</x:Reference>
+        <x:Reference>__ReferenceID8</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID4</x:Reference>
-    <x:Reference>__ReferenceID5</x:Reference>
-    <x:Reference>__ReferenceID6</x:Reference>
-    <x:Reference>__ReferenceID7</x:Reference>
-    <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
     <x:Reference>__ReferenceID10</x:Reference>
     <x:Reference>__ReferenceID11</x:Reference>
@@ -462,7 +546,10 @@
     <x:Reference>__ReferenceID13</x:Reference>
     <x:Reference>__ReferenceID14</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
-    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID16</x:Reference>
+    <x:Reference>__ReferenceID17</x:Reference>
+    <x:Reference>__ReferenceID18</x:Reference>
+    <x:Reference>__ReferenceID19</x:Reference>
+    <x:Reference>__ReferenceID20</x:Reference>
   </Flowchart>
 </Activity>
