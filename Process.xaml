@@ -75,8 +75,6 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_PathDocumentos">C:\Users\88891\Documents\UiPath\Archivaldo\Documentos\</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">["Luis Margarito Gonzalez casasanero".ToLower]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Curp">["GAAB971029HMSRDR07".ToLower]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">["GAAB971029956".ToLower]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_MensajeCorreo" xml:space="preserve">["GAAB971029HMSRDR07   GAAB971029956rt".ToLower]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="In_LayoutCorreo" xml:space="preserve">Estimado {cliente}, un gusto poder saludale.
 
 
@@ -86,9 +84,7 @@ El motivo de este correo es para comentarle que  tuvimos algunos problemas con l
         <InArgument x:TypeArguments="x:String" x:Key="in_CambioDireccion">El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Parentesco">El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_DireccionFiscal">["NICOLAS BRAVO 15 VICENTE GUERRERO CUAUTLA MORELOS".ToLower]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_CPFiscal">62748</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_CPResidencial" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial">["NICOLAS BRAVO 15 VICENTE GUERRERO CUAUTLA MORELOS".ToLower]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

@@ -35,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -52,6 +52,9 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="ObtenerCasos" sap:VirtualizedContainerService.HintSize="811,1622" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -60,7 +63,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach SalesForce" sap:VirtualizedContainerService.HintSize="769,1530" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="25369820a739a243f8b6146965bde966" Selector="&lt;html app='chrome.exe' title='*Salesforce*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach SalesForce" sap:VirtualizedContainerService.HintSize="769,1530" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="25369820a739a243f8b6146965bde966" Selector="&lt;html app='chrome.exe' url='https://gbm--gbmte.lightning.force.com*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -202,7 +205,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb8542b98929a86baae4000e542b110" Selector="&lt;webctrl tag='MARK' innertext='Mis casos' /&gt;&#xD;&#xA;" WaitForReady="COMPLETE">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3eb8542b98929a86baae4000e542b110" Selector="&lt;webctrl tag='MARK' innertext='Mis casos' /&gt;&#xA;" WaitForReady="COMPLETE">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -377,7 +380,7 @@
                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:FilterDataTable DataTable="[out_TransactionData]" DisplayName="Quitar caso con distinto asunto" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_TransactionData]" SelectColumnsMode="Keep">
+                                          <ui:FilterDataTable DataTable="[out_TransactionData]" DisplayName="Quitar caso con distinto asunto" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_TransactionData]" SelectColumnsMode="Keep">
                                             <ui:FilterDataTable.Filters>
                                               <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
                                                 <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -385,7 +388,31 @@
                                                     <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
                                                   </ui:FilterOperationArgument.Column>
                                                   <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["Actualización de contrato"]</InArgument>
+                                                    <InArgument x:TypeArguments="x:String">["solicitud de actualiza"]</InArgument>
+                                                  </ui:FilterOperationArgument.Operand>
+                                                </ui:FilterOperationArgument>
+                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                  <ui:FilterOperationArgument.Column>
+                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                  </ui:FilterOperationArgument.Column>
+                                                  <ui:FilterOperationArgument.Operand>
+                                                    <InArgument x:TypeArguments="x:String">["SOLICITUD DE ACTUALIZA"]</InArgument>
+                                                  </ui:FilterOperationArgument.Operand>
+                                                </ui:FilterOperationArgument>
+                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                  <ui:FilterOperationArgument.Column>
+                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                  </ui:FilterOperationArgument.Column>
+                                                  <ui:FilterOperationArgument.Operand>
+                                                    <InArgument x:TypeArguments="x:String">["Solicitud de Actualiza"]</InArgument>
+                                                  </ui:FilterOperationArgument.Operand>
+                                                </ui:FilterOperationArgument>
+                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                  <ui:FilterOperationArgument.Column>
+                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                  </ui:FilterOperationArgument.Column>
+                                                  <ui:FilterOperationArgument.Operand>
+                                                    <InArgument x:TypeArguments="x:String">["Solicitud de actualiza"]</InArgument>
                                                   </ui:FilterOperationArgument.Operand>
                                                 </ui:FilterOperationArgument>
                                               </scg:List>

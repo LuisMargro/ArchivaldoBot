@@ -6,14 +6,12 @@
     <x:Property Name="io_Cliente" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
     <x:Property Name="in_DireccionFiscal" Type="InArgument(x:String)" />
-    <x:Property Name="in_CPFiscal" Type="InArgument(x:String)" />
     <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
-    <x:Property Name="in_CPResidencial" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,979</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>654,977</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidarDocumentosCorrectos_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -64,7 +62,7 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="El presente workflow se encarga de recibir el texto plano de algunos documentos, clasificarlos, y validar que dichos documentos le pertenecen" DisplayName="ValidarDocumentosCorrectos" sap:VirtualizedContainerService.HintSize="634,919" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="El presente workflow se encarga de recibir el texto plano de algunos documentos, clasificarlos, y validar que dichos documentos le pertenecen" DisplayName="ValidarDocumentosCorrectos" sap:VirtualizedContainerService.HintSize="634,917" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:String[]" Name="ArregloNombre" />
       <Variable x:TypeArguments="s:String[]" Name="ArregloDireccionFiscal" />
@@ -100,10 +98,10 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">0,404</av:Point>
-              <av:Size x:Key="ShapeSize">200,52</av:Size>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AnalizarIdentificacion workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/AnalizarIdentificacion.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke AnalizarIdentificacion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/AnalizarIdentificacion.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
               <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
@@ -117,12 +115,12 @@
         </FlowStep>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowDecision x:Name="__ReferenceID0" Condition="[(in_StringDocumento.Contains(&quot;total a pagar&quot;) or in_StringDocumento.Contains(&quot;predial&quot;)) and not io_Cliente(3).ToString.Equals(&quot;validado&quot;)]" DisplayName="¿Es comprobante?" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID0" Condition="[(in_StringDocumento.Contains(&quot;total a pagar&quot;) or in_StringDocumento.Contains(&quot;predial&quot;)) and not io_Cliente(3).ToString.Equals(&quot;validado&quot;)]" DisplayName="¿Es comprobante?" sap:VirtualizedContainerService.HintSize="102,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">268.5,396.5</av:Point>
-              <av:Size x:Key="ShapeSize">103,87</av:Size>
+              <av:Size x:Key="ShapeSize">102,87</av:Size>
               <x:String x:Key="FalseLabel">No</x:String>
               <x:String x:Key="TrueLabel">Si</x:String>
               <av:PointCollection x:Key="FalseConnector">370.5,440 410,440 410,576.5</av:PointCollection>
@@ -134,10 +132,10 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,534</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarcomprobante workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarcomprobante.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarcomprobante workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarcomprobante.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
                   <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
@@ -191,11 +189,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,126</av:Point>
-          <av:Size x:Key="ShapeSize">200,68</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,194 300,224 314.5,224 314.5,236.5</av:PointCollection>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,192 300,222 314.5,222 314.5,236.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Toquenizar nombre y direccion" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence DisplayName="Toquenizar nombre y direccion" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>

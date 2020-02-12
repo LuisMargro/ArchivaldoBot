@@ -102,7 +102,7 @@
         </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID2" Condition="[String.IsNullOrEmpty(io_Cliente_Tmp(3).ToString)]" DisplayName="Comprobante" sap:VirtualizedContainerService.HintSize="80,87" sap2010:WorkflowViewState.IdRef="FlowDecision_35" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
+    <FlowDecision x:Name="__ReferenceID2" Condition="[String.IsNullOrEmpty(io_Cliente_Tmp(3).ToString) or String.IsNullOrEmpty(io_Cliente_Tmp(5).toString)]" DisplayName="Comprobante" sap:VirtualizedContainerService.HintSize="80,87" sap2010:WorkflowViewState.IdRef="FlowDecision_35" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
