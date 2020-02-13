@@ -3,8 +3,9 @@
     <x:Property Name="in_NumeroContrato" Type="InArgument(x:String)" />
     <x:Property Name="in_RutaDocumentos" Type="InArgument(x:String)" />
     <x:Property Name="in_pathLog" Type="InArgument(x:String)" />
-    <x:Property Name="out_Cliente" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="out_Cliente" Type="OutArgument(sd:DataRow)" />
     <x:Property Name="out_BanderaClienteNuevo" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_CasoHijo" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -92,6 +93,7 @@
                   <Literal x:TypeArguments="x:String" Value="" />
                 </Variable.Default>
               </Variable>
+              <Variable x:TypeArguments="x:Boolean" Name="CasoHijo" />
             </Flowchart.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -210,9 +212,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
+                <ui:UiElementExists DisplayName="Caso hijo" Exists="[out_CasoHijo]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3220111f4ba47ceba2317d0c1ec31611" Selector="&lt;webctrl tag='DIV' innertext='Caso principal*Modificar Caso principal' /&gt;&lt;webctrl tag='DIV' class='outputLookupContainer forceOutputLookupWithPreview' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
               </Sequence>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID19" Condition="[Not CorreoVacio]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                <FlowDecision x:Name="__ReferenceID19" Condition="[Not CorreoVacio and not CasoHijo]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -254,7 +261,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:GetValue>
-                        <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click abrir correos electronicos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click abrir correos electronicos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
                           <ui:Click.CursorPosition>
                             <ui:CursorPosition Position="Center">
                               <ui:CursorPosition.OffsetX>
