@@ -1,0 +1,24 @@
+<webctrl tag='DIV' innertext='Caso principal*Modificar Caso principal' />
+
+<extract>
+	<row exact="1">
+		<webctrl tag="tr"/>
+	</row>
+	<column exact="1" name="FechaDocto" attr="text">
+		<webctrl tag="tr"/>
+		<webctrl tag="td"/>
+		<webctrl tag="span" class="slds-grid slds-grid--align-spread" idx="1"/>
+		<webctrl tag="span" class="slds-truncate uiOutputDateTime" idx="1"/>
+	</column>
+	<column exact="1" name="Docto" attr="text">
+		<webctrl tag="tr"/>
+		<webctrl tag="th" class="slds-cell-edit cellContainer" idx="1"/>
+		<webctrl tag="span" class="slds-grid slds-grid--align-spread" idx="1"/>
+		<webctrl tag="a" class="slds-resizable forceContentCompoundFieldsTitleRenderer" idx="1"/>
+		<webctrl tag="div" class="slds-grid slds-grid_vertical-align-center" idx="1"/>
+		<webctrl tag="div" class="titleCol truncate" idx="1"/>
+		<webctrl tag="div" class="forceContentFileTitle" idx="1"/>
+		<webctrl tag="div" class="slds-truncate" idx="1"/>
+		<webctrl tag="span" class="itemTitle desktop outputTextOverride uiOutputText" idx="1"/>
+	</column>
+</extract>
