@@ -69,7 +69,7 @@
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[in_TransactionItem(0).ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_RutaDocumentos">[in_Config("PathDocumentosCliente").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_pathLog">C:\Users\88891\Documents\UiPath\Archivaldo\Data\log.xlsx</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_pathLog">[in_Config("PathLog").ToString]</InArgument>
         <InArgument x:TypeArguments="sd:DataRow" x:Key="out_Cliente" />
         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_BanderaClienteNuevo" />
       </ui:InvokeWorkflowFile.Arguments>
