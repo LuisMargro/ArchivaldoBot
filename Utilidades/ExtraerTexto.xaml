@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>765,1112</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>765,1072</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtraerTexto_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -74,14 +74,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID0">
+    <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">70,244.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">70,270 50,270 50,616.5 80,616.5 80,646.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">70,270 50,270 50,576.5 80,576.5 80,606.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:ReadPDFWithOCR DegreeOfParallelism="-1" DisplayName="Extraer info PDF" FileName="[in_PathDocumento]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_1" ImageDpi="150" Range="All" Text="[StringDocumento]">
@@ -100,54 +100,53 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ReadPDFWithOCR>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID1" Condition="[String.IsNullOrEmpty(StringDocumento)]" DisplayName="StringDocumento" sap:VirtualizedContainerService.HintSize="100,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID2" Condition="[String.IsNullOrEmpty(StringDocumento)]" DisplayName="StringDocumento" sap:VirtualizedContainerService.HintSize="100,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">30,646.5</av:Point>
+              <av:Point x:Key="ShapeLocation">30,606.5</av:Point>
               <av:Size x:Key="ShapeSize">100,87</av:Size>
               <x:String x:Key="TrueLabel">Empty</x:String>
               <x:String x:Key="FalseLabel">Not Empty</x:String>
-              <av:PointCollection x:Key="FalseConnector">130,690 430,690 430,740</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">130,650 430,650 430,740</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">30,650 0,650 0,770 30,770</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <FlowDecision.False>
-            <FlowStep x:Name="__ReferenceID4">
+          <FlowDecision.True>
+            <FlowStep x:Name="__ReferenceID10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">299,740</av:Point>
-                  <av:Size x:Key="ShapeSize">262,60</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">430,800 430,820</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">30,744.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">230,770 260,770 260,710 430,710 430,740</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Convertir StringDocumento a bytes" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="s:Byte[]">[TempBytes]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="s:Byte[]">[System.Text.Encoding.GetEncoding("ISO-8859-8").GetBytes(StringDocumento)]</InArgument>
-                </Assign.Value>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke OCRWeb workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilidades\OCRWeb.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_PathDocumento">[in_PathDocumento]</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_StringDocto">[out_TextoDocumento]</OutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </Assign>
+              </ui:InvokeWorkflowFile>
               <FlowStep.Next>
-                <FlowStep x:Name="__ReferenceID5">
+                <FlowStep x:Name="__ReferenceID0">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">299,820</av:Point>
+                      <av:Point x:Key="ShapeLocation">299,740</av:Point>
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">430,880 430,910</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">430,800 430,820</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Guardar StringDocumento sin acentos" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign DisplayName="Convertir StringDocumento a bytes" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[StringDocumento]</OutArgument>
+                      <OutArgument x:TypeArguments="s:Byte[]">[TempBytes]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[System.Text.Encoding.UTF8.GetString(tempBytes).ToLower]</InArgument>
+                      <InArgument x:TypeArguments="s:Byte[]">[System.Text.Encoding.GetEncoding("ISO-8859-8").GetBytes(StringDocumento)]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -156,19 +155,20 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID9">
+                    <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">299,910</av:Point>
+                          <av:Point x:Key="ShapeLocation">299,820</av:Point>
                           <av:Size x:Key="ShapeSize">262,60</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">430,880 430,910</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Retornar texto de documento" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign DisplayName="Guardar StringDocumento sin acentos" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[out_TextoDocumento]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[StringDocumento]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[StringDocumento]</InArgument>
+                          <InArgument x:TypeArguments="x:String">[System.Text.Encoding.UTF8.GetString(tempBytes).ToLower]</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -176,16 +176,42 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID9">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">299,910</av:Point>
+                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign DisplayName="Retornar texto de documento" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[out_TextoDocumento]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[StringDocumento]</InArgument>
+                            </Assign.Value>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Assign>
+                        </FlowStep>
+                      </FlowStep.Next>
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>
+          </FlowDecision.True>
+          <FlowDecision.False>
+            <x:Reference>__ReferenceID0</x:Reference>
           </FlowDecision.False>
         </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID10" Condition="[in_PathDocumento.Contains(&quot;.pdf&quot;) Or in_PathDocumento.Contains(&quot;.PDF&quot;)]" DisplayName="Es Pdf" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID0}">
+    <FlowDecision x:Name="__ReferenceID11" Condition="[in_PathDocumento.Contains(&quot;.pdf&quot;) Or in_PathDocumento.Contains(&quot;.PDF&quot;)]" DisplayName="Es Pdf" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID1}">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -196,7 +222,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.False>
-        <FlowDecision x:Name="__ReferenceID2" Condition="[in_PathDocumento.contains(&quot;.jpg&quot;) Or in_PathDocumento.Contains(&quot;.JPG&quot;) Or in_PathDocumento.Contains(&quot;.jpeg&quot;)Or in_PathDocumento.Contains(&quot;.JPEG&quot;)Or in_PathDocumento.Contains(&quot;.png&quot;)Or in_PathDocumento.Contains(&quot;.PNG&quot;) Or in_PathDocumento.Contains(&quot;.tiff&quot;) Or in_PathDocumento.Contains(&quot;.TIFF&quot;) Or in_PathDocumento.Contains(&quot;.tif&quot;) Or in_PathDocumento.Contains(&quot;.TIF&quot;) Or in_PathDocumento.Contains(&quot;.jfif&quot;) Or in_PathDocumento.Contains(&quot;.JFIF&quot;)]" DisplayName="Es imagen?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+        <FlowDecision x:Name="__ReferenceID3" Condition="[in_PathDocumento.contains(&quot;.jpg&quot;) Or in_PathDocumento.Contains(&quot;.JPG&quot;) Or in_PathDocumento.Contains(&quot;.jpeg&quot;)Or in_PathDocumento.Contains(&quot;.JPEG&quot;)Or in_PathDocumento.Contains(&quot;.png&quot;)Or in_PathDocumento.Contains(&quot;.PNG&quot;) Or in_PathDocumento.Contains(&quot;.tiff&quot;) Or in_PathDocumento.Contains(&quot;.TIFF&quot;) Or in_PathDocumento.Contains(&quot;.tif&quot;) Or in_PathDocumento.Contains(&quot;.TIF&quot;) Or in_PathDocumento.Contains(&quot;.jfif&quot;) Or in_PathDocumento.Contains(&quot;.JFIF&quot;)]" DisplayName="Es imagen?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -207,7 +233,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
-            <FlowStep x:Name="__ReferenceID3">
+            <FlowStep x:Name="__ReferenceID4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">80,314.5</av:Point>
@@ -228,7 +254,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">80,394.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">180,445.5 180,475.5 80,475.5 80,646.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">180,445.5 180,475.5 80,475.5 80,606.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch DisplayName="catch error extrayendo info de imagenes" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
@@ -264,7 +290,7 @@
                     </TryCatch.Catches>
                   </TryCatch>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID1</x:Reference>
+                    <x:Reference>__ReferenceID2</x:Reference>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowStep.Next>
@@ -286,7 +312,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">230,574.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">230,600 80,600 80,646.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">230,600 80,600 80,606.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <p:WordApplicationScope DisplayName="lectura de documento word" FilePath="[in_PathDocumento]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
@@ -312,7 +338,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </p:WordApplicationScope>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID1</x:Reference>
+                    <x:Reference>__ReferenceID2</x:Reference>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.True>
@@ -321,14 +347,15 @@
         </FlowDecision>
       </FlowDecision.False>
     </FlowDecision>
-    <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
-    <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
   </Flowchart>
 </Activity>
