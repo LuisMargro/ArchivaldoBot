@@ -1,0 +1,136 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LlenarSolicitudAperturaCuentaOperadora" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Campos" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="in_NumContrato" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>550,1321</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>LlenarSolicitudAperturaCuentaOperadora_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Esta secuencia se encarga de llenar el formato de &quot;solicitud de apertura de cuenta operadora&quot;.&#xD;&#xA;Recibe 2 parámetros, una datarow donde vienen todos los datos y el número de contrato.&#xD;&#xA;Crea un archvio word temporal a partir del original, lo llena y después lo exporta a pdf, por último elimina el word temporal. " DisplayName="LlenarSolicitudAperturaCuentaCB" sap:VirtualizedContainerService.HintSize="530,1221" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="DtPruebas" />
+      <Variable x:TypeArguments="x:String" Default="Documentacion\Solicitudes de apertura\SOLICITUD APERTURA DE CUENTA OPERADORA.docx" Name="RutaArchivoOriginal" />
+      <Variable x:TypeArguments="x:String" Default="Documentacion\Solicitudes de apertura\SOLICITUD APERTURA DE CUENTA OPERADORA_" Name="RutaArchivoNuevo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[DtPruebas]" DisplayName="Crear tabla" sap:VirtualizedContainerService.HintSize="488,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Ancla000&quot; default=&quot;GBM CDMX&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Ancla001&quot; default=&quot;0001&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Ancla002&quot; type=&quot;xs:string&quot; default=&quot;Principal&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla003&quot; type=&quot;xs:string&quot; default=&quot;Victoria&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla004&quot; type=&quot;xs:string&quot; default=&quot;123&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla005&quot; type=&quot;xs:string&quot; default=&quot;01/01/2001&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla006&quot; type=&quot;xs:string&quot; default=&quot;No discrecional por asesoría&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla007&quot; type=&quot;xs:string&quot; default=&quot;Titular 10%&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla008&quot; type=&quot;xs:string&quot; default=&quot;Cliente&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla009&quot; type=&quot;xs:string&quot; default=&quot;Ahorros&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla010&quot; type=&quot;xs:string&quot; default=&quot;Carlos&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla011&quot; type=&quot;xs:string&quot; default=&quot;García&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla012&quot; type=&quot;xs:string&quot; default=&quot;Vazquez&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla013&quot; type=&quot;xs:string&quot; default=&quot;01&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla014&quot; type=&quot;xs:string&quot; default=&quot;01&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla015&quot; type=&quot;xs:string&quot; default=&quot;2001&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla016&quot; type=&quot;xs:string&quot; default=&quot;México&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla017&quot; type=&quot;xs:string&quot; default=&quot;CDMX&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla018&quot; type=&quot;xs:string&quot; default=&quot;ABCD123456QWE&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla019&quot; type=&quot;xs:string&quot; default=&quot;ASDF123456QWERTY12&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla020&quot; type=&quot;xs:string&quot; default=&quot;Mexicana&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla021&quot; type=&quot;xs:string&quot; default=&quot;Buena&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla022&quot; type=&quot;xs:string&quot; default=&quot;México&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla023&quot; type=&quot;xs:string&quot; default=&quot;1234567890&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla024&quot; type=&quot;xs:string&quot; default=&quot;correo.email@gmail.com&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla025&quot; type=&quot;xs:string&quot; default=&quot;Lorenzo&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla026&quot; type=&quot;xs:string&quot; default=&quot;12&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla027&quot; type=&quot;xs:string&quot; default=&quot;08&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla028&quot; type=&quot;xs:string&quot; default=&quot;Veinte y Noviembre&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla029&quot; type=&quot;xs:string&quot; default=&quot;Hidalgo&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla030&quot; type=&quot;xs:string&quot; default=&quot;65784&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla031&quot; type=&quot;xs:string&quot; default=&quot;Santa Fe&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla032&quot; type=&quot;xs:string&quot; default=&quot;Los Ángeles&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla033&quot; type=&quot;xs:string&quot; default=&quot;High Computers&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla034&quot; type=&quot;xs:string&quot; default=&quot;Gerente&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla035&quot; type=&quot;xs:string&quot; default=&quot;Mando medio&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla036&quot; type=&quot;xs:string&quot; default=&quot;3 años&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla037&quot; type=&quot;xs:string&quot; default=&quot;7341456576&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla038&quot; type=&quot;xs:string&quot; default=&quot;www.página.com&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla039&quot; type=&quot;xs:string&quot; default=&quot;Servicios&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla040&quot; type=&quot;xs:string&quot; default=&quot;Ventas&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla041&quot; type=&quot;xs:string&quot; default=&quot;Sector Servicios&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla042&quot; type=&quot;xs:string&quot; default=&quot;Investigación&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla043&quot; type=&quot;xs:string&quot; default=&quot;Sueldo&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla044&quot; type=&quot;xs:string&quot; default=&quot;No&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla045&quot; type=&quot;xs:string&quot; default=&quot;Ninguna&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla046&quot; type=&quot;xs:string&quot; default=&quot;Persona con actividad empresarial&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla047&quot; type=&quot;xs:string&quot; default=&quot;www.internet.com&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla048&quot; type=&quot;xs:string&quot; default=&quot;1234324567&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla049&quot; type=&quot;xs:string&quot; default=&quot;Servicios&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla050&quot; type=&quot;xs:string&quot; default=&quot;Ventas&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla051&quot; type=&quot;xs:string&quot; default=&quot;Sector Servicios&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla052&quot; type=&quot;xs:string&quot; default=&quot;Investigación&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla053&quot; type=&quot;xs:string&quot; default=&quot;No&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla054&quot; type=&quot;xs:string&quot; default=&quot;Ninguna&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla055&quot; type=&quot;xs:string&quot; default=&quot;Inversión&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla056&quot; type=&quot;xs:string&quot; default=&quot;35000&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla057&quot; type=&quot;xs:string&quot; default=&quot;8&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla058&quot; type=&quot;xs:string&quot; default=&quot;de $ 500,001 - $ 2,000,000&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla059&quot; type=&quot;xs:string&quot; default=&quot;4&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla060&quot; type=&quot;xs:string&quot; default=&quot;de $ 0 - $ 500,000&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla061&quot; type=&quot;xs:string&quot; default=&quot;Alejandra&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla062&quot; type=&quot;xs:string&quot; default=&quot;Rodríguez&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla063&quot; type=&quot;xs:string&quot; default=&quot;Zavaleta&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla064&quot; type=&quot;xs:string&quot; default=&quot;Hermana&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla065&quot; type=&quot;xs:string&quot; default=&quot;08&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla066&quot; type=&quot;xs:string&quot; default=&quot;08&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla067&quot; type=&quot;xs:string&quot; default=&quot;2008&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla068&quot; type=&quot;xs:string&quot; default=&quot;30&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla069&quot; type=&quot;xs:string&quot; default=&quot;Mexicana&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla070&quot; type=&quot;xs:string&quot; default=&quot;México&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla071&quot; type=&quot;xs:string&quot; default=&quot;Daniel&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla072&quot; type=&quot;xs:string&quot; default=&quot;Roman&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla073&quot; type=&quot;xs:string&quot; default=&quot;Cuevas&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla074&quot; type=&quot;xs:string&quot; default=&quot;Hermano&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla075&quot; type=&quot;xs:string&quot; default=&quot;05&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla076&quot; type=&quot;xs:string&quot; default=&quot;05&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla077&quot; type=&quot;xs:string&quot; default=&quot;2005&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla078&quot; type=&quot;xs:string&quot; default=&quot;25&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla079&quot; type=&quot;xs:string&quot; default=&quot;Mexicano&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla080&quot; type=&quot;xs:string&quot; default=&quot;México&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla081&quot; type=&quot;xs:string&quot; default=&quot;Miguel&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla082&quot; type=&quot;xs:string&quot; default=&quot;45&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla083&quot; type=&quot;xs:string&quot; default=&quot;04&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla084&quot; type=&quot;xs:string&quot; default=&quot;Miguel y Hidalgo&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla085&quot; type=&quot;xs:string&quot; default=&quot;Emiliano&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla086&quot; type=&quot;xs:string&quot; default=&quot;87645&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla087&quot; type=&quot;xs:string&quot; default=&quot;Zapata&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla088&quot; type=&quot;xs:string&quot; default=&quot;Nuevo León&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla089&quot; type=&quot;xs:string&quot; default=&quot;México&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla090&quot; type=&quot;xs:string&quot; default=&quot;Benito&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla091&quot; type=&quot;xs:string&quot; default=&quot;Juarez&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla092&quot; type=&quot;xs:string&quot; default=&quot;55&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla093&quot; type=&quot;xs:string&quot; default=&quot;09&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla094&quot; type=&quot;xs:string&quot; default=&quot;Venustiano y Carranza&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla095&quot; type=&quot;xs:string&quot; default=&quot;Pedro&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla096&quot; type=&quot;xs:string&quot; default=&quot;34254&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla097&quot; type=&quot;xs:string&quot; default=&quot;Infante&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla098&quot; type=&quot;xs:string&quot; default=&quot;Querétaro&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla099&quot; type=&quot;xs:string&quot; default=&quot;México&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Ancla100&quot; type=&quot;xs:string&quot; default=&quot;Indios verdes&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <Assign DisplayName="Nueva fila" sap:VirtualizedContainerService.HintSize="488,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataRow">[in_Campos]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataRow">[DtPruebas.NewRow]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[RutaArchivoNuevo+in_NumContrato+&quot;.docx&quot;]" DisplayName="Crear Word temporal" sap:VirtualizedContainerService.HintSize="488,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[RutaArchivoOriginal]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CopyFile>
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[RutaArchivoNuevo+in_NumContrato+&quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="488,584" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+      <p:WordApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WordDocument">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Acciones dentro de word" sap:VirtualizedContainerService.HintSize="454,475" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="Contador" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEach x:TypeArguments="sd:DataColumn" CurrentIndex="[Contador]" DisplayName="Por cada columna" sap:VirtualizedContainerService.HintSize="412,284" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Campos.Table.Columns]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="sd:DataColumn">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataColumn" Name="Columna" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[in_Campos(Contador).ToString]" Search="[Columna.ToString]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEach>
+            <p:WordExportToPdf DisplayName="Generar PDF" FilePath="[RutaArchivoNuevo+in_NumContrato+&quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="412,59" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+          </Sequence>
+        </ActivityAction>
+      </p:WordApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:WordApplicationScope>
+    <ui:Delete ContinueOnError="{x:Null}" DisplayName="Eliminar word temporal" sap:VirtualizedContainerService.HintSize="488,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[RutaArchivoNuevo+in_NumContrato+&quot;.docx&quot;]" />
+  </Sequence>
+</Activity>
