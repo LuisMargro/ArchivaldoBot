@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>730,1097</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>730,1168</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidarCodigoPostal_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -54,10 +54,11 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ValidarCodigoPostal" sap:VirtualizedContainerService.HintSize="710,1037" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Validar el código postal en la página web de correos de México." DisplayName="ValidarCodigoPostal" sap:VirtualizedContainerService.HintSize="710,1068" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach pagina de consulata de CP" sap:VirtualizedContainerService.HintSize="668,945" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="d7fc1f3752710c95aea455bfad359c70" Selector="&lt;html app='chrome.exe' title='Consulta de Códigos Postales' /&gt;">
