@@ -74,7 +74,6 @@
             <Flowchart.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="TablaTmp" />
               <Variable x:TypeArguments="sd:DataTable" Name="TablaTmp2" />
-              <Variable x:TypeArguments="x:String" Name="hsd" />
             </Flowchart.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -88,9 +87,9 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID10</x:Reference>
+              <x:Reference>__ReferenceID9</x:Reference>
             </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID10">
+            <FlowStep x:Name="__ReferenceID9">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,97</av:Point>
@@ -351,7 +350,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">300,425 300,455 290.5,455 290.5,506.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Obtener caso nuevos" sap:VirtualizedContainerService.HintSize="376,611" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence DisplayName="Obtener caso nuevos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="hdd" />
                         </Sequence.Variables>
@@ -448,7 +447,7 @@
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">150,879</av:Point>
                                           <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">250,901 250,931 110,931 110,1109</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">250,901 250,931 100,931 100,1164</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:MergeDataTable Destination="[out_TransactionData]" DisplayName="Mezclar nuevos y en tramite" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[TablaTmp2]">
@@ -462,35 +461,58 @@
                                         <FlowStep x:Name="__ReferenceID0">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">10,1109</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,22</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">110,1131 110,1174.5</av:PointCollection>
+                                              <av:Point x:Key="ShapeLocation">0,1164</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:OutputDataTable DataTable="[out_TransactionData]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[hsd]">
+                                          <ui:FilterDataTable DataTable="[out_TransactionData]" DisplayName="Quitar caso con distinto asunto" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_TransactionData]" SelectColumnsMode="Keep">
+                                            <ui:FilterDataTable.Filters>
+                                              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                                <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                                                  <ui:FilterOperationArgument.Column>
+                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                  </ui:FilterOperationArgument.Column>
+                                                  <ui:FilterOperationArgument.Operand>
+                                                    <InArgument x:TypeArguments="x:String">["solicitud de actualiza"]</InArgument>
+                                                  </ui:FilterOperationArgument.Operand>
+                                                </ui:FilterOperationArgument>
+                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                  <ui:FilterOperationArgument.Column>
+                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                  </ui:FilterOperationArgument.Column>
+                                                  <ui:FilterOperationArgument.Operand>
+                                                    <InArgument x:TypeArguments="x:String">["SOLICITUD DE ACTUALIZA"]</InArgument>
+                                                  </ui:FilterOperationArgument.Operand>
+                                                </ui:FilterOperationArgument>
+                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                  <ui:FilterOperationArgument.Column>
+                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                  </ui:FilterOperationArgument.Column>
+                                                  <ui:FilterOperationArgument.Operand>
+                                                    <InArgument x:TypeArguments="x:String">["Solicitud de Actualiza"]</InArgument>
+                                                  </ui:FilterOperationArgument.Operand>
+                                                </ui:FilterOperationArgument>
+                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                  <ui:FilterOperationArgument.Column>
+                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                  </ui:FilterOperationArgument.Column>
+                                                  <ui:FilterOperationArgument.Operand>
+                                                    <InArgument x:TypeArguments="x:String">["Solicitud de actualiza"]</InArgument>
+                                                  </ui:FilterOperationArgument.Operand>
+                                                </ui:FilterOperationArgument>
+                                              </scg:List>
+                                            </ui:FilterDataTable.Filters>
+                                            <ui:FilterDataTable.SelectColumns>
+                                              <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                                <x:Null />
+                                              </scg:List>
+                                            </ui:FilterDataTable.SelectColumns>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                          </ui:OutputDataTable>
-                                          <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID9">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">10,1174.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[hsd]">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </ui:MessageBox>
-                                            </FlowStep>
-                                          </FlowStep.Next>
+                                          </ui:FilterDataTable>
                                         </FlowStep>
                                       </FlowStep.Next>
                                     </FlowStep>
@@ -511,7 +533,7 @@
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">289,1060</av:Point>
                                               <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">420,1120 210,1120</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">289,1090 100,1090 100,1164</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <Assign DisplayName="Ingresar nuevos en tramite" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
@@ -556,64 +578,7 @@
             <x:Reference>__ReferenceID6</x:Reference>
             <x:Reference>__ReferenceID7</x:Reference>
             <x:Reference>__ReferenceID8</x:Reference>
-            <FlowStep>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">30,1284.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:FilterDataTable DataTable="[out_TransactionData]" DisplayName="Quitar caso con distinto asunto" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_TransactionData]" SelectColumnsMode="Keep">
-                <ui:FilterDataTable.Filters>
-                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                    <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
-                      <ui:FilterOperationArgument.Column>
-                        <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                      </ui:FilterOperationArgument.Column>
-                      <ui:FilterOperationArgument.Operand>
-                        <InArgument x:TypeArguments="x:String">["solicitud de actualiza"]</InArgument>
-                      </ui:FilterOperationArgument.Operand>
-                    </ui:FilterOperationArgument>
-                    <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                      <ui:FilterOperationArgument.Column>
-                        <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                      </ui:FilterOperationArgument.Column>
-                      <ui:FilterOperationArgument.Operand>
-                        <InArgument x:TypeArguments="x:String">["SOLICITUD DE ACTUALIZA"]</InArgument>
-                      </ui:FilterOperationArgument.Operand>
-                    </ui:FilterOperationArgument>
-                    <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                      <ui:FilterOperationArgument.Column>
-                        <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                      </ui:FilterOperationArgument.Column>
-                      <ui:FilterOperationArgument.Operand>
-                        <InArgument x:TypeArguments="x:String">["Solicitud de Actualiza"]</InArgument>
-                      </ui:FilterOperationArgument.Operand>
-                    </ui:FilterOperationArgument>
-                    <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                      <ui:FilterOperationArgument.Column>
-                        <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                      </ui:FilterOperationArgument.Column>
-                      <ui:FilterOperationArgument.Operand>
-                        <InArgument x:TypeArguments="x:String">["Solicitud de actualiza"]</InArgument>
-                      </ui:FilterOperationArgument.Operand>
-                    </ui:FilterOperationArgument>
-                  </scg:List>
-                </ui:FilterDataTable.Filters>
-                <ui:FilterDataTable.SelectColumns>
-                  <scg:List x:TypeArguments="InArgument" Capacity="4">
-                    <x:Null />
-                  </scg:List>
-                </ui:FilterDataTable.SelectColumns>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:FilterDataTable>
-            </FlowStep>
             <x:Reference>__ReferenceID0</x:Reference>
-            <x:Reference>__ReferenceID9</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:BrowserScope.Body>
