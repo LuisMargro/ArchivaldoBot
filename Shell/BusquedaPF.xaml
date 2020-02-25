@@ -101,9 +101,9 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID31</x:Reference>
+              <x:Reference>__ReferenceID36</x:Reference>
             </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID31">
+            <FlowStep x:Name="__ReferenceID36">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
@@ -126,7 +126,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:UiElementExists>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID18" Condition="[Menu]" DisplayName="¿Pantalla menu?" sap:VirtualizedContainerService.HintSize="92,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                <FlowDecision x:Name="__ReferenceID23" Condition="[Menu]" DisplayName="¿Pantalla menu?" sap:VirtualizedContainerService.HintSize="92,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,7 +137,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID17">
+                    <FlowStep x:Name="__ReferenceID22">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">30,374.5</av:Point>
@@ -173,7 +173,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:Click>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID20" Condition="[String.IsNullOrEmpty(in_NumeroContrato)]" DisplayName="¿Contrato vacio?" sap:VirtualizedContainerService.HintSize="94,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                        <FlowDecision x:Name="__ReferenceID25" Condition="[String.IsNullOrEmpty(in_NumeroContrato)]" DisplayName="¿Contrato vacio?" sap:VirtualizedContainerService.HintSize="94,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -184,7 +184,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <FlowDecision.True>
-                            <FlowStep x:Name="__ReferenceID23">
+                            <FlowStep x:Name="__ReferenceID28">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">0,547</av:Point>
@@ -236,7 +236,7 @@
                                 </ui:TypeInto>
                               </Sequence>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID16">
+                                <FlowStep x:Name="__ReferenceID21">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">180,667</av:Point>
@@ -296,7 +296,7 @@
                                     </ui:Click>
                                   </Sequence>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID21">
+                                    <FlowStep x:Name="__ReferenceID26">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">180,764.5</av:Point>
@@ -315,7 +315,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:UiElementExists>
                                       <FlowStep.Next>
-                                        <FlowDecision x:Name="__ReferenceID24" Condition="[MensajeFallo]" DisplayName="¿Busqueda fallida?" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                        <FlowDecision x:Name="__ReferenceID29" Condition="[MensajeFallo]" DisplayName="¿Busqueda fallida?" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -326,7 +326,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <FlowDecision.True>
-                                            <FlowStep x:Name="__ReferenceID22">
+                                            <FlowStep x:Name="__ReferenceID27">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">20,974.5</av:Point>
@@ -363,7 +363,7 @@
                                             </FlowStep>
                                           </FlowDecision.True>
                                           <FlowDecision.False>
-                                            <FlowStep x:Name="__ReferenceID29">
+                                            <FlowStep x:Name="__ReferenceID34">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">350,1027</av:Point>
@@ -478,7 +478,7 @@
                                                 </Assign>
                                               </Sequence>
                                               <FlowStep.Next>
-                                                <FlowStep x:Name="__ReferenceID25">
+                                                <FlowStep x:Name="__ReferenceID30">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:Point x:Key="ShapeLocation">350,1117</av:Point>
@@ -489,6 +489,7 @@
                                                   <Sequence DisplayName="Extraer nombre competo del cliente" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                                     <Sequence.Variables>
                                                       <Variable x:TypeArguments="ui:GenericValue" Name="VariableExtractora" />
+                                                      <Variable x:TypeArguments="x:String" Name="VariableAsignacion" />
                                                     </Sequence.Variables>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -511,12 +512,18 @@
                                                         <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
                                                       </ui:GetValue.Value>
                                                     </ui:GetValue>
+                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SanitizarNombre" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                    </ui:InvokeWorkflowFile>
                                                     <Assign DisplayName="Guardar nombres" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:Object">[Cliente(0)]</OutArgument>
                                                       </Assign.To>
                                                       <Assign.Value>
-                                                        <InArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</InArgument>
+                                                        <InArgument x:TypeArguments="x:Object">[VariableAsignacion]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
                                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer apellido paterno" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
@@ -534,12 +541,18 @@
                                                         <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
                                                       </ui:GetValue.Value>
                                                     </ui:GetValue>
+                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar ApellidoPaterno" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                    </ui:InvokeWorkflowFile>
                                                     <Assign DisplayName="Guardar Apellido paterno" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:Object">[Cliente(0)]</OutArgument>
                                                       </Assign.To>
                                                       <Assign.Value>
-                                                        <InArgument x:TypeArguments="ui:GenericValue">[Cliente(0).ToString+" "+VariableExtractora]</InArgument>
+                                                        <InArgument x:TypeArguments="x:Object">[Cliente(0).ToString+" "+VariableAsignacion]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
                                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer apellido materno" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
@@ -557,12 +570,18 @@
                                                         <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
                                                       </ui:GetValue.Value>
                                                     </ui:GetValue>
+                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar Apellido materno" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                    </ui:InvokeWorkflowFile>
                                                     <Assign DisplayName="Guardar Apellido materno" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:Object">[Cliente(0)]</OutArgument>
                                                       </Assign.To>
                                                       <Assign.Value>
-                                                        <InArgument x:TypeArguments="ui:GenericValue">[Cliente(0).ToString+" "+VariableExtractora]</InArgument>
+                                                        <InArgument x:TypeArguments="x:Object">[Cliente(0).ToString+" "+VariableAsignacion]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
                                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer Fecha de nacimiento" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_21">
@@ -603,17 +622,23 @@
                                                         <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
                                                       </ui:GetValue.Value>
                                                     </ui:GetValue>
+                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar pais de nacimiento" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                        <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                    </ui:InvokeWorkflowFile>
                                                     <Assign DisplayName="Guardar pais de nacimiento" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                                                       <Assign.To>
                                                         <OutArgument x:TypeArguments="x:Object">[Cliente(2)]</OutArgument>
                                                       </Assign.To>
                                                       <Assign.Value>
-                                                        <InArgument x:TypeArguments="x:Object">[VariableExtractora]</InArgument>
+                                                        <InArgument x:TypeArguments="x:Object">[VariableAsignacion]</InArgument>
                                                       </Assign.Value>
                                                     </Assign>
                                                   </Sequence>
                                                   <FlowStep.Next>
-                                                    <FlowStep x:Name="__ReferenceID26">
+                                                    <FlowStep x:Name="__ReferenceID31">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">350,1234.5</av:Point>
@@ -621,10 +646,11 @@
                                                           <av:PointCollection x:Key="ConnectorLocation">450,1285.5 450,1327</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Flowchart DisplayName="Extraer domicilios" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+                                                      <Flowchart DisplayName="Extraer domicilios" sap:VirtualizedContainerService.HintSize="766,1739" sap2010:WorkflowViewState.IdRef="Flowchart_2">
                                                         <Flowchart.Variables>
                                                           <Variable x:TypeArguments="ui:GenericValue" Name="VariableExtractora" />
                                                           <Variable x:TypeArguments="s:String[]" Name="ArregloDireccion" />
+                                                          <Variable x:TypeArguments="x:String" Name="VariableAsignacion" />
                                                         </Flowchart.Variables>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -633,14 +659,14 @@
                                                             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                                                             <av:Size x:Key="ShapeSize">60,75</av:Size>
                                                             <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,124.5</av:PointCollection>
-                                                            <x:Double x:Key="Height">1553</x:Double>
-                                                            <x:Double x:Key="Width">694.5</x:Double>
+                                                            <x:Double x:Key="Height">1703</x:Double>
+                                                            <x:Double x:Key="Width">731.5</x:Double>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <Flowchart.StartNode>
-                                                          <x:Reference>__ReferenceID15</x:Reference>
+                                                          <x:Reference>__ReferenceID20</x:Reference>
                                                         </Flowchart.StartNode>
-                                                        <FlowStep x:Name="__ReferenceID15">
+                                                        <FlowStep x:Name="__ReferenceID20">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">200,124.5</av:Point>
@@ -680,7 +706,7 @@
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <av:Point x:Key="ShapeLocation">40,324.5</av:Point>
                                                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                      <av:PointCollection x:Key="ConnectorLocation">140,375.5 140,405.5 141,405.5 141,410</av:PointCollection>
+                                                                      <av:PointCollection x:Key="ConnectorLocation">240,350 270,350 270,360 360,360</av:PointCollection>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
                                                                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Obtener calle" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_6">
@@ -708,179 +734,156 @@
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ui:GetValue>
                                                                   <FlowStep.Next>
-                                                                    <FlowStep x:Name="__ReferenceID2">
+                                                                    <FlowStep x:Name="__ReferenceID15">
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                          <av:Point x:Key="ShapeLocation">10,410</av:Point>
-                                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                          <av:PointCollection x:Key="ConnectorLocation">141,470 140,470 140,494.5</av:PointCollection>
+                                                                          <av:Point x:Key="ShapeLocation">360,334.5</av:Point>
+                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                          <av:PointCollection x:Key="ConnectorLocation">460,385.5 460,440 272,440</av:PointCollection>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <Assign DisplayName="Guardar calle" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                                                                        <Assign.To>
-                                                                          <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
-                                                                        </Assign.To>
-                                                                        <Assign.Value>
-                                                                          <InArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</InArgument>
-                                                                        </Assign.Value>
-                                                                        <sap:WorkflowViewStateService.ViewState>
-                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                          </scg:Dictionary>
-                                                                        </sap:WorkflowViewStateService.ViewState>
-                                                                      </Assign>
+                                                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar la calle" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                                        <ui:InvokeWorkflowFile.Arguments>
+                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                                          <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                                        </ui:InvokeWorkflowFile.Arguments>
+                                                                      </ui:InvokeWorkflowFile>
                                                                       <FlowStep.Next>
-                                                                        <FlowStep x:Name="__ReferenceID3">
+                                                                        <FlowStep x:Name="__ReferenceID2">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <av:Point x:Key="ShapeLocation">40,494.5</av:Point>
-                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                              <av:PointCollection x:Key="ConnectorLocation">140,545.5 140,580</av:PointCollection>
+                                                                              <av:Point x:Key="ShapeLocation">10,410</av:Point>
+                                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                              <av:PointCollection x:Key="ConnectorLocation">141,470 140,470 140,494.5</av:PointCollection>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Obtener numero exterior" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_7">
-                                                                            <ui:GetValue.Target>
-                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3f0d47f6bbf6bb445ace257eb3e01e7b" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='NumeroExterior' /&gt;">
-                                                                                <ui:Target.TimeoutMS>
-                                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                                </ui:Target.TimeoutMS>
-                                                                                <ui:Target.WaitForReady>
-                                                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                                </ui:Target.WaitForReady>
-                                                                              </ui:Target>
-                                                                            </ui:GetValue.Target>
-                                                                            <ui:GetValue.Value>
-                                                                              <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
-                                                                            </ui:GetValue.Value>
+                                                                          <Assign DisplayName="Guardar calle" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                                                            <Assign.To>
+                                                                              <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
+                                                                            </Assign.To>
+                                                                            <Assign.Value>
+                                                                              <InArgument x:TypeArguments="x:Object">[VariableAsignacion]</InArgument>
+                                                                            </Assign.Value>
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                          </ui:GetValue>
+                                                                          </Assign>
                                                                           <FlowStep.Next>
-                                                                            <FlowStep x:Name="__ReferenceID4">
+                                                                            <FlowStep x:Name="__ReferenceID3">
                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                  <av:Point x:Key="ShapeLocation">9,580</av:Point>
-                                                                                  <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                                  <av:PointCollection x:Key="ConnectorLocation">140,640 140,674.02</av:PointCollection>
+                                                                                  <av:Point x:Key="ShapeLocation">40,494.5</av:Point>
+                                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                  <av:PointCollection x:Key="ConnectorLocation">140,545.5 140,580</av:PointCollection>
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                              <Assign DisplayName="Guardar Numero exterior" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                                                                                <Assign.To>
-                                                                                  <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
-                                                                                </Assign.To>
-                                                                                <Assign.Value>
-                                                                                  <InArgument x:TypeArguments="ui:GenericValue">[cliente(7).ToString+" "+VariableExtractora]</InArgument>
-                                                                                </Assign.Value>
+                                                                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Obtener numero exterior" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_7">
+                                                                                <ui:GetValue.Target>
+                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3f0d47f6bbf6bb445ace257eb3e01e7b" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='NumeroExterior' /&gt;">
+                                                                                    <ui:Target.TimeoutMS>
+                                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                                    </ui:Target.TimeoutMS>
+                                                                                    <ui:Target.WaitForReady>
+                                                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                    </ui:Target.WaitForReady>
+                                                                                  </ui:Target>
+                                                                                </ui:GetValue.Target>
+                                                                                <ui:GetValue.Value>
+                                                                                  <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
+                                                                                </ui:GetValue.Value>
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                              </Assign>
+                                                                              </ui:GetValue>
                                                                               <FlowStep.Next>
-                                                                                <FlowStep x:Name="__ReferenceID5">
+                                                                                <FlowStep x:Name="__ReferenceID4">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                      <av:Point x:Key="ShapeLocation">40,674.02</av:Point>
-                                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                                      <av:PointCollection x:Key="ConnectorLocation">140,725.02 140,750</av:PointCollection>
+                                                                                      <av:Point x:Key="ShapeLocation">9,580</av:Point>
+                                                                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                      <av:PointCollection x:Key="ConnectorLocation">140,640 140,674.02</av:PointCollection>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer pais" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_11">
-                                                                                    <ui:GetValue.Target>
-                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bfe5683c1595c231ed8c248afbbb64c8" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='2' role='editable text' /&gt;">
-                                                                                        <ui:Target.TimeoutMS>
-                                                                                          <InArgument x:TypeArguments="x:Int32" />
-                                                                                        </ui:Target.TimeoutMS>
-                                                                                        <ui:Target.WaitForReady>
-                                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                                        </ui:Target.WaitForReady>
-                                                                                      </ui:Target>
-                                                                                    </ui:GetValue.Target>
-                                                                                    <ui:GetValue.Value>
-                                                                                      <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
-                                                                                    </ui:GetValue.Value>
+                                                                                  <Assign DisplayName="Guardar Numero exterior" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                                                    <Assign.To>
+                                                                                      <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
+                                                                                    </Assign.To>
+                                                                                    <Assign.Value>
+                                                                                      <InArgument x:TypeArguments="ui:GenericValue">[cliente(7).ToString+" "+VariableExtractora]</InArgument>
+                                                                                    </Assign.Value>
                                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                                  </ui:GetValue>
+                                                                                  </Assign>
                                                                                   <FlowStep.Next>
-                                                                                    <FlowStep x:Name="__ReferenceID6">
+                                                                                    <FlowStep x:Name="__ReferenceID5">
                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                          <av:Point x:Key="ShapeLocation">9,750</av:Point>
-                                                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                                          <av:PointCollection x:Key="ConnectorLocation">140,810 140,844.5</av:PointCollection>
+                                                                                          <av:Point x:Key="ShapeLocation">40,674.02</av:Point>
+                                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                          <av:PointCollection x:Key="ConnectorLocation">240,699.52 460,699.52 460,734.5</av:PointCollection>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                      <Assign DisplayName="Guardar pais" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
-                                                                                        <Assign.To>
-                                                                                          <OutArgument x:TypeArguments="x:Object">[Cliente(3)]</OutArgument>
-                                                                                        </Assign.To>
-                                                                                        <Assign.Value>
-                                                                                          <InArgument x:TypeArguments="x:Object">[VariableExtractora]</InArgument>
-                                                                                        </Assign.Value>
+                                                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer pais" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_11">
+                                                                                        <ui:GetValue.Target>
+                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bfe5683c1595c231ed8c248afbbb64c8" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='2' role='editable text' /&gt;">
+                                                                                            <ui:Target.TimeoutMS>
+                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                            </ui:Target.TimeoutMS>
+                                                                                            <ui:Target.WaitForReady>
+                                                                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                            </ui:Target.WaitForReady>
+                                                                                          </ui:Target>
+                                                                                        </ui:GetValue.Target>
+                                                                                        <ui:GetValue.Value>
+                                                                                          <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
+                                                                                        </ui:GetValue.Value>
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                           </scg:Dictionary>
                                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                                      </Assign>
+                                                                                      </ui:GetValue>
                                                                                       <FlowStep.Next>
-                                                                                        <FlowStep x:Name="__ReferenceID7">
+                                                                                        <FlowStep x:Name="__ReferenceID16">
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                              <av:Point x:Key="ShapeLocation">40,844.5</av:Point>
+                                                                                              <av:Point x:Key="ShapeLocation">360,734.5</av:Point>
                                                                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                                              <av:PointCollection x:Key="ConnectorLocation">140,895.5 140,930</av:PointCollection>
+                                                                                              <av:PointCollection x:Key="ConnectorLocation">360,760 330,760 330,780 271,780</av:PointCollection>
                                                                                             </scg:Dictionary>
                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer estado" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_12">
-                                                                                            <ui:GetValue.Target>
-                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="cc0245c73791c5241a8ff7a103585779" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='3' role='editable text' /&gt;">
-                                                                                                <ui:Target.TimeoutMS>
-                                                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                                                </ui:Target.TimeoutMS>
-                                                                                                <ui:Target.WaitForReady>
-                                                                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                                                </ui:Target.WaitForReady>
-                                                                                              </ui:Target>
-                                                                                            </ui:GetValue.Target>
-                                                                                            <ui:GetValue.Value>
-                                                                                              <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
-                                                                                            </ui:GetValue.Value>
-                                                                                            <sap:WorkflowViewStateService.ViewState>
-                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                              </scg:Dictionary>
-                                                                                            </sap:WorkflowViewStateService.ViewState>
-                                                                                          </ui:GetValue>
+                                                                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar pais de residencia" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                                                            <ui:InvokeWorkflowFile.Arguments>
+                                                                                              <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                                                              <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                                                            </ui:InvokeWorkflowFile.Arguments>
+                                                                                          </ui:InvokeWorkflowFile>
                                                                                           <FlowStep.Next>
-                                                                                            <FlowStep x:Name="__ReferenceID8">
+                                                                                            <FlowStep x:Name="__ReferenceID6">
                                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                  <av:Point x:Key="ShapeLocation">9,930</av:Point>
+                                                                                                  <av:Point x:Key="ShapeLocation">9,750</av:Point>
                                                                                                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                                                  <av:PointCollection x:Key="ConnectorLocation">140,990 140,1024.5</av:PointCollection>
+                                                                                                  <av:PointCollection x:Key="ConnectorLocation">140,810 140,844.5</av:PointCollection>
                                                                                                 </scg:Dictionary>
                                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                                              <Assign DisplayName="Guardar Estado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                                                              <Assign DisplayName="Guardar pais" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                                                                                                 <Assign.To>
-                                                                                                  <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
+                                                                                                  <OutArgument x:TypeArguments="x:Object">[Cliente(3)]</OutArgument>
                                                                                                 </Assign.To>
                                                                                                 <Assign.Value>
-                                                                                                  <InArgument x:TypeArguments="ui:GenericValue">[cliente(7).ToString+" "+VariableExtractora]</InArgument>
+                                                                                                  <InArgument x:TypeArguments="x:Object">[VariableAsignacion]</InArgument>
                                                                                                 </Assign.Value>
                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -890,17 +893,17 @@
                                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                               </Assign>
                                                                                               <FlowStep.Next>
-                                                                                                <FlowStep x:Name="__ReferenceID9">
+                                                                                                <FlowStep x:Name="__ReferenceID7">
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                      <av:Point x:Key="ShapeLocation">40,1024.5</av:Point>
+                                                                                                      <av:Point x:Key="ShapeLocation">40,844.5</av:Point>
                                                                                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                                                      <av:PointCollection x:Key="ConnectorLocation">140,1075.5 140,1100</av:PointCollection>
+                                                                                                      <av:PointCollection x:Key="ConnectorLocation">240,870 350,870</av:PointCollection>
                                                                                                     </scg:Dictionary>
                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer Municipio" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_13">
+                                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer estado" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_12">
                                                                                                     <ui:GetValue.Target>
-                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b1a1cdc7f711df493e15a1f90e9401d6" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='5' role='editable text' /&gt;">
+                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="cc0245c73791c5241a8ff7a103585779" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='3' role='editable text' /&gt;">
                                                                                                         <ui:Target.TimeoutMS>
                                                                                                           <InArgument x:TypeArguments="x:Int32" />
                                                                                                         </ui:Target.TimeoutMS>
@@ -920,125 +923,103 @@
                                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                                   </ui:GetValue>
                                                                                                   <FlowStep.Next>
-                                                                                                    <FlowStep x:Name="__ReferenceID10">
+                                                                                                    <FlowStep x:Name="__ReferenceID17">
                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                          <av:Point x:Key="ShapeLocation">9,1100</av:Point>
-                                                                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                                                          <av:PointCollection x:Key="ConnectorLocation">140,1160 140,1184.5</av:PointCollection>
+                                                                                                          <av:Point x:Key="ShapeLocation">350,844.5</av:Point>
+                                                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                          <av:PointCollection x:Key="ConnectorLocation">450,895.5 450,960 271,960</av:PointCollection>
                                                                                                         </scg:Dictionary>
                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <Assign DisplayName="Guardar Municipio" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                                                                                                        <Assign.To>
-                                                                                                          <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
-                                                                                                        </Assign.To>
-                                                                                                        <Assign.Value>
-                                                                                                          <InArgument x:TypeArguments="ui:GenericValue">[cliente(7).ToString+" "+VariableExtractora]</InArgument>
-                                                                                                        </Assign.Value>
-                                                                                                        <sap:WorkflowViewStateService.ViewState>
-                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                                          </scg:Dictionary>
-                                                                                                        </sap:WorkflowViewStateService.ViewState>
-                                                                                                      </Assign>
+                                                                                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar el estado" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                                                                        <ui:InvokeWorkflowFile.Arguments>
+                                                                                                          <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                                                                          <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                                                                        </ui:InvokeWorkflowFile.Arguments>
+                                                                                                      </ui:InvokeWorkflowFile>
                                                                                                       <FlowStep.Next>
-                                                                                                        <FlowStep x:Name="__ReferenceID11">
+                                                                                                        <FlowStep x:Name="__ReferenceID8">
                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                              <av:Point x:Key="ShapeLocation">40,1184.5</av:Point>
-                                                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                                                              <av:PointCollection x:Key="ConnectorLocation">140,1235.5 140,1250</av:PointCollection>
+                                                                                                              <av:Point x:Key="ShapeLocation">9,930</av:Point>
+                                                                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                              <av:PointCollection x:Key="ConnectorLocation">140,990 140,1024.5</av:PointCollection>
                                                                                                             </scg:Dictionary>
                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer Colonia" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_14">
-                                                                                                            <ui:GetValue.Target>
-                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5315903d73390182aa6ab838aba15584" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='6' role='editable text' /&gt;">
-                                                                                                                <ui:Target.TimeoutMS>
-                                                                                                                  <InArgument x:TypeArguments="x:Int32" />
-                                                                                                                </ui:Target.TimeoutMS>
-                                                                                                                <ui:Target.WaitForReady>
-                                                                                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                                                                </ui:Target.WaitForReady>
-                                                                                                              </ui:Target>
-                                                                                                            </ui:GetValue.Target>
-                                                                                                            <ui:GetValue.Value>
-                                                                                                              <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
-                                                                                                            </ui:GetValue.Value>
+                                                                                                          <Assign DisplayName="Guardar Estado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                                                                            <Assign.To>
+                                                                                                              <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
+                                                                                                            </Assign.To>
+                                                                                                            <Assign.Value>
+                                                                                                              <InArgument x:TypeArguments="x:Object">[cliente(7).ToString+" "+VariableAsignacion]</InArgument>
+                                                                                                            </Assign.Value>
                                                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                                               </scg:Dictionary>
                                                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                                                          </ui:GetValue>
+                                                                                                          </Assign>
                                                                                                           <FlowStep.Next>
-                                                                                                            <FlowStep x:Name="__ReferenceID12">
+                                                                                                            <FlowStep x:Name="__ReferenceID9">
                                                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                  <av:Point x:Key="ShapeLocation">9,1250</av:Point>
-                                                                                                                  <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                                                                                  <av:PointCollection x:Key="ConnectorLocation">140,1310 140,1344.5</av:PointCollection>
+                                                                                                                  <av:Point x:Key="ShapeLocation">40,1024.5</av:Point>
+                                                                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                  <av:PointCollection x:Key="ConnectorLocation">240,1050 350,1050</av:PointCollection>
                                                                                                                 </scg:Dictionary>
                                                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                                                              <Assign DisplayName="Guardar Colonia" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                                                                                                <Assign.To>
-                                                                                                                  <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
-                                                                                                                </Assign.To>
-                                                                                                                <Assign.Value>
-                                                                                                                  <InArgument x:TypeArguments="ui:GenericValue">[cliente(7).ToString+" "+VariableExtractora]</InArgument>
-                                                                                                                </Assign.Value>
+                                                                                                              <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer Municipio" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_13">
+                                                                                                                <ui:GetValue.Target>
+                                                                                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b1a1cdc7f711df493e15a1f90e9401d6" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='5' role='editable text' /&gt;">
+                                                                                                                    <ui:Target.TimeoutMS>
+                                                                                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                    </ui:Target.TimeoutMS>
+                                                                                                                    <ui:Target.WaitForReady>
+                                                                                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                    </ui:Target.WaitForReady>
+                                                                                                                  </ui:Target>
+                                                                                                                </ui:GetValue.Target>
+                                                                                                                <ui:GetValue.Value>
+                                                                                                                  <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
+                                                                                                                </ui:GetValue.Value>
                                                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                                                                   </scg:Dictionary>
                                                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                                              </Assign>
+                                                                                                              </ui:GetValue>
                                                                                                               <FlowStep.Next>
-                                                                                                                <FlowStep x:Name="__ReferenceID13">
+                                                                                                                <FlowStep x:Name="__ReferenceID18">
                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                      <av:Point x:Key="ShapeLocation">40,1344.5</av:Point>
+                                                                                                                      <av:Point x:Key="ShapeLocation">350,1024.5</av:Point>
                                                                                                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">140,1395.5 140,1450</av:PointCollection>
+                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">450,1075.5 450,1130 271,1130</av:PointCollection>
                                                                                                                     </scg:Dictionary>
                                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer Codigopostal" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_15">
-                                                                                                                    <ui:GetValue.Target>
-                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2551edc31a16f2bca54597bb6545a54b" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='7' role='editable text' /&gt;">
-                                                                                                                        <ui:Target.TimeoutMS>
-                                                                                                                          <InArgument x:TypeArguments="x:Int32" />
-                                                                                                                        </ui:Target.TimeoutMS>
-                                                                                                                        <ui:Target.WaitForReady>
-                                                                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                                                                        </ui:Target.WaitForReady>
-                                                                                                                      </ui:Target>
-                                                                                                                    </ui:GetValue.Target>
-                                                                                                                    <ui:GetValue.Value>
-                                                                                                                      <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
-                                                                                                                    </ui:GetValue.Value>
-                                                                                                                    <sap:WorkflowViewStateService.ViewState>
-                                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                                                                      </scg:Dictionary>
-                                                                                                                    </sap:WorkflowViewStateService.ViewState>
-                                                                                                                  </ui:GetValue>
+                                                                                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar el municipio" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                                                                                    <ui:InvokeWorkflowFile.Arguments>
+                                                                                                                      <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                                                                                      <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                                                                                    </ui:InvokeWorkflowFile.Arguments>
+                                                                                                                  </ui:InvokeWorkflowFile>
                                                                                                                   <FlowStep.Next>
-                                                                                                                    <FlowStep x:Name="__ReferenceID14">
+                                                                                                                    <FlowStep x:Name="__ReferenceID10">
                                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                                          <av:Point x:Key="ShapeLocation">9,1450</av:Point>
+                                                                                                                          <av:Point x:Key="ShapeLocation">9,1100</av:Point>
                                                                                                                           <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">140,1160 140,1184.5</av:PointCollection>
                                                                                                                         </scg:Dictionary>
                                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                                      <Assign DisplayName="Guardar codigo postal" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                                                                                      <Assign DisplayName="Guardar Municipio" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                                                                                                                         <Assign.To>
-                                                                                                                          <OutArgument x:TypeArguments="x:Object">[Cliente(9)]</OutArgument>
+                                                                                                                          <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
                                                                                                                         </Assign.To>
                                                                                                                         <Assign.Value>
-                                                                                                                          <InArgument x:TypeArguments="x:Object">[VariableExtractora]</InArgument>
+                                                                                                                          <InArgument x:TypeArguments="x:Object">[cliente(7).ToString+" "+VariableAsignacion]</InArgument>
                                                                                                                         </Assign.Value>
                                                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1047,6 +1028,136 @@
                                                                                                                           </scg:Dictionary>
                                                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                                                       </Assign>
+                                                                                                                      <FlowStep.Next>
+                                                                                                                        <FlowStep x:Name="__ReferenceID11">
+                                                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                              <av:Point x:Key="ShapeLocation">40,1184.5</av:Point>
+                                                                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                              <av:PointCollection x:Key="ConnectorLocation">240,1210 270,1210 270,1220 340,1220</av:PointCollection>
+                                                                                                                            </scg:Dictionary>
+                                                                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                                                                          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer Colonia" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_14">
+                                                                                                                            <ui:GetValue.Target>
+                                                                                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5315903d73390182aa6ab838aba15584" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='6' role='editable text' /&gt;">
+                                                                                                                                <ui:Target.TimeoutMS>
+                                                                                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                </ui:Target.TimeoutMS>
+                                                                                                                                <ui:Target.WaitForReady>
+                                                                                                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                </ui:Target.WaitForReady>
+                                                                                                                              </ui:Target>
+                                                                                                                            </ui:GetValue.Target>
+                                                                                                                            <ui:GetValue.Value>
+                                                                                                                              <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
+                                                                                                                            </ui:GetValue.Value>
+                                                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                                              </scg:Dictionary>
+                                                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                                                          </ui:GetValue>
+                                                                                                                          <FlowStep.Next>
+                                                                                                                            <FlowStep x:Name="__ReferenceID19">
+                                                                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                  <av:Point x:Key="ShapeLocation">340,1194.5</av:Point>
+                                                                                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                                  <av:PointCollection x:Key="ConnectorLocation">440,1245.5 440,1280 271,1280</av:PointCollection>
+                                                                                                                                </scg:Dictionary>
+                                                                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar la colonia" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                                                                                                <ui:InvokeWorkflowFile.Arguments>
+                                                                                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                                                                                                  <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                                                                                                </ui:InvokeWorkflowFile.Arguments>
+                                                                                                                              </ui:InvokeWorkflowFile>
+                                                                                                                              <FlowStep.Next>
+                                                                                                                                <FlowStep x:Name="__ReferenceID12">
+                                                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                      <av:Point x:Key="ShapeLocation">9,1250</av:Point>
+                                                                                                                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">140,1310 140,1344.5</av:PointCollection>
+                                                                                                                                    </scg:Dictionary>
+                                                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                  <Assign DisplayName="Guardar Colonia" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                                                                                                    <Assign.To>
+                                                                                                                                      <OutArgument x:TypeArguments="x:Object">[Cliente(7)]</OutArgument>
+                                                                                                                                    </Assign.To>
+                                                                                                                                    <Assign.Value>
+                                                                                                                                      <InArgument x:TypeArguments="x:Object">[cliente(7).ToString+" "+VariableAsignacion]</InArgument>
+                                                                                                                                    </Assign.Value>
+                                                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                                                      </scg:Dictionary>
+                                                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                  </Assign>
+                                                                                                                                  <FlowStep.Next>
+                                                                                                                                    <FlowStep x:Name="__ReferenceID13">
+                                                                                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                          <av:Point x:Key="ShapeLocation">40,1344.5</av:Point>
+                                                                                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">140,1395.5 140,1450</av:PointCollection>
+                                                                                                                                        </scg:Dictionary>
+                                                                                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer Codigopostal" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetValue_15">
+                                                                                                                                        <ui:GetValue.Target>
+                                                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2551edc31a16f2bca54597bb6545a54b" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl automationid='0226b2c7-412e-4e8d-b063-0b469012524b' /&gt;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&lt;ctrl idx='1' name='Gbm.AccountManagement.Client.ViewModels.Shared.AddressViewModel' role='list item' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='7' role='editable text' /&gt;">
+                                                                                                                                            <ui:Target.TimeoutMS>
+                                                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                                            </ui:Target.TimeoutMS>
+                                                                                                                                            <ui:Target.WaitForReady>
+                                                                                                                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                                            </ui:Target.WaitForReady>
+                                                                                                                                          </ui:Target>
+                                                                                                                                        </ui:GetValue.Target>
+                                                                                                                                        <ui:GetValue.Value>
+                                                                                                                                          <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
+                                                                                                                                        </ui:GetValue.Value>
+                                                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                                                          </scg:Dictionary>
+                                                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                      </ui:GetValue>
+                                                                                                                                      <FlowStep.Next>
+                                                                                                                                        <FlowStep x:Name="__ReferenceID14">
+                                                                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                              <av:Point x:Key="ShapeLocation">9,1450</av:Point>
+                                                                                                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                                                                                                            </scg:Dictionary>
+                                                                                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                          <Assign DisplayName="Guardar codigo postal" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                                                                                                            <Assign.To>
+                                                                                                                                              <OutArgument x:TypeArguments="x:Object">[Cliente(9)]</OutArgument>
+                                                                                                                                            </Assign.To>
+                                                                                                                                            <Assign.Value>
+                                                                                                                                              <InArgument x:TypeArguments="x:Object">[VariableExtractora]</InArgument>
+                                                                                                                                            </Assign.Value>
+                                                                                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                                                                                              </scg:Dictionary>
+                                                                                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                                                                                          </Assign>
+                                                                                                                                        </FlowStep>
+                                                                                                                                      </FlowStep.Next>
+                                                                                                                                    </FlowStep>
+                                                                                                                                  </FlowStep.Next>
+                                                                                                                                </FlowStep>
+                                                                                                                              </FlowStep.Next>
+                                                                                                                            </FlowStep>
+                                                                                                                          </FlowStep.Next>
+                                                                                                                        </FlowStep>
+                                                                                                                      </FlowStep.Next>
                                                                                                                     </FlowStep>
                                                                                                                   </FlowStep.Next>
                                                                                                                 </FlowStep>
@@ -1093,9 +1204,14 @@
                                                         <x:Reference>__ReferenceID12</x:Reference>
                                                         <x:Reference>__ReferenceID13</x:Reference>
                                                         <x:Reference>__ReferenceID14</x:Reference>
+                                                        <x:Reference>__ReferenceID15</x:Reference>
+                                                        <x:Reference>__ReferenceID16</x:Reference>
+                                                        <x:Reference>__ReferenceID17</x:Reference>
+                                                        <x:Reference>__ReferenceID18</x:Reference>
+                                                        <x:Reference>__ReferenceID19</x:Reference>
                                                       </Flowchart>
                                                       <FlowStep.Next>
-                                                        <FlowStep x:Name="__ReferenceID27">
+                                                        <FlowStep x:Name="__ReferenceID32">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">350,1327</av:Point>
@@ -1106,6 +1222,7 @@
                                                           <Sequence DisplayName="Obtener datos especificos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                                             <Sequence.Variables>
                                                               <Variable x:TypeArguments="ui:GenericValue" Name="VariableExtractora" />
+                                                              <Variable x:TypeArguments="x:String" Name="VariableAsignacion" />
                                                             </Sequence.Variables>
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1253,12 +1370,18 @@
                                                                 <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
                                                               </ui:GetValue.Value>
                                                             </ui:GetValue>
+                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar Nombre banco" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+                                                              <ui:InvokeWorkflowFile.Arguments>
+                                                                <InArgument x:TypeArguments="x:String" x:Key="in_String">[VariableExtractora]</InArgument>
+                                                                <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[VariableAsignacion]</OutArgument>
+                                                              </ui:InvokeWorkflowFile.Arguments>
+                                                            </ui:InvokeWorkflowFile>
                                                             <Assign DisplayName="Guardar el nombre del banco" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:Object">[Cliente(11)]</OutArgument>
                                                               </Assign.To>
                                                               <Assign.Value>
-                                                                <InArgument x:TypeArguments="x:Object">[VariableExtractora]</InArgument>
+                                                                <InArgument x:TypeArguments="x:Object">[VariableAsignacion]</InArgument>
                                                               </Assign.Value>
                                                             </Assign>
                                                             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer numero de cuenta" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_20">
@@ -1302,7 +1425,7 @@
                                                             </Assign>
                                                           </Sequence>
                                                           <FlowStep.Next>
-                                                            <FlowStep x:Name="__ReferenceID28">
+                                                            <FlowStep x:Name="__ReferenceID33">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <av:Point x:Key="ShapeLocation">319,1430</av:Point>
@@ -1341,7 +1464,7 @@
                             </FlowStep>
                           </FlowDecision.True>
                           <FlowDecision.False>
-                            <FlowStep x:Name="__ReferenceID30">
+                            <FlowStep x:Name="__ReferenceID35">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">420,487</av:Point>
@@ -1394,7 +1517,7 @@
                                 </ui:SendHotkey>
                               </Sequence>
                               <FlowStep.Next>
-                                <x:Reference>__ReferenceID16</x:Reference>
+                                <x:Reference>__ReferenceID21</x:Reference>
                               </FlowStep.Next>
                             </FlowStep>
                           </FlowDecision.False>
@@ -1403,7 +1526,7 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowStep x:Name="__ReferenceID19">
+                    <FlowStep x:Name="__ReferenceID24">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">360,304.5</av:Point>
@@ -1439,28 +1562,28 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:Click>
                       <FlowStep.Next>
-                        <x:Reference>__ReferenceID17</x:Reference>
+                        <x:Reference>__ReferenceID22</x:Reference>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowDecision.False>
                 </FlowDecision>
               </FlowStep.Next>
             </FlowStep>
-            <x:Reference>__ReferenceID18</x:Reference>
-            <x:Reference>__ReferenceID17</x:Reference>
-            <x:Reference>__ReferenceID19</x:Reference>
-            <x:Reference>__ReferenceID20</x:Reference>
-            <x:Reference>__ReferenceID21</x:Reference>
-            <x:Reference>__ReferenceID22</x:Reference>
             <x:Reference>__ReferenceID23</x:Reference>
-            <x:Reference>__ReferenceID16</x:Reference>
+            <x:Reference>__ReferenceID22</x:Reference>
             <x:Reference>__ReferenceID24</x:Reference>
             <x:Reference>__ReferenceID25</x:Reference>
             <x:Reference>__ReferenceID26</x:Reference>
             <x:Reference>__ReferenceID27</x:Reference>
             <x:Reference>__ReferenceID28</x:Reference>
+            <x:Reference>__ReferenceID21</x:Reference>
             <x:Reference>__ReferenceID29</x:Reference>
             <x:Reference>__ReferenceID30</x:Reference>
+            <x:Reference>__ReferenceID31</x:Reference>
+            <x:Reference>__ReferenceID32</x:Reference>
+            <x:Reference>__ReferenceID33</x:Reference>
+            <x:Reference>__ReferenceID34</x:Reference>
+            <x:Reference>__ReferenceID35</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:WindowScope.Body>
