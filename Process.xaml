@@ -276,7 +276,7 @@
                                 <av:Size x:Key="ShapeSize">200,51</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="722,1305" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[StringListSolicitudActualizacion]">
+                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[StringListSolicitudActualizacion]">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="x:String">
                                   <ActivityAction.Argument>
@@ -413,7 +413,7 @@
                                                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidacionGeneral workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\ValidacionGeneral.xaml">
+                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidacionGeneral workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\ValidacionGeneral.xaml">
                                                                 <ui:InvokeWorkflowFile.Arguments>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[NumeroContrato]</InArgument>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[DataClienteBusqueda(0).ToString]</InArgument>
@@ -525,6 +525,24 @@
       <x:Reference>__ReferenceID17</x:Reference>
       <x:Reference>__ReferenceID18</x:Reference>
       <x:Reference>__ReferenceID19</x:Reference>
+      <FlowStep>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">0,994.02</av:Point>
+            <av:Size x:Key="ShapeSize">200,51</av:Size>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainCotejarDocumentos workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="AnalisisDocumentos\MainCotejarDocumentos.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+      </FlowStep>
     </Flowchart>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainCotejarDocumentos workflow" sap:VirtualizedContainerService.HintSize="752,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\MainCotejarDocumentos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
