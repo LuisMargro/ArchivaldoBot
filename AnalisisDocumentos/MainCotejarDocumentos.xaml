@@ -1,6 +1,5 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MainAnalisisDocumentos" this:MainAnalisisDocumentos.in_PathDocumentos="C:\Users\88891\Documents\UiPath\Archivaldo\Documentos\" this:MainAnalisisDocumentos.in_Nombre="[&quot;Bernabe adame garcia&quot;.ToLower]" this:MainAnalisisDocumentos.in_Curp="[&quot;gaab9&quot;.ToLower]" this:MainAnalisisDocumentos.in_FaltanDocumentos="Faltan los siguientes documentos:" this:MainAnalisisDocumentos.in_DoctosInvalidos="Encontramos problemas con los siguientes documentos:" this:MainAnalisisDocumentos.in_CambioDireccion="El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?" this:MainAnalisisDocumentos.in_Parentesco="El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?" this:MainAnalisisDocumentos.in_DireccionFiscal="[&quot;ricardo soto&quot;.ToLower]" this:MainAnalisisDocumentos.in_DireccionResidencial="[&quot;NICOLAS BRAVO 15 VICENTE GUERRERO CUAUTLA MORELOS&quot;.ToLower]" this:MainAnalisisDocumentos.in_LayoutCorreo="Estimado {cliente}, un gusto poder saludale.&#xA;&#xA;&#xA;El motivo de este correo es para comentarle que  tuvimos algunos problemas con la documentacion que envio, dichos problemas se enlistan a continuación." xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MainAnalisisDocumentos" this:MainAnalisisDocumentos.in_Nombre="[&quot;Bernabe adame garcia&quot;.ToLower]" this:MainAnalisisDocumentos.in_Curp="[&quot;gaab9&quot;.ToLower]" this:MainAnalisisDocumentos.in_FaltanDocumentos="Faltan los siguientes documentos:" this:MainAnalisisDocumentos.in_DoctosInvalidos="Encontramos problemas con los siguientes documentos:" this:MainAnalisisDocumentos.in_CambioDireccion="El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?" this:MainAnalisisDocumentos.in_Parentesco="El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?" this:MainAnalisisDocumentos.in_DireccionFiscal="[&quot;ricardo soto&quot;.ToLower]" this:MainAnalisisDocumentos.in_DireccionResidencial="[&quot;NICOLAS BRAVO 15 VICENTE GUERRERO CUAUTLA MORELOS&quot;.ToLower]" this:MainAnalisisDocumentos.in_LayoutCorreo="Estimado {cliente}, un gusto poder saludale.&#xA;&#xA;&#xA;El motivo de este correo es para comentarle que  tuvimos algunos problemas con la documentacion que envio, dichos problemas se enlistan a continuación." xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_PathDocumentos" Type="InArgument(x:String)" />
     <x:Property Name="in_Nombre" Type="InArgument(x:String)" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
     <x:Property Name="in_FaltanDocumentos" Type="InArgument(x:String)" />
@@ -11,7 +10,7 @@
     <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
     <x:Property Name="in_LayoutCorreo" Type="InArgument(x:String)" />
     <x:Property Name="in_ClienteLog" Type="InArgument(sd:DataRow)" />
-    <x:Property Name="in_ArrayDocumentos" Type="InArgument(s:String[])" />
+    <x:Property Name="in_ArrayDocumentos" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="in_NumeroCuenta" Type="InArgument(x:String)" />
     <x:Property Name="in_PathBancos" Type="InArgument(x:String)" />
   </x:Members>
@@ -46,6 +45,7 @@
       <x:String>UiPath.Vision.OCR</x:String>
       <x:String>System.Text</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -166,7 +166,7 @@
                         <av:PointCollection x:Key="ConnectorLocation">290,185.5 290,226.5</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invocar Validar documentos correctos" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidarDocumentosCorrectos.xaml">
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invocar Validar documentos correctos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidarDocumentosCorrectos.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[StringDocumento]</InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">[in_Nombre]</InArgument>

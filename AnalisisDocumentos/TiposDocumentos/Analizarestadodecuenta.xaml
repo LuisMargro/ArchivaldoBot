@@ -117,7 +117,7 @@
           <OutArgument x:TypeArguments="x:Object">[io_Cliente(4)]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:Object">["Validado"]</InArgument>
+          <InArgument x:TypeArguments="x:Object">["validado"]</InArgument>
         </Assign.Value>
         <sap:WorkflowViewStateService.ViewState>
           <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -247,7 +247,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadRange AddHeaders="True" DataTable="[BancosDt]" DisplayName="leer bd de bancos" sap:VirtualizedContainerService.HintSize="576,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Bd">
+              <ui:ExcelReadRange AddHeaders="True" DataTable="[BancosDt]" DisplayName="leer bd de bancos" sap:VirtualizedContainerService.HintSize="576,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Hoja1">
                 <ui:ExcelReadRange.Range>
                   <InArgument x:TypeArguments="x:String">
                     <Literal x:TypeArguments="x:String" Value="" />
