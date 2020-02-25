@@ -1,8 +1,8 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Extraerdoctos" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="correo" Type="InArgument(sd:DataRow)" />
-    <x:Property Name="CorreosNuevosCliente" Type="InOutArgument(x:String)" />
     <x:Property Name="in_RutaDocumentos" Type="InArgument(x:String)" />
+    <x:Property Name="in_Correo" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="io_CorreosNuevosCliente" Type="InOutArgument(x:String)" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>654,961</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -70,7 +70,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,197.5 290,197.5 290,224.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Se le da tiempo antes para esperar a la carga del sistea" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click en correo" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Se le da tiempo antes para esperar a la carga del sistema" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click en correo" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
@@ -82,7 +82,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="21ed61bc8c04742ced0e11fb9a88e225" Selector="[&quot;&lt;webctrl aaname='&quot;+correo(0).ToString+&quot;' parentid='brandBand_*' tag='A' class='slds-truncate outputLookupLink slds-truncate*forceOutputLookup'/&gt;&quot;]">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="21ed61bc8c04742ced0e11fb9a88e225" Selector="[&quot;&lt;webctrl aaname='&quot;+in_Correo(0).ToString+&quot;' parentid='brandBand_*' tag='A' class='slds-truncate outputLookupLink slds-truncate*forceOutputLookup'/&gt;&quot;]">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -152,11 +152,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">10,424.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">110,475.5 110,504.5</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,93</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">110,517.5 110,534.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click Abrir todos los documentos activos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Se le da tiempo antes para esperar a la carga del sistema" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click Abrir todos los documentos activos" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:Click.CursorPosition>
                           <ui:CursorPosition Position="Center">
                             <ui:CursorPosition.OffsetX>
@@ -180,6 +180,7 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:Click>
@@ -187,9 +188,9 @@
                         <FlowStep x:Name="__ReferenceID14">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">10,504.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">10,534.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">110,555.5 110,604.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">110,585.5 110,604.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[DTDocumentos]" DisplayName="Extraer tabla de documentos" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='ArchivosAdjuntos' attr='text'&gt;&lt;webctrl tag='div' class='forceContentFileTitle'/&gt;&lt;webctrl tag='div' class='slds-truncate'/&gt;&lt;webctrl tag='span' class='itemTitle desktop outputTextOverride uiOutputText'/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExtractData_5" MaxNumberOfResults="100" SimulateClick="True">
@@ -457,10 +458,10 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Assign DisplayName="Concatenar clientes" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                                     <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[CorreosNuevosCliente]</OutArgument>
+                                      <OutArgument x:TypeArguments="x:String">[io_CorreosNuevosCliente]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[CorreosNuevosCliente+correo(1).ToString.trim+";"]</InArgument>
+                                      <InArgument x:TypeArguments="x:String">[io_CorreosNuevosCliente+in_Correo(1).ToString.trim+";"]</InArgument>
                                     </Assign.Value>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">

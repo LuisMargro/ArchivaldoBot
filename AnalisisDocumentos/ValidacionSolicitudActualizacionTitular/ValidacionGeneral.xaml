@@ -5,19 +5,19 @@
     <x:Property Name="in_FechaNacimiento" Type="InArgument(x:String)" />
     <x:Property Name="in_Nacionalidad" Type="InArgument(x:String)" />
     <x:Property Name="in_Email" Type="InArgument(x:String)" />
-    <x:Property Name="out_Curp" Type="OutArgument(x:String)" />
-    <x:Property Name="out_Rfc" Type="OutArgument(x:String)" />
     <x:Property Name="out_DomicilioResidencial" Type="OutArgument(x:String)" />
     <x:Property Name="out_DomicilioFiscal" Type="OutArgument(x:String)" />
     <x:Property Name="in_NombreBanco" Type="InArgument(x:String)" />
     <x:Property Name="in_CuentaClabe" Type="InArgument(x:String)" />
     <x:Property Name="out_Registro" Type="OutArgument(sd:DataRow)" />
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
+    <x:Property Name="in_Curp" Type="InArgument(x:String)" />
+    <x:Property Name="in_Rfc" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>789,1502</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>789,1542</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidarSolicitudActualizacionTitular_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -111,16 +111,16 @@
               <av:PointCollection x:Key="ConnectorLocation">300,705.5 300,745.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosGenerales workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosGenerales.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosGenerales workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosGenerales.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[in_NombreCompleto]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_FechaNacimiento">[in_FechaNacimiento]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_Nacionalidad">[in_Nacionalidad]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_Email">[in_Email]</InArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_Curp">[out_Curp]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_Rfc">[out_Rfc]</OutArgument>
               <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
               <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[in_Curp]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[in_Rfc]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <FlowStep.Next>
