@@ -39,7 +39,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="21">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -241,7 +241,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">246.5,206.5</av:Point>
                       <av:Size x:Key="ShapeSize">106,87</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">246.5,250 110,250 110,257</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">246.5,250 110,250 110,267</av:PointCollection>
                       <av:PointCollection x:Key="FalseConnector">353.5,250 590,250 590,1114.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -249,12 +249,15 @@
                     <FlowStep x:Name="__ReferenceID7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">10,257</av:Point>
+                          <av:Point x:Key="ShapeLocation">10,267</av:Point>
                           <av:Size x:Key="ShapeSize">200,66</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">110,323 110,354.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">110,333 110,364.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="376,559" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="prueb" />
+                        </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -288,6 +291,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:Click>
+                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
                         <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[CorreosDt]" DisplayName="Extraer tabla de correos" ExtractMetadata="&lt;extract&gt;&lt;row exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot;/&gt;&lt;/row&gt;&lt;column exact='1' name='Asunto' attr='text'&gt;&lt;webctrl tag='tr'/&gt;&lt;webctrl tag='th' class='slds-cell-edit cellContainer'/&gt;&lt;webctrl tag='span' class='slds-grid slds-grid--align-spread'/&gt;&lt;webctrl tag='a'/&gt;&lt;/column&gt;&lt;column exact=&quot;1&quot; name=&quot;Fecha&quot; attr=&quot;text&quot;&gt;&lt;webctrl tag=&quot;tr&quot;/&gt;&lt;webctrl tag=&quot;td&quot;/&gt;&lt;webctrl tag=&quot;span&quot; class=&quot;slds-grid slds-grid--align-spread&quot;/&gt;&lt;webctrl tag=&quot;span&quot; class=&quot;slds-truncate uiOutputDateTime&quot;/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9994de94d68240af0f2628025ebeeede" Selector="&lt;webctrl tag='TABLE' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' /&gt;&lt;webctrl tag='TBODY' /&gt;" WaitForReady="COMPLETE">
@@ -302,14 +306,16 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ExtractData>
+                        <ui:OutputDataTable DataTable="[CorreosDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[prueb]" />
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[prueb]" />
                       </Sequence>
                       <FlowStep.Next>
                         <FlowStep x:Name="__ReferenceID5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">10,354.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">10,364.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">210,380 280,380 280,416.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">210,390 280,390 280,416.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar al cliente en el log" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathLog]">

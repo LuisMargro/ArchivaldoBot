@@ -390,7 +390,7 @@
         </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID14" Condition="[in_StringDocumento.Contains(&quot;tarjeta&quot;)]" DisplayName="¿Edo. cuenta tarjeta?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
+    <FlowDecision x:Name="__ReferenceID14" Condition="False" DisplayName="¿Edo. cuenta tarjeta?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

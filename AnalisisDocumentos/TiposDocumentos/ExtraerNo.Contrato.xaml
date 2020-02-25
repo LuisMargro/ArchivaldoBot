@@ -79,7 +79,7 @@
         <OutArgument x:TypeArguments="x:String">[out_NumrtoContrato]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[Tokens(Tokens.Length-1)]</InArgument>
+        <InArgument x:TypeArguments="x:String">[Tokens(Tokens.Length-1).trim]</InArgument>
       </Assign.Value>
     </Assign>
   </Sequence>

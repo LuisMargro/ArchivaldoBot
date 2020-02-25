@@ -173,9 +173,9 @@
                     <ui:InvokeWorkflowFile.Arguments>
                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_pathBDBancos">[in_PathBancos]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_NumeroCuenta">[in_Cuenta]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_PathBDBancos">[in_PathBancos]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </FlowStep>
