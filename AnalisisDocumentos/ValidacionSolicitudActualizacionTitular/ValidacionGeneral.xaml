@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ValidarSolicitudActualizacionTitular" this:ValidarSolicitudActualizacionTitular.in_NumeroContrato="1234" this:ValidarSolicitudActualizacionTitular.in_NombreCompleto="Bernabe Garcia Adame" this:ValidarSolicitudActualizacionTitular.in_FechaNacimiento="29/10/97" this:ValidarSolicitudActualizacionTitular.in_Nacionalidad="Mexico" this:ValidarSolicitudActualizacionTitular.in_Email="bernabe.adame@beeckerco.com" this:ValidarSolicitudActualizacionTitular.in_NombreBanco="banorte" this:ValidarSolicitudActualizacionTitular.in_CuentaClabe="1234" this:ValidarSolicitudActualizacionTitular.in_PathDocumentosCliente="C:\Users\Beecker\Desktop\SOLICITUD DE ACTUALIZACIÓN TITULAR.docx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ValidarSolicitudActualizacionTitular" this:ValidarSolicitudActualizacionTitular.in_NumeroContrato="1234" this:ValidarSolicitudActualizacionTitular.in_NombreCompleto="Bernabe Garcia Adame" this:ValidarSolicitudActualizacionTitular.in_FechaNacimiento="29/10/97" this:ValidarSolicitudActualizacionTitular.in_Nacionalidad="Mexico" this:ValidarSolicitudActualizacionTitular.in_Email="bernabe.adame@beeckerco.com" this:ValidarSolicitudActualizacionTitular.in_NombreBanco="banorte" this:ValidarSolicitudActualizacionTitular.in_CuentaClabe="1234" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_NumeroContrato" Type="InArgument(x:String)" />
     <x:Property Name="in_NombreCompleto" Type="InArgument(x:String)" />
@@ -12,7 +12,7 @@
     <x:Property Name="in_NombreBanco" Type="InArgument(x:String)" />
     <x:Property Name="in_CuentaClabe" Type="InArgument(x:String)" />
     <x:Property Name="out_Registro" Type="OutArgument(sd:DataRow)" />
-    <x:Property Name="in_PathDocumentosCliente" Type="InArgument(x:String)" />
+    <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -72,7 +72,6 @@
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Examina que los campos de el archivo Actualización de contrato sean correctos o que estén llenos.&#xA;Retornanará como argumento de salida una datarow con todos los campos, indicando si son o no son válidos." DisplayName="Validación general" sap:VirtualizedContainerService.HintSize="769,1442" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="TextoDocumento" />
       <Variable x:TypeArguments="s:String[]" Name="Cadenas" />
       <Variable x:TypeArguments="x:Boolean" Name="CpValido" />
       <Variable x:TypeArguments="sd:DataTable" Name="DtRegistro" />
@@ -90,191 +89,150 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID13</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID10">
+    <FlowDecision x:Name="__ReferenceID1" Condition="[Cadenas(7).Contains(in_NumeroContrato)]" DisplayName="¿Número de contrato?" sap:VirtualizedContainerService.HintSize="124,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">200,290</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,341 300,430</av:PointCollection>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <av:Point x:Key="ShapeLocation">238,516.5</av:Point>
+          <av:Size x:Key="ShapeSize">124,87</av:Size>
+          <x:String x:Key="TrueLabel">Si</x:String>
+          <x:String x:Key="FalseLabel">No</x:String>
+          <av:PointCollection x:Key="TrueConnector">238,560 210,560 210,624.5 300,624.5 300,654.5</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">362,560 422,560</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraerTexto workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Utilidades\ExtraerTexto.xaml">
-        <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="in_PathDocumento">[in_PathDocumentosCliente]</InArgument>
-          <OutArgument x:TypeArguments="x:String" x:Key="out_TextoDocumento">[TextoDocumento]</OutArgument>
-        </ui:InvokeWorkflowFile.Arguments>
-      </ui:InvokeWorkflowFile>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID2">
+      <FlowDecision.True>
+        <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">169,430</av:Point>
-              <av:Size x:Key="ShapeSize">262,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">300,490 300,516.5</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">200,654.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,705.5 300,745.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Dividir por salto de línea" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-            <Assign.To>
-              <OutArgument x:TypeArguments="s:String[]">[Cadenas]</OutArgument>
-            </Assign.To>
-            <Assign.Value>
-              <InArgument x:TypeArguments="s:String[]">[TextoDocumento.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries)]</InArgument>
-            </Assign.Value>
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Assign>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosGenerales workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosGenerales.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[in_NombreCompleto]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_FechaNacimiento">[in_FechaNacimiento]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Nacionalidad">[in_Nacionalidad]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Email">[in_Email]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_Curp">[out_Curp]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_Rfc">[out_Rfc]</OutArgument>
+              <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
+              <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID1" Condition="[Cadenas(7).Contains(in_NumeroContrato)]" DisplayName="¿Número de contrato?" sap:VirtualizedContainerService.HintSize="124,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">238,516.5</av:Point>
-                  <av:Size x:Key="ShapeSize">124,87</av:Size>
-                  <x:String x:Key="TrueLabel">Si</x:String>
-                  <x:String x:Key="FalseLabel">No</x:String>
-                  <av:PointCollection x:Key="TrueConnector">238,560 210,560 210,624.5 300,624.5 300,654.5</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">362,560 422,560</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">200,745.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,796.5 300,836.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <FlowDecision.True>
-                <FlowStep x:Name="__ReferenceID0">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DomicilioFiscal workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DomicilioFiscal.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioFiscal">[out_DomicilioFiscal]</OutArgument>
+                  <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+                  <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">200,654.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">200,836.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">300,705.5 300,745.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">300,887.5 300,927.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosGenerales workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosGenerales.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DomicilioResidencial workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DomicilioResidencial.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[in_NombreCompleto]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_FechaNacimiento">[in_FechaNacimiento]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Nacionalidad">[in_Nacionalidad]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_Email">[in_Email]</InArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_Curp">[out_Curp]</OutArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_Rfc">[out_Rfc]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioResidencial">[out_DomicilioResidencial]</OutArgument>
                       <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID3">
+                    <FlowStep x:Name="__ReferenceID4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">200,745.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">200,927.5</av:Point>
                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300,796.5 300,836.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">300,978.5 300,1018.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DomicilioFiscal workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DomicilioFiscal.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke FatcsCrsdelTitular workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/FatcsCrsdelTitular.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioFiscal">[out_DomicilioFiscal]</OutArgument>
-                          <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                           <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
+                          <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID4">
+                        <FlowStep x:Name="__ReferenceID5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,836.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">200,1018.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">300,887.5 300,927.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">300,1069.5 300,1110.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DomicilioResidencial workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DomicilioResidencial.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelBeneficiario workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelBeneficiario.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioResidencial">[out_DomicilioResidencial]</OutArgument>
                               <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
                               <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID5">
+                            <FlowStep x:Name="__ReferenceID6">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">200,927.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">200,1110.5</av:Point>
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">300,978.5 300,1018.5</av:PointCollection>
+                                  <av:PointCollection x:Key="ConnectorLocation">300,1161.5 300,1211.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke FatcsCrsdelTitular workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/FatcsCrsdelTitular.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ActividadLaboral workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/ActividadLaboral.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
                                   <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID6">
+                                <FlowStep x:Name="__ReferenceID7">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">200,1018.5</av:Point>
+                                      <av:Point x:Key="ShapeLocation">200,1211.5</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">300,1069.5 300,1110.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">300,1262.5 300,1312.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelBeneficiario workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelBeneficiario.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VínculoPatrimonial workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/VínculoPatrimonial.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
                                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID7">
+                                    <FlowStep x:Name="__ReferenceID8">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">200,1110.5</av:Point>
+                                          <av:Point x:Key="ShapeLocation">200,1312.5</av:Point>
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">300,1161.5 300,1211.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ActividadLaboral workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/ActividadLaboral.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelaCuentaBancaria workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelaCuentaBancaria.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[in_NombreCompleto]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_NombreBanco">[in_NombreBanco]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_CuentaClabe">[in_CuentaClabe]</InArgument>
                                           <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+                                          <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                       </ui:InvokeWorkflowFile>
-                                      <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID8">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">200,1211.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">300,1262.5 300,1312.5</av:PointCollection>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VínculoPatrimonial workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/VínculoPatrimonial.xaml">
-                                            <ui:InvokeWorkflowFile.Arguments>
-                                              <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
-                                              <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
-                                            </ui:InvokeWorkflowFile.Arguments>
-                                          </ui:InvokeWorkflowFile>
-                                          <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID9">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">200,1312.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelaCuentaBancaria workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelaCuentaBancaria.xaml">
-                                                <ui:InvokeWorkflowFile.Arguments>
-                                                  <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[in_NombreCompleto]</InArgument>
-                                                  <InArgument x:TypeArguments="x:String" x:Key="in_NombreBanco">[in_NombreBanco]</InArgument>
-                                                  <InArgument x:TypeArguments="x:String" x:Key="in_CuentaClabe">[in_CuentaClabe]</InArgument>
-                                                  <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
-                                                  <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
-                                                </ui:InvokeWorkflowFile.Arguments>
-                                              </ui:InvokeWorkflowFile>
-                                            </FlowStep>
-                                          </FlowStep.Next>
-                                        </FlowStep>
-                                      </FlowStep.Next>
                                     </FlowStep>
                                   </FlowStep.Next>
                                 </FlowStep>
@@ -286,50 +244,73 @@
                     </FlowStep>
                   </FlowStep.Next>
                 </FlowStep>
-              </FlowDecision.True>
-              <FlowDecision.False>
-                <FlowStep x:Name="__ReferenceID12">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">422,530</av:Point>
-                      <av:Size x:Key="ShapeSize">262,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">553,590 553,680 400,680</av:PointCollection>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Falta número de contrato" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_26">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:Object">[out_Registro(0)]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:Object">[False]</InArgument>
-                    </Assign.Value>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Assign>
-                  <FlowStep.Next>
-                    <x:Reference>__ReferenceID0</x:Reference>
-                  </FlowStep.Next>
-                </FlowStep>
-              </FlowDecision.False>
-            </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
           </FlowStep.Next>
         </FlowStep>
+      </FlowDecision.True>
+      <FlowDecision.False>
+        <FlowStep x:Name="__ReferenceID11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">422,530</av:Point>
+              <av:Size x:Key="ShapeSize">262,60</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">553,590 553,680 400,680</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Falta número de contrato" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_26">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Object">[out_Registro(0)]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Object">[False]</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID0</x:Reference>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowDecision.False>
+    </FlowDecision>
+    <FlowStep x:Name="__ReferenceID9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">169,370</av:Point>
+          <av:Size x:Key="ShapeSize">262,60</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,430 300,516.5</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Dividir por salto de línea" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:String[]">[Cadenas]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:String[]">[in_TextoDocumento.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries)]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID1</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID1</x:Reference>
-    <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
-    <x:Reference>__ReferenceID9</x:Reference>
-    <FlowStep x:Name="__ReferenceID13">
+    <FlowStep x:Name="__ReferenceID12">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
@@ -345,12 +326,12 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID11">
+        <FlowStep x:Name="__ReferenceID10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">168.895,195.5</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">299.895,255.5 299.895,285.5 300,285.5 300,290</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">299.895,255.5 299.895,285.5 300,285.5 300,370</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Inicializar el registro" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_25">
@@ -367,12 +348,12 @@
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
           <FlowStep.Next>
-            <x:Reference>__ReferenceID10</x:Reference>
+            <x:Reference>__ReferenceID9</x:Reference>
           </FlowStep.Next>
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID10</x:Reference>
     <x:Reference>__ReferenceID11</x:Reference>
-    <x:Reference>__ReferenceID12</x:Reference>
   </Flowchart>
 </Activity>
