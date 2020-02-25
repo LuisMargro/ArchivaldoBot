@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>782,1447</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>782,1518</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>BusquedaPF_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -56,10 +56,11 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BusquedaPF" sap:VirtualizedContainerService.HintSize="762,1387" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Buscar el registro del cliente dentro de Shell" DisplayName="BusquedaPF" sap:VirtualizedContainerService.HintSize="762,1418" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Shell GBM" sap:VirtualizedContainerService.HintSize="720,1295" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="0e1d7dac0b21df843714048d0ef1d85c" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='GBM Escritorio de Aplicaciones v2.0' /&gt;">
@@ -71,7 +72,6 @@
           <Flowchart DisplayName="Proceso de busqueda de Personas" sap:VirtualizedContainerService.HintSize="686,1149" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <Flowchart.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="Menu" />
-              <Variable x:TypeArguments="x:Boolean" Name="PantallaAbierta" />
               <Variable x:TypeArguments="x:Boolean" Name="MensajeFallo" />
             </Flowchart.Variables>
             <sap:WorkflowViewStateService.ViewState>
@@ -229,7 +229,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">280,733 280,764.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Sequencia de accionado de busqueda" sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <Sequence DisplayName="Sequencia de accionado de busqueda" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
