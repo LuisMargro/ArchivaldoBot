@@ -94,7 +94,6 @@
                   <Literal x:TypeArguments="x:String" Value="" />
                 </Variable.Default>
               </Variable>
-              <Variable x:TypeArguments="x:Boolean" Name="CasoHijo" />
             </Flowchart.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -163,7 +162,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:Click>
-                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickBeforeTyping="False" DelayMS="2000" DisplayName="Activar busqueda" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,128" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickBeforeTyping="False" DelayMS="2000" DisplayName="Activar busqueda" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,123" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                   <ui:SendHotkey.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c4aacace667e9cf80ba96f5d48c0803b" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='split-left' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
                       <ui:Target.TimeoutMS>
@@ -177,7 +176,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:SendHotkey>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click Abrir contrato" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click Abrir contrato" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -196,7 +195,7 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:UiElementExists Exists="{x:Null}" DisplayName="Esperar la carga del sistema" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                <ui:UiElementExists Exists="{x:Null}" DisplayName="Esperar la carga del sistema" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3e5507cadf2ef925e2a875b71159db4d" Selector="&lt;webctrl parentid='brandBand_*' tag='IMG' /&gt;">
                       <ui:Target.TimeoutMS>
@@ -214,7 +213,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
-                <ui:UiElementExists DisplayName="Correo electronico vacio" Exists="[CorreoVacio]" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                <ui:UiElementExists DisplayName="Correo electronico vacio" Exists="[CorreoVacio]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bc75fdb447309e0fd855f611fe312997" Selector="&lt;webctrl aaname='(0)' parentid='header_*' tag='SPAN' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
                   </ui:UiElementExists.Target>
@@ -224,14 +223,19 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
-                <ui:UiElementExists DisplayName="Caso hijo" Exists="[out_CasoHijo]" sap:VirtualizedContainerService.HintSize="334,52" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                <ui:UiElementExists DisplayName="Caso hijo" Exists="[out_CasoHijo]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3220111f4ba47ceba2317d0c1ec31611" Selector="&lt;webctrl id='window' tag='A' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
                   </ui:UiElementExists.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
               </Sequence>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio and not CasoHijo]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio and not out_CasoHijo]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -416,10 +420,15 @@
                                                 </ActivityAction.Argument>
                                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Extraerdoctos workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce/Extraerdoctos.xaml">
                                                   <ui:InvokeWorkflowFile.Arguments>
-                                                    <InArgument x:TypeArguments="sd:DataRow" x:Key="correo">[correo]</InArgument>
-                                                    <InOutArgument x:TypeArguments="x:String" x:Key="CorreosNuevosCliente">[CorreosNuevosCliente]</InOutArgument>
                                                     <InArgument x:TypeArguments="x:String" x:Key="in_RutaDocumentos">[in_RutaDocumentos]</InArgument>
+                                                    <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Correo">[correo]</InArgument>
+                                                    <InOutArgument x:TypeArguments="x:String" x:Key="io_CorreosNuevosCliente">[CorreosNuevosCliente]</InOutArgument>
                                                   </ui:InvokeWorkflowFile.Arguments>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
                                                 </ui:InvokeWorkflowFile>
                                               </ActivityAction>
                                             </ui:ForEachRow.Body>

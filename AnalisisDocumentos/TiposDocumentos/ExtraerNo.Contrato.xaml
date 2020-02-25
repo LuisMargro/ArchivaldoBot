@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>324,409</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>324,369</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtraerNo_Contrato_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -71,7 +71,7 @@
         <OutArgument x:TypeArguments="s:String[]">[Tokens]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="s:String[]">[in_StringDocto.Split({"Contrato No"},StringSplitOptions.None)]</InArgument>
+        <InArgument x:TypeArguments="s:String[]">[in_StringDocto.Split({"contrato no."},StringSplitOptions.None)]</InArgument>
       </Assign.Value>
     </Assign>
     <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">

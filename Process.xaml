@@ -75,20 +75,29 @@
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraccionDocumentos workflow" sap:VirtualizedContainerService.HintSize="734,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\ExtraccionDocumentos.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_RutaDocumentos">[in_Config("PathDocumentosCliente").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_pathLog">[in_Config("PathLog").ToString]</InArgument>
         <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_Cliente">[Cliente]</OutArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_BanderaClienteNuevo">[BanderaClienteNuevo]</OutArgument>
         <OutArgument x:TypeArguments="x:Boolean" x:Key="out_CasoHijo">[CasoHijo]</OutArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_NumeroCaso">[in_TransactionItem(0).ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_PathLog">[in_Config("PathLog").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <Flowchart DisplayName="Procesar documentos" sap:VirtualizedContainerService.HintSize="734,1041" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="s:String[]" Name="ArrayDocumentos" />
-        <Variable x:TypeArguments="scg:List(x:String)" Name="StringListDoctos" />
+        <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="StringListDoctos" />
         <Variable x:TypeArguments="x:String" Name="StringDocto" />
-        <Variable x:TypeArguments="scg:List(x:String)" Name="StringListSolicitudActualizacion" />
+        <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="StringListSolicitudActualizacion" />
         <Variable x:TypeArguments="sd:DataRow" Name="DataClienteBusqueda" />
+        <Variable x:TypeArguments="x:String" Name="NumeroContrato" />
+        <Variable x:TypeArguments="x:String" Name="TipoFigura" />
+        <Variable x:TypeArguments="x:String" Name="Entidad" />
+        <Variable x:TypeArguments="x:String" Name="TipoContrato" />
+        <Variable x:TypeArguments="x:String" Name="Curp" />
+        <Variable x:TypeArguments="x:String" Name="Rfc" />
+        <Variable x:TypeArguments="x:String" Name="DomicilioResidencial" />
+        <Variable x:TypeArguments="x:String" Name="DomicilioFiscal" />
+        <Variable x:TypeArguments="sd:DataRow" Name="Registro" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -312,24 +321,13 @@ El motivo de este correo es para comentarle que  tuvimos algunos problemas con l
                                 <av:Size x:Key="ShapeSize">200,51</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[StringListSolicitudActualizacion]">
+                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="722,1305" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[StringListSolicitudActualizacion]">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="x:String">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:String" Name="Solicitud" />
                                   </ActivityAction.Argument>
                                   <Flowchart DisplayName="iterar en la lista de solicitud de actualizacion" sap:VirtualizedContainerService.HintSize="686,1171" sap2010:WorkflowViewState.IdRef="Flowchart_3">
-                                    <Flowchart.Variables>
-                                      <Variable x:TypeArguments="x:String" Name="NumeroContrato" />
-                                      <Variable x:TypeArguments="x:String" Name="TipoFigura" />
-                                      <Variable x:TypeArguments="x:String" Name="Entidad" />
-                                      <Variable x:TypeArguments="x:String" Name="TipoContrato" />
-                                      <Variable x:TypeArguments="x:String" Name="Curp" />
-                                      <Variable x:TypeArguments="x:String" Name="Rfc" />
-                                      <Variable x:TypeArguments="x:String" Name="DomicilioResidencial" />
-                                      <Variable x:TypeArguments="x:String" Name="DomicilioFiscal" />
-                                      <Variable x:TypeArguments="sd:DataRow" Name="Registro" />
-                                    </Flowchart.Variables>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -450,28 +448,34 @@ El motivo de este correo es para comentarle que  tuvimos algunos problemas con l
                                                                   <av:PointCollection x:Key="ConnectorLocation">110,796.5 110,826.5 120,826.5 120,934.5</av:PointCollection>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidacionGeneral workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\ValidacionGeneral.xaml">
-                                                                <ui:InvokeWorkflowFile.Arguments>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[NumeroContrato]</InArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[DataClienteBusqueda(0).ToString]</InArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_FechaNacimiento">[DataClienteBusqueda(1).ToString]</InArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_Nacionalidad">[DataClienteBusqueda(2).ToString]</InArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_Email">bernabe.adame@beeckerco.com</InArgument>
-                                                                  <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioResidencial">[DomicilioResidencial]</OutArgument>
-                                                                  <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioFiscal">[DomicilioFiscal]</OutArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_NombreBanco">[DataClienteBusqueda(11).ToString]</InArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_CuentaClabe">[DataClienteBusqueda(12).ToString]</InArgument>
-                                                                  <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_Registro">[Registro]</OutArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[Solicitud]</InArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[DataClienteBusqueda(6).ToString]</InArgument>
-                                                                  <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[DataClienteBusqueda(5).ToString]</InArgument>
-                                                                </ui:InvokeWorkflowFile.Arguments>
-                                                                <sap:WorkflowViewStateService.ViewState>
-                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                  </scg:Dictionary>
-                                                                </sap:WorkflowViewStateService.ViewState>
-                                                              </ui:InvokeWorkflowFile>
+                                                              <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                                                <ui:CommentOut.Body>
+                                                                  <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                                                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidacionGeneral workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\ValidacionGeneral.xaml">
+                                                                      <ui:InvokeWorkflowFile.Arguments>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[NumeroContrato]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[DataClienteBusqueda(0).ToString]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_FechaNacimiento">[DataClienteBusqueda(1).ToString]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_Nacionalidad">[DataClienteBusqueda(2).ToString]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_Email">bernabe.adame@beeckerco.com</InArgument>
+                                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioResidencial">[DomicilioResidencial]</OutArgument>
+                                                                        <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioFiscal">[DomicilioFiscal]</OutArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_NombreBanco">[DataClienteBusqueda(11).ToString]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_CuentaClabe">[DataClienteBusqueda(12).ToString]</InArgument>
+                                                                        <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_Registro">[Registro]</OutArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[Solicitud]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[DataClienteBusqueda(6).ToString]</InArgument>
+                                                                        <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[DataClienteBusqueda(5).ToString]</InArgument>
+                                                                      </ui:InvokeWorkflowFile.Arguments>
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                    </ui:InvokeWorkflowFile>
+                                                                  </Sequence>
+                                                                </ui:CommentOut.Body>
+                                                              </ui:CommentOut>
                                                               <FlowStep.Next>
                                                                 <FlowStep x:Name="__ReferenceID10">
                                                                   <sap:WorkflowViewStateService.ViewState>

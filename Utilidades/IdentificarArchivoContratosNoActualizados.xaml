@@ -103,7 +103,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">105,603 105,633 100,633 100,644.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadCell Cell="[&quot;I&quot;+(NumFila+2).ToString]" DisplayName="Obtener el tipo de contrato" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="Contratos por actualizar">
+              <ui:ExcelReadCell Cell="[&quot;I&quot;+(NumFila+1).ToString]" DisplayName="Obtener el tipo de contrato" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="Contratos por actualizar">
                 <ui:ExcelReadCell.Result>
                   <OutArgument x:TypeArguments="x:String">[out_TipoContrato]</OutArgument>
                 </ui:ExcelReadCell.Result>
@@ -116,7 +116,10 @@
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ExcelReadCell Result="{x:Null}" Cell="[&quot;A&quot;+(NumFila+2).ToString]" DisplayName="Obtener la entidad" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_5" SheetName="Contratos por actualizar">
+                  <ui:ExcelReadCell Cell="[&quot;A&quot;+(NumFila+1).ToString]" DisplayName="Obtener la entidad" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_5" SheetName="Contratos por actualizar">
+                    <ui:ExcelReadCell.Result>
+                      <OutArgument x:TypeArguments="x:String">[out_Entidad]</OutArgument>
+                    </ui:ExcelReadCell.Result>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +137,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">105,512 105,552</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadCell Cell="[&quot;C&quot;+(NumFila+2).ToString]" DisplayName="Obtener el tipo de figura" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_4" SheetName="Contratos por actualizar">
+              <ui:ExcelReadCell Cell="[&quot;C&quot;+(NumFila+1).ToString]" DisplayName="Obtener el tipo de figura" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_4" SheetName="Contratos por actualizar">
                 <ui:ExcelReadCell.Result>
                   <OutArgument x:TypeArguments="x:String">[out_TipoFigura]</OutArgument>
                 </ui:ExcelReadCell.Result>

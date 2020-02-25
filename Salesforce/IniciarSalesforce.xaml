@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>696,1017</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>696,977</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -127,7 +127,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:UiElementExists DisplayName="Existe sesión iniciada" Exists="[ExisteSesionIniciada]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="265ac4857705ee7c300fda4dd5cd5c52" Selector="&lt;webctrl aaname=' Sandbox: gbmte' parentid='oneHeader' tag='SPAN' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="265ac4857705ee7c300fda4dd5cd5c52" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;&lt;webctrl aaname=' Sandbox: gbmte' parentid='oneHeader' tag='SPAN' /&gt;" TimeoutMS="10000" WaitForReady="INTERACTIVE" />
               </ui:UiElementExists.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
