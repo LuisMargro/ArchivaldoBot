@@ -276,13 +276,13 @@
                                 <av:Size x:Key="ShapeSize">200,51</av:Size>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="732,1230" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[StringListSolicitudActualizacion]">
+                            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="722,1305" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[StringListSolicitudActualizacion]">
                               <ui:ForEach.Body>
                                 <ActivityAction x:TypeArguments="x:String">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:String" Name="Solicitud" />
                                   </ActivityAction.Argument>
-                                  <Flowchart DisplayName="iterar en la lista de solicitud de actualizacion" sap:VirtualizedContainerService.HintSize="696,1096" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                                  <Flowchart DisplayName="iterar en la lista de solicitud de actualizacion" sap:VirtualizedContainerService.HintSize="686,1171" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                                     <Flowchart.Variables>
                                       <Variable x:TypeArguments="x:String" Name="NumeroContrato" />
                                       <Variable x:TypeArguments="x:String" Name="TipoFigura" />
@@ -301,8 +301,8 @@
                                         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                                         <av:Size x:Key="ShapeSize">60,75</av:Size>
                                         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,144</av:PointCollection>
-                                        <x:Double x:Key="Height">1060</x:Double>
-                                        <x:Double x:Key="Width">662</x:Double>
+                                        <x:Double x:Key="Height">1135</x:Double>
+                                        <x:Double x:Key="Width">652</x:Double>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <Flowchart.StartNode>
@@ -413,7 +413,7 @@
                                                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidacionGeneral workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\ValidacionGeneral.xaml">
+                                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidacionGeneral workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\ValidacionGeneral.xaml">
                                                                 <ui:InvokeWorkflowFile.Arguments>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[NumeroContrato]</InArgument>
                                                                   <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[DataClienteBusqueda(0).ToString]</InArgument>
