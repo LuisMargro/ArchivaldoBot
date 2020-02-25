@@ -4,11 +4,12 @@
     <x:Property Name="out_TipoFigura" Type="OutArgument(x:String)" />
     <x:Property Name="out_TipoContrato" Type="OutArgument(x:String)" />
     <x:Property Name="in_NumContrato" Type="InArgument(x:String)" />
+    <x:Property Name="out_Entidad" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>765,981</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>730,1034</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>IdentificarArchivoContratosNoActualizados_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -63,20 +64,20 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Identifica el archivo de Contratos no actualizados y busca el registro del caso" DisplayName="IdentificarArchivoContratosNoActualizados" sap:VirtualizedContainerService.HintSize="745,881" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Identifica el archivo de Contratos no actualizados y busca el registro del caso" DisplayName="IdentificarArchivoContratosNoActualizados" sap:VirtualizedContainerService.HintSize="710,974" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Abrir archivo de contratos no actualizados" sap:VirtualizedContainerService.HintSize="703,758" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathArchivo]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Abrir archivo de contratos no actualizados" sap:VirtualizedContainerService.HintSize="668,851" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathArchivo]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Flowchart DisplayName="Actividades dentro del archivo" sap:VirtualizedContainerService.HintSize="669,649" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+          <Flowchart DisplayName="Actividades dentro del archivo" sap:VirtualizedContainerService.HintSize="634,742" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <Flowchart.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="DtContratos" />
               <Variable x:TypeArguments="x:Int32" Name="NumFila" />
@@ -87,9 +88,8 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
-                <x:Double x:Key="Width">635</x:Double>
-                <x:Double x:Key="Height">613</x:Double>
+                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5</av:PointCollection>
+                <x:Double x:Key="Height">705.5</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
@@ -98,25 +98,43 @@
             <FlowStep x:Name="__ReferenceID0">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">5,562</av:Point>
+                  <av:Point x:Key="ShapeLocation">5,552</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">105,603 105,633 100,633 100,644.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadCell Cell="[&quot;H&quot;+(NumFila+2).ToString]" DisplayName="Obtener el tipo de contrato" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="Contratos por actualizar">
+              <ui:ExcelReadCell Cell="[&quot;I&quot;+(NumFila+2).ToString]" DisplayName="Obtener el tipo de contrato" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_3" SheetName="Contratos por actualizar">
                 <ui:ExcelReadCell.Result>
                   <OutArgument x:TypeArguments="x:String">[out_TipoContrato]</OutArgument>
                 </ui:ExcelReadCell.Result>
               </ui:ExcelReadCell>
+              <FlowStep.Next>
+                <FlowStep x:Name="__ReferenceID6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">0,644.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelReadCell Result="{x:Null}" Cell="[&quot;A&quot;+(NumFila+2).ToString]" DisplayName="Obtener la entidad" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_5" SheetName="Contratos por actualizar">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ExcelReadCell>
+                </FlowStep>
+              </FlowStep.Next>
             </FlowStep>
             <FlowStep x:Name="__ReferenceID1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">5,461</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">105,512 105,562</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">105,512 105,552</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ExcelReadCell Cell="[&quot;A&quot;+(NumFila+2).ToString]" DisplayName="Obtener el tipo de figura" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_4" SheetName="Contratos por actualizar">
+              <ui:ExcelReadCell Cell="[&quot;C&quot;+(NumFila+2).ToString]" DisplayName="Obtener el tipo de figura" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadCell_4" SheetName="Contratos por actualizar">
                 <ui:ExcelReadCell.Result>
                   <OutArgument x:TypeArguments="x:String">[out_TipoFigura]</OutArgument>
                 </ui:ExcelReadCell.Result>
@@ -128,30 +146,30 @@
             <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">5,259</av:Point>
+                  <av:Point x:Key="ShapeLocation">0,219</av:Point>
                   <av:Size x:Key="ShapeSize">200,22</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">105,281 105,331</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">100,241 100,271 170,271 170,306.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LookupDataTable CellValue="{x:Null}" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[DtContratos]" DisplayName="Buscar registro del contrato" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnIndex="[1]" LookupValue="[in_NumContrato]" RowIndex="[NumFila]" />
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID5" Condition="[NumFila &gt;= 0]" DisplayName="¿Se encontró el registro?" sap:VirtualizedContainerService.HintSize="134,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID1}">
+                <FlowDecision x:Name="__ReferenceID4" Condition="[NumFila &gt;= 0]" DisplayName="¿Se encontró el registro?" sap:VirtualizedContainerService.HintSize="134,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID1}">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">38,331</av:Point>
+                      <av:Point x:Key="ShapeLocation">103,306.5</av:Point>
                       <av:Size x:Key="ShapeSize">134,87</av:Size>
                       <x:String x:Key="TrueLabel">Si</x:String>
                       <x:String x:Key="FalseLabel">No</x:String>
-                      <av:PointCollection x:Key="TrueConnector">38,374.5 15,374.5 15,431 105,431 105,461</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">172,374.5 202,374.5 202,374.02 222,374.02</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">103,350 75,350 75,431 105,431 105,461</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">237,350 267,350 267,380 325,380</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.False>
-                    <FlowStep x:Name="__ReferenceID6">
+                    <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">222,343.52</av:Point>
+                          <av:Point x:Key="ShapeLocation">325,349.5</av:Point>
                           <av:Size x:Key="ShapeSize">230,61</av:Size>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
@@ -170,9 +188,9 @@
             <FlowStep x:Name="__ReferenceID7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">200,127.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">200,107.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,178.5 300,226.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">300,158.5 300,186.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:ExcelReadRange AddHeaders="False" DataTable="[DtContratos]" DisplayName="Obtener los contratos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="Contratos por actualizar">
@@ -187,31 +205,13 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <av:Point x:Key="ShapeLocation">255,226.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">255,186.5</av:Point>
                       <av:Size x:Key="ShapeSize">90,87</av:Size>
                       <x:String x:Key="FalseLabel">No</x:String>
                       <x:String x:Key="TrueLabel">Si</x:String>
-                      <av:PointCollection x:Key="TrueConnector">255,270 205,270</av:PointCollection>
-                      <av:PointCollection x:Key="FalseConnector">345,270 405,270</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">255,230 200,230</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <FlowDecision.False>
-                    <FlowStep x:Name="__ReferenceID4">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">405,239.5</av:Point>
-                          <av:Size x:Key="ShapeSize">230,61</av:Size>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <WriteLine DisplayName="No hay contratos" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="No hay contratos en el archivo Contratos No Actualizados">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </WriteLine>
-                    </FlowStep>
-                  </FlowDecision.False>
                 </FlowDecision>
               </FlowStep.Next>
             </FlowStep>
