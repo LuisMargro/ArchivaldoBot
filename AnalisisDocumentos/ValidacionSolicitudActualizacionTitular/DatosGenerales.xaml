@@ -4,15 +4,15 @@
     <x:Property Name="in_FechaNacimiento" Type="InArgument(x:String)" />
     <x:Property Name="in_Nacionalidad" Type="InArgument(x:String)" />
     <x:Property Name="in_Email" Type="InArgument(x:String)" />
-    <x:Property Name="out_Curp" Type="OutArgument(x:String)" />
-    <x:Property Name="out_Rfc" Type="OutArgument(x:String)" />
     <x:Property Name="io_Cadenas" Type="InOutArgument(s:String[])" />
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
+    <x:Property Name="in_Curp" Type="InArgument(x:String)" />
+    <x:Property Name="in_Rfc" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>738,2491</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>738,2451</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="32">
+    <scg:List x:TypeArguments="x:String" Capacity="17">
       <x:String>System.Activities</x:String>
       <x:String>System</x:String>
       <x:String>System.Collections</x:String>
@@ -33,7 +33,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="15">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -57,6 +57,8 @@
       <Variable x:TypeArguments="x:Boolean" Name="NombreValido" />
       <Variable x:TypeArguments="x:Boolean" Name="CurpValida" />
       <Variable x:TypeArguments="x:Boolean" Name="RfcValida" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="Curp" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="Rfc" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -190,10 +192,10 @@
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Assign DisplayName="Obtener CURP" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                                     <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[out_Curp]</OutArgument>
+                                      <OutArgument x:TypeArguments="ui:GenericValue">[Curp]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[io_Cadenas(15).Split(":"c)(1).Trim.ToUpper]</InArgument>
+                                      <InArgument x:TypeArguments="ui:GenericValue">[io_Cadenas(15).Split(":"c)(1).Trim.ToUpper]</InArgument>
                                     </Assign.Value>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -212,7 +214,7 @@
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarCurp workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilidades\ValidarCurp.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[out_Curp]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[Curp]</InArgument>
                                           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ExisteCurp">[CurpValida]</OutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                         <sap:WorkflowViewStateService.ViewState>
@@ -222,7 +224,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:InvokeWorkflowFile>
                                       <FlowStep.Next>
-                                        <FlowDecision x:Name="__ReferenceID14" Condition="[CurpValida]" DisplayName="¿CURP?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_27">
+                                        <FlowDecision x:Name="__ReferenceID14" Condition="[CurpValida And io_Cadenas(15).ToLower.Contains(in_Curp.ToLower)]" DisplayName="¿CURP?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_27">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -245,10 +247,10 @@
                                               </sap:WorkflowViewStateService.ViewState>
                                               <Assign DisplayName="Obtener RFC" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
                                                 <Assign.To>
-                                                  <OutArgument x:TypeArguments="x:String">[out_Rfc]</OutArgument>
+                                                  <OutArgument x:TypeArguments="ui:GenericValue">[Rfc]</OutArgument>
                                                 </Assign.To>
                                                 <Assign.Value>
-                                                  <InArgument x:TypeArguments="x:String">[io_Cadenas(16).Split(":"c)(1).Trim.ToUpper]</InArgument>
+                                                  <InArgument x:TypeArguments="ui:GenericValue">[io_Cadenas(16).Split(":"c)(1).Trim.ToUpper]</InArgument>
                                                 </Assign.Value>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -267,7 +269,7 @@
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarRFC workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Utilidades\ValidarRFC.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[out_Rfc]</InArgument>
+                                                      <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[Rfc]</InArgument>
                                                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_BanderaRfc">[RfcValida]</OutArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -277,7 +279,7 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InvokeWorkflowFile>
                                                   <FlowStep.Next>
-                                                    <FlowDecision x:Name="__ReferenceID16" Condition="[RfcValida]" DisplayName="¿RFC?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_26">
+                                                    <FlowDecision x:Name="__ReferenceID16" Condition="[RfcValida And io_Cadenas(16).ToLower.Contains(in_Rfc.ToLower)]" DisplayName="¿RFC?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_26">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
