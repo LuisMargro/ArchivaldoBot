@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>550,1321</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>550,1230</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LlenarSolicitudAperturaCuentaOperadora_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,7 +53,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Esta secuencia se encarga de llenar el formato de &quot;solicitud de apertura de cuenta operadora&quot;.&#xD;&#xA;Recibe 2 parámetros, una datarow donde vienen todos los datos y el número de contrato.&#xD;&#xA;Crea un archvio word temporal a partir del original, lo llena y después lo exporta a pdf, por último elimina el word temporal. " DisplayName="LlenarSolicitudAperturaCuentaCB" sap:VirtualizedContainerService.HintSize="530,1221" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Esta secuencia se encarga de llenar el formato de &quot;solicitud de apertura de cuenta operadora&quot;.&#xA;Recibe 2 parámetros, una datarow donde vienen todos los datos y el número de contrato.&#xA;Crea un archvio word temporal a partir del original, lo llena y después lo exporta a pdf, por último elimina el word temporal. " DisplayName="LlenarSolicitudAperturaCuentaCB" sap:VirtualizedContainerService.HintSize="530,1130" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DtPruebas" />
       <Variable x:TypeArguments="x:String" Default="Documentacion\Solicitudes de apertura\SOLICITUD APERTURA DE CUENTA OPERADORA.docx" Name="RutaArchivoOriginal" />
@@ -82,13 +82,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CopyFile>
-    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[RutaArchivoNuevo+in_NumContrato+&quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="488,584" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+    <p:WordApplicationScope DisplayName="Word Application Scope" FilePath="[RutaArchivoNuevo+in_NumContrato+&quot;.docx&quot;]" sap:VirtualizedContainerService.HintSize="488,493" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Acciones dentro de word" sap:VirtualizedContainerService.HintSize="454,475" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Acciones dentro de word" sap:VirtualizedContainerService.HintSize="412,384" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="Contador" />
             </Sequence.Variables>
@@ -97,20 +97,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEach x:TypeArguments="sd:DataColumn" CurrentIndex="[Contador]" DisplayName="Por cada columna" sap:VirtualizedContainerService.HintSize="412,284" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Campos.Table.Columns]">
+            <ui:ForEach x:TypeArguments="sd:DataColumn" CurrentIndex="[Contador]" DisplayName="Por cada columna" sap:VirtualizedContainerService.HintSize="370,193" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Campos.Table.Columns]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="sd:DataColumn">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataColumn" Name="Columna" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[in_Campos(Contador).ToString]" Search="[Columna.ToString]" />
-                  </Sequence>
+                  <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="WordReplaceText_1" Replace="[in_Campos(Contador).ToString]" Search="[Columna.ToString]" />
                 </ActivityAction>
               </ui:ForEach.Body>
               <sap:WorkflowViewStateService.ViewState>
@@ -120,7 +113,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEach>
-            <p:WordExportToPdf DisplayName="Generar PDF" FilePath="[RutaArchivoNuevo+in_NumContrato+&quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="412,59" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+            <p:WordExportToPdf DisplayName="Generar PDF" FilePath="[RutaArchivoNuevo+in_NumContrato+&quot;.pdf&quot;]" sap:VirtualizedContainerService.HintSize="370,59" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
           </Sequence>
         </ActivityAction>
       </p:WordApplicationScope.Body>

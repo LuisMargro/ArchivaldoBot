@@ -3,7 +3,7 @@
     <x:Property Name="io_Cadenas" Type="InOutArgument(s:String[])" />
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>757,2266</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>757,2297</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -42,7 +42,7 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="Datos del beneficiario" sap:VirtualizedContainerService.HintSize="737,2166" sap2010:WorkflowViewState.IdRef="Flowchart_6">
+  <Flowchart sap2010:Annotation.AnnotationText="Valida que el campo de Datos del beneficiario estén llenos en el archivo" DisplayName="Datos del beneficiario" sap:VirtualizedContainerService.HintSize="737,2197" sap2010:WorkflowViewState.IdRef="Flowchart_6">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -51,6 +51,7 @@
         <x:Double x:Key="Width">703</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 305.641666666667,107.5 305.641666666667,116.5</av:PointCollection>
         <x:Double x:Key="Height">2130</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>

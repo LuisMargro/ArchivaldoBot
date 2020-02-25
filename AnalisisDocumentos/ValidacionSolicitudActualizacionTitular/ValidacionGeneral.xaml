@@ -73,7 +73,6 @@
   <Flowchart sap2010:Annotation.AnnotationText="Examina que los campos de el archivo Actualización de contrato sean correctos o que estén llenos.&#xA;Retornanará como argumento de salida una datarow con todos los campos, indicando si son o no son válidos." DisplayName="Validación general" sap:VirtualizedContainerService.HintSize="769,1442" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:String[]" Name="Cadenas" />
-      <Variable x:TypeArguments="x:Boolean" Name="CpValido" />
       <Variable x:TypeArguments="sd:DataTable" Name="DtRegistro" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
