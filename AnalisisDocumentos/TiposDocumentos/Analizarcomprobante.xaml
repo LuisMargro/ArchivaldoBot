@@ -109,7 +109,7 @@
             <Flowchart.StartNode>
               <x:Reference>__ReferenceID10</x:Reference>
             </Flowchart.StartNode>
-            <FlowDecision x:Name="__ReferenceID7" Condition="[NombreFiscal And DireccionFiscal And not io_Cliente(3).ToString.Contains(&quot;Validado&quot;)]" DisplayName="¿Coincide Nombre y Direccion?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_24">
+            <FlowDecision x:Name="__ReferenceID7" Condition="[NombreFiscal And DireccionFiscal And not io_Cliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Coincide Nombre y Direccion?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_24">
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +134,7 @@
                       <OutArgument x:TypeArguments="x:Object">[io_Cliente(3)]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:Object">["Validado"]</InArgument>
+                      <InArgument x:TypeArguments="x:Object">["validado"]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -363,7 +363,7 @@
                 <Flowchart.StartNode>
                   <x:Reference>__ReferenceID21</x:Reference>
                 </Flowchart.StartNode>
-                <FlowDecision x:Name="__ReferenceID18" Condition="[NombreResidencial And DireccionResidencial And not io_Cliente(5).ToString.Contains(&quot;Validado&quot;)]" DisplayName="¿Coincide Nombre y Direccion?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_30">
+                <FlowDecision x:Name="__ReferenceID18" Condition="[NombreResidencial And DireccionResidencial And not io_Cliente(5).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Coincide Nombre y Direccion?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_30">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -388,7 +388,7 @@
                           <OutArgument x:TypeArguments="x:Object">[io_Cliente(5)]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="x:Object">["Validado"]</InArgument>
+                          <InArgument x:TypeArguments="x:Object">["validado"]</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg1:Dictionary x:TypeArguments="x:String, x:Object">

@@ -7,6 +7,8 @@
     <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
     <x:Property Name="in_DireccionFiscal" Type="InArgument(x:String)" />
     <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
+    <x:Property Name="in_PathBancos" Type="InArgument(x:String)" />
+    <x:Property Name="in_Cuenta" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -148,12 +150,12 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID1" Condition="[in_StringDocumento.Contains(&quot;estado de cuenta&quot;)]" DisplayName="¿Es estado de cuenta?" sap:VirtualizedContainerService.HintSize="122,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+            <FlowDecision x:Name="__ReferenceID1" Condition="[in_StringDocumento.Contains(&quot;estado de cuenta&quot;)]" DisplayName="¿Es estado de cuenta?" sap:VirtualizedContainerService.HintSize="120,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <av:Point x:Key="ShapeLocation">350,576.5</av:Point>
-                  <av:Size x:Key="ShapeSize">122,87</av:Size>
+                  <av:Size x:Key="ShapeSize">120,87</av:Size>
                   <x:String x:Key="FalseLabel">No</x:String>
                   <x:String x:Key="TrueLabel">Si</x:String>
                   <av:PointCollection x:Key="TrueConnector">350,620 100,620 100,684</av:PointCollection>
@@ -164,16 +166,16 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">0,684</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarestadodecuenta workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarestadodecuenta.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarestadodecuenta workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarestadodecuenta.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_pathBDBancos">C:\Users\88891\Documents\UiPath\Archivaldo\Data\BdBancos.xlsx</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_pathBDBancos">[in_PathBancos]</InArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_NumeroCuenta" />
+                      <InArgument x:TypeArguments="x:String" x:Key="in_NumeroCuenta">[in_Cuenta]</InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </FlowStep>

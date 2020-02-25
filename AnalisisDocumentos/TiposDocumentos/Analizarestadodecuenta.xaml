@@ -6,7 +6,7 @@
     <x:Property Name="in_NumeroCuenta" Type="InArgument(x:String)" />
     <x:Property Name="in_PathBDBancos" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>780,1338</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>780,1298</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -397,16 +397,16 @@
           <av:Point x:Key="ShapeLocation">243,136.5</av:Point>
           <av:Size x:Key="ShapeSize">114,87</av:Size>
           <av:PointCollection x:Key="FalseConnector">357,180 460,180 460,264.5</av:PointCollection>
-          <av:PointCollection x:Key="TrueConnector">243,180 140,180 140,240</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">243,180 131,180 131,240</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
         <FlowStep x:Name="__ReferenceID12">
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">9,240</av:Point>
+              <av:Point x:Key="ShapeLocation">0,240</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">140,300 140,330</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">131,300 131,320</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Asignar menssaje de no coincidencia" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_65">
@@ -426,7 +426,7 @@
             <FlowStep x:Name="__ReferenceID13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">9,330</av:Point>
+                  <av:Point x:Key="ShapeLocation">0,320</av:Point>
                   <av:Size x:Key="ShapeSize">262,60</av:Size>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>

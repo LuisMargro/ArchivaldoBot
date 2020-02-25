@@ -299,7 +299,7 @@
                                       <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">["Cedula invalida, no se encuentra en el registro nacional de profesionales"]</InArgument>
+                                      <InArgument x:TypeArguments="x:Object">["cedula invalida, no se encuentra en el registro nacional de profesionales"]</InArgument>
                                     </Assign.Value>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -348,7 +348,7 @@
                                   <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Object">["Validado"]</InArgument>
+                                  <InArgument x:TypeArguments="x:Object">["validado"]</InArgument>
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -405,7 +405,7 @@
                           <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">["Cedula no legible"]</InArgument>
+                          <InArgument x:TypeArguments="x:Object">["cedula no legible"]</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
