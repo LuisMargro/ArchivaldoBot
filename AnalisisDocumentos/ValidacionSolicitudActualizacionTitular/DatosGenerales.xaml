@@ -8,8 +8,9 @@
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
     <x:Property Name="in_Rfc" Type="InArgument(x:String)" />
+    <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>738,2491</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>738,2451</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="17">
@@ -106,7 +107,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarNombre.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[io_Cadenas(10)]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_TextoDocumento]</InArgument>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="out_CoincideNombre">[NombreValido]</OutArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
@@ -684,7 +685,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">329,300</av:Point>
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">460,360 460,396.5 271.5,396.5 271.5,426.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">460,360 460,390 271.5,390 271.5,426.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign DisplayName="Falta nombre completo" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_27">
