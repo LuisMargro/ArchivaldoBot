@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>782,1518</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>782,1529</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>BusquedaPF_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -56,7 +56,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Buscar el registro del cliente dentro de Shell" DisplayName="BusquedaPF" sap:VirtualizedContainerService.HintSize="762,1418" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Se recibe por argumento el numero de contrato de un cliente el cual se busca en el sistema shell, el resultado de la busqueda del cliente se retorna como datarow por argumentos (En construccion)" DisplayName="BusquedaPF" sap:VirtualizedContainerService.HintSize="762,1429" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -72,6 +72,7 @@
           <Flowchart DisplayName="Proceso de busqueda de Personas" sap:VirtualizedContainerService.HintSize="686,1149" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <Flowchart.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="Menu" />
+              <Variable x:TypeArguments="x:Boolean" Name="PantallaAbierta" />
               <Variable x:TypeArguments="x:Boolean" Name="MensajeFallo" />
             </Flowchart.Variables>
             <sap:WorkflowViewStateService.ViewState>
