@@ -42,7 +42,7 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Validar que los campos de vínculo patrimonial del archivo estén llenos" DisplayName="Vínculo patrimonial" sap:VirtualizedContainerService.HintSize="721,1777" sap2010:WorkflowViewState.IdRef="Flowchart_9">
+  <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Vínculo patrimonial&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena." DisplayName="Vínculo patrimonial" sap:VirtualizedContainerService.HintSize="721,1777" sap2010:WorkflowViewState.IdRef="Flowchart_9">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="Rfc" />
       <Variable x:TypeArguments="x:Boolean" Name="RfcValido" />

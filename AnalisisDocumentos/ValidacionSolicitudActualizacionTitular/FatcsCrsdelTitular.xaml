@@ -42,7 +42,7 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Valida que los datos del campo Crs del titular estén llenos en el archivo" DisplayName="Fatcs Crs del titular" sap:VirtualizedContainerService.HintSize="678,947" sap2010:WorkflowViewState.IdRef="Flowchart_5">
+  <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Facts Crs del titular&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena." DisplayName="Fatcs Crs del titular" sap:VirtualizedContainerService.HintSize="678,947" sap2010:WorkflowViewState.IdRef="Flowchart_5">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>

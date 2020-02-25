@@ -46,7 +46,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Valida que el campo de domicilio residencial del archivo estén lleno, esta validación difiere que el domicilio fiscal ya que los índices de los campos son diferentes" DisplayName="Domicilio residencial" sap:VirtualizedContainerService.HintSize="691,1578" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+  <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Domicilio residencial&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena, difiere de DomicilioFiscal ya que los índices son distintos." DisplayName="Domicilio residencial" sap:VirtualizedContainerService.HintSize="691,1578" sap2010:WorkflowViewState.IdRef="Flowchart_4">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="CodigoPostal" />
       <Variable x:TypeArguments="x:Boolean" Name="CpValido" />
