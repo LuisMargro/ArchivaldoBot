@@ -1,10 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="DomicilioFiscal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="DomicilioFiscal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_DomicilioFiscal" Type="OutArgument(x:String)" />
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
-    <x:Property Name="io_Cadenas" Type="InOutArgument(s:String[])" />
+    <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>723,1782</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>723,1742</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -136,7 +136,7 @@
           <OutArgument x:TypeArguments="x:String">[CodigoPostal]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[io_Cadenas(30).Split(":"c)(1).Trim.ToLower]</InArgument>
+          <InArgument x:TypeArguments="x:String">[in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"cp"},StringSplitOptions.None)(1).Split({"mandar"},StringSplitOptions.None)(0).Replace(":","").Trim.Replace(" ","")]</InArgument>
         </Assign.Value>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -161,7 +161,7 @@
           <OutArgument x:TypeArguments="x:String">[out_DomicilioFiscal]</OutArgument>
         </Assign.To>
         <Assign.Value>
-          <InArgument x:TypeArguments="x:String">[io_Cadenas(23).Split(":"c)(1).Trim.ToLower+" "+io_Cadenas(24).Split(":"c)(1).Trim.ToLower+" "+io_Cadenas(25).Split(":"c)(1).Trim.ToLower+" "+io_Cadenas(26).Split(":"c)(1).Trim.ToLower+" "+io_Cadenas(27).Split(":"c)(1).Trim.ToLower+" "+io_Cadenas(28).Split(":"c)(1).Trim.ToLower+" "+io_Cadenas(29).Split(":"c)(1).Trim.ToLower+" "+io_Cadenas(30).Split(":"c)(1).Trim.ToLower]</InArgument>
+          <InArgument x:TypeArguments="x:String">[in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"calle"},StringSplitOptions.None)(1).Split({"num exterior"},StringSplitOptions.None)(0).Replace(":","").Trim+" "+in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"num exterior"},StringSplitOptions.None)(1).Split({"num interior"},StringSplitOptions.None)(0).Replace(":","").Trim+" "+in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"num interior"},StringSplitOptions.None)(1).Split({"entre calles"},StringSplitOptions.None)(0).Replace(":","").Trim+" "+in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"domicilio)"},StringSplitOptions.None)(1).Split({"estado"},StringSplitOptions.None)(0).Replace(":","").Trim+" "+in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"domicilio fiscal"},StringSplitOptions.None)(1).Split({"estado"},StringSplitOptions.None)(1).Split({"delegacion"},StringSplitOptions.None)(0).Replace(":","").Trim+" "+in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"municipio"},StringSplitOptions.None)(1).Split({"colonia"},StringSplitOptions.None)(0).Replace(":","").Trim+" "+in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"colonia"},StringSplitOptions.None)(1).Split({"cp"},StringSplitOptions.None)(0).Replace(":","").Trim+" "+in_TextoDocumento.Split({"domicilio residencial"},StringSplitOptions.None)(0).Split({"cp"},StringSplitOptions.None)(1).Split({"mandar"},StringSplitOptions.None)(0).Replace(":","").Trim]</InArgument>
         </Assign.Value>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -173,7 +173,7 @@
         <x:Reference>__ReferenceID2</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID18" Condition="[io_Cadenas(23).Trim.Split(&quot;:&quot;c)(0).Length+1 &lt; io_Cadenas(23).Trim.Length]" DisplayName="¿Calle?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_47">
+    <FlowDecision x:Name="__ReferenceID18" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;calle&quot;},StringSplitOptions.None)(1).Split({&quot;num exterior&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Calle?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_47">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -186,7 +186,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
-        <FlowDecision x:Name="__ReferenceID9" Condition="[io_Cadenas(24).Trim.Split(&quot;:&quot;c)(0).Length+1 &lt; io_Cadenas(24).Trim.Length]" DisplayName="¿Num Exterior?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_46">
+        <FlowDecision x:Name="__ReferenceID9" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;num exterior&quot;},StringSplitOptions.None)(1).Split({&quot;num interior&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Num Exterior?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_46">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -199,7 +199,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
-            <FlowDecision x:Name="__ReferenceID8" Condition="[io_Cadenas(25).Trim.Split(&quot;:&quot;c)(0).Length+1 &lt; io_Cadenas(25).Trim.Length]" DisplayName="¿Numero interior?" sap:VirtualizedContainerService.HintSize="101,87" sap2010:WorkflowViewState.IdRef="FlowDecision_92">
+            <FlowDecision x:Name="__ReferenceID8" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;num interior&quot;},StringSplitOptions.None)(1).Split({&quot;entre calles&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Numero interior?" sap:VirtualizedContainerService.HintSize="101,87" sap2010:WorkflowViewState.IdRef="FlowDecision_92">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -212,7 +212,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowDecision x:Name="__ReferenceID7" Condition="[io_Cadenas(26).Trim.Split(&quot;:&quot;c)(0).Length+1 &lt; io_Cadenas(26).Trim.Length]" DisplayName="¿Entre calles?" sap:VirtualizedContainerService.HintSize="75,87" sap2010:WorkflowViewState.IdRef="FlowDecision_45">
+                <FlowDecision x:Name="__ReferenceID7" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;domicilio)&quot;},StringSplitOptions.None)(1).Split({&quot;estado&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Entre calles?" sap:VirtualizedContainerService.HintSize="75,87" sap2010:WorkflowViewState.IdRef="FlowDecision_45">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -225,7 +225,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowDecision x:Name="__ReferenceID6" Condition="[io_Cadenas(27).Trim.Split(&quot;:&quot;c)(0).Length+1 &lt; io_Cadenas(27).Trim.Length]" DisplayName="¿Estado?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_44">
+                    <FlowDecision x:Name="__ReferenceID6" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;domicilio fiscal&quot;},StringSplitOptions.None)(1).Split({&quot;estado&quot;},StringSplitOptions.None)(1).Split({&quot;delegacion&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Estado?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_44">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,7 +238,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
-                        <FlowDecision x:Name="__ReferenceID5" Condition="[io_Cadenas(28).Trim.Split(&quot;:&quot;c)(0).Length+1 &lt; io_Cadenas(28).Trim.Length]" DisplayName="¿Municipio?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_43">
+                        <FlowDecision x:Name="__ReferenceID5" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;municipio&quot;},StringSplitOptions.None)(1).Split({&quot;colonia&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Municipio?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_43">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -251,7 +251,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <FlowDecision.True>
-                            <FlowDecision x:Name="__ReferenceID4" Condition="[io_Cadenas(29).Trim.Split(&quot;:&quot;c)(0).Length+1 &lt; io_Cadenas(29).Trim.Length]" DisplayName="¿Colonia?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_42" True="{x:Reference __ReferenceID3}">
+                            <FlowDecision x:Name="__ReferenceID4" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;colonia&quot;},StringSplitOptions.None)(1).Split({&quot;cp&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Colonia?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_42" True="{x:Reference __ReferenceID3}">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
