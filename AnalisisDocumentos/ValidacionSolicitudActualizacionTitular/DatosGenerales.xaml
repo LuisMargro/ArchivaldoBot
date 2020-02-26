@@ -107,7 +107,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarNombre.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_TextoDocumento]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_TextoDocumento.Split({"domicilio fiscal"},StringSplitOptions.None)(0).Split({"nombre completo:"},StringSplitOptions.None)(1).Split({"fecha de nacimiento"},StringSplitOptions.None)(0)]</InArgument>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="out_CoincideNombre">[NombreValido]</OutArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
@@ -131,7 +131,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowDecision x:Name="__ReferenceID10" Condition="[io_Cadenas(11).Contains(in_FechaNacimiento)]" DisplayName="¿Fecha de nacimiento?" sap:VirtualizedContainerService.HintSize="126,87" sap2010:WorkflowViewState.IdRef="FlowDecision_31">
+                <FlowDecision x:Name="__ReferenceID10" Condition="[in_TextoDocumento.Split({&quot;domicilio fiscal&quot;},StringSplitOptions.None)(0).Split({&quot;fecha de nacimiento:&quot;},StringSplitOptions.None)(1).Split({&quot;pais y estado de nacimiento&quot;},StringSplitOptions.None)(0).Contains(in_FechaNacimiento)]" DisplayName="¿Fecha de nacimiento?" sap:VirtualizedContainerService.HintSize="126,87" sap2010:WorkflowViewState.IdRef="FlowDecision_31">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
