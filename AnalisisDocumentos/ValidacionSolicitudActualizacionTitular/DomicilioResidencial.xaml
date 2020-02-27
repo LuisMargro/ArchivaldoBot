@@ -4,7 +4,7 @@
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
     <x:Property Name="io_DomicilioResidencial" Type="InOutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>711,2238</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>738,2278</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="17">
@@ -46,7 +46,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Domicilio residencial&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena, difiere de DomicilioFiscal ya que los índices son distintos." DisplayName="Domicilio residencial" sap:VirtualizedContainerService.HintSize="691,2178" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+  <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Domicilio residencial&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena, difiere de DomicilioFiscal ya que los índices son distintos." DisplayName="Domicilio residencial" sap:VirtualizedContainerService.HintSize="718,2178" sap2010:WorkflowViewState.IdRef="Flowchart_4">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="CodigoPostal" />
       <Variable x:TypeArguments="x:Boolean" Name="CpValido" />
@@ -59,13 +59,13 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Height">2100</x:Double>
-        <x:Double x:Key="Width">657.28333333333308</x:Double>
+        <x:Double x:Key="Width">684</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,126.5</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID23</x:Reference>
+      <x:Reference>__ReferenceID24</x:Reference>
     </Flowchart.StartNode>
     <FlowDecision x:Name="__ReferenceID0" Condition="[Not CpValido]" DisplayName="¿Falta CP residencial válido?" sap:VirtualizedContainerService.HintSize="153,87" sap2010:WorkflowViewState.IdRef="FlowDecision_35">
       <sap:WorkflowViewStateService.ViewState>
@@ -555,7 +555,7 @@
     <x:Reference>__ReferenceID17</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <FlowDecision x:Name="__ReferenceID23" Condition="[String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(1).Split({&quot;calle&quot;},StringSplitOptions.None)(0).Replace(&quot;(si es el mismo que el fiscal favor de indicarlo aqui)&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Es el mismo que el fiscal?" sap:VirtualizedContainerService.HintSize="144,87" sap2010:WorkflowViewState.IdRef="FlowDecision_94" True="{x:Reference __ReferenceID18}">
+    <FlowDecision x:Name="__ReferenceID24" Condition="[String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(1).Split({&quot;calle&quot;},StringSplitOptions.None)(0).Replace(&quot;(si es el mismo que el fiscal favor de indicarlo aqui)&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Es el mismo que el fiscal?" sap:VirtualizedContainerService.HintSize="144,87" sap2010:WorkflowViewState.IdRef="FlowDecision_94" True="{x:Reference __ReferenceID18}">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -564,12 +564,37 @@
           <x:String x:Key="FalseLabel">No</x:String>
           <x:String x:Key="TrueLabel">Si</x:String>
           <av:PointCollection x:Key="TrueConnector">228,170 210,170 210,226.5 300,226.5 300,256.5</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">372,170 422,170</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
+      <FlowDecision.False>
+        <FlowStep x:Name="__ReferenceID23">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">422,140</av:Point>
+              <av:Size x:Key="ShapeSize">262,60</av:Size>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign DisplayName="Domicilio validado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_58">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[io_DomicilioResidencial]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">validado</InArgument>
+            </Assign.Value>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Assign>
+        </FlowStep>
+      </FlowDecision.False>
     </FlowDecision>
     <x:Reference>__ReferenceID19</x:Reference>
     <x:Reference>__ReferenceID20</x:Reference>
     <x:Reference>__ReferenceID21</x:Reference>
     <x:Reference>__ReferenceID22</x:Reference>
+    <x:Reference>__ReferenceID23</x:Reference>
   </Flowchart>
 </Activity>
