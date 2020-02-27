@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="BusquedaPF" this:BusquedaPF.in_NumeroContrato="210548" this:BusquedaPF.in_Company="Casa de Bolsa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="BusquedaPF" this:BusquedaPF.in_NumeroContrato="210548" this:BusquedaPF.in_Company="Casa de Bolsa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_NumeroContrato" Type="InArgument(x:String)" />
     <x:Property Name="in_Nombre" Type="InArgument(x:String)" />
@@ -84,10 +84,9 @@
           <Flowchart DisplayName="Proceso de busqueda de Personas" sap:VirtualizedContainerService.HintSize="680,1526" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <Flowchart.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="Menu" />
-              <Variable x:TypeArguments="x:Boolean" Name="PantallaAbierta" />
               <Variable x:TypeArguments="x:Boolean" Name="MensajeFallo" />
-              <Variable x:TypeArguments="sd:DataTable" Name="Clientes" />
               <Variable x:TypeArguments="sd:DataRow" Name="Cliente" />
+              <Variable x:TypeArguments="sd:DataTable" Name="Clientes" />
             </Flowchart.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -252,7 +251,7 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Ingresar compañia" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[in_Company+ &quot;[k(enter)]&quot;]">
                                       <ui:TypeInto.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3c1607093499be7eccc948211a34f35d" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xD;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xD;&#xA;&lt;ctrl name='MahApps.Metro.Controls.MetroTabItem Header: Content:' role='page tab' aastate='no disponible, seleccionado, seleccionable' /&gt;&#xD;&#xA;&lt;ctrl automationid='businessUnitComboBox' /&gt;&#xD;&#xA;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;&#xD;&#xA;">
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3c1607093499be7eccc948211a34f35d" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xA;&lt;ctrl name='MahApps.Metro.Controls.MetroTabItem Header: Content:' role='page tab' aastate='no disponible, seleccionado, seleccionable' /&gt;&#xA;&lt;ctrl automationid='businessUnitComboBox' /&gt;&#xA;&lt;ctrl automationid='PART_EditableTextBox' role='editable text' /&gt;&#xA;">
                                           <ui:Target.TimeoutMS>
                                             <InArgument x:TypeArguments="x:Int32" />
                                           </ui:Target.TimeoutMS>
@@ -389,7 +388,7 @@
                                                     </ui:CursorPosition>
                                                   </ui:Click.CursorPosition>
                                                   <ui:Click.Target>
-                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6313964189bf514630eb12975f9092b6" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xD;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xD;&#xA;&lt;ctrl name='MahApps.Metro.Controls.MetroTabItem Header: Content:' role='page tab' aastate='no disponible, seleccionado, seleccionable' /&gt;&#xD;&#xA;&lt;ctrl name='RESULTADOS DE BUSQUEDA' role='page tab' /&gt;&#xD;&#xA;&lt;ctrl automationid='Row_0' /&gt;&#xD;&#xA;&lt;ctrl automationid='CellElement_0_0' /&gt;&#xD;&#xA;&lt;ctrl name='MODIFICAR' role='text' /&gt;&#xD;&#xA;">
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6313964189bf514630eb12975f9092b6" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xA;&lt;ctrl name='MahApps.Metro.Controls.MetroTabItem Header: Content:' role='page tab' aastate='no disponible, seleccionado, seleccionable' /&gt;&#xA;&lt;ctrl name='RESULTADOS DE BUSQUEDA' role='page tab' /&gt;&#xA;&lt;ctrl automationid='Row_0' /&gt;&#xA;&lt;ctrl automationid='CellElement_0_0' /&gt;&#xA;&lt;ctrl name='MODIFICAR' role='text' /&gt;&#xA;">
                                                       <ui:Target.TimeoutMS>
                                                         <InArgument x:TypeArguments="x:Int32" />
                                                       </ui:Target.TimeoutMS>
@@ -499,7 +498,7 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer nombres" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
                                                       <ui:GetValue.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0526144f642e77bc73490efe6a326703" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xD;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xD;&#xA;&lt;ctrl aastate='seleccionado, enfocable, seleccionable' /&gt;&#xD;&#xA;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&#xD;&#xA;&lt;ctrl automationid='FirstName' role='editable text' /&gt;&#xD;&#xA;">
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0526144f642e77bc73490efe6a326703" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xA;&lt;ctrl aastate='seleccionado, enfocable, seleccionable' /&gt;&#xA;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&#xA;&lt;ctrl automationid='FirstName' role='editable text' /&gt;&#xA;">
                                                           <ui:Target.TimeoutMS>
                                                             <InArgument x:TypeArguments="x:Int32" />
                                                           </ui:Target.TimeoutMS>
@@ -528,7 +527,7 @@
                                                     </Assign>
                                                     <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer apellido paterno" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
                                                       <ui:GetValue.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2b5c29ae53dbcb675d330daa442df01b" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xD;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xD;&#xA;&lt;ctrl aastate='seleccionado, enfocable, seleccionable' /&gt;&#xD;&#xA;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&#xD;&#xA;&lt;ctrl automationid='PaternalName' /&gt;&#xD;&#xA;">
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2b5c29ae53dbcb675d330daa442df01b" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xA;&lt;ctrl aastate='seleccionado, enfocable, seleccionable' /&gt;&#xA;&lt;ctrl name='Datos Generales' role='page tab' /&gt;&#xA;&lt;ctrl automationid='PaternalName' /&gt;&#xA;">
                                                           <ui:Target.TimeoutMS>
                                                             <InArgument x:TypeArguments="x:Int32" />
                                                           </ui:Target.TimeoutMS>
@@ -649,7 +648,6 @@
                                                       <Flowchart DisplayName="Extraer domicilios" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_2">
                                                         <Flowchart.Variables>
                                                           <Variable x:TypeArguments="ui:GenericValue" Name="VariableExtractora" />
-                                                          <Variable x:TypeArguments="s:String[]" Name="ArregloDireccion" />
                                                           <Variable x:TypeArguments="x:String" Name="VariableAsignacion" />
                                                         </Flowchart.Variables>
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -1244,7 +1242,7 @@
                                                               <av:PointCollection x:Key="ConnectorLocation">450,1393 450,1430</av:PointCollection>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <Sequence DisplayName="Obtener datos especificos" sap:VirtualizedContainerService.HintSize="376,1843" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                                          <Sequence DisplayName="Obtener datos especificos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                                             <Sequence.Variables>
                                                               <Variable x:TypeArguments="ui:GenericValue" Name="VariableExtractora" />
                                                               <Variable x:TypeArguments="x:String" Name="VariableAsignacion" />
@@ -1515,7 +1513,7 @@
                                     </ui:CursorPosition>
                                   </ui:Click.CursorPosition>
                                   <ui:Click.Target>
-                                    <ui:Target Element="{x:Null}" InformativeScreenshot="d8a7e9fbdc0b9198014cba58ad730801" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xD;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xD;&#xA;&lt;ctrl name='MahApps.Metro.Controls.MetroTabItem Header: Content:' role='page tab' aastate='no disponible, seleccionado, seleccionable' /&gt;&#xD;&#xA;&lt;ctrl automationid='DisplayText' role='editable text' /&gt;&#xD;&#xA;">
+                                    <ui:Target Element="{x:Null}" InformativeScreenshot="d8a7e9fbdc0b9198014cba58ad730801" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&#xA;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&#xA;&lt;ctrl name='MahApps.Metro.Controls.MetroTabItem Header: Content:' role='page tab' aastate='no disponible, seleccionado, seleccionable' /&gt;&#xA;&lt;ctrl automationid='DisplayText' role='editable text' /&gt;&#xA;">
                                       <ui:Target.ClippingRegion>
                                         <ui:Region Rectangle="11, 10, 8, 6" />
                                       </ui:Target.ClippingRegion>

@@ -6,7 +6,7 @@
     <x:Property Name="in_NumeroCuenta" Type="InArgument(x:String)" />
     <x:Property Name="in_PathBDBancos" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>780,1298</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>780,1338</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -158,7 +158,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">450,1070 450,1100</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Asignar menssaje de no coincidencia" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_61">
+              <Assign DisplayName="Asignar menssaje de no coincidencia por número de cuenta no coincide" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_61">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Object">[io_Cliente(4)]</OutArgument>
                 </Assign.To>
@@ -179,7 +179,7 @@
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign mensaje de salida" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_62">
+                  <Assign DisplayName="Assign mensaje de salida por no cuenta inválido" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_62">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_Mensaje]</OutArgument>
                     </Assign.To>
@@ -349,7 +349,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">540,510 540,540</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Asignar menssaje de no coincidencia" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_63">
+              <Assign DisplayName="Asignar menssaje de no coincidencia por banco inválido" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_63">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Object">[io_Cliente(4)]</OutArgument>
                 </Assign.To>
@@ -370,7 +370,7 @@
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
                     </scg1:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="Assign mensaje de salida" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_64">
+                  <Assign DisplayName="Assign mensaje de salida por banco inválido" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_64">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[out_Mensaje]</OutArgument>
                     </Assign.To>
@@ -409,7 +409,7 @@
               <av:PointCollection x:Key="ConnectorLocation">131,300 131,320</av:PointCollection>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Asignar menssaje de no coincidencia" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_65">
+          <Assign DisplayName="Asignar menssaje de no coincidencia por estado de cuenta inválido" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_65">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Object">[io_Cliente(4)]</OutArgument>
             </Assign.To>
@@ -430,7 +430,7 @@
                   <av:Size x:Key="ShapeSize">262,60</av:Size>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign DisplayName="Assign mensaje de salida" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_66">
+              <Assign DisplayName="Assign mensaje de salida por estaado de cuenta inválido" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_66">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[out_Mensaje]</OutArgument>
                 </Assign.To>

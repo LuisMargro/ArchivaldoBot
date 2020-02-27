@@ -8,7 +8,7 @@
     <x:Property Name="in_ArregloDireccionResidencial" Type="InArgument(s:String[])" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>936,1479</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>936,1519</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -232,7 +232,7 @@
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                                 </scg1:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Flowchart DisplayName="Validar si cuenta como comprobante de domicilio" sap:VirtualizedContainerService.HintSize="634,1206" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+                              <Flowchart DisplayName="Validar si cuenta como comprobante de domicilio" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Flowchart_3">
                                 <Flowchart.Variables>
                                   <Variable x:TypeArguments="x:Boolean" Name="DirFiscal" />
                                   <Variable x:TypeArguments="x:Boolean" Name="DirResidencial" />
@@ -387,7 +387,7 @@
                               <av:Size x:Key="ShapeSize">262,60</av:Size>
                             </scg1:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign DisplayName="Assign Validado en la identificacion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_60">
+                          <Assign DisplayName="Assign inválido en la identificacion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_60">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                             </Assign.To>

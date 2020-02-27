@@ -60,7 +60,6 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="StringDocumento" />
       <Variable x:TypeArguments="ui:Image" Name="Imagen" />
-      <Variable x:TypeArguments="s:Byte[]" Name="TempBytes" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
