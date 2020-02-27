@@ -198,6 +198,7 @@
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
                                   <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                               <FlowStep.Next>
@@ -409,7 +410,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">300,495.5 300,516.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[in_TextoDocumento.Split({&quot;domicilio fiscal&quot;},StringSplitOptions.None)(0).Split({&quot;estado civil&quot;},StringSplitOptions.None)(1).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length.ToString]">
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[in_TextoDocumento.Split({&quot;si se es prestador de servicios independiente&quot;},StringSplitOptions.None)(1).Split({&quot;tel oficina&quot;},StringSplitOptions.None)(1).Split({&quot;sector economico de la empresa donde presta sus servicios&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;)+&quot; &quot;+in_TextoDocumento.Split({&quot;si se es prestador de servicios independiente&quot;},StringSplitOptions.None)(1).Split({&quot;tel oficina&quot;},StringSplitOptions.None)(1).Split({&quot;sector economico de la empresa donde presta sus servicios&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length.ToString]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
