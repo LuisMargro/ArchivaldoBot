@@ -9,7 +9,7 @@
     <x:Property Name="in_DireccionFiscal" Type="InArgument(x:String)" />
     <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
     <x:Property Name="in_LayoutCorreo" Type="InArgument(x:String)" />
-    <x:Property Name="in_ClienteLog" Type="InArgument(sd:DataRow)" />
+    <x:Property Name="in_ClienteLog" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="in_ArrayDocumentos" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="in_NumeroCuenta" Type="InArgument(x:String)" />
     <x:Property Name="in_PathBancos" Type="InArgument(x:String)" />
@@ -17,7 +17,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>735,1852</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>735,1892</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MainAnalisisDocumentos_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -156,7 +156,7 @@
                     <av:PointCollection x:Key="ConnectorLocation">290,185.5 290,226.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invocar Validar documentos correctos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidarDocumentosCorrectos.xaml">
+                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invocar Validar documentos correctos" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidarDocumentosCorrectos.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[StringDocumento]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">[in_Nombre]</InArgument>
