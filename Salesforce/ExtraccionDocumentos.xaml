@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>841,1804</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>841,1844</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -117,7 +117,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,173 300,206.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="376,954" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -254,10 +254,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">110,333 110,364.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="376,559" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                        <Sequence.Variables>
-                          <Variable x:TypeArguments="x:String" Name="prueb" />
-                        </Sequence.Variables>
+                      <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -291,7 +288,13 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:Click>
-                        <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        <Delay sap2010:Annotation.AnnotationText="Espera a que termine de cargar el datatable" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Delay_1">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Delay>
                         <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[CorreosDt]" DisplayName="Extraer tabla de correos" ExtractMetadata="&lt;extract&gt;&lt;row exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot;/&gt;&lt;/row&gt;&lt;column exact='1' name='Asunto' attr='text'&gt;&lt;webctrl tag='tr'/&gt;&lt;webctrl tag='th' class='slds-cell-edit cellContainer'/&gt;&lt;webctrl tag='span' class='slds-grid slds-grid--align-spread'/&gt;&lt;webctrl tag='a'/&gt;&lt;/column&gt;&lt;column exact=&quot;1&quot; name=&quot;Fecha&quot; attr=&quot;text&quot;&gt;&lt;webctrl tag=&quot;tr&quot;/&gt;&lt;webctrl tag=&quot;td&quot;/&gt;&lt;webctrl tag=&quot;span&quot; class=&quot;slds-grid slds-grid--align-spread&quot;/&gt;&lt;webctrl tag=&quot;span&quot; class=&quot;slds-truncate uiOutputDateTime&quot;/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100" SimulateClick="True">
                           <ui:ExtractData.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9994de94d68240af0f2628025ebeeede" Selector="&lt;webctrl tag='TABLE' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' /&gt;&lt;webctrl tag='TBODY' /&gt;" WaitForReady="COMPLETE">
@@ -306,8 +309,6 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:ExtractData>
-                        <ui:OutputDataTable DataTable="[CorreosDt]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[prueb]" />
-                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[prueb]" />
                       </Sequence>
                       <FlowStep.Next>
                         <FlowStep x:Name="__ReferenceID5">
