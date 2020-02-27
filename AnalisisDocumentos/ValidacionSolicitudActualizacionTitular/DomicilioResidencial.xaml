@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
-    <x:Property Name="io_DomicilioResidencial" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_DomicilioResidencial" Type="InArgument(x:String)" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>738,2278</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -28,7 +28,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="15">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -44,6 +44,8 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Domicilio residencial&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena, difiere de DomicilioFiscal ya que los índices son distintos." DisplayName="Domicilio residencial" sap:VirtualizedContainerService.HintSize="718,2178" sap2010:WorkflowViewState.IdRef="Flowchart_4">
@@ -158,7 +160,7 @@
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[DomicilioResidencial]</InArgument>
-              <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[io_DomicilioResidencial.ToLower.Split(" "c)]</InArgument>
+              <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_DomicilioResidencial.ToLower.Split(" "c)]</InArgument>
               <OutArgument x:TypeArguments="x:Boolean" x:Key="out_DireccionCoincide">[DireccionCoincide]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
             <sap:WorkflowViewStateService.ViewState>
@@ -191,10 +193,10 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign DisplayName="La dirección no coincide" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_56">
                     <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[io_DomicilioResidencial]</OutArgument>
+                      <OutArgument x:TypeArguments="x:Object">[io_Registro(84)]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">validado</InArgument>
+                      <InArgument x:TypeArguments="x:Object">["validado"]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -242,10 +244,10 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign DisplayName="La dirección no coincide" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_57">
                     <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[io_DomicilioResidencial]</OutArgument>
+                      <OutArgument x:TypeArguments="x:Object">[io_Registro(84)]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">invalidado</InArgument>
+                      <InArgument x:TypeArguments="x:Object">["invalidado"]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -577,7 +579,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Domicilio validado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_58">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[io_DomicilioResidencial]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[in_DomicilioResidencial]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:String">validado</InArgument>
