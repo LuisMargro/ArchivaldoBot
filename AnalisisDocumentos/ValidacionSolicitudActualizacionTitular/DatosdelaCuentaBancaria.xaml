@@ -1,12 +1,10 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="DatosdelaCuentaBancaria" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_NombreCompleto" Type="InArgument(x:String)" />
-    <x:Property Name="in_NombreBanco" Type="InArgument(x:String)" />
-    <x:Property Name="in_CuentaClabe" Type="InArgument(x:String)" />
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
-    <x:Property Name="io_Cadenas" Type="InOutArgument(s:String[])" />
+    <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>723,937</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>723,897</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -43,6 +41,9 @@
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Datos de la cuenta bancaria&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena." DisplayName="Datos de la cuenta bancaria" sap:VirtualizedContainerService.HintSize="703,837" sap2010:WorkflowViewState.IdRef="Flowchart_10">
@@ -64,7 +65,7 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID7</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID1" Condition="[io_Cadenas(131).ToLower.Contains(in_CuentaClabe.ToLower)]" DisplayName="¿Cuenta Blabe?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_90">
+    <FlowDecision x:Name="__ReferenceID1" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;datos de la cuenta bancaria del titular&quot;},StringSplitOptions.None)(1).Split({&quot;cuenta clabe&quot;},StringSplitOptions.None)(1).Split({&quot;nombre del titular de la cuenta&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Cuenta Blabe?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_90">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -109,7 +110,7 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarNombre.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[io_Cadenas(132)]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_TextoDocumento.Split({"datos de la cuenta bancaria del titular"},StringSplitOptions.None)(1).Split({"nombre del titular de la cuenta"},StringSplitOptions.None)(1).Split({"en caso de resultar procedente"},StringSplitOptions.None)(0).Replace(":","").Replace(" ","")]</InArgument>
                   <OutArgument x:TypeArguments="x:Boolean" x:Key="out_CoincideNombre">[NombreValido]</OutArgument>
                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
@@ -188,7 +189,7 @@
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
-    <FlowDecision x:Name="__ReferenceID7" Condition="[io_Cadenas(130).ToLower.Contains(in_NombreBanco.ToLower)]" DisplayName="¿Banco?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_91" True="{x:Reference __ReferenceID1}">
+    <FlowDecision x:Name="__ReferenceID7" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;datos de la cuenta bancaria del titular&quot;},StringSplitOptions.None)(1).Split({&quot;banco:&quot;},StringSplitOptions.None)(1).Split({&quot;cuenta clabe&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Banco?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_91" True="{x:Reference __ReferenceID1}">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
