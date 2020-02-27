@@ -3,7 +3,7 @@
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>679,1297</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>679,1257</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -113,7 +113,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowDecision x:Name="__ReferenceID6" Condition="[String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;fatca crs del titular&quot;},StringSplitOptions.None)(1).Split({&quot;*identificador fiscal&quot;},StringSplitOptions.None)(1).Split({&quot;tax identification number&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Tax Vacío?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_61">
+                    <FlowDecision x:Name="__ReferenceID6" Condition="[String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;fatca crs del titular&quot;},StringSplitOptions.None)(1).Split({&quot;identificador fiscal:&quot;},StringSplitOptions.None)(1).Split({&quot;tax identification number&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Tax Vacío?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_61">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
