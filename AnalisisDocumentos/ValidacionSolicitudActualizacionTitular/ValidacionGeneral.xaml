@@ -5,14 +5,14 @@
     <x:Property Name="in_FechaNacimiento" Type="InArgument(x:String)" />
     <x:Property Name="in_Nacionalidad" Type="InArgument(x:String)" />
     <x:Property Name="in_Email" Type="InArgument(x:String)" />
-    <x:Property Name="out_DomicilioResidencial" Type="OutArgument(x:String)" />
-    <x:Property Name="out_DomicilioFiscal" Type="OutArgument(x:String)" />
     <x:Property Name="in_NombreBanco" Type="InArgument(x:String)" />
     <x:Property Name="in_CuentaClabe" Type="InArgument(x:String)" />
     <x:Property Name="out_Registro" Type="OutArgument(sd:DataRow)" />
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
     <x:Property Name="in_Rfc" Type="InArgument(x:String)" />
+    <x:Property Name="io_DomicilioResidencial" Type="InOutArgument(x:String)" />
+    <x:Property Name="io_DomicilioFiscal" Type="InOutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -134,9 +134,9 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DomicilioFiscal workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DomicilioFiscal.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioFiscal">[out_DomicilioFiscal]</OutArgument>
                   <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                   <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="io_DomicilioFiscal">[io_DomicilioFiscal]</InOutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <FlowStep.Next>
@@ -148,11 +148,11 @@
                       <av:PointCollection x:Key="ConnectorLocation">300,757.5 300,797.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DomicilioResidencial workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DomicilioResidencial.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DomicilioResidencial workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DomicilioResidencial.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_DomicilioResidencial">[out_DomicilioResidencial]</OutArgument>
                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                       <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
+                      <InOutArgument x:TypeArguments="x:String" x:Key="io_DomicilioResidencial">[io_DomicilioResidencial]</InOutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
