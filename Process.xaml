@@ -295,7 +295,7 @@
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">20,1094.5</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">120,1145.5 120,1175.5 320,1175.5 320,1224.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">120,1145.5 120,1175.5 320,1175.5 320,1264.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer string del documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[ArrayDocumentos]">
@@ -328,9 +328,9 @@
                                     <FlowStep x:Name="__ReferenceID16">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">220,1224.5</av:Point>
+                                          <av:Point x:Key="ShapeLocation">220,1264.5</av:Point>
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">320,1275.5 320,1364.5</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">320,1315.5 320,1364.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Cerrar caso" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
@@ -394,7 +394,7 @@
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">420,1094</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">520,1145 520,1175 320,1175 320,1224.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">520,1145 520,1175 320,1175 320,1264.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[StringListSolicitudActualizacion]">
