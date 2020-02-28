@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>741,2051</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>741,2231</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DomicilioFiscal_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -56,32 +56,32 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Llenar el apartado de Domicilio Fiscal en el Checklist" sap:VirtualizedContainerService.HintSize="721,1991" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Llenar el apartado de Domicilio Fiscal en el Checklist" DisplayName="DomicilioFiscal" sap:VirtualizedContainerService.HintSize="721,2171" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Checklist" sap:VirtualizedContainerService.HintSize="679,1868" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5e64f9e3298364e5b6f0be4ad9c46e99" Selector="&lt;html app='chrome.exe' title='Crear Checklist validación de documentos | Salesforce' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Checklist" sap:VirtualizedContainerService.HintSize="679,2048" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5e64f9e3298364e5b6f0be4ad9c46e99" Selector="&lt;html app='chrome.exe' title='Crear Checklist validación de documentos | Salesforce' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Flowchart DisplayName="DatosGeneralesTitular" sap:VirtualizedContainerService.HintSize="645,1722" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+          <Flowchart DisplayName="DatosGeneralesTitular" sap:VirtualizedContainerService.HintSize="645,1902" sap2010:WorkflowViewState.IdRef="Flowchart_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
                 <av:PointCollection x:Key="ConnectorLocation">330,40 480,40 480,70</av:PointCollection>
-                <x:Double x:Key="Height">1685.5</x:Double>
+                <x:Double x:Key="Height">1865.5</x:Double>
                 <x:Double x:Key="Width">611</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID24</x:Reference>
+              <x:Reference>__ReferenceID26</x:Reference>
             </Flowchart.StartNode>
             <FlowDecision x:Name="__ReferenceID7" Condition="[Convert.ToBoolean(in_Registro(13))]" DisplayName="¿Calle?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
               <sap:WorkflowViewStateService.ViewState>
@@ -1186,7 +1186,7 @@
                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                               <av:Point x:Key="ShapeLocation">40,1634.5</av:Point>
                                                                                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                                                              <av:PointCollection x:Key="ConnectorLocation">240,1290 318,1290 318,1326.5</av:PointCollection>
+                                                                                                              <av:PointCollection x:Key="ConnectorLocation">140,1685.5 140,1715.5 140.5,1715.5 140.5,1724.5</av:PointCollection>
                                                                                                             </scg:Dictionary>
                                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                                           <ui:AnchorBase AnchorPosition="Top" DisplayName="CP lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_22">
@@ -1249,6 +1249,143 @@
                                                                                                               </scg:Dictionary>
                                                                                                             </sap:WorkflowViewStateService.ViewState>
                                                                                                           </ui:AnchorBase>
+                                                                                                          <FlowStep.Next>
+                                                                                                            <FlowStep x:Name="__ReferenceID24">
+                                                                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                  <av:Point x:Key="ShapeLocation">40.5,1724.5</av:Point>
+                                                                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                  <av:PointCollection x:Key="ConnectorLocation">140.5,1775.5 140.5,1805.5 140,1805.5 140,1814.5</av:PointCollection>
+                                                                                                                </scg:Dictionary>
+                                                                                                              </sap:WorkflowViewStateService.ViewState>
+                                                                                                              <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar CP SAPOMEX" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_23">
+                                                                                                                <ui:AnchorBase.Action>
+                                                                                                                  <ActivityAction x:TypeArguments="ui:Anchor">
+                                                                                                                    <ActivityAction.Argument>
+                                                                                                                      <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                                                                                                                    </ActivityAction.Argument>
+                                                                                                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Check CP SAPOMEX" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                                                                      <ui:Click.CursorPosition>
+                                                                                                                        <ui:CursorPosition Position="Center">
+                                                                                                                          <ui:CursorPosition.OffsetX>
+                                                                                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                          </ui:CursorPosition.OffsetX>
+                                                                                                                          <ui:CursorPosition.OffsetY>
+                                                                                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                          </ui:CursorPosition.OffsetY>
+                                                                                                                        </ui:CursorPosition>
+                                                                                                                      </ui:Click.CursorPosition>
+                                                                                                                      <ui:Click.Target>
+                                                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="02f010da5ad1f0b84ba5acc87b752ebe" Selector="&lt;webctrl aaname='SEPOMEX' tag='SPAN' /&gt;">
+                                                                                                                          <ui:Target.TimeoutMS>
+                                                                                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                          </ui:Target.TimeoutMS>
+                                                                                                                          <ui:Target.WaitForReady>
+                                                                                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                          </ui:Target.WaitForReady>
+                                                                                                                        </ui:Target>
+                                                                                                                      </ui:Click.Target>
+                                                                                                                    </ui:Click>
+                                                                                                                  </ActivityAction>
+                                                                                                                </ui:AnchorBase.Action>
+                                                                                                                <ui:AnchorBase.AnchorProvider>
+                                                                                                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="El atributo IDX es necesario (está validado)" DisplayName="Buscar campo CP SAPOMEX" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_39">
+                                                                                                                    <ui:WaitUiElementAppear.Target>
+                                                                                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="35d6dbe3cb418c4774e06dc6259c659c" Selector="&lt;webctrl tag='DIV' aaname='CP' idx='1' /&gt;">
+                                                                                                                        <ui:Target.TimeoutMS>
+                                                                                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                        </ui:Target.TimeoutMS>
+                                                                                                                        <ui:Target.WaitForReady>
+                                                                                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                        </ui:Target.WaitForReady>
+                                                                                                                      </ui:Target>
+                                                                                                                    </ui:WaitUiElementAppear.Target>
+                                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                                                      </scg:Dictionary>
+                                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                                  </ui:WaitUiElementAppear>
+                                                                                                                </ui:AnchorBase.AnchorProvider>
+                                                                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                  </scg:Dictionary>
+                                                                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                                                              </ui:AnchorBase>
+                                                                                                              <FlowStep.Next>
+                                                                                                                <FlowStep x:Name="__ReferenceID25">
+                                                                                                                  <sap:WorkflowViewStateService.ViewState>
+                                                                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                      <av:Point x:Key="ShapeLocation">40,1814.5</av:Point>
+                                                                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                                      <av:PointCollection x:Key="ConnectorLocation">250,1300 328,1300 328,1336.5</av:PointCollection>
+                                                                                                                    </scg:Dictionary>
+                                                                                                                  </sap:WorkflowViewStateService.ViewState>
+                                                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="CP SAPOMEX lleno" sap:VirtualizedContainerService.HintSize="384,383" sap2010:WorkflowViewState.IdRef="AnchorBase_24">
+                                                                                                                    <ui:AnchorBase.Action>
+                                                                                                                      <ActivityAction x:TypeArguments="ui:Anchor">
+                                                                                                                        <ActivityAction.Argument>
+                                                                                                                          <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                                                                                                                        </ActivityAction.Argument>
+                                                                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Elegir CP SAPOMEX llena" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                                                                          <ui:Click.CursorPosition>
+                                                                                                                            <ui:CursorPosition Position="Center">
+                                                                                                                              <ui:CursorPosition.OffsetX>
+                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                              </ui:CursorPosition.OffsetX>
+                                                                                                                              <ui:CursorPosition.OffsetY>
+                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                              </ui:CursorPosition.OffsetY>
+                                                                                                                            </ui:CursorPosition>
+                                                                                                                          </ui:Click.CursorPosition>
+                                                                                                                          <ui:Click.Target>
+                                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                                                                              <ui:Target.TimeoutMS>
+                                                                                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                              </ui:Target.TimeoutMS>
+                                                                                                                              <ui:Target.WaitForReady>
+                                                                                                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                              </ui:Target.WaitForReady>
+                                                                                                                            </ui:Target>
+                                                                                                                          </ui:Click.Target>
+                                                                                                                          <sap:WorkflowViewStateService.ViewState>
+                                                                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                            </scg:Dictionary>
+                                                                                                                          </sap:WorkflowViewStateService.ViewState>
+                                                                                                                        </ui:Click>
+                                                                                                                      </ActivityAction>
+                                                                                                                    </ui:AnchorBase.Action>
+                                                                                                                    <ui:AnchorBase.AnchorProvider>
+                                                                                                                      <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="El atributo IDX es necesario (está validado)" DisplayName="Buscar campo CP SAPOMEX lleno" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_40">
+                                                                                                                        <ui:WaitUiElementAppear.Target>
+                                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="35d6dbe3cb418c4774e06dc6259c659c" Selector="&lt;webctrl tag='DIV' aaname='CP' idx='1' /&gt;">
+                                                                                                                            <ui:Target.TimeoutMS>
+                                                                                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                                                                                            </ui:Target.TimeoutMS>
+                                                                                                                            <ui:Target.WaitForReady>
+                                                                                                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                                                                            </ui:Target.WaitForReady>
+                                                                                                                          </ui:Target>
+                                                                                                                        </ui:WaitUiElementAppear.Target>
+                                                                                                                        <sap:WorkflowViewStateService.ViewState>
+                                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                                                                          </scg:Dictionary>
+                                                                                                                        </sap:WorkflowViewStateService.ViewState>
+                                                                                                                      </ui:WaitUiElementAppear>
+                                                                                                                    </ui:AnchorBase.AnchorProvider>
+                                                                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                                                                      </scg:Dictionary>
+                                                                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                                                                  </ui:AnchorBase>
+                                                                                                                </FlowStep>
+                                                                                                              </FlowStep.Next>
+                                                                                                            </FlowStep>
+                                                                                                          </FlowStep.Next>
                                                                                                         </FlowStep>
                                                                                                       </FlowStep.Next>
                                                                                                     </FlowStep>
@@ -1322,7 +1459,7 @@
             <x:Reference>__ReferenceID2</x:Reference>
             <x:Reference>__ReferenceID3</x:Reference>
             <x:Reference>__ReferenceID4</x:Reference>
-            <FlowStep x:Name="__ReferenceID24">
+            <FlowStep x:Name="__ReferenceID26">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">349,70</av:Point>
@@ -1365,6 +1502,8 @@
             <x:Reference>__ReferenceID21</x:Reference>
             <x:Reference>__ReferenceID22</x:Reference>
             <x:Reference>__ReferenceID23</x:Reference>
+            <x:Reference>__ReferenceID24</x:Reference>
+            <x:Reference>__ReferenceID25</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:BrowserScope.Body>
