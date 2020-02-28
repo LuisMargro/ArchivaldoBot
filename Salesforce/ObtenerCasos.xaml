@@ -98,7 +98,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,163 300,237</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="526,1995" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="CasosVisible" />
                 </Sequence.Variables>
@@ -269,7 +269,7 @@
                     </ui:Target>
                   </ui:TypeInto.Target>
                 </ui:TypeInto>
-                <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Se agrego una pequeña espera posterior para permitir el cierre de la ventana" ClickType="CLICK_SINGLE" DelayBefore="3000" DisplayName="Click a mis casos" sap:VirtualizedContainerService.HintSize="484,148" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click a mis casos" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -287,12 +287,14 @@
                       </ui:Target.TimeoutMS>
                     </ui:Target>
                   </ui:Click.Target>
+                </ui:Click>
+                <Delay sap2010:Annotation.AnnotationText="Se agrego una pequeña espera posterior para permitir el cierre de la ventana" DisplayName="Esperar resultados" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="Delay_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </ui:Click>
+                </Delay>
               </Sequence>
               <FlowStep.Next>
                 <FlowStep x:Name="__ReferenceID7">
@@ -303,7 +305,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">300,303 300,357</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Obtener casos en tramite" sap:VirtualizedContainerService.HintSize="376,608" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Obtener casos en tramite" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
