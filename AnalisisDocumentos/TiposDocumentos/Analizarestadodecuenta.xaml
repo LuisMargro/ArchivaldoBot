@@ -182,7 +182,7 @@
           <av:PointCollection x:Key="ConnectorLocation">460,315.5 460,345.5 300,345.5 300,386.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Attach bd bancos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathBDBancos]">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Attach bd bancos" sap:VirtualizedContainerService.HintSize="652,1100" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathBDBancos]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
@@ -246,7 +246,7 @@
                           </scg1:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </Assign>
-                      <If Condition="[in_StringDocumento.Contains(NombreBanco)]" DisplayName="Buscar nombre de banco en el docto" sap:VirtualizedContainerService.HintSize="484,361" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If Condition="[in_StringDocumento.Contains(NombreBanco.Split(&quot; &quot;C)(0))]" DisplayName="Buscar nombre de banco en el docto" sap:VirtualizedContainerService.HintSize="484,361" sap2010:WorkflowViewState.IdRef="If_2">
                         <If.Then>
                           <Sequence DisplayName="Nombre banco coincide" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_4">
                             <sap:WorkflowViewStateService.ViewState>
@@ -254,7 +254,6 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg1:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:Break DisplayName="Salir el ciclo" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                             <Assign DisplayName="activar bandera de encontrado de docto" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_60">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Boolean">[BanderaBancoCoincidencia]</OutArgument>
@@ -263,6 +262,7 @@
                                 <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                               </Assign.Value>
                             </Assign>
+                            <ui:Break DisplayName="Salir el ciclo" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                           </Sequence>
                         </If.Then>
                       </If>
@@ -316,7 +316,7 @@
         </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID10" Condition="False" DisplayName="¿Edo. cuenta tarjeta?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
+    <FlowDecision x:Name="__ReferenceID10" Condition="[in_StringDocumento.Contains(&quot;estado de cuenta de la tarjeta&quot;)]" DisplayName="¿Edo. cuenta tarjeta?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
