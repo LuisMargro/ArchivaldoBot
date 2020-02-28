@@ -7,7 +7,7 @@
     <x:Property Name="in_ArregloDireccionResidencial" Type="InArgument(s:String[])" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>936,1479</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>936,1519</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -525,7 +525,7 @@
               <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:Object">["la identificacion no le pernece al cliente"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Identificacion ilegible"]</InArgument>
             </Assign.Value>
             <sap:WorkflowViewStateService.ViewState>
               <scg1:Dictionary x:TypeArguments="x:String, x:Object">

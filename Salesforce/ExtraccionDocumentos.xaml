@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>841,1844</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>841,1804</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -107,9 +107,9 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID15</x:Reference>
+              <x:Reference>__ReferenceID16</x:Reference>
             </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID15">
+            <FlowStep x:Name="__ReferenceID16">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,107</av:Point>
@@ -473,7 +473,7 @@
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:Point x:Key="ShapeLocation">19,1030</av:Point>
                                                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                      <av:PointCollection x:Key="ConnectorLocation">150,1090 150,1120 360,1120 360,1300</av:PointCollection>
+                                                      <av:PointCollection x:Key="ConnectorLocation">150,1090 150,1134.02</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <Assign DisplayName="Guardar Numero de caso" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
@@ -490,26 +490,64 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </Assign>
                                                   <FlowStep.Next>
-                                                    <FlowStep x:Name="__ReferenceID1">
+                                                    <FlowStep x:Name="__ReferenceID15">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <av:Point x:Key="ShapeLocation">229,1300</av:Point>
-                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                          <av:Point x:Key="ShapeLocation">50,1134.02</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">250,1159.52 360,1159.52 360,1300</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Assign DisplayName="Retornar la bandera de cliente nuevo" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
-                                                        <Assign.To>
-                                                          <OutArgument x:TypeArguments="x:Boolean">[out_BanderaClienteNuevo]</OutArgument>
-                                                        </Assign.To>
-                                                        <Assign.Value>
-                                                          <InArgument x:TypeArguments="x:Boolean">[String.IsNullOrEmpty(QueryCliente)]</InArgument>
-                                                        </Assign.Value>
+                                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click cerrar bandeja de correos electronicos" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                        <ui:Click.CursorPosition>
+                                                          <ui:CursorPosition Position="Center">
+                                                            <ui:CursorPosition.OffsetX>
+                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                            </ui:CursorPosition.OffsetX>
+                                                            <ui:CursorPosition.OffsetY>
+                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                            </ui:CursorPosition.OffsetY>
+                                                          </ui:CursorPosition>
+                                                        </ui:Click.CursorPosition>
+                                                        <ui:Click.Target>
+                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="65089c39f8f28d71c7555d84dbdae4f5" Selector="&lt;webctrl aaname='Correos electrónicos' tag='SPAN' parentclass='tabHeader slds-tabs--default__link slds-p-right--small slds-grow ' /&gt;&lt;nav up='2' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;button&amp;gt;lightning-primitive-icon&amp;gt;svg' tag='svg' /&gt;">
+                                                            <ui:Target.TimeoutMS>
+                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                            </ui:Target.TimeoutMS>
+                                                            <ui:Target.WaitForReady>
+                                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                            </ui:Target.WaitForReady>
+                                                          </ui:Target>
+                                                        </ui:Click.Target>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                      </Assign>
+                                                      </ui:Click>
+                                                      <FlowStep.Next>
+                                                        <FlowStep x:Name="__ReferenceID1">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">229,1300</av:Point>
+                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign DisplayName="Retornar la bandera de cliente nuevo" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Boolean">[out_BanderaClienteNuevo]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Boolean">[String.IsNullOrEmpty(QueryCliente)]</InArgument>
+                                                            </Assign.Value>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </Assign>
+                                                        </FlowStep>
+                                                      </FlowStep.Next>
                                                     </FlowStep>
                                                   </FlowStep.Next>
                                                 </FlowStep>
@@ -737,6 +775,7 @@
             <x:Reference>__ReferenceID0</x:Reference>
             <x:Reference>__ReferenceID14</x:Reference>
             <x:Reference>__ReferenceID1</x:Reference>
+            <x:Reference>__ReferenceID15</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:BrowserScope.Body>

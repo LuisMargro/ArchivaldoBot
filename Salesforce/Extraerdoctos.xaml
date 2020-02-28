@@ -4,7 +4,7 @@
     <x:Property Name="in_Correo" Type="InArgument(sd:DataRow)" />
     <x:Property Name="io_CorreosNuevosCliente" Type="InOutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>730,1201</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>732,1298</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -43,20 +43,20 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Modulo que forma parte de la extraccion de documentos, se encarga de abrir el correo del cliente y descargar los archivos adjuntos" sap:VirtualizedContainerService.HintSize="710,1141" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Modulo que forma parte de la extraccion de documentos, se encarga de abrir el correo del cliente y descargar los archivos adjuntos" sap:VirtualizedContainerService.HintSize="712,1238" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach salesforce" sap:VirtualizedContainerService.HintSize="668,1007" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ca1e5751a3102d4701a4a34c5724f1f5" Selector="&lt;html app='chrome.exe' title='*Salesforce*' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach salesforce" sap:VirtualizedContainerService.HintSize="670,1104" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="ca1e5751a3102d4701a4a34c5724f1f5" Selector="&lt;html app='chrome.exe' title='*Salesforce*' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Flowchart sap2010:Annotation.AnnotationText="Modulo que forma parte de la extraccion de documentos, se encarga de abrir el correo del cliente y descargar los archivos adjuntos" DisplayName="Extraer docto's" sap:VirtualizedContainerService.HintSize="634,861" sap2010:WorkflowViewState.IdRef="Flowchart_5">
+          <Flowchart sap2010:Annotation.AnnotationText="Modulo que forma parte de la extraccion de documentos, se encarga de abrir el correo del cliente y descargar los archivos adjuntos" DisplayName="Extraer docto's" sap:VirtualizedContainerService.HintSize="636,958" sap2010:WorkflowViewState.IdRef="Flowchart_5">
             <Flowchart.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="DTDocumentos" />
               <Variable x:TypeArguments="x:Boolean" Name="NoHayArchivos" />
@@ -68,14 +68,15 @@
                 <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
                 <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,104.5</av:PointCollection>
-                <x:Double x:Key="Height">783</x:Double>
+                <x:Double x:Key="Height">880</x:Double>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Double x:Key="Width">602</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID16</x:Reference>
+              <x:Reference>__ReferenceID17</x:Reference>
             </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID16">
+            <FlowStep x:Name="__ReferenceID17">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,104.5</av:Point>
@@ -83,7 +84,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,197.5 290,197.5 290,224.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Se le da tiempo antes para esperar a la carga del sistema" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click en correo" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Se le da tiempo antes para esperar a la carga del sistema" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click en correo" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -156,12 +157,12 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">260.5,356.5</av:Point>
                               <av:Size x:Key="ShapeSize">82,87</av:Size>
-                              <av:PointCollection x:Key="FalseConnector">342.5,400 400,400 400,514.5</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">342.5,400 390,400 390,714.5</av:PointCollection>
                               <av:PointCollection x:Key="TrueConnector">260.5,400 110,400 110,424.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <FlowDecision.True>
-                            <FlowStep x:Name="__ReferenceID13">
+                            <FlowStep x:Name="__ReferenceID12">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">10,424.5</av:Point>
@@ -169,7 +170,7 @@
                                   <av:PointCollection x:Key="ConnectorLocation">110,517.5 110,534.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="Se le da tiempo antes para esperar a la carga del sistema" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click Abrir todos los documentos activos" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Se le da tiempo antes para esperar a la carga del sistema" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click Abrir todos los documentos activos" sap:VirtualizedContainerService.HintSize="200,93" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
@@ -198,7 +199,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:Click>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID14">
+                                <FlowStep x:Name="__ReferenceID13">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">10,534.5</av:Point>
@@ -216,12 +217,12 @@
                                     </ui:ExtractData.Target>
                                   </ui:ExtractData>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID15">
+                                    <FlowStep x:Name="__ReferenceID14">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">10,604.5</av:Point>
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">110,655.5 110,685.5 269.895,685.5 269.895,700</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">110,655.5 110,674.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DTDocumentos]" DisplayName="Iterar documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
@@ -230,7 +231,7 @@
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="document" />
                                             </ActivityAction.Argument>
-                                            <Flowchart DisplayName="Descarga de documento" sap:VirtualizedContainerService.HintSize="648,868" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                            <Flowchart DisplayName="Descarga de documento" sap:VirtualizedContainerService.HintSize="648,932" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                               <Flowchart.Variables>
                                                 <Variable x:TypeArguments="x:Boolean" Name="PaginaDescarga" />
                                                 <Variable x:TypeArguments="x:Boolean" Name="ArchDescargado" />
@@ -243,7 +244,7 @@
                                                   <av:Size x:Key="ShapeSize">60,75</av:Size>
                                                   <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,114.5</av:PointCollection>
                                                   <x:Double x:Key="Width">613.5</x:Double>
-                                                  <x:Double x:Key="Height">832</x:Double>
+                                                  <x:Double x:Key="Height">896.5</x:Double>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <Flowchart.StartNode>
@@ -257,7 +258,7 @@
                                                     <av:PointCollection x:Key="ConnectorLocation">120,505.5 120,544.5</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Ingresar ruta de descarga del documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[in_RutaDocumentos+document(0).ToString]">
+                                                <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Ingresar ruta de descarga del documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[in_RutaDocumentos+document(0).ToString]">
                                                   <ui:TypeInto.Target>
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="63c6ae360d99a9e4c3d19703b5652c42" Selector="&lt;wnd app='chrome.exe' title='Guardar como' /&gt;&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nombre de archivo:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;">
                                                       <ui:Target.TimeoutMS>
@@ -278,7 +279,7 @@
                                                         <av:PointCollection x:Key="ConnectorLocation">120,595.5 120,625.5 130,625.5 130,644.5</av:PointCollection>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Guardar documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click Guardar documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                       <ui:Click.CursorPosition>
                                                         <ui:CursorPosition Position="Center">
                                                           <ui:CursorPosition.OffsetX>
@@ -388,7 +389,7 @@
                                                     <av:PointCollection x:Key="ConnectorLocation">300,165.5 300,184.5</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Abrir documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Abrir documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:Click.CursorPosition>
                                                     <ui:CursorPosition Position="Center">
                                                       <ui:CursorPosition.OffsetX>
@@ -460,26 +461,102 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:ForEachRow>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID8">
+                                        <FlowStep x:Name="__ReferenceID16">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">138.895,700</av:Point>
-                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                              <av:Point x:Key="ShapeLocation">10,674.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">210,700 390,700 390,714.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign DisplayName="Concatenar clientes" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                                            <Assign.To>
-                                              <OutArgument x:TypeArguments="x:String">[io_CorreosNuevosCliente]</OutArgument>
-                                            </Assign.To>
-                                            <Assign.Value>
-                                              <InArgument x:TypeArguments="x:String">[io_CorreosNuevosCliente+in_Correo(1).ToString.trim+";"]</InArgument>
-                                            </Assign.Value>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar archivos adjuntos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9439694869a4db480331d5c4b23cabc8" Selector="&lt;webctrl aaname='Archivos adjuntos' tag='SPAN' parentclass='tabHeader slds-tabs--default__link slds-p-right--small slds-grow ' /&gt;&lt;nav up='2' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;button&amp;gt;lightning-primitive-icon&amp;gt;svg' tag='svg' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                          </Assign>
+                                          </ui:Click>
+                                          <FlowStep.Next>
+                                            <FlowStep x:Name="__ReferenceID8">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">290,714.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">390,765.5 390,800</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click cerrar mensaje" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                <ui:Click.CursorPosition>
+                                                  <ui:CursorPosition Position="Center">
+                                                    <ui:CursorPosition.OffsetX>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetX>
+                                                    <ui:CursorPosition.OffsetY>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetY>
+                                                  </ui:CursorPosition>
+                                                </ui:Click.CursorPosition>
+                                                <ui:Click.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ee4681a7000350b5ad4446cdfc900baf" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;button&amp;gt;lightning-primitive-icon&amp;gt;svg&amp;gt;use' idx='2' tag='use' /&gt;">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:Click.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:Click>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID15">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">259,800</av:Point>
+                                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign DisplayName="Concatenar clientes" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[io_CorreosNuevosCliente]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[io_CorreosNuevosCliente+in_Correo(1).ToString.trim+";"]</InArgument>
+                                                    </Assign.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Assign>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowStep.Next>
                                         </FlowStep>
                                       </FlowStep.Next>
                                     </FlowStep>
@@ -489,45 +566,7 @@
                             </FlowStep>
                           </FlowDecision.True>
                           <FlowDecision.False>
-                            <FlowStep x:Name="__ReferenceID12">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">300,514.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">400,565.5 400,595.5 269.895,595.5 269.895,700</av:PointCollection>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click cerrar caso" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ee4681a7000350b5ad4446cdfc900baf" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;div&amp;gt;button&amp;gt;lightning-primitive-icon&amp;gt;svg&amp;gt;use' idx='2' tag='use' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </ui:Click>
-                              <FlowStep.Next>
-                                <x:Reference>__ReferenceID8</x:Reference>
-                              </FlowStep.Next>
-                            </FlowStep>
+                            <x:Reference>__ReferenceID8</x:Reference>
                           </FlowDecision.False>
                         </FlowDecision>
                       </FlowStep.Next>
@@ -539,11 +578,12 @@
             <x:Reference>__ReferenceID9</x:Reference>
             <x:Reference>__ReferenceID10</x:Reference>
             <x:Reference>__ReferenceID11</x:Reference>
+            <x:Reference>__ReferenceID8</x:Reference>
             <x:Reference>__ReferenceID12</x:Reference>
             <x:Reference>__ReferenceID13</x:Reference>
             <x:Reference>__ReferenceID14</x:Reference>
             <x:Reference>__ReferenceID15</x:Reference>
-            <x:Reference>__ReferenceID8</x:Reference>
+            <x:Reference>__ReferenceID16</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:BrowserScope.Body>
