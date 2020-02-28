@@ -331,7 +331,7 @@ El motivo de este correo es para comentarle que  tuvimos algunos problemas con l
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Eliminar documentos" sap:VirtualizedContainerService.HintSize="307,194" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[ArrayDocumentos]">
+                                      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Eliminar documentos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[ArrayDocumentos]">
                                         <ui:ForEach.Body>
                                           <ActivityAction x:TypeArguments="x:String">
                                             <ActivityAction.Argument>
@@ -558,20 +558,12 @@ El motivo de este correo es para comentarle que  tuvimos algunos problemas con l
                                                                             <av:PointCollection x:Key="ConnectorLocation">120,1095 120,1154.5</av:PointCollection>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainCotejarDocumentos workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="AnalisisDocumentos\MainCotejarDocumentos.xaml">
+                                                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainCotejarDocumentos workflow" sap:VirtualizedContainerService.HintSize="358,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="AnalisisDocumentos\MainCotejarDocumentos.xaml">
                                                                           <ui:InvokeWorkflowFile.Arguments>
                                                                             <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">[DataClienteBusqueda(0).ToString]</InArgument>
                                                                             <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[DataClienteBusqueda(6).ToString]</InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_FaltanDocumentos">Faltan los siguientes documentos:</InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_DoctosInvalidos">Encontramos problemas con los siguientes documentos:</InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_CambioDireccion">El comprobante de domicilio no concuerda con la direccion registrada en nuesto sistema, ¿Desea actualizarla?</InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_Parentesco">El comprobante de domicilio que usted envio no pertence a usted, ¿Cual es el parentezco que tiene con la persona dueña del comprobante?</InArgument>
                                                                             <InArgument x:TypeArguments="x:String" x:Key="in_DireccionFiscal">[DataClienteBusqueda(7).ToString]</InArgument>
                                                                             <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial">[DataClienteBusqueda(8).ToString]</InArgument>
-                                                                            <InArgument x:TypeArguments="x:String" x:Key="in_LayoutCorreo" xml:space="preserve">Estimado {cliente}, un gusto poder saludale.
-
-
-El motivo de este correo es para comentarle que  tuvimos algunos problemas con la documentacion que envio, dichos problemas se enlistan a continuación.</InArgument>
                                                                             <InOutArgument x:TypeArguments="sd:DataRow" x:Key="in_ClienteLog">[Cliente]</InOutArgument>
                                                                             <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_ArrayDocumentos">[StringListDoctos]</InArgument>
                                                                             <InArgument x:TypeArguments="x:String" x:Key="in_NumeroCuenta">[DataClienteBusqueda(12).ToString]</InArgument>
@@ -591,7 +583,7 @@ El motivo de este correo es para comentarle que  tuvimos algunos problemas con l
                                                                                 <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GuardarClienteLog workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\GuardarClienteLog.xaml">
+                                                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GuardarClienteLog workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\GuardarClienteLog.xaml">
                                                                               <ui:InvokeWorkflowFile.Arguments>
                                                                                 <InArgument x:TypeArguments="x:String" x:Key="in_PathLog">[in_Config("PathLog").ToString]</InArgument>
                                                                                 <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Cliente">[Cliente]</InArgument>

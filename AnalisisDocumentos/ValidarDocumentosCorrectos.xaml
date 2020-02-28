@@ -4,7 +4,6 @@
     <x:Property Name="in_Nombre" Type="InArgument(x:String)" />
     <x:Property Name="in_CURP" Type="InArgument(x:String)" />
     <x:Property Name="io_Cliente" Type="InOutArgument(sd:DataRow)" />
-    <x:Property Name="out_Mensaje" Type="OutArgument(x:String)" />
     <x:Property Name="in_DireccionFiscal" Type="InArgument(x:String)" />
     <x:Property Name="in_DireccionResidencial" Type="InArgument(x:String)" />
     <x:Property Name="in_PathBancos" Type="InArgument(x:String)" />
@@ -107,11 +106,10 @@
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
               <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[in_CURP]</InArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccionFiscal">[ArregloDireccionFiscal]</InArgument>
               <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccionResidencial">[ArregloDireccionResidencial]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[in_CURP]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </FlowStep>
@@ -137,11 +135,10 @@
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarcomprobante workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarcomprobante.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarcomprobante workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarcomprobante.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
                   <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloNombre">[ArregloNombre]</InArgument>
                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccionFiscal">[ArregloDireccionFiscal]</InArgument>
                   <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccionResidencial">[ArregloDireccionResidencial]</InArgument>
@@ -169,7 +166,7 @@
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarestadodecuenta workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarestadodecuenta.xaml">
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Analizarestadodecuenta workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="AnalisisDocumentos/TiposDocumentos/Analizarestadodecuenta.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[io_Cliente]</InOutArgument>
                       <OutArgument x:TypeArguments="x:String" x:Key="out_Mensaje">[out_Mensaje]</OutArgument>
