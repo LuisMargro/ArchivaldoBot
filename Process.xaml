@@ -559,7 +559,7 @@
                                                                             <av:PointCollection x:Key="ConnectorLocation">120,1015.5 120,1054.5</av:PointCollection>
                                                                           </scg:Dictionary>
                                                                         </sap:WorkflowViewStateService.ViewState>
-                                                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer string del documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_12" Values="[ArrayDocumentos]">
+                                                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer string del documento" sap:VirtualizedContainerService.HintSize="415,221" sap2010:WorkflowViewState.IdRef="ForEach`1_12" Values="[StringListDoctos]">
                                                                           <ui:ForEach.Body>
                                                                             <ActivityAction x:TypeArguments="x:String">
                                                                               <ActivityAction.Argument>
@@ -613,7 +613,7 @@
                                                                                     <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MatrizTipificacion workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="Salesforce\MatrizTipificacion.xaml">
+                                                                                <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MatrizTipificacion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="Salesforce\MatrizTipificacion.xaml">
                                                                                   <ui:InvokeWorkflowFile.Arguments>
                                                                                     <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[NumeroContrato]</InArgument>
                                                                                     <InArgument x:TypeArguments="x:String" x:Key="in_NombreCliente">[DataClienteBusqueda(0).ToString]</InArgument>

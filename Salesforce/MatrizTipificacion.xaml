@@ -131,7 +131,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">290,265.5 290,299</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Ingresar numero de contrato" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_NumeroContrato]">
+                  <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Ingresar numero de contrato" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[in_NumeroContrato]">
                     <ui:TypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0957952d51dbc4688916a26cf742259b" Selector="&lt;webctrl tag='INPUT' aaname='ContratoIngresar el número de contrato cuando no se encuentra información de la solicitud en Salesforce' /&gt;&#xA;">
                         <ui:Target.TimeoutMS>
@@ -157,7 +157,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">290,321 290,354.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Delay sap2010:Annotation.AnnotationText="Se agrego una espera posterio con el fin de permitir al sistema encontrar al usuario" DisplayName="Esperar resultados" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+                      <Delay sap2010:Annotation.AnnotationText="Se agrego una espera posterio con el fin de permitir al sistema encontrar al usuario" DisplayName="Esperar resultados" Duration="00:00:08" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -457,7 +457,7 @@
                                               <av:Size x:Key="ShapeSize">200,66</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="LLenado del estado de info adicional" sap:VirtualizedContainerService.HintSize="376,636" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                          <Sequence DisplayName="LLenado del estado de info adicional" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
