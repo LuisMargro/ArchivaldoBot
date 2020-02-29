@@ -180,7 +180,7 @@
                                 </ui:CursorPosition>
                               </ui:Click.CursorPosition>
                               <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                   <ui:Target.TimeoutMS>
                                     <InArgument x:TypeArguments="x:Int32" />
                                   </ui:Target.TimeoutMS>
@@ -303,7 +303,7 @@
                                         </ui:CursorPosition>
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                           <ui:Target.TimeoutMS>
                                             <InArgument x:TypeArguments="x:Int32" />
                                           </ui:Target.TimeoutMS>
@@ -426,7 +426,7 @@
                                                 </ui:CursorPosition>
                                               </ui:Click.CursorPosition>
                                               <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                   <ui:Target.TimeoutMS>
                                                     <InArgument x:TypeArguments="x:Int32" />
                                                   </ui:Target.TimeoutMS>
@@ -562,7 +562,7 @@
                                                             </ui:CursorPosition>
                                                           </ui:Click.CursorPosition>
                                                           <ui:Click.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                               <ui:Target.TimeoutMS>
                                                                 <InArgument x:TypeArguments="x:Int32" />
                                                               </ui:Target.TimeoutMS>
@@ -685,7 +685,7 @@
                                                                     </ui:CursorPosition>
                                                                   </ui:Click.CursorPosition>
                                                                   <ui:Click.Target>
-                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                       <ui:Target.TimeoutMS>
                                                                         <InArgument x:TypeArguments="x:Int32" />
                                                                       </ui:Target.TimeoutMS>
@@ -808,7 +808,7 @@
                                                                             </ui:CursorPosition>
                                                                           </ui:Click.CursorPosition>
                                                                           <ui:Click.Target>
-                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                               <ui:Target.TimeoutMS>
                                                                                 <InArgument x:TypeArguments="x:Int32" />
                                                                               </ui:Target.TimeoutMS>
@@ -943,7 +943,7 @@
                                                                                         </ui:CursorPosition>
                                                                                       </ui:Click.CursorPosition>
                                                                                       <ui:Click.Target>
-                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                                           <ui:Target.TimeoutMS>
                                                                                             <InArgument x:TypeArguments="x:Int32" />
                                                                                           </ui:Target.TimeoutMS>
@@ -1066,7 +1066,7 @@
                                                                                                 </ui:CursorPosition>
                                                                                               </ui:Click.CursorPosition>
                                                                                               <ui:Click.Target>
-                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                                                   <ui:Target.TimeoutMS>
                                                                                                     <InArgument x:TypeArguments="x:Int32" />
                                                                                                   </ui:Target.TimeoutMS>
@@ -1189,7 +1189,7 @@
                                                                                                         </ui:CursorPosition>
                                                                                                       </ui:Click.CursorPosition>
                                                                                                       <ui:Click.Target>
-                                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                                                           <ui:Target.TimeoutMS>
                                                                                                             <InArgument x:TypeArguments="x:Int32" />
                                                                                                           </ui:Target.TimeoutMS>

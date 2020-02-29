@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>730,1329</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>730,1289</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FatcaCrsTitular_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -324,7 +324,7 @@
                                                 </ui:CursorPosition>
                                               </ui:Click.CursorPosition>
                                               <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                   <ui:Target.TimeoutMS>
                                                     <InArgument x:TypeArguments="x:Int32" />
                                                   </ui:Target.TimeoutMS>
@@ -370,7 +370,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">120.5,665.5 120.5,695.5 120,695.5 120,704.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Residente en el extranjero DR" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
+                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Residente en el extranjero DR" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
                                             <ui:AnchorBase.Action>
                                               <ActivityAction x:TypeArguments="ui:Anchor">
                                                 <ActivityAction.Argument>
@@ -447,7 +447,7 @@
                                                         </ui:CursorPosition>
                                                       </ui:Click.CursorPosition>
                                                       <ui:Click.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                           <ui:Target.TimeoutMS>
                                                             <InArgument x:TypeArguments="x:Int32" />
                                                           </ui:Target.TimeoutMS>

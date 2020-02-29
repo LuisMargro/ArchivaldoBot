@@ -383,7 +383,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">110,815.5 110,845.5 303.5,845.5 303.5,896.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Estado" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_40">
+                                              <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Estado" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_40">
                                                 <ui:AnchorBase.Action>
                                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                                     <ActivityAction.Argument>
@@ -830,7 +830,7 @@
                                                                                                     </ui:CursorPosition>
                                                                                                   </ui:Click.CursorPosition>
                                                                                                   <ui:Click.Target>
-                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                                                       <ui:Target.TimeoutMS>
                                                                                                         <InArgument x:TypeArguments="x:Int32" />
                                                                                                       </ui:Target.TimeoutMS>
@@ -953,7 +953,7 @@
                                                                                                             </ui:CursorPosition>
                                                                                                           </ui:Click.CursorPosition>
                                                                                                           <ui:Click.Target>
-                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                                                               <ui:Target.TimeoutMS>
                                                                                                                 <InArgument x:TypeArguments="x:Int32" />
                                                                                                               </ui:Target.TimeoutMS>
@@ -999,7 +999,7 @@
                                                                                                           <av:PointCollection x:Key="ConnectorLocation">130.5,1975.5 130.5,2005.5 130,2005.5 130,2014.5</av:PointCollection>
                                                                                                         </scg:Dictionary>
                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Fecha de registro RFC" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_48">
+                                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Fecha de registro RFC" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_48">
                                                                                                         <ui:AnchorBase.Action>
                                                                                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                             <ActivityAction.Argument>
@@ -1076,7 +1076,7 @@
                                                                                                                     </ui:CursorPosition>
                                                                                                                   </ui:Click.CursorPosition>
                                                                                                                   <ui:Click.Target>
-                                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl parentid='*;a' tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
+                                                                                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81962ab312c7f3ee5776fa3e2d50ede1" Selector="&lt;webctrl tag='BUTTON' type='button' aaname='Mover selección a Elegido' /&gt;">
                                                                                                                       <ui:Target.TimeoutMS>
                                                                                                                         <InArgument x:TypeArguments="x:Int32" />
                                                                                                                       </ui:Target.TimeoutMS>
