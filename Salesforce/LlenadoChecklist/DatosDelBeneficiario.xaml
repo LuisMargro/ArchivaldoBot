@@ -541,7 +541,7 @@
                                                                       <av:PointCollection x:Key="ConnectorLocation">130.641666666667,1096.5 130.641666666667,1126.5 322,1126.5 322,1236.5</av:PointCollection>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Parentesco con el titular lleno" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
+                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Parentesco con el titular lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
                                                                     <ui:AnchorBase.Action>
                                                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                                                         <ActivityAction.Argument>
@@ -829,7 +829,7 @@
                                                                                                       <av:PointCollection x:Key="ConnectorLocation">130.641666666667,2116.5 130.641666666667,2146.5 318,2146.5 318,2246.5</av:PointCollection>
                                                                                                     </scg:Dictionary>
                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Estado lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_25">
+                                                                                                  <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Estado lleno" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_25">
                                                                                                     <ui:AnchorBase.Action>
                                                                                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                         <ActivityAction.Argument>
@@ -860,9 +860,9 @@
                                                                                                       </ActivityAction>
                                                                                                     </ui:AnchorBase.Action>
                                                                                                     <ui:AnchorBase.AnchorProvider>
-                                                                                                      <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="El atributo IDX es necesario (está validado)" DisplayName="Buscar campo Estado" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_42">
+                                                                                                      <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Buscar campo % Asignado para Estado" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_49">
                                                                                                         <ui:WaitUiElementAppear.Target>
-                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5b5620219229ca55b52c4cff796e22c3" Selector="&lt;webctrl aaname='Estado' omit:parentid='*;a' tag='SPAN' idx='2' /&gt;">
+                                                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="37d81b94ba842a3091638c21418233d5" Selector="&lt;webctrl tag='DIV' aaname='% Asignado' /&gt;">
                                                                                                             <ui:Target.TimeoutMS>
                                                                                                               <InArgument x:TypeArguments="x:Int32" />
                                                                                                             </ui:Target.TimeoutMS>
@@ -871,11 +871,6 @@
                                                                                                             </ui:Target.WaitForReady>
                                                                                                           </ui:Target>
                                                                                                         </ui:WaitUiElementAppear.Target>
-                                                                                                        <sap:WorkflowViewStateService.ViewState>
-                                                                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                                                                          </scg:Dictionary>
-                                                                                                        </sap:WorkflowViewStateService.ViewState>
                                                                                                       </ui:WaitUiElementAppear>
                                                                                                     </ui:AnchorBase.AnchorProvider>
                                                                                                     <sap:WorkflowViewStateService.ViewState>

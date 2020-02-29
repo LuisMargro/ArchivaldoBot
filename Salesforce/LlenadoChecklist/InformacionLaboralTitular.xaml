@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>764,4038</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>831,4069</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InformacionLaboralTitular_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -56,19 +56,20 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="InformacionLaboralTitular" sap:VirtualizedContainerService.HintSize="744,3978" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Llena el apartado de Información laboral del titular en el checklist" DisplayName="InformacionLaboralTitular" sap:VirtualizedContainerService.HintSize="811,4009" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Checklist" sap:VirtualizedContainerService.HintSize="702,3886" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5e64f9e3298364e5b6f0be4ad9c46e99" Selector="&lt;html app='chrome.exe' title='Crear Checklist validación de documentos | Salesforce' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Checklist" sap:VirtualizedContainerService.HintSize="769,3886" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="5e64f9e3298364e5b6f0be4ad9c46e99" Selector="&lt;html app='chrome.exe' title='Crear Checklist validación de documentos | Salesforce' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Flowchart DisplayName="DatosGeneralesTitular" sap:VirtualizedContainerService.HintSize="668,3740" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+          <Flowchart DisplayName="DatosGeneralesTitular" sap:VirtualizedContainerService.HintSize="735,3740" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -76,7 +77,7 @@
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
                 <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,126.5</av:PointCollection>
                 <x:Double x:Key="Height">3703.5</x:Double>
-                <x:Double x:Key="Width">634</x:Double>
+                <x:Double x:Key="Width">701</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
@@ -91,7 +92,7 @@
                   <x:String x:Key="FalseLabel">No</x:String>
                   <x:String x:Key="TrueLabel">Si</x:String>
                   <av:PointCollection x:Key="TrueConnector">258.5,170 228.5,170 228.5,169.52 208.5,169.52</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">341.5,170 470.641666666667,170 470.641666666667,1946.5 388.5,1946.5 388.5,1976.5</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">341.5,170 673,170 673,1947 388.5,1947 388.5,1976.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
@@ -1967,7 +1968,7 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID48" Condition="[Convert.ToBoolean(in_Registro(59))]" DisplayName="¿Es otro?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_40">
+                    <FlowDecision x:Name="__ReferenceID48" Condition="[Convert.ToBoolean(in_Registro(68))]" DisplayName="¿Es otro?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_40">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2095,7 +2096,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">190.641666666667,2235.02 190.641666666667,2265.02 420.641666666667,2265.02 420.641666666667,2306.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="otro Actividad giro" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_42">
+                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="otro Actividad giro" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_42">
                                         <ui:AnchorBase.Action>
                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                             <ActivityAction.Argument>
