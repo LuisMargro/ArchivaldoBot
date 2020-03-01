@@ -3,7 +3,7 @@
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>679,1257</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>679,1297</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -101,7 +101,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowDecision x:Name="__ReferenceID0" Condition="[in_TextoDocumento.Split({&quot;fatca crs del titular&quot;},StringSplitOptions.None)(1).Split({&quot;declarada al inicio?&quot;},StringSplitOptions.None)(1).Split({&quot;?es residente&quot;},StringSplitOptions.None)(0).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;si&quot;) Or in_TextoDocumento.Split({&quot;fatca crs del titular&quot;},StringSplitOptions.None)(1).Split({&quot;indique en que pais?&quot;},StringSplitOptions.None)(1).Split({&quot;?es contribuyente&quot;},StringSplitOptions.None)(0).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;si&quot;) Or in_TextoDocumento.Split({&quot;fatca crs del titular&quot;},StringSplitOptions.None)(1).Split({&quot;declarado al inicio?&quot;},StringSplitOptions.None)(1).Split({&quot;*identificador&quot;},StringSplitOptions.None)(0).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;si&quot;)]" DisplayName="¿Se requiere TAX?" sap:VirtualizedContainerService.HintSize="97,87" sap2010:WorkflowViewState.IdRef="FlowDecision_60">
+                <FlowDecision x:Name="__ReferenceID0" Condition="[in_TextoDocumento.Split({&quot;fatca crs del titular&quot;},StringSplitOptions.None)(1).Split({&quot;declarada al inicio?&quot;},StringSplitOptions.None)(1).Split({&quot;?es residente&quot;},StringSplitOptions.None)(0).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;si&quot;) Or in_TextoDocumento.Split({&quot;fatca crs del titular&quot;},StringSplitOptions.None)(1).Split({&quot;indique en que pais?&quot;},StringSplitOptions.None)(1).Split({&quot;?es contribuyente&quot;},StringSplitOptions.None)(0).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;si&quot;) Or in_TextoDocumento.Split({&quot;declarado al inicio?&quot;},StringSplitOptions.None)(1).Split({&quot; fiscal&quot;},StringSplitOptions.None)(0).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;si&quot;)]" DisplayName="¿Se requiere TAX?" sap:VirtualizedContainerService.HintSize="97,87" sap2010:WorkflowViewState.IdRef="FlowDecision_60">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

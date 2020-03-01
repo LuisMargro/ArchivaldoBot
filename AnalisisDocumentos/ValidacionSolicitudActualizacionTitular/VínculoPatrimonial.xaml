@@ -62,9 +62,9 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID21</x:Reference>
+      <x:Reference>__ReferenceID22</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID21" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;razon social&quot;},StringSplitOptions.None)(1).Split({&quot;pais&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Razón social?" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_86">
+    <FlowDecision x:Name="__ReferenceID22" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;razon social&quot;},StringSplitOptions.None)(1).Split({&quot;pais&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Razón social?" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_86">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -77,7 +77,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
-        <FlowDecision x:Name="__ReferenceID8" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;pais&quot;},StringSplitOptions.None)(1).Split({&quot;fecha de registro&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿País?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_85">
+        <FlowDecision x:Name="__ReferenceID9" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;pais&quot;},StringSplitOptions.None)(1).Split({&quot;fecha de registro&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿País?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_85">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -90,7 +90,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
-            <FlowDecision x:Name="__ReferenceID7" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;fecha de registro&quot;},StringSplitOptions.None)(1).Split({&quot;rfc&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Fecha de registro?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_84">
+            <FlowDecision x:Name="__ReferenceID8" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;fecha de registro&quot;},StringSplitOptions.None)(1).Split({&quot;rfc&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Fecha de registro?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_84">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -98,17 +98,17 @@
                   <av:Size x:Key="ShapeSize">106,87</av:Size>
                   <x:String x:Key="TrueLabel">Si</x:String>
                   <x:String x:Key="FalseLabel">No</x:String>
-                  <av:PointCollection x:Key="TrueConnector">250.5,450 220.5,450 220.5,510 301,510 301,540</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">250.5,450 180,450 180,510</av:PointCollection>
                   <av:PointCollection x:Key="FalseConnector">356.5,450 416.5,450</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowStep x:Name="__ReferenceID6">
+                <FlowStep x:Name="__ReferenceID7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">170,540</av:Point>
+                      <av:Point x:Key="ShapeLocation">49,510</av:Point>
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">301,600 301,640</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">180,570 180,600 290,600 290,606.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign DisplayName="Obtener RFC" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_23">
@@ -116,7 +116,7 @@
                       <OutArgument x:TypeArguments="x:String">[Rfc]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TextoDocumento.Split({"vinculo patrimonial (en caso de ser socio de alguna empresa)"},StringSplitOptions.None)(1).Split({"rfc"},StringSplitOptions.None)(1).Split({"pagina internet"},StringSplitOptions.None)(0).Replace(":","").Replace(" ","").ToUpper]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_TextoDocumento.Split({"vinculo patrimonial (en caso de ser socio de alguna empresa)"},StringSplitOptions.None)(1).Split({"rfc"},StringSplitOptions.None)(1).Split({"pagina internet"},StringSplitOptions.None)(0).Replace(":","").Replace(" ","").Replace(".","").Trim.ToUpper]</InArgument>
                     </Assign.Value>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -125,127 +125,164 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID9">
+                    <FlowDecision x:Name="__ReferenceID21" Condition="[String.IsNullOrEmpty(Rfc)]" DisplayName="¿Rfc no vacio?" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_89">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">201,640</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">301,691 301,721 300,721 300,726.5</av:PointCollection>
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">249.5,606.5</av:Point>
+                          <av:Size x:Key="ShapeSize">81,87</av:Size>
+                          <av:PointCollection x:Key="TrueConnector">249.5,650 110,650 110,684.5</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">330.5,650 527,650 527,740</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarRFC workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Utilidades\ValidarRFC.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[Rfc]</InArgument>
-                          <OutArgument x:TypeArguments="x:Boolean" x:Key="out_BanderaRfc">[RfcValido]</OutArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:InvokeWorkflowFile>
-                      <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID10" Condition="[RfcValido]" DisplayName="¿RFC válido?" sap:VirtualizedContainerService.HintSize="72,87" sap2010:WorkflowViewState.IdRef="FlowDecision_83">
+                      <FlowDecision.True>
+                        <FlowStep x:Name="__ReferenceID10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <av:Point x:Key="ShapeLocation">264,726.5</av:Point>
-                              <av:Size x:Key="ShapeSize">72,87</av:Size>
-                              <x:String x:Key="FalseLabel">No</x:String>
-                              <x:String x:Key="TrueLabel">Si</x:String>
-                              <av:PointCollection x:Key="TrueConnector">264,770 241.283333333333,770 241.283333333333,826.5 301.283333333333,826.5 301.283333333333,856.5</av:PointCollection>
-                              <av:PointCollection x:Key="FalseConnector">336,770 396,770</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">10,684.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">210,710 300,710 300,726.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <FlowDecision.True>
-                            <FlowDecision x:Name="__ReferenceID5" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;pagina internet&quot;},StringSplitOptions.None)(1).Split({&quot;sector&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Página de internet?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_82">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarRFC workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Utilidades\ValidarRFC.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_Rfc">[Rfc]</InArgument>
+                              <OutArgument x:TypeArguments="x:Boolean" x:Key="out_BanderaRfc">[RfcValido]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:InvokeWorkflowFile>
+                          <FlowStep.Next>
+                            <FlowDecision x:Name="__ReferenceID11" Condition="[RfcValido]" DisplayName="¿RFC válido?" sap:VirtualizedContainerService.HintSize="72,87" sap2010:WorkflowViewState.IdRef="FlowDecision_83">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <av:Point x:Key="ShapeLocation">245.283333333333,856.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">112,87</av:Size>
+                                  <av:Point x:Key="ShapeLocation">264,726.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">72,87</av:Size>
                                   <x:String x:Key="FalseLabel">No</x:String>
                                   <x:String x:Key="TrueLabel">Si</x:String>
-                                  <av:PointCollection x:Key="TrueConnector">245.283333333333,900 215.283333333333,900 215.283333333333,956.5 301.566666666667,956.5 301.566666666667,986.5</av:PointCollection>
-                                  <av:PointCollection x:Key="FalseConnector">357.283333333333,900 417.283333333333,900</av:PointCollection>
+                                  <av:PointCollection x:Key="TrueConnector">264,770 241.283333333333,770 241.283333333333,826.5 301.283333333333,826.5 301.283333333333,856.5</av:PointCollection>
+                                  <av:PointCollection x:Key="FalseConnector">336,770 396,770</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <FlowDecision.True>
-                                <FlowDecision x:Name="__ReferenceID4" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;sector&quot;},StringSplitOptions.None)(1).Split({&quot;activ/giro&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Sector?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_81">
+                                <FlowDecision x:Name="__ReferenceID5" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;pagina internet&quot;},StringSplitOptions.None)(1).Split({&quot;sector&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Página de internet?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_82">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <av:Point x:Key="ShapeLocation">266.566666666667,986.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                      <av:Point x:Key="ShapeLocation">245.283333333333,856.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">112,87</av:Size>
                                       <x:String x:Key="FalseLabel">No</x:String>
                                       <x:String x:Key="TrueLabel">Si</x:String>
-                                      <av:PointCollection x:Key="TrueConnector">266.566666666667,1030 244.35,1030 244.35,1086.5 304.35,1086.5 304.35,1116.5</av:PointCollection>
-                                      <av:PointCollection x:Key="FalseConnector">336.566666666667,1030 396.566666666667,1030</av:PointCollection>
+                                      <av:PointCollection x:Key="TrueConnector">245.283333333333,900 215.283333333333,900 215.283333333333,956.5 301.566666666667,956.5 301.566666666667,986.5</av:PointCollection>
+                                      <av:PointCollection x:Key="FalseConnector">357.283333333333,900 417.283333333333,900</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <FlowDecision.True>
-                                    <FlowDecision x:Name="__ReferenceID3" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;activ/giro&quot;},StringSplitOptions.None)(1).Split({&quot;tel. oficina&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Actividad/Giro?" sap:VirtualizedContainerService.HintSize="93,87" sap2010:WorkflowViewState.IdRef="FlowDecision_80">
+                                    <FlowDecision x:Name="__ReferenceID4" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;sector&quot;},StringSplitOptions.None)(1).Split({&quot;activ/giro&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Sector?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_81">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          <av:Point x:Key="ShapeLocation">257.85,1116.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">93,87</av:Size>
+                                          <av:Point x:Key="ShapeLocation">266.566666666667,986.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">70,87</av:Size>
                                           <x:String x:Key="FalseLabel">No</x:String>
                                           <x:String x:Key="TrueLabel">Si</x:String>
-                                          <av:PointCollection x:Key="TrueConnector">257.85,1160 247.133333333333,1160 247.133333333333,1216.5 307.133333333333,1216.5 307.133333333333,1246.5</av:PointCollection>
-                                          <av:PointCollection x:Key="FalseConnector">350.85,1160 410.85,1160</av:PointCollection>
+                                          <av:PointCollection x:Key="TrueConnector">266.566666666667,1030 244.35,1030 244.35,1086.5 304.35,1086.5 304.35,1116.5</av:PointCollection>
+                                          <av:PointCollection x:Key="FalseConnector">336.566666666667,1030 396.566666666667,1030</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <FlowDecision.True>
-                                        <FlowDecision x:Name="__ReferenceID2" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;tel. oficina&quot;},StringSplitOptions.None)(1).Split({&quot;porcentaje de vinculo patrimonial&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;))]" DisplayName="¿Teléfono de oficina?" sap:VirtualizedContainerService.HintSize="116,87" sap2010:WorkflowViewState.IdRef="FlowDecision_79">
+                                        <FlowDecision x:Name="__ReferenceID3" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;activ/giro&quot;},StringSplitOptions.None)(1).Split({&quot;tel. oficina&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Actividad/Giro?" sap:VirtualizedContainerService.HintSize="93,87" sap2010:WorkflowViewState.IdRef="FlowDecision_80">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              <av:Point x:Key="ShapeLocation">249.133333333333,1246.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">116,87</av:Size>
+                                              <av:Point x:Key="ShapeLocation">257.85,1116.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">93,87</av:Size>
                                               <x:String x:Key="FalseLabel">No</x:String>
                                               <x:String x:Key="TrueLabel">Si</x:String>
-                                              <av:PointCollection x:Key="TrueConnector">249.133333333333,1290 235.416666666667,1290 235.416666666667,1346.5 295.416666666667,1346.5 295.416666666667,1376.5</av:PointCollection>
-                                              <av:PointCollection x:Key="FalseConnector">365.133333333333,1290 425.133333333333,1290</av:PointCollection>
+                                              <av:PointCollection x:Key="TrueConnector">257.85,1160 247.133333333333,1160 247.133333333333,1216.5 307.133333333333,1216.5 307.133333333333,1246.5</av:PointCollection>
+                                              <av:PointCollection x:Key="FalseConnector">350.85,1160 410.85,1160</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <FlowDecision.True>
-                                            <FlowDecision x:Name="__ReferenceID1" Condition="[in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;porcentaje de vinculo patrimonial&quot;},StringSplitOptions.None)(1).Split({&quot;indicar si es consejero&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot;_&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length &gt; 23]" DisplayName="¿Porcentaje?" sap:VirtualizedContainerService.HintSize="72,87" sap2010:WorkflowViewState.IdRef="FlowDecision_88">
+                                            <FlowDecision x:Name="__ReferenceID2" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;tel. oficina&quot;},StringSplitOptions.None)(1).Split({&quot;porcentaje de vinculo patrimonial&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Teléfono de oficina?" sap:VirtualizedContainerService.HintSize="116,87" sap2010:WorkflowViewState.IdRef="FlowDecision_79">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <av:Point x:Key="ShapeLocation">260.416666666667,1376.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">72,87</av:Size>
+                                                  <av:Point x:Key="ShapeLocation">249.133333333333,1246.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">116,87</av:Size>
                                                   <x:String x:Key="FalseLabel">No</x:String>
                                                   <x:String x:Key="TrueLabel">Si</x:String>
-                                                  <av:PointCollection x:Key="TrueConnector">260.416666666667,1420 230.416666666667,1420 230.416666666667,1476.5 311.7,1476.5 311.7,1506.5</av:PointCollection>
-                                                  <av:PointCollection x:Key="FalseConnector">332.416666666667,1420 392.416666666667,1420</av:PointCollection>
+                                                  <av:PointCollection x:Key="TrueConnector">249.133333333333,1290 235.416666666667,1290 235.416666666667,1346.5 295.416666666667,1346.5 295.416666666667,1376.5</av:PointCollection>
+                                                  <av:PointCollection x:Key="FalseConnector">365.133333333333,1290 425.133333333333,1290</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <FlowDecision.True>
-                                                <FlowDecision x:Name="__ReferenceID0" Condition="[Not in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;indicar si es consejero&quot;},StringSplitOptions.None)(1).Split({&quot;datos de la cuenta bancaria del titular&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot;_&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length &gt; 4]" DisplayName="¿Consejero vacío?" sap:VirtualizedContainerService.HintSize="100,87" sap2010:WorkflowViewState.IdRef="FlowDecision_87">
+                                                <FlowDecision x:Name="__ReferenceID1" Condition="[in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;porcentaje de vinculo patrimonial&quot;},StringSplitOptions.None)(1).Split({&quot;indicar si es consejero&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot;_&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length &gt; 23]" DisplayName="¿Porcentaje?" sap:VirtualizedContainerService.HintSize="72,87" sap2010:WorkflowViewState.IdRef="FlowDecision_88">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      <av:Point x:Key="ShapeLocation">261.7,1506.5</av:Point>
-                                                      <av:Size x:Key="ShapeSize">100,87</av:Size>
-                                                      <av:PointCollection x:Key="TrueConnector">261.7,1550 242.7,1550 242.7,1620 302.7,1620 302.7,1650</av:PointCollection>
+                                                      <av:Point x:Key="ShapeLocation">260.416666666667,1376.5</av:Point>
+                                                      <av:Size x:Key="ShapeSize">72,87</av:Size>
                                                       <x:String x:Key="FalseLabel">No</x:String>
                                                       <x:String x:Key="TrueLabel">Si</x:String>
+                                                      <av:PointCollection x:Key="TrueConnector">260.416666666667,1420 230.416666666667,1420 230.416666666667,1476.5 311.7,1476.5 311.7,1506.5</av:PointCollection>
+                                                      <av:PointCollection x:Key="FalseConnector">332.416666666667,1420 392.416666666667,1420</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <FlowDecision.True>
-                                                    <FlowStep x:Name="__ReferenceID20">
+                                                    <FlowDecision x:Name="__ReferenceID0" Condition="[Not in_TextoDocumento.Split({&quot;vinculo patrimonial (en caso de ser socio de alguna empresa)&quot;},StringSplitOptions.None)(1).Split({&quot;indicar si es consejero&quot;},StringSplitOptions.None)(1).Split({&quot;datos de la cuenta bancaria del titular&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot;_&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length &gt; 4]" DisplayName="¿Consejero vacío?" sap:VirtualizedContainerService.HintSize="100,87" sap2010:WorkflowViewState.IdRef="FlowDecision_87">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                          <av:Point x:Key="ShapeLocation">171.7,1650</av:Point>
-                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                          <av:PointCollection x:Key="ConnectorLocation">581.5,220 581.5,250 354.425,250 354.425,307.5</av:PointCollection>
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          <av:Point x:Key="ShapeLocation">261.7,1506.5</av:Point>
+                                                          <av:Size x:Key="ShapeSize">100,87</av:Size>
+                                                          <av:PointCollection x:Key="TrueConnector">261.7,1550 242.7,1550 242.7,1620 302.7,1620 302.7,1650</av:PointCollection>
+                                                          <x:String x:Key="FalseLabel">No</x:String>
+                                                          <x:String x:Key="TrueLabel">Si</x:String>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Assign DisplayName="Falta consejero" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_113">
+                                                      <FlowDecision.True>
+                                                        <FlowStep x:Name="__ReferenceID20">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">171.7,1650</av:Point>
+                                                              <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                              <av:PointCollection x:Key="ConnectorLocation">581.5,220 581.5,250 354.425,250 354.425,307.5</av:PointCollection>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign DisplayName="Falta consejero" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_113">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Object">[io_Registro(79)]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Object">[False]</InArgument>
+                                                            </Assign.Value>
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </Assign>
+                                                        </FlowStep>
+                                                      </FlowDecision.True>
+                                                    </FlowDecision>
+                                                  </FlowDecision.True>
+                                                  <FlowDecision.False>
+                                                    <FlowStep x:Name="__ReferenceID19">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">392.416666666667,1390</av:Point>
+                                                          <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">523.416666666667,1450 523.416666666667,1480 336.7,1480 336.7,1506.5</av:PointCollection>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <Assign DisplayName="Falta porcentaje" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_114">
                                                         <Assign.To>
-                                                          <OutArgument x:TypeArguments="x:Object">[io_Registro(79)]</OutArgument>
+                                                          <OutArgument x:TypeArguments="x:Object">[io_Registro(78)]</OutArgument>
                                                         </Assign.To>
                                                         <Assign.Value>
                                                           <InArgument x:TypeArguments="x:Object">[False]</InArgument>
@@ -256,22 +293,25 @@
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                       </Assign>
+                                                      <FlowStep.Next>
+                                                        <x:Reference>__ReferenceID0</x:Reference>
+                                                      </FlowStep.Next>
                                                     </FlowStep>
-                                                  </FlowDecision.True>
+                                                  </FlowDecision.False>
                                                 </FlowDecision>
                                               </FlowDecision.True>
                                               <FlowDecision.False>
-                                                <FlowStep x:Name="__ReferenceID19">
+                                                <FlowStep x:Name="__ReferenceID18">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">392.416666666667,1390</av:Point>
+                                                      <av:Point x:Key="ShapeLocation">425.133333333333,1260</av:Point>
                                                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                      <av:PointCollection x:Key="ConnectorLocation">523.416666666667,1450 523.416666666667,1480 336.7,1480 336.7,1506.5</av:PointCollection>
+                                                      <av:PointCollection x:Key="ConnectorLocation">556.133333333333,1320 556.133333333333,1350 314.416666666667,1350 314.416666666667,1376.5</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Assign DisplayName="Falta porcentaje" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_114">
+                                                  <Assign DisplayName="Falta teléfono de oficina" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_115">
                                                     <Assign.To>
-                                                      <OutArgument x:TypeArguments="x:Object">[io_Registro(78)]</OutArgument>
+                                                      <OutArgument x:TypeArguments="x:Object">[io_Registro(77)]</OutArgument>
                                                     </Assign.To>
                                                     <Assign.Value>
                                                       <InArgument x:TypeArguments="x:Object">[False]</InArgument>
@@ -283,24 +323,24 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </Assign>
                                                   <FlowStep.Next>
-                                                    <x:Reference>__ReferenceID0</x:Reference>
+                                                    <x:Reference>__ReferenceID1</x:Reference>
                                                   </FlowStep.Next>
                                                 </FlowStep>
                                               </FlowDecision.False>
                                             </FlowDecision>
                                           </FlowDecision.True>
                                           <FlowDecision.False>
-                                            <FlowStep x:Name="__ReferenceID18">
+                                            <FlowStep x:Name="__ReferenceID17">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">425.133333333333,1260</av:Point>
+                                                  <av:Point x:Key="ShapeLocation">410.85,1130</av:Point>
                                                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">556.133333333333,1320 556.133333333333,1350 314.416666666667,1350 314.416666666667,1376.5</av:PointCollection>
+                                                  <av:PointCollection x:Key="ConnectorLocation">541.85,1190 541.85,1220 336.133333333333,1220 336.133333333333,1246.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Assign DisplayName="Falta teléfono de oficina" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_115">
+                                              <Assign DisplayName="Falta actividad/giro" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_116">
                                                 <Assign.To>
-                                                  <OutArgument x:TypeArguments="x:Object">[io_Registro(77)]</OutArgument>
+                                                  <OutArgument x:TypeArguments="x:Object">[io_Registro(76)]</OutArgument>
                                                 </Assign.To>
                                                 <Assign.Value>
                                                   <InArgument x:TypeArguments="x:Object">[False]</InArgument>
@@ -312,24 +352,24 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </Assign>
                                               <FlowStep.Next>
-                                                <x:Reference>__ReferenceID1</x:Reference>
+                                                <x:Reference>__ReferenceID2</x:Reference>
                                               </FlowStep.Next>
                                             </FlowStep>
                                           </FlowDecision.False>
                                         </FlowDecision>
                                       </FlowDecision.True>
                                       <FlowDecision.False>
-                                        <FlowStep x:Name="__ReferenceID17">
+                                        <FlowStep x:Name="__ReferenceID16">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">410.85,1130</av:Point>
+                                              <av:Point x:Key="ShapeLocation">396.566666666667,1000</av:Point>
                                               <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">541.85,1190 541.85,1220 336.133333333333,1220 336.133333333333,1246.5</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">527.566666666667,1060 527.566666666667,1090 327.6,1090 327.6,1116.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign DisplayName="Falta actividad/giro" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_116">
+                                          <Assign DisplayName="Falta sector" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_117">
                                             <Assign.To>
-                                              <OutArgument x:TypeArguments="x:Object">[io_Registro(76)]</OutArgument>
+                                              <OutArgument x:TypeArguments="x:Object">[io_Registro(75)]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
                                               <InArgument x:TypeArguments="x:Object">[False]</InArgument>
@@ -341,24 +381,24 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                           </Assign>
                                           <FlowStep.Next>
-                                            <x:Reference>__ReferenceID2</x:Reference>
+                                            <x:Reference>__ReferenceID3</x:Reference>
                                           </FlowStep.Next>
                                         </FlowStep>
                                       </FlowDecision.False>
                                     </FlowDecision>
                                   </FlowDecision.True>
                                   <FlowDecision.False>
-                                    <FlowStep x:Name="__ReferenceID16">
+                                    <FlowStep x:Name="__ReferenceID15">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">396.566666666667,1000</av:Point>
+                                          <av:Point x:Key="ShapeLocation">417.283333333333,870</av:Point>
                                           <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">527.566666666667,1060 527.566666666667,1090 327.6,1090 327.6,1116.5</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">548.283333333333,930 548.283333333333,960 319.066666666667,960 319.066666666667,986.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign DisplayName="Falta sector" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_117">
+                                      <Assign DisplayName="Falta página de internet" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_118">
                                         <Assign.To>
-                                          <OutArgument x:TypeArguments="x:Object">[io_Registro(75)]</OutArgument>
+                                          <OutArgument x:TypeArguments="x:Object">[io_Registro(74)]</OutArgument>
                                         </Assign.To>
                                         <Assign.Value>
                                           <InArgument x:TypeArguments="x:Object">[False]</InArgument>
@@ -370,24 +410,24 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </Assign>
                                       <FlowStep.Next>
-                                        <x:Reference>__ReferenceID3</x:Reference>
+                                        <x:Reference>__ReferenceID4</x:Reference>
                                       </FlowStep.Next>
                                     </FlowStep>
                                   </FlowDecision.False>
                                 </FlowDecision>
                               </FlowDecision.True>
                               <FlowDecision.False>
-                                <FlowStep x:Name="__ReferenceID15">
+                                <FlowStep x:Name="__ReferenceID6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">417.283333333333,870</av:Point>
+                                      <av:Point x:Key="ShapeLocation">396,740</av:Point>
                                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">548.283333333333,930 548.283333333333,960 319.066666666667,960 319.066666666667,986.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">527,800 527,830 329.283333333333,830 329.283333333333,856.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign DisplayName="Falta página de internet" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_118">
+                                  <Assign DisplayName="Falta RFC" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_119">
                                     <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Object">[io_Registro(74)]</OutArgument>
+                                      <OutArgument x:TypeArguments="x:Object">[io_Registro(73)]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
                                       <InArgument x:TypeArguments="x:Object">[False]</InArgument>
@@ -399,52 +439,28 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </Assign>
                                   <FlowStep.Next>
-                                    <x:Reference>__ReferenceID4</x:Reference>
+                                    <x:Reference>__ReferenceID5</x:Reference>
                                   </FlowStep.Next>
                                 </FlowStep>
                               </FlowDecision.False>
                             </FlowDecision>
-                          </FlowDecision.True>
-                          <FlowDecision.False>
-                            <FlowStep x:Name="__ReferenceID14">
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">396,740</av:Point>
-                                  <av:Size x:Key="ShapeSize">262,60</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">527,800 527,830 329.283333333333,830 329.283333333333,856.5</av:PointCollection>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Falta RFC" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_119">
-                                <Assign.To>
-                                  <OutArgument x:TypeArguments="x:Object">[io_Registro(73)]</OutArgument>
-                                </Assign.To>
-                                <Assign.Value>
-                                  <InArgument x:TypeArguments="x:Object">[False]</InArgument>
-                                </Assign.Value>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </Assign>
-                              <FlowStep.Next>
-                                <x:Reference>__ReferenceID5</x:Reference>
-                              </FlowStep.Next>
-                            </FlowStep>
-                          </FlowDecision.False>
-                        </FlowDecision>
-                      </FlowStep.Next>
-                    </FlowStep>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowDecision.True>
+                      <FlowDecision.False>
+                        <x:Reference>__ReferenceID6</x:Reference>
+                      </FlowDecision.False>
+                    </FlowDecision>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.True>
               <FlowDecision.False>
-                <FlowStep x:Name="__ReferenceID13">
+                <FlowStep x:Name="__ReferenceID14">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">416.5,420</av:Point>
                       <av:Size x:Key="ShapeSize">262,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">547.5,480 547.5,570 432,570</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">547.5,480 547.5,540 311,540</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign DisplayName="Falta fecha de registro" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_120">
@@ -461,14 +477,14 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                   <FlowStep.Next>
-                    <x:Reference>__ReferenceID6</x:Reference>
+                    <x:Reference>__ReferenceID7</x:Reference>
                   </FlowStep.Next>
                 </FlowStep>
               </FlowDecision.False>
             </FlowDecision>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowStep x:Name="__ReferenceID12">
+            <FlowStep x:Name="__ReferenceID13">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">391.925,281</av:Point>
@@ -490,14 +506,14 @@
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
               <FlowStep.Next>
-                <x:Reference>__ReferenceID7</x:Reference>
+                <x:Reference>__ReferenceID8</x:Reference>
               </FlowStep.Next>
             </FlowStep>
           </FlowDecision.False>
         </FlowDecision>
       </FlowDecision.True>
       <FlowDecision.False>
-        <FlowStep x:Name="__ReferenceID11">
+        <FlowStep x:Name="__ReferenceID12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">410.5,120</av:Point>
@@ -520,26 +536,27 @@
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
+    <x:Reference>__ReferenceID9</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
-    <x:Reference>__ReferenceID6</x:Reference>
-    <x:Reference>__ReferenceID9</x:Reference>
     <x:Reference>__ReferenceID10</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID0</x:Reference>
-    <x:Reference>__ReferenceID11</x:Reference>
     <x:Reference>__ReferenceID12</x:Reference>
     <x:Reference>__ReferenceID13</x:Reference>
     <x:Reference>__ReferenceID14</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
     <x:Reference>__ReferenceID16</x:Reference>
     <x:Reference>__ReferenceID17</x:Reference>
     <x:Reference>__ReferenceID18</x:Reference>
     <x:Reference>__ReferenceID19</x:Reference>
     <x:Reference>__ReferenceID20</x:Reference>
+    <x:Reference>__ReferenceID21</x:Reference>
   </Flowchart>
 </Activity>
