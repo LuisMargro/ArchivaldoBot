@@ -212,9 +212,9 @@
                                           <av:PointCollection x:Key="ConnectorLocation">270,1105.5 270,1135.5 240,1135.5 240,1146.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarCurp workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilidades\ValidarCurp.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarCurp workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilidades\ValidarCurp.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
-                                          <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[Curp]</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_Curp">[Curp.Trim]</InArgument>
                                           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_ExisteCurp">[CurpValida]</OutArgument>
                                         </ui:InvokeWorkflowFile.Arguments>
                                         <sap:WorkflowViewStateService.ViewState>
