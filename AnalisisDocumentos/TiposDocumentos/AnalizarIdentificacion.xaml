@@ -7,7 +7,7 @@
     <x:Property Name="in_ArregloDireccionResidencial" Type="InArgument(s:String[])" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>936,1479</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>936,1519</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -89,7 +89,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">100,585.02 100,706.5 245.5,706.5 245.5,736.5</av:PointCollection>
                 </scg1:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="vigencia de la ine" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch DisplayName="vigencia de la ine" sap:VirtualizedContainerService.HintSize="438,778" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -110,7 +110,7 @@
                         <OutArgument x:TypeArguments="x:String">[Vigencia]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[in_StringDocumento.Split({"vigencia"},StringSplitOptions.None)(1)]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[in_StringDocumento.Split({"vigencia"},StringSplitOptions.None)(1).Replace(":","")]</InArgument>
                       </Assign.Value>
                     </Assign>
                     <ui:Matches BuilderPattern="(\d+)" DisplayName="Extraer vigencia" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="Matches_2" Input="[Vigencia]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;+&quot;,&quot;QuantifierID&quot;:&quot;OOM&quot;,&quot;QuantifierName&quot;:&quot;At least one (1 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(\d+)" RegexOption="IgnoreCase" Result="[NumeroExtraido]" />

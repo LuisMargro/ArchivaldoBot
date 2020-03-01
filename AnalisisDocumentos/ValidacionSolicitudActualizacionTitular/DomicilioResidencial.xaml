@@ -555,7 +555,7 @@
               <OutArgument x:TypeArguments="x:Object">[io_Registro(84)]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:Object">[true]</InArgument>
+              <InArgument x:TypeArguments="x:Object">["validado"]</InArgument>
             </Assign.Value>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
