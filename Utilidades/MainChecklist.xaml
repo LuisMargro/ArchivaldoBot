@@ -58,6 +58,9 @@
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="MainChecklist" sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:Boolean" Default="True" Name="Validado" />
+    </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -67,33 +70,31 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID13</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID8">
+    <FlowStep x:Name="__ReferenceID13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,144.02</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,196.02 300,246.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart DisplayName="Validar si la documentacion esta completa" sap:VirtualizedContainerService.HintSize="704,1138" sap2010:WorkflowViewState.IdRef="Flowchart_2">
-        <Flowchart.Variables>
-          <Variable x:TypeArguments="x:Boolean" Default="True" Name="Validado" />
-        </Flowchart.Variables>
+      <Flowchart DisplayName="Validar si la documentacion esta completa" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Flowchart_2">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
             <av:Size x:Key="ShapeSize">60,75</av:Size>
             <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 301.5,107.5 301.5,136.5</av:PointCollection>
-            <x:Double x:Key="Width">670</x:Double>
-            <x:Double x:Key="Height">1102</x:Double>
+            <x:Double x:Key="Width">651.00110717448717</x:Double>
+            <x:Double x:Key="Height">1536.453626999016</x:Double>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID7</x:Reference>
+          <x:Reference>__ReferenceID10</x:Reference>
         </Flowchart.StartNode>
-        <FlowDecision x:Name="__ReferenceID7" Condition="[System.Convert.ToBoolean(in_DataCliente(70)) and System.Convert.ToBoolean(in_DataCliente(71)) and System.Convert.ToBoolean(in_DataCliente(72)) and System.Convert.ToBoolean(in_DataCliente(73)) And System.Convert.ToBoolean(in_DataCliente(74)) and System.Convert.ToBoolean(in_DataCliente(75)) And System.Convert.ToBoolean(in_DataCliente(76)) and System.Convert.ToBoolean(in_DataCliente(77)) and System.Convert.ToBoolean(in_DataCliente(78)) and System.Convert.ToBoolean(in_DataCliente(79))]" DisplayName="VP lleno" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID10" Condition="[System.Convert.ToBoolean(in_DataSolicitud(70)) and System.Convert.ToBoolean(in_DataSolicitud(71)) and System.Convert.ToBoolean(in_DataSolicitud(72)) and System.Convert.ToBoolean(in_DataSolicitud(73)) And System.Convert.ToBoolean(in_DataSolicitud(74)) and System.Convert.ToBoolean(in_DataSolicitud(75)) And System.Convert.ToBoolean(in_DataSolicitud(76)) and System.Convert.ToBoolean(in_DataSolicitud(77)) and System.Convert.ToBoolean(in_DataSolicitud(78)) and System.Convert.ToBoolean(in_DataSolicitud(79))]" DisplayName="VP lleno" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -104,7 +105,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
-            <FlowDecision x:Name="__ReferenceID1" Condition="[System.Convert.ToBoolean(in_DataCliente(80)) and System.Convert.ToBoolean(in_DataCliente(81)) and System.Convert.ToBoolean(in_DataCliente(82))]" DisplayName="Cuenta B. completa" sap:VirtualizedContainerService.HintSize="109,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+            <FlowDecision x:Name="__ReferenceID1" Condition="[System.Convert.ToBoolean(in_DataSolicitud(80)) and System.Convert.ToBoolean(in_DataSolicitud(81)) and System.Convert.ToBoolean(in_DataSolicitud(82))]" DisplayName="Cuenta B. completa" sap:VirtualizedContainerService.HintSize="109,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -115,7 +116,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowDecision x:Name="__ReferenceID3" Condition="[System.Convert.ToBoolean(in_DataCliente(1)) and System.Convert.ToBoolean(in_DataCliente(2)) and System.Convert.ToBoolean(in_DataCliente(3)) and System.Convert.ToBoolean(in_DataCliente(4)) and System.Convert.ToBoolean(in_DataCliente(5)) and System.Convert.ToBoolean(in_DataCliente(6)) and System.Convert.ToBoolean(in_DataCliente(7)) and System.Convert.ToBoolean(in_DataCliente(8)) and System.Convert.ToBoolean(in_DataCliente(9)) and System.Convert.ToBoolean(in_DataCliente(10)) and System.Convert.ToBoolean(in_DataCliente(11)) and System.Convert.ToBoolean(in_DataCliente(12))]" DisplayName="Info Personal valido" sap:VirtualizedContainerService.HintSize="110,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                <FlowDecision x:Name="__ReferenceID3" Condition="[System.Convert.ToBoolean(in_DataSolicitud(1)) and System.Convert.ToBoolean(in_DataSolicitud(2)) and System.Convert.ToBoolean(in_DataSolicitud(3)) and System.Convert.ToBoolean(in_DataSolicitud(4)) and System.Convert.ToBoolean(in_DataSolicitud(5)) and System.Convert.ToBoolean(in_DataSolicitud(6)) and System.Convert.ToBoolean(in_DataSolicitud(7)) and System.Convert.ToBoolean(in_DataSolicitud(8)) and System.Convert.ToBoolean(in_DataSolicitud(9)) and System.Convert.ToBoolean(in_DataSolicitud(10)) and System.Convert.ToBoolean(in_DataSolicitud(11)) and System.Convert.ToBoolean(in_DataSolicitud(12))]" DisplayName="Info Personal valido" sap:VirtualizedContainerService.HintSize="110,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -126,7 +127,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowDecision x:Name="__ReferenceID4" Condition="[System.Convert.ToBoolean(in_DataCliente(13)) and System.Convert.ToBoolean(in_DataCliente(14)) and System.Convert.ToBoolean(in_DataCliente(15)) and System.Convert.ToBoolean(in_DataCliente(16)) and System.Convert.ToBoolean(in_DataCliente(17)) and System.Convert.ToBoolean(in_DataCliente(18)) and System.Convert.ToBoolean(in_DataCliente(19)) and System.Convert.ToBoolean(in_DataCliente(20)) and System.Convert.ToBoolean(in_DataCliente(83))]" DisplayName="Direccion fiscal" sap:VirtualizedContainerService.HintSize="85,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
+                    <FlowDecision x:Name="__ReferenceID4" Condition="[System.Convert.ToBoolean(in_DataSolicitud(13)) and System.Convert.ToBoolean(in_DataSolicitud(14)) and System.Convert.ToBoolean(in_DataSolicitud(15)) and System.Convert.ToBoolean(in_DataSolicitud(16)) and System.Convert.ToBoolean(in_DataSolicitud(17)) and System.Convert.ToBoolean(in_DataSolicitud(18)) and System.Convert.ToBoolean(in_DataSolicitud(19)) and System.Convert.ToBoolean(in_DataSolicitud(20)) and System.Convert.ToBoolean(in_DataSolicitud(83))]" DisplayName="Direccion fiscal" sap:VirtualizedContainerService.HintSize="85,87" sap2010:WorkflowViewState.IdRef="FlowDecision_5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,7 +138,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
-                        <FlowDecision x:Name="__ReferenceID5" Condition="[System.Convert.ToBoolean(in_DataCliente(84))]" DisplayName="Direccion residencial" sap:VirtualizedContainerService.HintSize="115,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                        <FlowDecision x:Name="__ReferenceID5" Condition="[System.Convert.ToBoolean(in_DataSolicitud(84))]" DisplayName="Direccion residencial" sap:VirtualizedContainerService.HintSize="115,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,37 +149,85 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <FlowDecision.True>
-                            <FlowDecision x:Name="__ReferenceID6" Condition="[System.Convert.ToBoolean(in_DataCliente(29)) and System.Convert.ToBoolean(in_DataCliente(30)) and System.Convert.ToBoolean(in_DataCliente(30)) and System.Convert.ToBoolean(in_DataCliente(31)) and System.Convert.ToBoolean(in_DataCliente(32))]" DisplayName="Fatcs Crs" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                            <FlowDecision x:Name="__ReferenceID6" Condition="[System.Convert.ToBoolean(in_DataSolicitud(29)) and System.Convert.ToBoolean(in_DataSolicitud(30)) and System.Convert.ToBoolean(in_DataSolicitud(30)) and System.Convert.ToBoolean(in_DataSolicitud(31)) and System.Convert.ToBoolean(in_DataSolicitud(32))]" DisplayName="Fatcs Crs" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">200.5,936.5</av:Point>
                                   <av:Size x:Key="ShapeSize">70,87</av:Size>
                                   <av:PointCollection x:Key="FalseConnector">270.5,980 520,980 520,480</av:PointCollection>
+                                  <av:PointCollection x:Key="TrueConnector">200.5,980 170.5,980 170.5,1066.5 225.5,1066.5 225.5,1096.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <FlowDecision.False>
-                                <FlowStep x:Name="__ReferenceID0">
+                              <FlowDecision.True>
+                                <FlowDecision x:Name="__ReferenceID7" Condition="[System.Convert.ToBoolean(in_DataSolicitud(33)) and System.Convert.ToBoolean(in_DataSolicitud(34)) and System.Convert.ToBoolean(in_DataSolicitud(35)) and System.Convert.ToBoolean(in_DataSolicitud(36)) and System.Convert.ToBoolean(in_DataSolicitud(37)) and System.Convert.ToBoolean(in_DataSolicitud(38)) and System.Convert.ToBoolean(in_DataSolicitud(39)) and System.Convert.ToBoolean(in_DataSolicitud(40)) and System.Convert.ToBoolean(in_DataSolicitud(41)) and System.Convert.ToBoolean(in_DataSolicitud(42)) and System.Convert.ToBoolean(in_DataSolicitud(43))]" DisplayName="Beneficiario" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_8">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">389,420</av:Point>
-                                      <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <av:Point x:Key="ShapeLocation">190.5,1096.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                      <av:PointCollection x:Key="FalseConnector">260.5,1140 520,1140 520,480</av:PointCollection>
+                                      <av:PointCollection x:Key="TrueConnector">190.5,1140 168,1140 168,1196.5 228,1196.5 228,1226.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign DisplayName="Solicitud invalida" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:Boolean">[Validado]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                    </Assign.Value>
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </Assign>
-                                </FlowStep>
+                                  <FlowDecision.True>
+                                    <FlowDecision x:Name="__ReferenceID8" Condition="[System.Convert.ToBoolean(in_DataSolicitud(0))]" DisplayName="numero contrato" sap:VirtualizedContainerService.HintSize="95,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <av:Point x:Key="ShapeLocation">180.5,1226.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">95,87</av:Size>
+                                          <av:PointCollection x:Key="FalseConnector">275.5,1270 520,1270 520,480</av:PointCollection>
+                                          <av:PointCollection x:Key="TrueConnector">180.5,1270 150.5,1270 150.5,1376.5 240,1376.5 240,1406.5</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <FlowDecision.True>
+                                        <FlowDecision x:Name="__ReferenceID9" Condition="[System.Convert.ToBoolean(in_DataSolicitud(69)) or (System.Convert.ToBoolean(in_DataSolicitud(48))and System.Convert.ToBoolean(in_DataSolicitud(49)) and System.Convert.ToBoolean(in_DataSolicitud(50)) and System.Convert.ToBoolean(in_DataSolicitud(51)) and System.Convert.ToBoolean(in_DataSolicitud(52)) and System.Convert.ToBoolean(in_DataSolicitud(53)) and System.Convert.ToBoolean(in_DataSolicitud(54)) and System.Convert.ToBoolean(in_DataSolicitud(55)) and System.Convert.ToBoolean(in_DataSolicitud(56)) and System.Convert.ToBoolean(in_DataSolicitud(57)) and System.Convert.ToBoolean(in_DataSolicitud(58))) or (System.Convert.ToBoolean(in_DataSolicitud(60)) and System.Convert.ToBoolean(in_DataSolicitud(61)) and System.Convert.ToBoolean(in_DataSolicitud(62)) and System.Convert.ToBoolean(in_DataSolicitud(63)) and System.Convert.ToBoolean(in_DataSolicitud(64)) and System.Convert.ToBoolean(in_DataSolicitud(65)) and System.Convert.ToBoolean(in_DataSolicitud(66)))]" DisplayName="Actividad laboral" sap:VirtualizedContainerService.HintSize="95,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <av:Point x:Key="ShapeLocation">192.5,1406.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">95,87</av:Size>
+                                              <av:PointCollection x:Key="FalseConnector">287.5,1450 520,1450 520,480</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <FlowDecision.False>
+                                            <FlowStep x:Name="__ReferenceID0">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">389,420</av:Point>
+                                                  <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign DisplayName="Solicitud invalida" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Boolean">[Validado]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                </Assign.Value>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Assign>
+                                            </FlowStep>
+                                          </FlowDecision.False>
+                                        </FlowDecision>
+                                      </FlowDecision.True>
+                                      <FlowDecision.False>
+                                        <x:Reference>__ReferenceID0</x:Reference>
+                                      </FlowDecision.False>
+                                    </FlowDecision>
+                                  </FlowDecision.True>
+                                  <FlowDecision.False>
+                                    <x:Reference>__ReferenceID0</x:Reference>
+                                  </FlowDecision.False>
+                                </FlowDecision>
+                              </FlowDecision.True>
+                              <FlowDecision.False>
+                                <x:Reference>__ReferenceID0</x:Reference>
                               </FlowDecision.False>
                             </FlowDecision>
                           </FlowDecision.True>
@@ -203,7 +252,7 @@
             </FlowDecision>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID2" Condition="[not System.Convert.ToBoolean(in_DataCliente(70)) and not System.Convert.ToBoolean(in_DataCliente(71)) and not System.Convert.ToBoolean(in_DataCliente(72)) and not System.Convert.ToBoolean(in_DataCliente(73)) And not System.Convert.ToBoolean(in_DataCliente(74)) and not System.Convert.ToBoolean(in_DataCliente(75)) And not System.Convert.ToBoolean(in_DataCliente(76)) and not System.Convert.ToBoolean(in_DataCliente(77)) and not System.Convert.ToBoolean(in_DataCliente(78)) and not System.Convert.ToBoolean(in_DataCliente(79))]" DisplayName="VP Vacio" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID1}" False="{x:Reference __ReferenceID0}">
+            <FlowDecision x:Name="__ReferenceID2" Condition="[not System.Convert.ToBoolean(in_DataSolicitud(70)) and not System.Convert.ToBoolean(in_DataSolicitud(71)) and not System.Convert.ToBoolean(in_DataSolicitud(72)) and not System.Convert.ToBoolean(in_DataSolicitud(73)) And not System.Convert.ToBoolean(in_DataSolicitud(74)) and not System.Convert.ToBoolean(in_DataSolicitud(75)) And not System.Convert.ToBoolean(in_DataSolicitud(76)) and not System.Convert.ToBoolean(in_DataSolicitud(77)) and not System.Convert.ToBoolean(in_DataSolicitud(78)) and not System.Convert.ToBoolean(in_DataSolicitud(79))]" DisplayName="VP Vacio" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID1}" False="{x:Reference __ReferenceID0}">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -223,7 +272,35 @@
         <x:Reference>__ReferenceID4</x:Reference>
         <x:Reference>__ReferenceID5</x:Reference>
         <x:Reference>__ReferenceID6</x:Reference>
+        <x:Reference>__ReferenceID7</x:Reference>
+        <x:Reference>__ReferenceID8</x:Reference>
+        <x:Reference>__ReferenceID9</x:Reference>
       </Flowchart>
+      <FlowStep.Next>
+        <FlowDecision x:Name="__ReferenceID11" Condition="[Validado]" DisplayName="Validado" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <av:Point x:Key="ShapeLocation">265,246.5</av:Point>
+              <av:Size x:Key="ShapeSize">70,87</av:Size>
+              <av:PointCollection x:Key="TrueConnector">265,290 170,290 170,396.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <FlowDecision.True>
+            <FlowDecision x:Name="__ReferenceID12" Condition="[in_DataCliente(2).ToString.Contains(&quot;validado&quot;) and (in_DataCliente(3).ToString.Contains(&quot;validado&quot;) or in_DataCliente(7).ToString.Contains(&quot;validado&quot;)) and in_DataCliente(4).ToString.Contains(&quot;validado&quot;) and (in_DataCliente(5).ToString.Contains(&quot;validado&quot;) or in_DataCliente(6).ToString.Contains(&quot;validado&quot;))]" DisplayName="Validar documentacion" sap:VirtualizedContainerService.HintSize="127,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <av:Point x:Key="ShapeLocation">106.5,396.5</av:Point>
+                  <av:Size x:Key="ShapeSize">127,87</av:Size>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </FlowDecision>
+          </FlowDecision.True>
+        </FlowDecision>
+      </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID11</x:Reference>
+    <x:Reference>__ReferenceID12</x:Reference>
   </Flowchart>
 </Activity>
