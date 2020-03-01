@@ -4,7 +4,7 @@
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
     <x:Property Name="in_DomicilioFiscal" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>723,2047</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>723,2087</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="17">
@@ -250,10 +250,10 @@
                                       <av:PointCollection x:Key="ConnectorLocation">300,1255.5 300,1336.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_TextoDocumento]</InArgument>
-                                      <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_DomicilioFiscal.ToLower.Split(" "c)]</InArgument>
+                                      <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_DomicilioFiscal.ToLower.Split({" "},StringSplitOptions.none)]</InArgument>
                                       <OutArgument x:TypeArguments="x:Boolean" x:Key="out_DireccionCoincide">[DireccionCoincide]</OutArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                     <sap:WorkflowViewStateService.ViewState>

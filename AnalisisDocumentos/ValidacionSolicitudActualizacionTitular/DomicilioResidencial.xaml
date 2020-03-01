@@ -4,7 +4,7 @@
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
     <x:Property Name="in_DomicilioResidencial" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>738,2238</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>738,2278</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="17">
@@ -552,10 +552,10 @@
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Domicilio validado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_58">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[in_DomicilioResidencial]</OutArgument>
+              <OutArgument x:TypeArguments="x:Object">[io_Registro(84)]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">validado</InArgument>
+              <InArgument x:TypeArguments="x:Object">[true]</InArgument>
             </Assign.Value>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">

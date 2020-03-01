@@ -125,7 +125,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID21" Condition="[String.IsNullOrEmpty(Rfc)]" DisplayName="¿Rfc no vacio?" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_89">
+                    <FlowDecision x:Name="__ReferenceID21" Condition="[not String.IsNullOrEmpty(Rfc)]" DisplayName="¿Rfc no vacio?" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_89">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -240,7 +240,7 @@
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <av:Point x:Key="ShapeLocation">261.7,1506.5</av:Point>
                                                           <av:Size x:Key="ShapeSize">100,87</av:Size>
-                                                          <av:PointCollection x:Key="TrueConnector">261.7,1550 242.7,1550 242.7,1620 302.7,1620 302.7,1650</av:PointCollection>
+                                                          <av:PointCollection x:Key="TrueConnector">261.7,1550 252.7,1550 252.7,1640</av:PointCollection>
                                                           <x:String x:Key="FalseLabel">No</x:String>
                                                           <x:String x:Key="TrueLabel">Si</x:String>
                                                         </scg:Dictionary>
@@ -249,7 +249,7 @@
                                                         <FlowStep x:Name="__ReferenceID20">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                              <av:Point x:Key="ShapeLocation">171.7,1650</av:Point>
+                                                              <av:Point x:Key="ShapeLocation">121.7,1640</av:Point>
                                                               <av:Size x:Key="ShapeSize">262,60</av:Size>
                                                               <av:PointCollection x:Key="ConnectorLocation">581.5,220 581.5,250 354.425,250 354.425,307.5</av:PointCollection>
                                                             </scg:Dictionary>
@@ -518,6 +518,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">410.5,120</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">541.5,180 541.5,210 296.925,210 296.925,267.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Falta razón social" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_122">
@@ -533,6 +534,9 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID9</x:Reference>
+          </FlowStep.Next>
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
