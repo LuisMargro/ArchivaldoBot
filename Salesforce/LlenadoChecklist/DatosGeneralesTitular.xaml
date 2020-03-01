@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>741,3921</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>741,3961</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DatosGeneralesTitular_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -775,7 +775,7 @@
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                               </ui:AnchorBase>
                                                                               <FlowStep.Next>
-                                                                                <FlowDecision x:Name="__ReferenceID6" Condition="[String.Equals(in_LogCliente(2).ToString,&quot;validado&quot;)]" DisplayName="¿Nombre completo en INE?" sap:VirtualizedContainerService.HintSize="151,87" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
+                                                                                <FlowDecision x:Name="__ReferenceID6" Condition="[not in_LogCliente(2).ToString.Contains(&quot;nombre&quot;)]" DisplayName="¿Nombre completo en INE?" sap:VirtualizedContainerService.HintSize="151,87" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
