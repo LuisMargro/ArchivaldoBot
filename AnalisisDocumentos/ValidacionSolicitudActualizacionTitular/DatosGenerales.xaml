@@ -156,7 +156,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
-                        <FlowDecision x:Name="__ReferenceID8" Condition="[in_TextoDocumento.Split({&quot;domicilio fiscal&quot;},StringSplitOptions.None)(0).Split({&quot;nacionalidad&quot;},StringSplitOptions.None)(1).Split({&quot;pais de tributacion&quot;},StringSplitOptions.None)(0).Contains(in_Nacionalidad)]" DisplayName="¿Nacionalidad?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_29">
+                        <FlowDecision x:Name="__ReferenceID8" Condition="[in_TextoDocumento.Split({&quot;domicilio fiscal&quot;},StringSplitOptions.None)(0).Split({&quot;nacionalidad&quot;},StringSplitOptions.None)(1).Split({&quot;pais de tributacion&quot;},StringSplitOptions.None)(0).Contains(in_Nacionalidad.Substring(0,5))]" DisplayName="¿Nacionalidad?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>

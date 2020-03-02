@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GuardarClienteLog" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GuardarClienteLog" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_PathLog" Type="InArgument(x:String)" />
     <x:Property Name="in_Cliente" Type="InArgument(sd:DataRow)" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>645,919</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>690,1152</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GuardarClienteLog_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -61,24 +61,25 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Se guarda el registro del correo del cliente en el Log." DisplayName="GuardarClienteLog" sap:VirtualizedContainerService.HintSize="625,819" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Se guarda el registro del correo del cliente en el Log." DisplayName="GuardarClienteLog" sap:VirtualizedContainerService.HintSize="670,1052" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar al cliente en el log" sap:VirtualizedContainerService.HintSize="583,696" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" WorkbookPath="[in_PathLog]">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar al cliente en el log" sap:VirtualizedContainerService.HintSize="628,929" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" WorkbookPath="[in_PathLog]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="549,587" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="594,820" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="QueryCliente" />
               <Variable x:TypeArguments="sd:DataTable" Name="DtLog" />
-              <Variable x:TypeArguments="x:String" Name="hshd" />
+              <Variable x:TypeArguments="s:Object[]" Name="ArrayItemsCliente" />
+              <Variable x:TypeArguments="x:Int32" Name="indiceDato" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -86,30 +87,47 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[DtLog]" DisplayName="Obtener log" sap:VirtualizedContainerService.HintSize="507,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="Clientes">
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[DtLog]" DisplayName="Obtener log" sap:VirtualizedContainerService.HintSize="552,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="Clientes">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ExcelReadRange>
-            <ui:LookupDataTable CellValue="{x:Null}" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[DtLog]" DisplayName="Buscar Cliente" sap:VirtualizedContainerService.HintSize="507,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnIndex="[1]" LookupValue="[in_Cliente(1).ToString]" RowIndex="[QueryCliente]" />
-            <If Condition="[QueryCliente = -1]" DisplayName="¿Es un cliente nuevo?" sap:VirtualizedContainerService.HintSize="507,207" sap2010:WorkflowViewState.IdRef="If_1">
+            <ui:LookupDataTable CellValue="{x:Null}" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[DtLog]" DisplayName="Buscar Cliente" sap:VirtualizedContainerService.HintSize="552,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_2" LookupColumnIndex="[1]" LookupValue="[in_Cliente(1).ToString]" RowIndex="[QueryCliente]" />
+            <Assign sap:VirtualizedContainerService.HintSize="552,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:Object[]">[ArrayItemsCliente]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:Object[]">[in_Cliente.ItemArray()]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[QueryCliente = -1]" DisplayName="¿Es un cliente nuevo?" sap:VirtualizedContainerService.HintSize="552,340" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[in_Cliente.ItemArray()]" DataTable="[DtLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[ArrayItemsCliente]" DataTable="[DtLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
               </If.Then>
               <If.Else>
-                <Assign DisplayName="cambiar cliente" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="sd:DataRow">[DtLog.Rows(QueryCliente)]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="sd:DataRow">[in_Cliente]</InArgument>
-                  </Assign.Value>
-                </Assign>
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[indiceDato]" DisplayName="Recorrer datos del cliente" sap:VirtualizedContainerService.HintSize="307,193" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ArrayItemsCliente]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+                      </ActivityAction.Argument>
+                      <Assign DisplayName="Guardar cambio" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Object">[DtLog(QueryCliente)(indiceDato)]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Object">[item]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
               </If.Else>
             </If>
-            <ui:ExcelWriteRange AddHeaders="True" DataTable="[DtLog]" DisplayName="Escribir tabla de usuarios" sap:VirtualizedContainerService.HintSize="507,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Clientes">
+            <ui:ExcelWriteRange AddHeaders="True" DataTable="[DtLog]" DisplayName="Escribir tabla de usuarios" sap:VirtualizedContainerService.HintSize="552,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Clientes">
               <ui:ExcelWriteRange.StartingCell>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />

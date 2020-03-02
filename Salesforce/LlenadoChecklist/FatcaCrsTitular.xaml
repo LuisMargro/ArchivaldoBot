@@ -75,32 +75,32 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 324.641666666667,107.5 324.641666666667,127.5</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 330,107.5 330,166.5</av:PointCollection>
                 <x:Double x:Key="Height">924.5</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
               <x:Reference>__ReferenceID10</x:Reference>
             </Flowchart.StartNode>
-            <FlowDecision x:Name="__ReferenceID10" Condition="[Convert.ToBoolean(in_Registro(29))]" DisplayName="¿Nacionalidad distinta?" sap:VirtualizedContainerService.HintSize="128,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
+            <FlowDecision x:Name="__ReferenceID10" Condition="[Convert.ToBoolean(in_Registro(29)) and in_Registro(85).ToString.Contains(&quot;verdadero&quot;)]" DisplayName="¿Nacionalidad distinta?" sap:VirtualizedContainerService.HintSize="128,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">260.641666666667,127.5</av:Point>
+                  <av:Point x:Key="ShapeLocation">266,166.5</av:Point>
                   <av:Size x:Key="ShapeSize">128,87</av:Size>
                   <x:String x:Key="FalseLabel">No</x:String>
                   <x:String x:Key="TrueLabel">Si</x:String>
-                  <av:PointCollection x:Key="TrueConnector">260.641666666667,171 210.641666666667,171</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">388.641666666667,171 409.141666666667,171 409.141666666667,227.5 349.141666666667,227.5 349.141666666667,257.5</av:PointCollection>
+                  <av:PointCollection x:Key="TrueConnector">266,210 100,210 100,284.5</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">394,210 419.5,210 419.5,326.5 359.5,326.5 359.5,356.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
                 <FlowStep x:Name="__ReferenceID3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">10.6416666666667,145.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">0,284.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">110.641666666667,196.5 110.641666666667,226.5 319.641666666667,226.5 319.641666666667,257.5</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">200,310 330,310 330,356.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:AnchorBase AnchorPosition="Top" DisplayName="Nacionalidad llena" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
@@ -154,25 +154,25 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:AnchorBase>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID2" Condition="[Convert.ToBoolean(in_Registro(32))]" DisplayName="¿Identificación fiscal?" sap:VirtualizedContainerService.HintSize="118,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+                    <FlowDecision x:Name="__ReferenceID2" Condition="[Convert.ToBoolean(in_Registro(32)) and in_Registro(85).ToString.Contains(&quot;verdadero&quot;)]" DisplayName="¿Identificación fiscal?" sap:VirtualizedContainerService.HintSize="118,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <av:Point x:Key="ShapeLocation">260.641666666667,257.5</av:Point>
+                          <av:Point x:Key="ShapeLocation">271,356.5</av:Point>
                           <av:Size x:Key="ShapeSize">118,87</av:Size>
                           <x:String x:Key="FalseLabel">No</x:String>
                           <x:String x:Key="TrueLabel">Si</x:String>
-                          <av:PointCollection x:Key="TrueConnector">260.641666666667,301 230.641666666667,301 230.641666666667,300 210,300</av:PointCollection>
-                          <av:PointCollection x:Key="FalseConnector">378.641666666667,301 406.141666666667,301 406.141666666667,387.5 376.141666666667,387.5 376.141666666667,417.5</av:PointCollection>
+                          <av:PointCollection x:Key="TrueConnector">271,400 200,400</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">389,400 438.5,400 438.5,586.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
                         <FlowStep x:Name="__ReferenceID4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">10,274.5</av:Point>
+                              <av:Point x:Key="ShapeLocation">0,374.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">110,325.5 110,355.5 337.641666666667,355.5 337.641666666667,417.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">100,425.5 100,455.5 400,455.5 400,586.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:AnchorBase AnchorPosition="Top" DisplayName="Identificación fiscal lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
@@ -226,25 +226,25 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:AnchorBase>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID1" Condition="[Convert.ToBoolean(in_Registro(30))]" DisplayName="¿Residentie en el extranjero?" sap:VirtualizedContainerService.HintSize="154,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                            <FlowDecision x:Name="__ReferenceID1" Condition="[Convert.ToBoolean(in_Registro(30)) and in_Registro(85).ToString.Contains(&quot;verdadero&quot;)]" DisplayName="¿Residentie en el extranjero?" sap:VirtualizedContainerService.HintSize="154,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <av:Point x:Key="ShapeLocation">260.641666666667,417.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">323,586.5</av:Point>
                                   <av:Size x:Key="ShapeSize">154,87</av:Size>
                                   <x:String x:Key="FalseLabel">No</x:String>
                                   <x:String x:Key="TrueLabel">Si</x:String>
-                                  <av:PointCollection x:Key="TrueConnector">260.641666666667,461 230.641666666667,461 230.641666666667,460 220.5,460</av:PointCollection>
-                                  <av:PointCollection x:Key="FalseConnector">414.641666666667,461 440,461 440,786.5</av:PointCollection>
+                                  <av:PointCollection x:Key="TrueConnector">323,630 293,630 293,510 220,510</av:PointCollection>
+                                  <av:PointCollection x:Key="FalseConnector">477,630 500,630 500,756.5 440,756.5 440,786.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <FlowDecision.True>
                                 <FlowStep x:Name="__ReferenceID7">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">20.5,434.5</av:Point>
+                                      <av:Point x:Key="ShapeLocation">20,484.5</av:Point>
                                       <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">120.5,485.5 120.5,515.5 120,515.5 120,524.5</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">120,535.5 120,564.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Residente en el extranjero" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_19">
@@ -301,9 +301,9 @@
                                     <FlowStep x:Name="__ReferenceID6">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">20,524.5</av:Point>
+                                          <av:Point x:Key="ShapeLocation">20,564.5</av:Point>
                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">120,575.5 120,605.5 120.5,605.5 120.5,614.5</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">120,615.5 120,644.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <ui:AnchorBase AnchorPosition="Top" DisplayName="Residente en el extranjero lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_20">
@@ -365,9 +365,9 @@
                                         <FlowStep x:Name="__ReferenceID9">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">20.5,614.5</av:Point>
+                                              <av:Point x:Key="ShapeLocation">20,644.5</av:Point>
                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">120.5,665.5 120.5,695.5 120,695.5 120,704.5</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">120,695.5 120,724.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Residente en el extranjero DR" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
@@ -424,9 +424,9 @@
                                             <FlowStep x:Name="__ReferenceID8">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">20,704.5</av:Point>
+                                                  <av:Point x:Key="ShapeLocation">20,724.5</av:Point>
                                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">220,730 360,730 360,786.5</av:PointCollection>
+                                                  <av:PointCollection x:Key="ConnectorLocation">220,750 360,750 360,786.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <ui:AnchorBase AnchorPosition="Top" DisplayName="Residente en el extranjero lleno DR" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_22">
@@ -485,7 +485,7 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:AnchorBase>
                                               <FlowStep.Next>
-                                                <FlowDecision x:Name="__ReferenceID0" Condition="[Convert.ToBoolean(in_Registro(3))]" DisplayName="¿Contribuyente fiscal extranjero?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
+                                                <FlowDecision x:Name="__ReferenceID0" Condition="[Convert.ToBoolean(in_Registro(3)) and in_Registro(85).ToString.Contains(&quot;verdadero&quot;)]" DisplayName="¿Contribuyente fiscal extranjero?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

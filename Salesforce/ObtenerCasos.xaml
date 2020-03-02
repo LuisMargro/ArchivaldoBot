@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>831,1753</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>831,1713</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -98,7 +98,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,163 300,237</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="526,1995" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="CasosVisible" />
                 </Sequence.Variables>
@@ -260,6 +260,26 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
+                <ui:ImageFound Found="{x:Null}" sap2010:Annotation.AnnotationText="Se agrego una imagen de espera, para mitigar error por falta de carga" DisplayName="Cuadro de dialogo desplegado" sap:VirtualizedContainerService.HintSize="484,148" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                  <ui:ImageFound.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                  </ui:ImageFound.Image>
+                  <ui:ImageFound.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:ImageFound.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ImageFound>
                 <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Ingresar el tipo de seleccion" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_TipoCaso]">
                   <ui:TypeInto.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8a90982516117ca0bc17a04cb5ec496c" Selector="&lt;webctrl tag='INPUT' parentclass='uiInput uiAutocomplete uiInput--default uiInput--picklist' /&gt;" WaitForReady="INTERACTIVE">
@@ -470,54 +490,60 @@
                                               <av:Size x:Key="ShapeSize">200,51</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:FilterDataTable DataTable="[out_TransactionData]" DisplayName="Quitar caso con distinto asunto" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_TransactionData]" SelectColumnsMode="Keep">
-                                            <ui:FilterDataTable.Filters>
-                                              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                                <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
-                                                  <ui:FilterOperationArgument.Column>
-                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                                                  </ui:FilterOperationArgument.Column>
-                                                  <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["solicitud de actualiza"]</InArgument>
-                                                  </ui:FilterOperationArgument.Operand>
-                                                </ui:FilterOperationArgument>
-                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                  <ui:FilterOperationArgument.Column>
-                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                                                  </ui:FilterOperationArgument.Column>
-                                                  <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["SOLICITUD DE ACTUALIZA"]</InArgument>
-                                                  </ui:FilterOperationArgument.Operand>
-                                                </ui:FilterOperationArgument>
-                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                  <ui:FilterOperationArgument.Column>
-                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                                                  </ui:FilterOperationArgument.Column>
-                                                  <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["Solicitud de Actualiza"]</InArgument>
-                                                  </ui:FilterOperationArgument.Operand>
-                                                </ui:FilterOperationArgument>
-                                                <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
-                                                  <ui:FilterOperationArgument.Column>
-                                                    <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                                                  </ui:FilterOperationArgument.Column>
-                                                  <ui:FilterOperationArgument.Operand>
-                                                    <InArgument x:TypeArguments="x:String">["Solicitud de actualiza"]</InArgument>
-                                                  </ui:FilterOperationArgument.Operand>
-                                                </ui:FilterOperationArgument>
-                                              </scg:List>
-                                            </ui:FilterDataTable.Filters>
-                                            <ui:FilterDataTable.SelectColumns>
-                                              <scg:List x:TypeArguments="InArgument" Capacity="4">
-                                                <x:Null />
-                                              </scg:List>
-                                            </ui:FilterDataTable.SelectColumns>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ui:FilterDataTable>
+                                          <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                            <ui:CommentOut.Body>
+                                              <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                                <ui:FilterDataTable DataTable="[out_TransactionData]" DisplayName="Quitar caso con distinto asunto" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[out_TransactionData]" SelectColumnsMode="Keep">
+                                                  <ui:FilterDataTable.Filters>
+                                                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                                      <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+                                                        <ui:FilterOperationArgument.Column>
+                                                          <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                        </ui:FilterOperationArgument.Column>
+                                                        <ui:FilterOperationArgument.Operand>
+                                                          <InArgument x:TypeArguments="x:String">["solicitud de actualiza"]</InArgument>
+                                                        </ui:FilterOperationArgument.Operand>
+                                                      </ui:FilterOperationArgument>
+                                                      <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                        <ui:FilterOperationArgument.Column>
+                                                          <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                        </ui:FilterOperationArgument.Column>
+                                                        <ui:FilterOperationArgument.Operand>
+                                                          <InArgument x:TypeArguments="x:String">["SOLICITUD DE ACTUALIZA"]</InArgument>
+                                                        </ui:FilterOperationArgument.Operand>
+                                                      </ui:FilterOperationArgument>
+                                                      <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                        <ui:FilterOperationArgument.Column>
+                                                          <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                        </ui:FilterOperationArgument.Column>
+                                                        <ui:FilterOperationArgument.Operand>
+                                                          <InArgument x:TypeArguments="x:String">["Solicitud de Actualiza"]</InArgument>
+                                                        </ui:FilterOperationArgument.Operand>
+                                                      </ui:FilterOperationArgument>
+                                                      <ui:FilterOperationArgument BooleanOperator="Or" Operator="CONTAINS">
+                                                        <ui:FilterOperationArgument.Column>
+                                                          <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
+                                                        </ui:FilterOperationArgument.Column>
+                                                        <ui:FilterOperationArgument.Operand>
+                                                          <InArgument x:TypeArguments="x:String">["Solicitud de actualiza"]</InArgument>
+                                                        </ui:FilterOperationArgument.Operand>
+                                                      </ui:FilterOperationArgument>
+                                                    </scg:List>
+                                                  </ui:FilterDataTable.Filters>
+                                                  <ui:FilterDataTable.SelectColumns>
+                                                    <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                                      <x:Null />
+                                                    </scg:List>
+                                                  </ui:FilterDataTable.SelectColumns>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:FilterDataTable>
+                                              </Sequence>
+                                            </ui:CommentOut.Body>
+                                          </ui:CommentOut>
                                         </FlowStep>
                                       </FlowStep.Next>
                                     </FlowStep>
