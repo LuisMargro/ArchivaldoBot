@@ -230,7 +230,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:AnchorBase>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID14" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿Calle en comprobante?" sap:VirtualizedContainerService.HintSize="133,87" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
+                        <FlowDecision x:Name="__ReferenceID14" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Calle en comprobante?" sap:VirtualizedContainerService.HintSize="133,87" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -522,7 +522,7 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:AnchorBase>
                                               <FlowStep.Next>
-                                                <FlowDecision x:Name="__ReferenceID12" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿Estado en comprobante?" sap:VirtualizedContainerService.HintSize="142,87" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
+                                                <FlowDecision x:Name="__ReferenceID12" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Estado en comprobante?" sap:VirtualizedContainerService.HintSize="142,87" sap2010:WorkflowViewState.IdRef="FlowDecision_14">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -814,7 +814,7 @@
                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                       </ui:AnchorBase>
                                                                       <FlowStep.Next>
-                                                                        <FlowDecision x:Name="__ReferenceID10" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿Número exterior en comprobante?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
+                                                                        <FlowDecision x:Name="__ReferenceID10" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Número exterior en comprobante?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1106,7 +1106,7 @@
                                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                               </ui:AnchorBase>
                                                                                               <FlowStep.Next>
-                                                                                                <FlowDecision x:Name="__ReferenceID8" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿Delegación o municipio en comprobante?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
+                                                                                                <FlowDecision x:Name="__ReferenceID8" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Delegación o municipio en comprobante?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1398,7 +1398,7 @@
                                                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                                                       </ui:AnchorBase>
                                                                                                                       <FlowStep.Next>
-                                                                                                                        <FlowDecision x:Name="__ReferenceID6" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿Número interior en comprobante?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
+                                                                                                                        <FlowDecision x:Name="__ReferenceID6" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Número interior en comprobante?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_18">
                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1690,7 +1690,7 @@
                                                                                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                                                                               </ui:AnchorBase>
                                                                                                                                               <FlowStep.Next>
-                                                                                                                                                <FlowDecision x:Name="__ReferenceID4" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿Colonia en comprobante?" sap:VirtualizedContainerService.HintSize="148,87" sap2010:WorkflowViewState.IdRef="FlowDecision_17">
+                                                                                                                                                <FlowDecision x:Name="__ReferenceID4" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Colonia en comprobante?" sap:VirtualizedContainerService.HintSize="148,87" sap2010:WorkflowViewState.IdRef="FlowDecision_17">
                                                                                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1845,7 +1845,7 @@
                                                                                                                                                                   <x:String x:Key="FalseLabel">No</x:String>
                                                                                                                                                                   <x:String x:Key="TrueLabel">Si</x:String>
                                                                                                                                                                   <av:PointCollection x:Key="TrueConnector">280.5,2520 240.5,2520</av:PointCollection>
-                                                                                                                                                                  <av:PointCollection x:Key="FalseConnector">355.5,2520 393,2520 393,2676.5</av:PointCollection>
+                                                                                                                                                                  <av:PointCollection x:Key="FalseConnector">355.5,2520 387.5,2520 387.5,2676.5</av:PointCollection>
                                                                                                                                                                 </scg:Dictionary>
                                                                                                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                               <FlowDecision.True>
@@ -1918,7 +1918,7 @@
                                                                                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                                           <av:Point x:Key="ShapeLocation">40,2584.5</av:Point>
                                                                                                                                                                           <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                                                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">240,2610 355.5,2610 355.5,2676.5</av:PointCollection>
+                                                                                                                                                                          <av:PointCollection x:Key="ConnectorLocation">240,2610 350,2610 350,2676.5</av:PointCollection>
                                                                                                                                                                         </scg:Dictionary>
                                                                                                                                                                       </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                       <ui:AnchorBase AnchorPosition="Top" DisplayName="Entre calles lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_18">
@@ -1982,16 +1982,16 @@
                                                                                                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                       </ui:AnchorBase>
                                                                                                                                                                       <FlowStep.Next>
-                                                                                                                                                                        <FlowDecision x:Name="__ReferenceID2" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿Entre calles comprobante?" sap:VirtualizedContainerService.HintSize="150,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
+                                                                                                                                                                        <FlowDecision x:Name="__ReferenceID2" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Entre calles comprobante?" sap:VirtualizedContainerService.HintSize="150,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
                                                                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                                                                                                                              <av:Point x:Key="ShapeLocation">280.5,2676.5</av:Point>
+                                                                                                                                                                              <av:Point x:Key="ShapeLocation">275,2676.5</av:Point>
                                                                                                                                                                               <av:Size x:Key="ShapeSize">150,87</av:Size>
                                                                                                                                                                               <x:String x:Key="FalseLabel">No</x:String>
                                                                                                                                                                               <x:String x:Key="TrueLabel">Si</x:String>
-                                                                                                                                                                              <av:PointCollection x:Key="TrueConnector">280.5,2720 240.5,2720</av:PointCollection>
-                                                                                                                                                                              <av:PointCollection x:Key="FalseConnector">430.5,2720 443,2720 443,2856.5 323,2856.5 323,2886.5</av:PointCollection>
+                                                                                                                                                                              <av:PointCollection x:Key="TrueConnector">275,2720 240.5,2720</av:PointCollection>
+                                                                                                                                                                              <av:PointCollection x:Key="FalseConnector">425,2720 443,2720 443,2856.5 323,2856.5 323,2886.5</av:PointCollection>
                                                                                                                                                                             </scg:Dictionary>
                                                                                                                                                                           </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                           <FlowDecision.True>
@@ -2407,7 +2407,7 @@
                                                                                                                                                                                                         </sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                                                       </ui:AnchorBase>
                                                                                                                                                                                                       <FlowStep.Next>
-                                                                                                                                                                                                        <FlowDecision x:Name="__ReferenceID0" Condition="[String.Equals(in_LogCliente(3),&quot;validado&quot;)]" DisplayName="¿CP en comprobante?" sap:VirtualizedContainerService.HintSize="122,87" sap2010:WorkflowViewState.IdRef="FlowDecision_20">
+                                                                                                                                                                                                        <FlowDecision x:Name="__ReferenceID0" Condition="[in_LogCliente(3).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿CP en comprobante?" sap:VirtualizedContainerService.HintSize="122,87" sap2010:WorkflowViewState.IdRef="FlowDecision_20">
                                                                                                                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                                                                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2491,7 +2491,7 @@
                                                                                                                                                                                                                       <av:PointCollection x:Key="ConnectorLocation">150,3055.5 150,3085.5 150.5,3085.5 150.5,3094.5</av:PointCollection>
                                                                                                                                                                                                                     </scg:Dictionary>
                                                                                                                                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                                                                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="CP lleno en comprobante" sap:VirtualizedContainerService.HintSize="384,383" sap2010:WorkflowViewState.IdRef="AnchorBase_40">
+                                                                                                                                                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="CP lleno en comprobante" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_40">
                                                                                                                                                                                                                     <ui:AnchorBase.Action>
                                                                                                                                                                                                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                                                                                                                                         <ActivityAction.Argument>

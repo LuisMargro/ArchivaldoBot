@@ -4,7 +4,7 @@
     <x:Property Name="in_Correo" Type="InArgument(sd:DataRow)" />
     <x:Property Name="io_CorreosNuevosCliente" Type="InOutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>732,1338</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>732,1298</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -230,13 +230,13 @@
                                           <av:PointCollection x:Key="ConnectorLocation">110,655.5 110,674.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DTDocumentos]" DisplayName="Iterar documento" sap:VirtualizedContainerService.HintSize="773,1080" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                      <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DTDocumentos]" DisplayName="Iterar documento" sap:VirtualizedContainerService.HintSize="786,1080" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                                         <ui:ForEachRow.Body>
                                           <ActivityAction x:TypeArguments="sd:DataRow">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="document" />
                                             </ActivityAction.Argument>
-                                            <Flowchart DisplayName="Descarga de documento" sap:VirtualizedContainerService.HintSize="723,932" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+                                            <Flowchart DisplayName="Descarga de documento" sap:VirtualizedContainerService.HintSize="736,932" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                                               <Flowchart.Variables>
                                                 <Variable x:TypeArguments="x:Boolean" Name="PaginaDescarga" />
                                                 <Variable x:TypeArguments="x:Boolean" Name="ArchDescargado" />
@@ -253,7 +253,7 @@
                                                   <av:Point x:Key="ShapeLocation">0,2.5</av:Point>
                                                   <av:Size x:Key="ShapeSize">60,75</av:Size>
                                                   <av:PointCollection x:Key="ConnectorLocation">60,40 90,40 90,0 550,0 550,26.5</av:PointCollection>
-                                                  <x:Double x:Key="Width">689</x:Double>
+                                                  <x:Double x:Key="Width">702</x:Double>
                                                   <x:Double x:Key="Height">896.5</x:Double>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
@@ -320,9 +320,9 @@
                                                             <av:PointCollection x:Key="ConnectorLocation">130,695.5 130,725.5 340,725.5 340,744.5</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Cerrar pestaña" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="w" KeyModifiers="Ctrl">
+                                                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Cerrar pestaña" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="w" KeyModifiers="Ctrl">
                                                           <ui:SendHotkey.Target>
-                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e33d53db03c75576cfd339c2fe1f5dc2" Selector="&lt;wnd app='chrome.exe' title='servlet.FileDownload*' /&gt;&lt;ctrl name='servlet.FileDownload' role='document' /&gt;">
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="e33d53db03c75576cfd339c2fe1f5dc2" Selector="&lt;wnd app='chrome.exe' title='servlet.FileDownload*' /&gt;&lt;ctrl name='servlet.FileDownload*' /&gt;">
                                                               <ui:Target.TimeoutMS>
                                                                 <InArgument x:TypeArguments="x:Int32" />
                                                               </ui:Target.TimeoutMS>
@@ -379,7 +379,7 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Descargar documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="s" KeyModifiers="Ctrl">
                                                   <ui:SendHotkey.Target>
-                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a0f72f417549fdf1828cf4f7368845b1" Selector="&lt;wnd app='chrome.exe' title='servlet.FileDownload*' /&gt;&lt;ctrl name='servlet.FileDownload' role='document' /&gt;">
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a0f72f417549fdf1828cf4f7368845b1" Selector="&lt;wnd app='chrome.exe' title='servlet.FileDownload*' /&gt;&lt;ctrl name='servlet.FileDownload*' /&gt;">
                                                       <ui:Target.TimeoutMS>
                                                         <InArgument x:TypeArguments="x:Int32" />
                                                       </ui:Target.TimeoutMS>
@@ -434,7 +434,7 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                     <ui:UiElementExists DisplayName="Existe la pagina de descarga" Exists="[PaginaDescarga]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_8">
                                                       <ui:UiElementExists.Target>
-                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="aba77459aacc0517e8215a077f0aff98" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='servlet.FileDownload*' /&gt;&#xA;&lt;ctrl name='servlet.FileDownload' role='document' /&gt;&#xA;" TimeoutMS="20000" WaitForReady="COMPLETE" />
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="aba77459aacc0517e8215a077f0aff98" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='servlet.FileDownload*' /&gt;&lt;ctrl name='servlet.FileDownload*' /&gt;" TimeoutMS="20000" WaitForReady="COMPLETE" />
                                                       </ui:UiElementExists.Target>
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -504,7 +504,7 @@
                                                             <av:PointCollection x:Key="ConnectorLocation">220,130 300,130 300,184.5</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Abrir documento con nombre muy largo" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Abrir documento con nombre muy largo" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                           <ui:Click.CursorPosition>
                                                             <ui:CursorPosition Position="Center">
                                                               <ui:CursorPosition.OffsetX>
