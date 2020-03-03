@@ -7,7 +7,7 @@
     <x:Property Name="in_ArregloDireccionResidencial" Type="InArgument(s:String[])" />
     <x:Property Name="in_Curp" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>936,1479</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>936,1519</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -22,7 +22,7 @@
     </scg1:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg1:List x:TypeArguments="AssemblyReference" Capacity="12">
+    <scg1:List x:TypeArguments="AssemblyReference" Capacity="24">
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -35,6 +35,7 @@
       <AssemblyReference>System.Data</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="El precente workflow recibe una  identificacion(INE, IFE, cedula profesional ó pasaporte) escaneada y un nombre,  se determina si la INE recibida le pertenece al nombre que se le fue proporcionado, si el ine le pertenece a la persona recibida, se asignara &quot;Validado&quot; a la variable de control; En caso contrario se asignara &quot;Encontrado&quot; y se rellenara el mensaje" DisplayName="Analizar identificacion" sap:VirtualizedContainerService.HintSize="916,1419" sap2010:WorkflowViewState.IdRef="Flowchart_2">
@@ -321,7 +322,7 @@
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:InvokeWorkflowFile>
                                                   <FlowStep.Next>
-                                                    <FlowDecision x:Name="__ReferenceID3" Condition="[DirResidencial and not io_Cliente(5).ToString.Contains(&quot;validado&quot;)]" DisplayName="Dir. Residen. coincide?" sap:VirtualizedContainerService.HintSize="124,87" sap2010:WorkflowViewState.IdRef="FlowDecision_22">
+                                                    <FlowDecision x:Name="__ReferenceID3" Condition="[DirResidencial]" DisplayName="Dir. Residen. coincide?" sap:VirtualizedContainerService.HintSize="124,87" sap2010:WorkflowViewState.IdRef="FlowDecision_22">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>

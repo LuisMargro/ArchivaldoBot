@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -55,6 +55,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="MainChecklist" sap:VirtualizedContainerService.HintSize="808,932" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -80,7 +81,7 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">265,126.5</av:Point>
           <av:Size x:Key="ShapeSize">70,87</av:Size>
-          <av:PointCollection x:Key="TrueConnector">265,170 160,170 160,226.5</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">265,170 190,170 190,216.5</av:PointCollection>
           <av:PointCollection x:Key="FalseConnector">335,170 600,170 600,574.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -89,10 +90,10 @@
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">96,226.5</av:Point>
+              <av:Point x:Key="ShapeLocation">126,216.5</av:Point>
               <av:Size x:Key="ShapeSize">128,87</av:Size>
-              <av:PointCollection x:Key="TrueConnector">96,270 70,270 70,334.5 100,334.5 100,364.5</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">224,270 450,270 450,376.5</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">126,260 100,260 100,364.5</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">254,260 450,260 450,376.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -101,7 +102,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,364.5</av:Point>
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">100,415.5 100,474.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">100,415.5 100,444.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Información workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\LlenadoChecklist\Información.xaml">
@@ -113,174 +114,168 @@
                 <FlowStep x:Name="__ReferenceID7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">0,474.5</av:Point>
+                      <av:Point x:Key="ShapeLocation">0,444.5</av:Point>
                       <av:Size x:Key="ShapeSize">200,51</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
-                    <ui:CommentOut.Body>
-                      <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_5">
-                        <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Cambiar propietario" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="f3c3f790c25e3e663ed9bcb18f412627" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
-                          <ui:BrowserScope.Body>
-                            <ActivityAction x:TypeArguments="x:Object">
-                              <ActivityAction.Argument>
-                                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                              </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,956" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                                <Sequence.Variables>
-                                  <Variable x:TypeArguments="x:String" Default="Estimado cliente, &#xA;&#xA;Para continuar con el trámite de actualización de contrato por favor responda este &#xA;correo adjuntando la siguiente información legible y en PDF: &#xA;&#xA;Cualquier duda, estaremos encantados de atenderle. &#xA;&#xA;Gracias por su apoyo" Name="Plantilla" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="archivosPDf" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="facta" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="correo" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="Beneficiario" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="Correovalidao" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="VinculoPatrimonial" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="DatosGenerales" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="CuentaBancaria" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioFiscal" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="infoLaboral" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioResidencial" />
-                                  <Variable x:TypeArguments="ui:GenericValue" Name="Mensaje" />
-                                </Sequence.Variables>
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Regresar a caso" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                  <ui:Click.CursorPosition>
-                                    <ui:CursorPosition Position="Center">
-                                      <ui:CursorPosition.OffsetX>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetX>
-                                      <ui:CursorPosition.OffsetY>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetY>
-                                    </ui:CursorPosition>
-                                  </ui:Click.CursorPosition>
-                                  <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff5e40334086542924e6ad28fd583299" Selector="&lt;webctrl tag='SPAN' class='title slds-truncate' parentclass='tabHeader slds-tabs--default__link slds-p-right--small slds-grow ' /&gt;&#xA;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:Click.Target>
-                                </ui:Click>
-                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  detailTab__item'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                  <ui:Click.CursorPosition>
-                                    <ui:CursorPosition Position="Center">
-                                      <ui:CursorPosition.OffsetX>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetX>
-                                      <ui:CursorPosition.OffsetY>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetY>
-                                    </ui:CursorPosition>
-                                  </ui:Click.CursorPosition>
-                                  <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6a25d9eb9a95d5a0c9edf6f0836996db" Selector="&lt;webctrl id='detailTab__item' parentid='brandBand_*' tag='A' aaname='Detalles' /&gt;&#xA;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:Click.Target>
-                                </ui:Click>
-                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'USE'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                  <ui:Click.CursorPosition>
-                                    <ui:CursorPosition Position="Center">
-                                      <ui:CursorPosition.OffsetX>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetX>
-                                      <ui:CursorPosition.OffsetY>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetY>
-                                    </ui:CursorPosition>
-                                  </ui:Click.CursorPosition>
-                                  <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="810c50653cf6fac66c0bda485c08952b" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_caso_p_gina_de_registro_case__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_case___0121a0000002mc*' parentid='sectionContent-*' idx='34' /&gt;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:Click.Target>
-                                </ui:Click>
-                                <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  7:68958;a'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="Eduardo Godinez Loza">
-                                  <ui:TypeInto.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f1772ac3ca2aff11a4411d5baca29b62" Selector="&lt;webctrl tag='INPUT' aaname='Introduzca un nuevo nombre de propietario' class=' default input uiInput uiInputTextForAutocomplete uiInput--default uiInput--input uiInput uiAutocomplete uiInput--default uiInput--lookup' /&gt;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:TypeInto.Target>
-                                </ui:TypeInto>
-                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                  <ui:Click.CursorPosition>
-                                    <ui:CursorPosition Position="Center">
-                                      <ui:CursorPosition.OffsetX>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetX>
-                                      <ui:CursorPosition.OffsetY>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetY>
-                                    </ui:CursorPosition>
-                                  </ui:Click.CursorPosition>
-                                  <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8d517853fe9feeeabb0bbcc768e7b4d0" Selector="&lt;webctrl aaname='  ' tag='DIV' class='primaryLabel slds-truncate slds-lookup__result-text' innertext='Eduardo Godinez Loza' /&gt;&#xA;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:Click.Target>
-                                </ui:Click>
-                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                  <ui:Click.CursorPosition>
-                                    <ui:CursorPosition Position="Center">
-                                      <ui:CursorPosition.OffsetX>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetX>
-                                      <ui:CursorPosition.OffsetY>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:CursorPosition.OffsetY>
-                                    </ui:CursorPosition>
-                                  </ui:Click.CursorPosition>
-                                  <ui:Click.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4badd19c414935213971e2b6725d5b24" Selector="&lt;webctrl name='cambiar propietario' tag='BUTTON' /&gt;">
-                                      <ui:Target.TimeoutMS>
-                                        <InArgument x:TypeArguments="x:Int32" />
-                                      </ui:Target.TimeoutMS>
-                                      <ui:Target.WaitForReady>
-                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                      </ui:Target.WaitForReady>
-                                    </ui:Target>
-                                  </ui:Click.Target>
-                                </ui:Click>
-                              </Sequence>
-                            </ActivityAction>
-                          </ui:BrowserScope.Body>
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Cambiar propietario" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="f3c3f790c25e3e663ed9bcb18f412627" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,956" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Default="Estimado cliente, &#xA;&#xA;Para continuar con el trámite de actualización de contrato por favor responda este &#xA;correo adjuntando la siguiente información legible y en PDF: &#xA;&#xA;Cualquier duda, estaremos encantados de atenderle. &#xA;&#xA;Gracias por su apoyo" Name="Plantilla" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="archivosPDf" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="facta" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="correo" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="Beneficiario" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="Correovalidao" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="VinculoPatrimonial" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="DatosGenerales" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="CuentaBancaria" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioFiscal" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="infoLaboral" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioResidencial" />
+                            <Variable x:TypeArguments="ui:GenericValue" Name="Mensaje" />
+                          </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                        </ui:BrowserScope>
-                      </Sequence>
-                    </ui:CommentOut.Body>
-                  </ui:CommentOut>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Regresar a caso" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff5e40334086542924e6ad28fd583299" Selector="&lt;webctrl tag='SPAN' class='title slds-truncate' parentclass='tabHeader slds-tabs--default__link slds-p-right--small slds-grow ' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click en detalles" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6a25d9eb9a95d5a0c9edf6f0836996db" Selector="&lt;webctrl id='detailTab__item' parentid='brandBand_*' tag='A' aaname='Detalles' /&gt;&#xA;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click en logo de cambio de propietario" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="810c50653cf6fac66c0bda485c08952b" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_caso_p_gina_de_registro_case__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_case___0121a0000002mc*' parentid='sectionContent-*' idx='34' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Buscar persona a la que se le asignara el caso" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="Eduardo Godinez Loza">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f1772ac3ca2aff11a4411d5baca29b62" Selector="&lt;webctrl tag='INPUT' aaname='Introduzca un nuevo nombre de propietario' class=' default input uiInput uiInputTextForAutocomplete uiInput--default uiInput--input uiInput uiAutocomplete uiInput--default uiInput--lookup' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Seleccionar persona" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8d517853fe9feeeabb0bbcc768e7b4d0" Selector="&lt;webctrl tag='A' parentclass='lookup__item  default uiAutocompleteOption forceSearchInputLookupDesktopOption' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click guardar nuevo propietario" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4badd19c414935213971e2b6725d5b24" Selector="&lt;webctrl name='cambiar propietario' tag='BUTTON' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:BrowserScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:BrowserScope>
                 </FlowStep>
               </FlowStep.Next>
             </FlowStep>
@@ -339,7 +334,7 @@
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">500,574.5</av:Point>
                               <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">600,625.5 600,684.5</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">600,625.5 600,655.5 580,655.5 580,734.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LlenadoGeneralChecklist workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Salesforce\LlenadoChecklist\LlenadoGeneralChecklist.xaml">
@@ -358,384 +353,474 @@
                             <FlowStep x:Name="__ReferenceID6">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">500,684.5</av:Point>
+                                  <av:Point x:Key="ShapeLocation">480,734.5</av:Point>
                                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                                <ui:CommentOut.Body>
-                                  <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach mandar mensaje" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="f3c3f790c25e3e663ed9bcb18f412627" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
-                                      <ui:BrowserScope.Body>
-                                        <ActivityAction x:TypeArguments="x:Object">
-                                          <ActivityAction.Argument>
-                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                                          </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="401,2908" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                                            <Sequence.Variables>
-                                              <Variable x:TypeArguments="x:String" Default="Estimado cliente, &#xA;&#xA;Para continuar con el trámite de actualización de contrato por favor responda este &#xA;correo adjuntando la siguiente información legible y en PDF: &#xA;&#xA;Cualquier duda, estaremos encantados de atenderle. &#xA;&#xA;Gracias por su apoyo" Name="Plantilla" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="archivosPDf" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="facta" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="correo" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="Beneficiario" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="Correovalidao" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="VinculoPatrimonial" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="DatosGenerales" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="CuentaBancaria" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioFiscal" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="infoLaboral" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioResidencial" />
-                                              <Variable x:TypeArguments="ui:GenericValue" Name="Mensaje" />
-                                            </Sequence.Variables>
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Get Archivos en pdf" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_13">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="930eccc2286d9342aa68ae873b00d2b8" Selector="&lt;webctrl parentid='sectionContent-*' tag='LIGHTNING-FORMATTED-TEXT' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;lightning-formatted-text' idx='1' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[archivosPDf]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Obtener factca" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_14">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b8cd6f54cd25a5e53cad9ef10dfc961d" Selector="&lt;webctrl parentid='sectionContent-*' parentname='outputField' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;formula-output-formula-html&amp;gt;lightning-formatted-rich-text&amp;gt;span' idx='1' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[facta]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Obtener correo" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_15">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d8b20e5e6af508af74907be85a9225a3" Selector="&lt;webctrl parentid='sectionContent-*' tag='LIGHTNING-FORMATTED-TEXT' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;lightning-formatted-text' idx='2' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[correo]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Obtener datos del beneficiario" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_16">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6a2070225679bebcafbff46bcfec426b" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='8' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[Beneficiario]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Contrato validado" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_17">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="980421de345af3778de8baa7ad3b32cc" Selector="&lt;webctrl parentid='sectionContent-*' tag='LIGHTNING-FORMATTED-TEXT' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;lightning-formatted-text' idx='3' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[Correovalidao]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Vinculo patrimonial" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_18">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4e255680e860d73a8d3bb8d6f2ec398b" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='12' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[VinculoPatrimonial]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Obtener datos generales del titular" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_19">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="dede79016b30ecb999b4d7e8828da49b" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='14' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[DatosGenerales]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="cuenta bancaria" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_20">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2e9659e8d129b20d23e5acd2fe0550b7" Selector="&lt;webctrl parentid='sectionContent-*' parentname='outputField' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;formula-output-formula-html&amp;gt;lightning-formatted-rich-text&amp;gt;span' idx='5' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[CuentaBancaria]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Get Text domicilio fiscal" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_21">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a50828423fc286cef8573431ad5982ca" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='18' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[DomicilioFiscal]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Obtener domicilio laboral" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_22">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9e75799d402c0ac4fb77c6e3651a28a6" Selector="&lt;webctrl parentid='sectionContent-*' parentname='outputField' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;formula-output-formula-html&amp;gt;lightning-formatted-rich-text&amp;gt;span' idx='7' /&gt;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[infoLaboral]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <ui:GetValue ContinueOnError="True" DisplayName="Domicilio residencial" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="GetValue_23">
-                                              <ui:GetValue.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d55164b3df08626017f1d23e7f178a13" Selector="&lt;webctrl parentid='sectionContent*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='22' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetValue.Target>
-                                              <ui:GetValue.Value>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[DomicilioResidencial]</OutArgument>
-                                              </ui:GetValue.Value>
-                                            </ui:GetValue>
-                                            <Assign DisplayName="Concatenar mensaje" sap:VirtualizedContainerService.HintSize="359,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                              <Assign.To>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[Mensaje]</OutArgument>
-                                              </Assign.To>
-                                              <Assign.Value>
-                                                <InArgument x:TypeArguments="ui:GenericValue">[archivosPDf+"\n"+facta+"\n"+correo+"\n"+Beneficiario+"\n"+VinculoPatrimonial+"\n"+DatosGenerales+"\n"+CuentaBancaria+"\n"+DomicilioFiscal+"\n"+infoLaboral+"\n"+DomicilioResidencial]</InArgument>
-                                              </Assign.Value>
-                                            </Assign>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Regresar a caso" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                              <ui:Click.CursorPosition>
-                                                <ui:CursorPosition Position="Center">
-                                                  <ui:CursorPosition.OffsetX>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetX>
-                                                  <ui:CursorPosition.OffsetY>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetY>
-                                                </ui:CursorPosition>
-                                              </ui:Click.CursorPosition>
-                                              <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff5e40334086542924e6ad28fd583299" Selector="&lt;webctrl tag='SPAN' class='title slds-truncate' parentclass='tabHeader slds-tabs--default__link slds-p-right--small slds-grow ' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:Click.Target>
-                                            </ui:Click>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click abrir reasignacion" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                              <ui:Click.CursorPosition>
-                                                <ui:CursorPosition Position="Center">
-                                                  <ui:CursorPosition.OffsetX>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetX>
-                                                  <ui:CursorPosition.OffsetY>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetY>
-                                                </ui:CursorPosition>
-                                              </ui:Click.CursorPosition>
-                                              <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="72b011201a930202c1e964f4bdba395f" Selector="&lt;webctrl tag='LIGHTNING-PRIMITIVE-ICON' colName='Fecha del mensaje' parentname='tabs' idx='1' /&gt;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:Click.Target>
-                                            </ui:Click>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click responder" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                              <ui:Click.CursorPosition>
-                                                <ui:CursorPosition Position="Center">
-                                                  <ui:CursorPosition.OffsetX>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetX>
-                                                  <ui:CursorPosition.OffsetY>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetY>
-                                                </ui:CursorPosition>
-                                              </ui:Click.CursorPosition>
-                                              <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="94f0bc11f47a6996c546764e767f1731" Selector="&lt;webctrl aaname='Responder' tag='A' innertext='Responder' parentclass='uiMenuItem' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:Click.Target>
-                                            </ui:Click>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click abrir todas las plantillas" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                              <ui:Click.CursorPosition>
-                                                <ui:CursorPosition Position="Center">
-                                                  <ui:CursorPosition.OffsetX>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetX>
-                                                  <ui:CursorPosition.OffsetY>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetY>
-                                                </ui:CursorPosition>
-                                              </ui:Click.CursorPosition>
-                                              <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="92b1268b1bc3f19f5cfecdf36891c315" Selector="&lt;webctrl tag='A' class='slds-button slds-button--icon slds-p-top--xxx-small slds-p-left--xxx-small slds-p-right--xxx-small' parentclass='uiPopupTrigger' /&gt;&#xA;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:Click.Target>
-                                            </ui:Click>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click insertar una plantilla" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                              <ui:Click.CursorPosition>
-                                                <ui:CursorPosition Position="Center">
-                                                  <ui:CursorPosition.OffsetX>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetX>
-                                                  <ui:CursorPosition.OffsetY>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetY>
-                                                </ui:CursorPosition>
-                                              </ui:Click.CursorPosition>
-                                              <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="34bf328a86c3b57fe7bf1e77eee833da" Selector="&lt;webctrl aaname='Insertar una plantilla*' tag='A' /&gt;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:Click.Target>
-                                            </ui:Click>
-                                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select planilla de correo" sap:VirtualizedContainerService.HintSize="359,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="Plantillas de correo electrónico de Classic">
-                                              <ui:SelectItem.Items>
-                                                <scg:List x:TypeArguments="x:String" Capacity="4">
-                                                  <x:String>Mis plantillas</x:String>
-                                                  <x:String>Todas las plantillas</x:String>
-                                                  <x:String>Plantillas de correo electrónico de Classic</x:String>
-                                                </scg:List>
-                                              </ui:SelectItem.Items>
-                                              <ui:SelectItem.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f0ebee5a21afbabee9df6826f6121c56" Selector="&lt;webctrl tag='SELECT' aaname='Plantillas' class='templateInputs select' parentid='content_*' /&gt;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:SelectItem.Target>
-                                            </ui:SelectItem>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click abiri solicitud" sap:VirtualizedContainerService.HintSize="359,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                              <ui:Click.CursorPosition>
-                                                <ui:CursorPosition Position="Center">
-                                                  <ui:CursorPosition.OffsetX>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetX>
-                                                  <ui:CursorPosition.OffsetY>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:CursorPosition.OffsetY>
-                                                </ui:CursorPosition>
-                                              </ui:Click.CursorPosition>
-                                              <ui:Click.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="196e9f8c8c154c18798ee579e08d3f6c" Selector="&lt;webctrl aaname='Solicitud de información' parentid='content_*' tag='BUTTON' /&gt;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:Click.Target>
-                                            </ui:Click>
-                                            <Assign sap:VirtualizedContainerService.HintSize="359,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                                              <Assign.To>
-                                                <OutArgument x:TypeArguments="ui:GenericValue">[Mensaje]</OutArgument>
-                                              </Assign.To>
-                                              <Assign.Value>
-                                                <InArgument x:TypeArguments="ui:GenericValue">[Plantilla.Split({"PDF: "}, StringSplitOptions.None)(0)+"\n"+Mensaje+"\n"+Plantilla.Split({"Cualquier"},StringSplitOptions.none)(1)]</InArgument>
-                                              </Assign.Value>
-                                            </Assign>
-                                          </Sequence>
-                                        </ActivityAction>
-                                      </ui:BrowserScope.Body>
+                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach mandar mensaje" sap:VirtualizedContainerService.HintSize="560,4277" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="f3c3f790c25e3e663ed9bcb18f412627" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
+                                <ui:BrowserScope.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,4131" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Default="Estimado cliente, &#xA;&#xA;Para continuar con el trámite de actualización de contrato por favor responda este &#xA;correo adjuntando la siguiente información legible y en PDF: &#xA;&#xA;Cualquier duda, estaremos encantados de atenderle. &#xA;&#xA;Gracias por su apoyo" Name="Plantilla" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="archivosPDf" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="facta" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="correo" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="Beneficiario" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="Correovalidao" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="VinculoPatrimonial" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="DatosGenerales" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="CuentaBancaria" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioFiscal" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="infoLaboral" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="DomicilioResidencial" />
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="Mensaje" />
+                                        <Variable x:TypeArguments="x:Int32" Default="0" Name="ContadorKeys" />
+                                      </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                    </ui:BrowserScope>
-                                  </Sequence>
-                                </ui:CommentOut.Body>
-                              </ui:CommentOut>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Get Archivos en pdf" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_13">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="930eccc2286d9342aa68ae873b00d2b8" Selector="&lt;webctrl parentid='sectionContent-*' tag='LIGHTNING-FORMATTED-TEXT' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;lightning-formatted-text' idx='1' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[archivosPDf]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Obtener factca" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_14">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="b8cd6f54cd25a5e53cad9ef10dfc961d" Selector="&lt;webctrl parentid='sectionContent-*' parentname='outputField' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;formula-output-formula-html&amp;gt;lightning-formatted-rich-text&amp;gt;span' idx='1' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[facta]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Obtener correo" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_15">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d8b20e5e6af508af74907be85a9225a3" Selector="&lt;webctrl parentid='sectionContent-*' tag='LIGHTNING-FORMATTED-TEXT' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;lightning-formatted-text' idx='2' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[correo]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Obtener datos del beneficiario" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_16">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6a2070225679bebcafbff46bcfec426b" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='8' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[Beneficiario]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Contrato validado" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_17">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="980421de345af3778de8baa7ad3b32cc" Selector="&lt;webctrl parentid='sectionContent-*' tag='LIGHTNING-FORMATTED-TEXT' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;lightning-formatted-text' idx='3' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[Correovalidao]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Vinculo patrimonial" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_18">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="4e255680e860d73a8d3bb8d6f2ec398b" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='12' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[VinculoPatrimonial]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Obtener datos generales del titular" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_19">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="dede79016b30ecb999b4d7e8828da49b" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='14' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[DatosGenerales]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="cuenta bancaria" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_20">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2e9659e8d129b20d23e5acd2fe0550b7" Selector="&lt;webctrl parentid='sectionContent-*' parentname='outputField' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;formula-output-formula-html&amp;gt;lightning-formatted-rich-text&amp;gt;span' idx='5' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[CuentaBancaria]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Get Text domicilio fiscal" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_21">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a50828423fc286cef8573431ad5982ca" Selector="&lt;webctrl parentid='sectionContent-*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='18' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[DomicilioFiscal]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Obtener domicilio laboral" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_22">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9e75799d402c0ac4fb77c6e3651a28a6" Selector="&lt;webctrl parentid='sectionContent-*' parentname='outputField' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;slot&amp;gt;slot&amp;gt;records-formula-output&amp;gt;slot&amp;gt;formula-output-formula-html&amp;gt;lightning-formatted-rich-text&amp;gt;span' idx='7' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[infoLaboral]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <ui:GetValue ContinueOnError="True" DisplayName="Domicilio residencial" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="GetValue_23">
+                                        <ui:GetValue.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d55164b3df08626017f1d23e7f178a13" Selector="&lt;webctrl parentid='sectionContent*' parentname='tabs' tag='SPAN' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;one-record-home-flexipage2&amp;gt;forcegenerated-flexipage_default_rec_l_validationdocsbot__c__view_js&amp;gt;flexipage-record-page-decorator&amp;gt;div&amp;gt;slot&amp;gt;flexipage-record-home-template-desktop2&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tabset2&amp;gt;div&amp;gt;lightning-tabset&amp;gt;div&amp;gt;slot&amp;gt;slot&amp;gt;slot&amp;gt;flexipage-tab2&amp;gt;slot&amp;gt;flexipage-component2&amp;gt;force-progressive-renderer&amp;gt;slot&amp;gt;slot&amp;gt;records-lwc-detail-panel&amp;gt;records-base-record-form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;records-record-layout-event-broker&amp;gt;slot&amp;gt;records-lwc-record-layout&amp;gt;forcegenerated-detailpanel_validationdocsbot__c___012000000000000aaa___full___view___recordlayout2&amp;gt;force-record-layout-block&amp;gt;slot&amp;gt;force-record-layout-section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;slot&amp;gt;force-record-layout-row&amp;gt;slot&amp;gt;force-record-layout-item&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span' idx='22' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:GetValue.Target>
+                                        <ui:GetValue.Value>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[DomicilioResidencial]</OutArgument>
+                                        </ui:GetValue.Value>
+                                      </ui:GetValue>
+                                      <Assign DisplayName="Concatenar mensaje" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[Mensaje]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="ui:GenericValue">[archivosPDf+ vbCrLf+facta+ vbCrLf+correo+ vbCrLf+Beneficiario+ vbCrLf+VinculoPatrimonial+ vbCrLf+DatosGenerales+ vbCrLf+CuentaBancaria+ vbCrLf+DomicilioFiscal+ vbCrLf+infoLaboral+ vbCrLf+DomicilioResidencial+ vbCrLf+"Mensajes del check list, el cual esta en contruccion por parte de GBM, por lo que no podria tener coherencia"]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Regresar a caso" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ff5e40334086542924e6ad28fd583299" Selector="&lt;webctrl tag='SPAN' class='title slds-truncate' parentclass='tabHeader slds-tabs--default__link slds-p-right--small slds-grow ' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                      </ui:Click>
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click abrir reasignacion" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="72b011201a930202c1e964f4bdba395f" Selector="&lt;webctrl tag='LIGHTNING-PRIMITIVE-ICON' colName='Fecha del mensaje' parentname='tabs' idx='1' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                      </ui:Click>
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click responder" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="94f0bc11f47a6996c546764e767f1731" Selector="&lt;webctrl aaname='Responder' tag='A' innertext='Responder' parentclass='uiMenuItem' /&gt;&#xA;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                      </ui:Click>
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click abrir todas las plantillas" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="92b1268b1bc3f19f5cfecdf36891c315" Selector="&lt;webctrl tag='A' class='slds-button slds-button--icon slds-p-top--xxx-small slds-p-left--xxx-small slds-p-right--xxx-small' parentclass='uiPopupTrigger' /&gt;&#xA;" WaitForReady="COMPLETE">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                      </ui:Click>
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click insertar una plantilla" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="34bf328a86c3b57fe7bf1e77eee833da" Selector="&lt;webctrl aaname='Insertar una plantilla*' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                      </ui:Click>
+                                      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select planilla de correo" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="Plantillas de correo electrónico de Classic">
+                                        <ui:SelectItem.Items>
+                                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                                            <x:String>Mis plantillas</x:String>
+                                            <x:String>Todas las plantillas</x:String>
+                                            <x:String>Plantillas de correo electrónico de Classic</x:String>
+                                          </scg:List>
+                                        </ui:SelectItem.Items>
+                                        <ui:SelectItem.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f0ebee5a21afbabee9df6826f6121c56" Selector="&lt;webctrl tag='SELECT' aaname='Plantillas' class='templateInputs select' parentid='content_*' /&gt;" WaitForReady="COMPLETE">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                          </ui:Target>
+                                        </ui:SelectItem.Target>
+                                      </ui:SelectItem>
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click abiri solicitud" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="196e9f8c8c154c18798ee579e08d3f6c" Selector="&lt;webctrl aaname='Solicitud de información' parentid='content_*' tag='BUTTON' /&gt;" WaitForReady="COMPLETE">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                      </ui:Click>
+                                      <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="ui:GenericValue">[Mensaje]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="ui:GenericValue">[Plantilla.Split({"PDF: "}, StringSplitOptions.None)(0)+ vbCrLf+Mensaje+ vbCrLf+Plantilla.Split({"Cualquier"},StringSplitOptions.none)(1)]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click en pdf" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:ClickImage.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:ClickImage.CursorPosition>
+                                        <ui:ClickImage.Image>
+                                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACUAAAAYCAYAAAB9ejRwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEsSURBVEhL7ZO7EYMwDEDZiDGYIROwBwMwADUDMAQ9LUNQ0zo8J0oEWNgFyVHw7nzYlhDPHzJ3QW6pVG6pVLzUPM+uLEuXZdmuVVXlE49yaEVRuGmafC70fR/MkyZ1Q6x2ikK6uBTWBbY5QJ85ctu2fc9+F6LngPymad6jPYdSgFCe524cRz8O5YAI6FxLKkZUioLsADGwpAAZpLZHrqW6rvtIW5y2U8AcMUQQCknVdb2Sknf0FUm6U/IRmbOkRELiMqaGNL1Ai52ULkDTQnD2ToWIHt+Woxw+FrtTwzD8T0oEfvL3xc48JEWfOY6buCBS+hKn4KXkZX2XtqsL5ehGjBwBOR23TkAWZP59V+ErtazGPR6vPs9/jA3WkdRiZ40NlozrcUulckul4dwTa8BnmpqUlLsAAAAASUVORK5CYII=" />
+                                        </ui:ClickImage.Image>
+                                        <ui:ClickImage.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:ClickImage.Target>
+                                      </ui:ClickImage>
+                                      <While DisplayName="navegar en la escritura de datos" sap:VirtualizedContainerService.HintSize="484,503" sap2010:WorkflowViewState.IdRef="While_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <While.Condition>[ContadorKeys&lt;4]</While.Condition>
+                                        <Sequence DisplayName="Mientras se posiciona el cursor" sap:VirtualizedContainerService.HintSize="376,346" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Recorrer cursor" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="right" KeyModifiers="None" SpecialKey="True">
+                                            <ui:SendHotkey.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ba52d760bd30618eb878d252899e427a" Selector="&lt;webctrl name='vfFrameId_*' tag='IFRAME' /&gt;&lt;webctrl tag='IFRAME' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:SendHotkey.Target>
+                                          </ui:SendHotkey>
+                                          <Assign DisplayName="Aumentar contador" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Int32">[ContadorKeys]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Int32">[ContadorKeys+1]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </While>
+                                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Posicionarse en fila vacia" sap:VirtualizedContainerService.HintSize="484,154" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="enter" KeyModifiers="None" SpecialKey="True">
+                                        <ui:SendHotkey.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ba52d760bd30618eb878d252899e427a" Selector="&lt;webctrl name='vfFrameId_*' tag='IFRAME' /&gt;&lt;webctrl tag='IFRAME' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:SendHotkey.Target>
+                                      </ui:SendHotkey>
+                                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="posicionarse en linea vacia" sap:VirtualizedContainerService.HintSize="484,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="[Mensaje]" KeyModifiers="None">
+                                        <ui:SendHotkey.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="ba52d760bd30618eb878d252899e427a" Selector="&lt;webctrl name='vfFrameId_*' tag='IFRAME' /&gt;&lt;webctrl tag='IFRAME' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:SendHotkey.Target>
+                                      </ui:SendHotkey>
+                                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click.CursorPosition>
+                                          <ui:CursorPosition Position="Center">
+                                            <ui:CursorPosition.OffsetX>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetX>
+                                            <ui:CursorPosition.OffsetY>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:CursorPosition.OffsetY>
+                                          </ui:CursorPosition>
+                                        </ui:Click.CursorPosition>
+                                        <ui:Click.Target>
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6a9f1abf488211aa8f0062c623e9c0aa" Selector="&lt;webctrl aaname='Enviar' tag='BUTTON' type='button' /&gt;">
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:Click.Target>
+                                      </ui:Click>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:BrowserScope.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:BrowserScope>
                             </FlowStep>
                           </FlowStep.Next>
                         </FlowStep>
