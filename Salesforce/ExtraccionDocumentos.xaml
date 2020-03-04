@@ -3,14 +3,15 @@
     <x:Property Name="in_RutaDocumentos" Type="InArgument(x:String)" />
     <x:Property Name="out_Cliente" Type="OutArgument(sd:DataRow)" />
     <x:Property Name="out_BanderaClienteNuevo" Type="OutArgument(x:Boolean)" />
-    <x:Property Name="out_CasoHijo" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_CasoHijo" Type="OutArgument(x:String)" />
     <x:Property Name="in_NumeroCaso" Type="InArgument(x:String)" />
     <x:Property Name="in_PathLog" Type="InArgument(x:String)" />
+    <x:Property Name="out_CorreoSalesForce" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>841,1945</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>841,1985</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -61,7 +62,6 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -120,7 +120,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,173 300,214.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="376,1400" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -232,16 +232,30 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:UiElementExists>
-                <ui:UiElementExists DisplayName="Caso hijo" Exists="[out_CasoHijo]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
-                  <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="3220111f4ba47ceba2317d0c1ec31611" Selector="&lt;webctrl tag='A' class='slds-grow flex-wrap-ie11' parentclass='slds-grid' idx='4' /&gt;&#xA;" TimeoutMS="2000" WaitForReady="COMPLETE" />
-                  </ui:UiElementExists.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:UiElementExists>
+                <ui:GetValue ContinueOnError="True" DisplayName="Obtener caso padre" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                  <ui:GetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0a5cfa5be5780ca60f46316182b24a1d" Selector="&lt;webctrl tag='A' class='slds-grow flex-wrap-ie11' parentclass='slds-grid' idx='4' /&gt;" TimeoutMS="2000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:GetValue.Target>
+                  <ui:GetValue.Value>
+                    <OutArgument x:TypeArguments="x:String">[out_CasoHijo]</OutArgument>
+                  </ui:GetValue.Value>
+                </ui:GetValue>
+                <ui:GetValue ContinueOnError="True" DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                  <ui:GetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9e1b3253eb1bee7b3eeef26108b9b0b7" Selector="&lt;webctrl parentid='sectionContent*' parentname='tabs' tag='SPAN' class='test-id__field-value slds-form-element__static slds-grow word-break-ie11' innertext='*@*' /&gt;&#xA;" TimeoutMS="2000">
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:GetValue.Target>
+                  <ui:GetValue.Value>
+                    <OutArgument x:TypeArguments="x:String">[out_CorreoSalesForce]</OutArgument>
+                  </ui:GetValue.Value>
+                </ui:GetValue>
               </Sequence>
               <FlowStep.Next>
                 <FlowStep x:Name="__ReferenceID18">
@@ -317,7 +331,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:Click>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio and not out_CasoHijo]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                            <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
