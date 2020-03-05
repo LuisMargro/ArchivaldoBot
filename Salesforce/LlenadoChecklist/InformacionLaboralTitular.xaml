@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>831,4069</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>831,4109</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>InformacionLaboralTitular_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -1853,13 +1853,13 @@
                                                                                                       <av:PointCollection x:Key="ConnectorLocation">140.641666666667,1345.02 140.641666666667,1375.02 380.641666666667,1375.02 380.641666666667,1426.5</av:PointCollection>
                                                                                                     </scg:Dictionary>
                                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Prestador persona física o moral" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_40">
+                                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Prestador persona física o moral" sap:VirtualizedContainerService.HintSize="384,352" sap2010:WorkflowViewState.IdRef="AnchorBase_40">
                                                                                                     <ui:AnchorBase.Action>
                                                                                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                         <ActivityAction.Argument>
                                                                                                           <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                                                                                                         </ActivityAction.Argument>
-                                                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Prestador persona física o moral" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Prestador persona física o moral seleccionar en el checklist" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                                                                           <ui:Click.CursorPosition>
                                                                                                             <ui:CursorPosition Position="Center">
                                                                                                               <ui:CursorPosition.OffsetX>

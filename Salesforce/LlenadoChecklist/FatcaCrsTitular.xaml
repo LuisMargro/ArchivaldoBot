@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>730,1329</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>730,1289</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>FatcaCrsTitular_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -401,7 +401,7 @@
                                               </ActivityAction>
                                             </ui:AnchorBase.Action>
                                             <ui:AnchorBase.AnchorProvider>
-                                              <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Buscar campo residente en el extranjero" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_24">
+                                              <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Buscar campo residente en el extranjero DR" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_24">
                                                 <ui:WaitUiElementAppear.Target>
                                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="d228a8695c747c06b456025361338ecf" Selector="&lt;webctrl tag='DIV' aaname='¿Residente del extranjero?' /&gt;">
                                                     <ui:Target.TimeoutMS>
