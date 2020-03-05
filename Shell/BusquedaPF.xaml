@@ -86,7 +86,6 @@
               <Variable x:TypeArguments="x:Boolean" Name="Menu" />
               <Variable x:TypeArguments="x:Boolean" Name="MensajeFallo" />
               <Variable x:TypeArguments="sd:DataRow" Name="Cliente" />
-              <Variable x:TypeArguments="sd:DataTable" Name="Clientes" />
             </Flowchart.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -370,7 +369,10 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">450,1093 450,1117</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Navegar a la pantalla" sap:VirtualizedContainerService.HintSize="376,919" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                              <Sequence DisplayName="Navegar a la pantalla" sap:VirtualizedContainerService.HintSize="376,961" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="sd:DataTable" Name="Clientes" />
+                                                </Sequence.Variables>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -403,7 +405,7 @@
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:Click>
-                                                <ui:ImageFound Found="{x:Null}" DisplayName="Esperar carga del sistema" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ImageFound_4">
+                                                <ui:ImageFound Found="{x:Null}" sap2010:Annotation.AnnotationText="Se utiliza una imagen como espera, ya que los selectores siempre estan presentes" DisplayName="Esperar carga del sistema" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="ImageFound_4">
                                                   <ui:ImageFound.Image>
                                                     <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                                                   </ui:ImageFound.Image>
@@ -414,6 +416,11 @@
                                                       </ui:Target.WaitForReady>
                                                     </ui:Target>
                                                   </ui:ImageFound.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
                                                 </ui:ImageFound>
                                                 <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="Se usa un click image porque el elemento no soporta clicks" ClickType="CLICK_SINGLE" DisplayName="Abrir datos generales" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                   <ui:ClickImage.CursorPosition>
@@ -1310,7 +1317,7 @@
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </ui:ImageFound>
-                                                            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Extraer nombre del banco" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_19">
+                                                            <ui:GetValue ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Se usa un atributo idx, ya que es una aplicacion de escritorio, por lo cual no es dinamica" DisplayName="Extraer nombre del banco" sap:VirtualizedContainerService.HintSize="334,148" sap2010:WorkflowViewState.IdRef="GetValue_19">
                                                               <ui:GetValue.Target>
                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="23a69d85c1286d1000acd943e62e958c" Selector="&lt;ctrl name='GBM.ApplicationPlatform.ShellApp.Views.VirtualDesktopItem' role='push button' /&gt;&lt;ctrl name='Rad Pane Group' role='page tab list' /&gt;&lt;ctrl aastate='seleccionado, enfocable, seleccionable' /&gt;&lt;ctrl name='Instrucciones de Liquidación' role='page tab' /&gt;&lt;ctrl name='Instrucciones Bancarias' role='page tab' /&gt;&lt;ctrl automationid='PART_EditableTextBox' idx='6' role='editable text' /&gt;">
                                                                   <ui:Target.TimeoutMS>
@@ -1324,6 +1331,11 @@
                                                               <ui:GetValue.Value>
                                                                 <OutArgument x:TypeArguments="ui:GenericValue">[VariableExtractora]</OutArgument>
                                                               </ui:GetValue.Value>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
                                                             </ui:GetValue>
                                                             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Sanitizar Nombre banco" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
                                                               <ui:InvokeWorkflowFile.Arguments>
