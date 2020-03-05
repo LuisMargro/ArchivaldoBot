@@ -250,7 +250,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">300,1255.5 300,1336.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarDireccion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\ValidarDireccion.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_TextoDocumento]</InArgument>
                                       <InArgument x:TypeArguments="s:String[]" x:Key="in_ArregloDireccion">[in_DomicilioFiscal.ToLower.Split({" "},StringSplitOptions.none)]</InArgument>
@@ -284,7 +284,7 @@
                                               <av:PointCollection x:Key="ConnectorLocation">161,1480 161,1510 299.79,1510 299.79,1530</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign DisplayName="La dirección no coincide" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_47">
+                                          <Assign DisplayName="La dirección coincide" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_47">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="x:Object">[io_Registro(83)]</OutArgument>
                                             </Assign.To>

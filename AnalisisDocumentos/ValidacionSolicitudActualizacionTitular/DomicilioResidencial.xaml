@@ -181,7 +181,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">161,1570 161,1600 300,1600 300,1630</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="La dirección no coincide" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_56">
+                  <Assign DisplayName="La dirección coincide" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_56">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Object">[io_Registro(84)]</OutArgument>
                     </Assign.To>

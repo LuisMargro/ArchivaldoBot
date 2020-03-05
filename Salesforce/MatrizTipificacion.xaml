@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>731,1250</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>731,1321</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MatrizTipificacion_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -56,10 +56,11 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="MatrizTipificacion" sap:VirtualizedContainerService.HintSize="711,1190" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Llena la matriz de tipificacion para el caso, esto con el fin de identificar a el cliente involucrado en dicho caso" DisplayName="MatrizTipificacion" sap:VirtualizedContainerService.HintSize="711,1221" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Sales Force" sap:VirtualizedContainerService.HintSize="669,1098" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b7866c9a17e24682f93422016a6ebd5b" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
