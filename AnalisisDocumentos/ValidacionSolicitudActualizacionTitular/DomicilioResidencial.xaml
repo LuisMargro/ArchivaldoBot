@@ -203,7 +203,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">300,1690 300,1724.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_55">
+                      <Assign DisplayName="Assign CP en registro" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_55">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[CodigoPostal]</OutArgument>
                         </Assign.To>
