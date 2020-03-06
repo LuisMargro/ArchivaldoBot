@@ -95,7 +95,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">https://cedulaprofesional.sep.gob.mx/cedula/presidencia/indexAvanzada.action</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NavegarASitios constulta de Curp" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Utilidades\NavegarASitios.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NavegarASitios constulta de Curp" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Utilidades\NavegarASitios.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">https://consultaunica.mx/consulta-tu-curp</InArgument>
       </ui:InvokeWorkflowFile.Arguments>

@@ -38,6 +38,7 @@
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="En el siguiente workflow se analiza que un estado de cuenta le pertenezca a una persona, en caso de que no le pertenezca se asigna a la variable de control el mensaje &quot;Encontrado&quot; y se retorna un mensaje" DisplayName="Analizar estado de cuenta" sap:VirtualizedContainerService.HintSize="760,1238" sap2010:WorkflowViewState.IdRef="Flowchart_4">
@@ -114,7 +115,7 @@
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
-        <FlowDecision x:Name="__ReferenceID6" Condition="[in_StringDocumento.Contains(in_NumeroCuenta)]" DisplayName="¿No. de cuenta coinciden?" sap:VirtualizedContainerService.HintSize="145,87" sap2010:WorkflowViewState.IdRef="FlowDecision_21" True="{x:Reference __ReferenceID0}">
+        <FlowDecision x:Name="__ReferenceID6" Condition="[in_StringDocumento.Replace(&quot; &quot;,&quot;&quot;).Contains(in_NumeroCuenta)]" DisplayName="¿No. de cuenta coinciden?" sap:VirtualizedContainerService.HintSize="145,87" sap2010:WorkflowViewState.IdRef="FlowDecision_21" True="{x:Reference __ReferenceID0}">
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,7 +162,7 @@
           <av:PointCollection x:Key="ConnectorLocation">130,575.5 130,605.5 290,605.5 290,626.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/ValidarNombre.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/ValidarNombre.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_CoincideNombre">[NombreEstadoCuentaCoincide]</OutArgument>
