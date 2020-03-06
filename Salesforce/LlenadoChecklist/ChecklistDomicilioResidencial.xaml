@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>741,3631</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>741,3671</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>DomicilioResidencial_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -543,7 +543,7 @@
                                                           <av:PointCollection x:Key="ConnectorLocation">120.5,775.5 120.5,805.5 120,805.5 120,814.5</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Estado en comprobante" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
+                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Estado en comprobante" sap:VirtualizedContainerService.HintSize="384,383" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
                                                         <ui:AnchorBase.Action>
                                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                                             <ActivityAction.Argument>
@@ -574,7 +574,7 @@
                                                           </ActivityAction>
                                                         </ui:AnchorBase.Action>
                                                         <ui:AnchorBase.AnchorProvider>
-                                                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="El atributo IDX es necesario (está validado)" DisplayName="Buscar campo  Estado en comprobante" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_22">
+                                                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" sap2010:Annotation.AnnotationText="El atributo IDX es necesario (está validado)" DisplayName="Buscar campo  Estado en comprobante para seleccionar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_22">
                                                             <ui:WaitUiElementAppear.Target>
                                                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="470f999c8d769838dc9962116945a3e5" Selector="&lt;webctrl tag='DIV' aaname='Estado' idx='2' /&gt;">
                                                                 <ui:Target.TimeoutMS>
@@ -1127,7 +1127,7 @@
                                                                                                           <av:PointCollection x:Key="ConnectorLocation">130.5,1505.5 130.5,1535.5 130,1535.5 130,1544.5</av:PointCollection>
                                                                                                         </scg:Dictionary>
                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Delegación o municipio en comprobante" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_25">
+                                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Seleccionar Delegación o municipio en comprobante" sap:VirtualizedContainerService.HintSize="384,383" sap2010:WorkflowViewState.IdRef="AnchorBase_25">
                                                                                                         <ui:AnchorBase.Action>
                                                                                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                             <ActivityAction.Argument>

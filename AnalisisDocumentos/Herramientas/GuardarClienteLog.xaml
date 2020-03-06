@@ -79,7 +79,7 @@
               <Variable x:TypeArguments="x:Int32" Name="QueryCliente" />
               <Variable x:TypeArguments="sd:DataTable" Name="DtLog" />
               <Variable x:TypeArguments="s:Object[]" Name="ArrayItemsCliente" />
-              <Variable x:TypeArguments="x:Int32" Name="indiceDato" />
+              <Variable x:TypeArguments="x:Int32" Name="IndiceDato" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -108,7 +108,7 @@
                 <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[ArrayItemsCliente]" DataTable="[DtLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
               </If.Then>
               <If.Else>
-                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[indiceDato]" DisplayName="Recorrer datos del cliente" sap:VirtualizedContainerService.HintSize="307,193" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ArrayItemsCliente]">
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[IndiceDato]" DisplayName="Recorrer datos del cliente" sap:VirtualizedContainerService.HintSize="307,193" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ArrayItemsCliente]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -116,7 +116,7 @@
                       </ActivityAction.Argument>
                       <Assign DisplayName="Guardar cambio" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:Object">[DtLog(QueryCliente)(indiceDato)]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Object">[DtLog(QueryCliente)(IndiceDato)]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:Object">[item]</InArgument>

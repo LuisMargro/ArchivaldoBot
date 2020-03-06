@@ -70,7 +70,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Flowchart DisplayName="DatosGeneralesTitular" sap:VirtualizedContainerService.HintSize="645,3592" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+          <Flowchart DisplayName="proceso de DatosGeneralesTitular" sap:VirtualizedContainerService.HintSize="645,3592" sap2010:WorkflowViewState.IdRef="Flowchart_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -93,7 +93,7 @@
                   <x:String x:Key="FalseLabel">No</x:String>
                   <x:String x:Key="TrueLabel">Si</x:String>
                   <av:PointCollection x:Key="TrueConnector">260.641666666667,171 210.641666666667,171</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">330.641666666667,171 337.141666666667,171 337.141666666667,267.5</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">330.641666666667,171 338.641666666667,171 338.641666666667,267.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
@@ -101,11 +101,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">10.6416666666667,145.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">110.641666666667,196.5 110.641666666667,226.5 311.641666666667,226.5 311.641666666667,267.5</av:PointCollection>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">110.641666666667,197.5 110.641666666667,227.5 311.641666666667,227.5 311.641666666667,267.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Profesión llena" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Profesión llena" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
                     <ui:AnchorBase.Action>
                       <ActivityAction x:TypeArguments="ui:Anchor">
                         <ActivityAction.Argument>
@@ -156,16 +156,16 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:AnchorBase>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID12" Condition="[Convert.ToBoolean(in_Registro(8))]" DisplayName="¿teléfono de casa?" sap:VirtualizedContainerService.HintSize="102,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                    <FlowDecision x:Name="__ReferenceID12" Condition="[Convert.ToBoolean(in_Registro(8))]" DisplayName="¿teléfono de casa?" sap:VirtualizedContainerService.HintSize="104,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">260.641666666667,267.5</av:Point>
-                          <av:Size x:Key="ShapeSize">102,87</av:Size>
+                          <av:Size x:Key="ShapeSize">104,87</av:Size>
                           <x:String x:Key="FalseLabel">No</x:String>
                           <x:String x:Key="TrueLabel">Si</x:String>
                           <av:PointCollection x:Key="TrueConnector">260.641666666667,311 210.641666666667,311</av:PointCollection>
-                          <av:PointCollection x:Key="FalseConnector">362.641666666667,311 392.641666666667,311 392.641666666667,387.5 334.891666666667,387.5 334.891666666667,417.5</av:PointCollection>
+                          <av:PointCollection x:Key="FalseConnector">364.641666666667,311 394.641666666667,311 394.641666666667,387.5 334.891666666667,387.5 334.891666666667,417.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <FlowDecision.True>
@@ -173,11 +173,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">10.6416666666667,285.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">110.641666666667,336.5 110.641666666667,366.5 310.141666666667,366.5 310.141666666667,417.5</av:PointCollection>
+                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">110.641666666667,337.5 110.641666666667,367.5 310.641666666667,367.5 310.641666666667,417.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Teléfono de casa lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Teléfono de casa lleno" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
                             <ui:AnchorBase.Action>
                               <ActivityAction x:TypeArguments="ui:Anchor">
                                 <ActivityAction.Argument>
@@ -228,12 +228,12 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:AnchorBase>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID11" Condition="[Convert.ToBoolean(in_Registro(9))]" DisplayName="¿Teléfono celular?" sap:VirtualizedContainerService.HintSize="99,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                            <FlowDecision x:Name="__ReferenceID11" Condition="[Convert.ToBoolean(in_Registro(9))]" DisplayName="¿Teléfono celular?" sap:VirtualizedContainerService.HintSize="100,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">260.641666666667,417.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">99,87</av:Size>
+                                  <av:Size x:Key="ShapeSize">100,87</av:Size>
                                   <x:String x:Key="FalseLabel">No</x:String>
                                   <x:String x:Key="TrueLabel">Si</x:String>
                                   <av:PointCollection x:Key="TrueConnector">260.641666666667,461 210.641666666667,461</av:PointCollection>
@@ -245,11 +245,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">10.6416666666667,435.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">110.641666666667,486.5 110.641666666667,516.5 350.641666666667,516.5 350.641666666667,567.5</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">110.641666666667,487.5 110.641666666667,517.5 350.641666666667,517.5 350.641666666667,567.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Teléfono celular lleno" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
+                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Teléfono celular lleno" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
                                     <ui:AnchorBase.Action>
                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                         <ActivityAction.Argument>
