@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>731,1281</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>731,1388</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MatrizTipificacion_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -56,20 +56,20 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Llena la matriz de tipificacion para el caso, esto con el fin de identificar a el cliente involucrado en dicho caso" DisplayName="MatrizTipificacion" sap:VirtualizedContainerService.HintSize="711,1221" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Llena la matriz de tipificacion para el caso, esto con el fin de identificar a el cliente involucrado en dicho caso" DisplayName="MatrizTipificacion" sap:VirtualizedContainerService.HintSize="711,1288" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Sales Force" sap:VirtualizedContainerService.HintSize="669,1098" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b7866c9a17e24682f93422016a6ebd5b" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Sales Force" sap:VirtualizedContainerService.HintSize="669,1165" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b7866c9a17e24682f93422016a6ebd5b" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Flowchart DisplayName="Proceso de llenado de tipificacion" sap:VirtualizedContainerService.HintSize="635,952" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+          <Flowchart DisplayName="Proceso de llenado de tipificacion" sap:VirtualizedContainerService.HintSize="635,1019" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <Flowchart.Variables>
               <Variable x:TypeArguments="x:Boolean" Default="True" Name="ClienteExistente" />
               <Variable x:TypeArguments="x:String" Name="InfoCliente" />
@@ -80,23 +80,23 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 <av:Point x:Key="ShapeLocation">260,2.5</av:Point>
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">320,40 440,40 440,74.5</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">290,77.5 290,134.5</av:PointCollection>
                 <x:Double x:Key="Width">601</x:Double>
-                <x:Double x:Key="Height">916.232</x:Double>
+                <x:Double x:Key="Height">983</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID9</x:Reference>
+              <x:Reference>__ReferenceID10</x:Reference>
             </Flowchart.StartNode>
             <FlowStep x:Name="__ReferenceID8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">190,154.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">290,205.5 290,244.5</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">190,374.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">290,425.5 290,444.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click avtivar modificaciones" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click avtivar modificaciones" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -127,12 +127,12 @@
                 <FlowStep x:Name="__ReferenceID1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">190,244.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">290,295.5 290,329</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">190,444.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">290,495.5 290,519</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Ingresar numero de contrato" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[in_NumeroContrato]">
+                  <ui:TypeInto ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" DisplayName="Ingresar numero de contrato" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[in_NumeroContrato]">
                     <ui:TypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0957952d51dbc4688916a26cf742259b" Selector="&lt;webctrl tag='INPUT' aaname='ContratoIngresar el número de contrato cuando no se encuentra información de la solicitud en Salesforce' /&gt;&#xA;">
                         <ui:Target.TimeoutMS>
@@ -153,9 +153,9 @@
                     <FlowStep x:Name="__ReferenceID7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">190,329</av:Point>
+                          <av:Point x:Key="ShapeLocation">190,519</av:Point>
                           <av:Size x:Key="ShapeSize">200,22</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">290,351 290,374.5</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">290,541 290,564.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <Delay sap2010:Annotation.AnnotationText="Se agrego una espera posterio con el fin de permitir al sistema encontrar al usuario" DisplayName="Esperar resultados" Duration="00:00:08" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
@@ -170,12 +170,12 @@
                         <FlowStep x:Name="__ReferenceID2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">190,374.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">290,425.5 290,456.5</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">190,564.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">290,615.5 290,636.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="Capturar error extrallendo al cliente existente" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                          <TryCatch DisplayName="Capturar error extrallendo al cliente existente" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,26 +221,26 @@
                             </TryCatch.Catches>
                           </TryCatch>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID3" Condition="[ClienteExistente and not String.IsNullOrEmpty(InfoCliente)]" DisplayName="¿El cliente Existe?" sap:VirtualizedContainerService.HintSize="97,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                            <FlowDecision x:Name="__ReferenceID3" Condition="[ClienteExistente and not String.IsNullOrEmpty(InfoCliente)]" DisplayName="¿El cliente Existe?" sap:VirtualizedContainerService.HintSize="96,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <av:Point x:Key="ShapeLocation">242,456.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">97,87</av:Size>
-                                  <av:PointCollection x:Key="TrueConnector">242,500 100,500 100,524.5</av:PointCollection>
-                                  <av:PointCollection x:Key="FalseConnector">338,500 480,500 480,507</av:PointCollection>
+                                  <av:Point x:Key="ShapeLocation">242,636.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">96,87</av:Size>
+                                  <av:PointCollection x:Key="TrueConnector">242,680 100,680 100,724.5</av:PointCollection>
+                                  <av:PointCollection x:Key="FalseConnector">338,680 480,680 480,707</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <FlowDecision.True>
                                 <FlowStep x:Name="__ReferenceID4">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">0,524.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">100,575.5 100,605.5 280,605.5 280,657</av:PointCollection>
+                                      <av:Point x:Key="ShapeLocation">0,724.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">100,775.5 100,805.5 280,805.5 280,827</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click guardar info cliente" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click guardar info cliente" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
                                     <ui:Click.CursorPosition>
                                       <ui:CursorPosition Position="Center">
                                         <ui:CursorPosition.OffsetX>
@@ -271,12 +271,12 @@
                                     <FlowStep x:Name="__ReferenceID0">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">180,657</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,68</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">280,725 280,767</av:PointCollection>
+                                          <av:Point x:Key="ShapeLocation">180,827</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">280,893 280,917</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Llenado de matriz RI" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                      <Sequence DisplayName="Llenado de matriz RI" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -454,11 +454,11 @@
                                         <FlowStep x:Name="__ReferenceID6">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">180,767</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                              <av:Point x:Key="ShapeLocation">180,917</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,66</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence DisplayName="LLenado del estado de info adicional" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                          <Sequence DisplayName="LLenado del estado de info adicional" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -560,18 +560,18 @@
                                 <FlowStep x:Name="__ReferenceID5">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">380,507</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,68</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">480,575 480,605 280,605 280,657</av:PointCollection>
+                                      <av:Point x:Key="ShapeLocation">380,707</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">480,773 480,803 280,803 280,827</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Registrar cliente no existente" sap:VirtualizedContainerService.HintSize="418,1514" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <Sequence DisplayName="Registrar cliente no existente" sap:VirtualizedContainerService.HintSize="418,1660" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click no guardar info cliente" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
+                                    <ui:Click DelayBefore="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DelayMS="1500" DisplayName="Click no guardar info cliente" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True" SimulateClick="False">
                                       <ui:Click.CursorPosition>
                                         <ui:CursorPosition Position="Center">
                                           <ui:CursorPosition.OffsetX>
@@ -610,13 +610,10 @@
                                         </ui:CursorPosition>
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8a050ebe7534bec6cf3e277e1f7b89b2" Selector="&lt;webctrl parentid='sectionContent-*' tag='FORCE-RECORD-LAYOUT-ITEM' class='slds-form__item slds-no-space' innertext='ContratoAyudaModificar Contrato' /&gt;&#xA;">
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8a050ebe7534bec6cf3e277e1f7b89b2" Selector="&lt;webctrl parentid='sectionContent-*' tag='FORCE-RECORD-LAYOUT-ITEM' class='slds-form__item slds-no-space' innertext='ContratoAyudaModificar Contrato' /&gt;&#xA;" WaitForReady="COMPLETE">
                                           <ui:Target.TimeoutMS>
                                             <InArgument x:TypeArguments="x:Int32" />
                                           </ui:Target.TimeoutMS>
-                                          <ui:Target.WaitForReady>
-                                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                                          </ui:Target.WaitForReady>
                                         </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
@@ -632,13 +629,10 @@
                                         </ui:CursorPosition>
                                       </ui:Click.CursorPosition>
                                       <ui:Click.Target>
-                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="07ece1fb09541b1263a167ac87921235" Selector="&lt;webctrl aaname='Datos del cliente NO existente en salesforce' parentid='tab-*' tag='SPAN' /&gt;&lt;nav up='3' /&gt;&lt;webctrl isleaf='1' parentid='sectionContent-*' tag='SPAN' class='inline-edit-trigger-icon slds-button__icon slds-button__icon_hint' /&gt;">
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="07ece1fb09541b1263a167ac87921235" Selector="&lt;webctrl aaname='Datos del cliente NO existente en salesforce' parentid='tab-*' tag='SPAN' /&gt;&lt;nav up='3' /&gt;&lt;webctrl isleaf='1' parentid='sectionContent-*' tag='SPAN' class='inline-edit-trigger-icon slds-button__icon slds-button__icon_hint' /&gt;" WaitForReady="COMPLETE">
                                           <ui:Target.TimeoutMS>
                                             <InArgument x:TypeArguments="x:Int32" />
                                           </ui:Target.TimeoutMS>
-                                          <ui:Target.WaitForReady>
-                                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                                          </ui:Target.WaitForReady>
                                         </ui:Target>
                                       </ui:Click.Target>
                                     </ui:Click>
@@ -666,6 +660,21 @@
                                         </ui:Target>
                                       </ui:TypeInto.Target>
                                     </ui:TypeInto>
+                                    <ui:ImageFound Found="{x:Null}" DisplayName="Esperar carga de pantalla modificaciones" sap:VirtualizedContainerService.HintSize="376,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                                      <ui:ImageFound.Image>
+                                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                                      </ui:ImageFound.Image>
+                                      <ui:ImageFound.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:ImageFound.Target>
+                                    </ui:ImageFound>
                                     <Sequence DisplayName="Cerra pestañas" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -722,7 +731,7 @@
                                           </ui:CursorPosition>
                                         </ui:Click.CursorPosition>
                                         <ui:Click.Target>
-                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5d8eb494f230c5ac8577a396ee10b944" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button&amp;gt;lightning-primitive-icon&amp;gt;svg' tag='svg' /&gt;&#xD;&#xA;">
+                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="5d8eb494f230c5ac8577a396ee10b944" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;button&amp;gt;lightning-primitive-icon&amp;gt;svg' tag='svg' /&gt;">
                                             <ui:Target.TimeoutMS>
                                               <InArgument x:TypeArguments="x:Int32" />
                                             </ui:Target.TimeoutMS>
@@ -778,15 +787,15 @@
             <x:Reference>__ReferenceID0</x:Reference>
             <x:Reference>__ReferenceID6</x:Reference>
             <x:Reference>__ReferenceID7</x:Reference>
-            <FlowStep x:Name="__ReferenceID9">
+            <FlowStep x:Name="__ReferenceID10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">340,74.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">440,125.5 440,180 390,180</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">190,134.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">290,185.5 290,224.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click abrir caso para matriz" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" ContinueOnError="True" DisplayName="Click abrir caso para matriz" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -814,9 +823,48 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:Click>
               <FlowStep.Next>
-                <x:Reference>__ReferenceID8</x:Reference>
+                <FlowStep x:Name="__ReferenceID9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">190,224.5</av:Point>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">290,275.5 290,374.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" ContinueOnError="True" DisplayName="Click posicionar caso" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="f0621793fa335da261aa7729b1f1e65e" Selector="&lt;webctrl tag='B' innertext='Interacciones*' /&gt;&#xA;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Click.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:Click>
+                  <FlowStep.Next>
+                    <x:Reference>__ReferenceID8</x:Reference>
+                  </FlowStep.Next>
+                </FlowStep>
               </FlowStep.Next>
             </FlowStep>
+            <x:Reference>__ReferenceID9</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:BrowserScope.Body>

@@ -55,6 +55,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Llenar el apartado Datos de la cuenta bancaria en el Checklist" DisplayName="DatosCuentaBancaria" sap:VirtualizedContainerService.HintSize="711,2151" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -77,14 +78,14 @@
                 <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
                 <av:Size x:Key="ShapeSize">60,75</av:Size>
                 <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 350,107.5 350,166.5</av:PointCollection>
-                <x:Double x:Key="Height">1845.5</x:Double>
+                <x:Double x:Key="Height">1846.5</x:Double>
                 <x:Double x:Key="Width">601</x:Double>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
               <x:Reference>__ReferenceID23</x:Reference>
             </Flowchart.StartNode>
-            <FlowDecision x:Name="__ReferenceID23" Condition="[Convert.ToBoolean(in_Registro(72))]" DisplayName="¿Banco?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <FlowDecision x:Name="__ReferenceID23" Condition="[Convert.ToBoolean(in_Registro(80))]" DisplayName="¿Banco?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -101,11 +102,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">20.5,154.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">120.5,205.5 120.5,235.5 120,235.5 120,244.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Banco Información" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_10">
+                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Banco Información" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_10">
                     <ui:AnchorBase.Action>
                       <ActivityAction x:TypeArguments="ui:Anchor">
                         <ActivityAction.Argument>
@@ -160,11 +161,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">20,244.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">120,295.5 120,325.5 120.5,325.5 120.5,344.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Banco Información" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_11">
+                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Banco Información" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_11">
                         <ui:AnchorBase.Action>
                           <ActivityAction x:TypeArguments="ui:Anchor">
                             <ActivityAction.Argument>
@@ -224,11 +225,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">20.5,344.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">220.5,370 250.5,370 250.5,306.5 352.141666666667,306.5 352.141666666667,336.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Banco Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_12">
+                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Banco Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_12">
                             <ui:AnchorBase.Action>
                               <ActivityAction x:TypeArguments="ui:Anchor">
                                 <ActivityAction.Argument>
@@ -279,12 +280,12 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:AnchorBase>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID4" Condition="[in_Cliente(4).ToString.Contains(&quot;validado&quot;)]" DisplayName="Banco cuenta bancaria" sap:VirtualizedContainerService.HintSize="126,87" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
+                            <FlowDecision x:Name="__ReferenceID4" Condition="[in_Cliente(4).ToString.Contains(&quot;validado&quot;)]" DisplayName="Banco cuenta bancaria" sap:VirtualizedContainerService.HintSize="125,87" sap2010:WorkflowViewState.IdRef="FlowDecision_13">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">320.641666666667,336.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">126,87</av:Size>
+                                  <av:Size x:Key="ShapeSize">125,87</av:Size>
                                   <av:PointCollection x:Key="TrueConnector">320.641666666667,380 290.641666666667,380 290.641666666667,460 220,460</av:PointCollection>
                                   <av:PointCollection x:Key="FalseConnector">446.641666666667,380 460,380 460,696.5 400,696.5 400,726.5</av:PointCollection>
                                 </scg:Dictionary>
@@ -294,11 +295,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">20,434.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                                       <av:PointCollection x:Key="ConnectorLocation">120,485.5 120,515.5 120.5,515.5 120.5,524.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Banco Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_13">
+                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Banco Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_13">
                                     <ui:AnchorBase.Action>
                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                         <ActivityAction.Argument>
@@ -358,11 +359,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">20.5,524.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                                           <av:PointCollection x:Key="ConnectorLocation">120.5,575.5 120.5,605.5 120,605.5 120,614.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Banco Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_14">
+                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Banco Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_14">
                                         <ui:AnchorBase.Action>
                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                             <ActivityAction.Argument>
@@ -417,11 +418,11 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">20,614.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                                               <av:PointCollection x:Key="ConnectorLocation">220,640 400,640 400,726.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Banco Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_15">
+                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Banco Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_15">
                                             <ui:AnchorBase.Action>
                                               <ActivityAction x:TypeArguments="ui:Anchor">
                                                 <ActivityAction.Argument>
@@ -477,7 +478,7 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:AnchorBase>
                                           <FlowStep.Next>
-                                            <FlowDecision x:Name="__ReferenceID3" Condition="[Convert.ToBoolean(in_Registro(72))]" DisplayName="¿Cuenta CLABE?" sap:VirtualizedContainerService.HintSize="92,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
+                                            <FlowDecision x:Name="__ReferenceID3" Condition="[Convert.ToBoolean(in_Registro(81))]" DisplayName="¿Cuenta CLABE?" sap:VirtualizedContainerService.HintSize="92,87" sap2010:WorkflowViewState.IdRef="FlowDecision_12">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -494,11 +495,11 @@
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <av:Point x:Key="ShapeLocation">20.5,744.5</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                       <av:PointCollection x:Key="ConnectorLocation">120.5,795.5 120.5,825.5 120,825.5 120,834.5</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Cuenta clabe Información" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_16">
+                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Cuenta clabe Información" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_16">
                                                     <ui:AnchorBase.Action>
                                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                                         <ActivityAction.Argument>
@@ -553,11 +554,11 @@
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">20,834.5</av:Point>
-                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                           <av:PointCollection x:Key="ConnectorLocation">120,885.5 120,915.5 120.5,915.5 120.5,934.5</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Cuenta clabe Información" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_17">
+                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Cuenta clabe Información" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_17">
                                                         <ui:AnchorBase.Action>
                                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                                             <ActivityAction.Argument>
@@ -617,11 +618,11 @@
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <av:Point x:Key="ShapeLocation">20.5,934.5</av:Point>
-                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                               <av:PointCollection x:Key="ConnectorLocation">120.5,985.5 120.5,1015.5 120,1015.5 120,1024.5</av:PointCollection>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Cuenta clabe Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_18">
+                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Cuenta clabe Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_18">
                                                             <ui:AnchorBase.Action>
                                                               <ActivityAction x:TypeArguments="ui:Anchor">
                                                                 <ActivityAction.Argument>
@@ -676,11 +677,11 @@
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <av:Point x:Key="ShapeLocation">20,1024.5</av:Point>
-                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                   <av:PointCollection x:Key="ConnectorLocation">220,1050 250,1050 250,896.5 434.75,896.5 434.75,926.5</av:PointCollection>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
-                                                              <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Cuenta clabe Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_19">
+                                                              <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Cuenta clabe Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_19">
                                                                 <ui:AnchorBase.Action>
                                                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                                                     <ActivityAction.Argument>
@@ -751,11 +752,11 @@
                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                           <av:Point x:Key="ShapeLocation">20.5,1114.5</av:Point>
-                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                           <av:PointCollection x:Key="ConnectorLocation">120.5,1165.5 120.5,1195.5 120,1195.5 120,1204.5</av:PointCollection>
                                                                         </scg:Dictionary>
                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Cuenta clabe Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_20">
+                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Cuenta clabe Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_20">
                                                                         <ui:AnchorBase.Action>
                                                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                                                             <ActivityAction.Argument>
@@ -810,11 +811,11 @@
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <av:Point x:Key="ShapeLocation">20,1204.5</av:Point>
-                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                               <av:PointCollection x:Key="ConnectorLocation">220,1230 345,1230 345,1316.5</av:PointCollection>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Cuenta clabe Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
+                                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Cuenta clabe Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_21">
                                                                             <ui:AnchorBase.Action>
                                                                               <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                 <ActivityAction.Argument>
@@ -887,11 +888,11 @@
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <av:Point x:Key="ShapeLocation">20.5,1334.5</av:Point>
-                                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                                       <av:PointCollection x:Key="ConnectorLocation">120.5,1385.5 120.5,1415.5 120,1415.5 120,1424.5</av:PointCollection>
                                                                                     </scg:Dictionary>
                                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Nombre titular Información" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_22">
+                                                                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Nombre titular Información" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_22">
                                                                                     <ui:AnchorBase.Action>
                                                                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                         <ActivityAction.Argument>
@@ -946,11 +947,11 @@
                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                           <av:Point x:Key="ShapeLocation">20,1424.5</av:Point>
-                                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                                           <av:PointCollection x:Key="ConnectorLocation">120,1475.5 120,1505.5 120.5,1505.5 120.5,1524.5</av:PointCollection>
                                                                                         </scg:Dictionary>
                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Nombre titular Información" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_23">
+                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Nombre titular Información" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_23">
                                                                                         <ui:AnchorBase.Action>
                                                                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                             <ActivityAction.Argument>
@@ -1010,11 +1011,11 @@
                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                               <av:Point x:Key="ShapeLocation">20.5,1524.5</av:Point>
-                                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                                               <av:PointCollection x:Key="ConnectorLocation">120.5,1575.5 120.5,1605.5 120,1605.5 120,1614.5</av:PointCollection>
                                                                                             </scg:Dictionary>
                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Nombre titular Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_24">
+                                                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Nombre titular Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_24">
                                                                                             <ui:AnchorBase.Action>
                                                                                               <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                 <ActivityAction.Argument>
@@ -1069,11 +1070,11 @@
                                                                                               <sap:WorkflowViewStateService.ViewState>
                                                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                   <av:Point x:Key="ShapeLocation">20,1614.5</av:Point>
-                                                                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                                                   <av:PointCollection x:Key="ConnectorLocation">220,1640 250,1640 250,1526.5 442.5,1526.5 442.5,1556.5</av:PointCollection>
                                                                                                 </scg:Dictionary>
                                                                                               </sap:WorkflowViewStateService.ViewState>
-                                                                                              <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Nombre titular Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_25">
+                                                                                              <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Nombre titular Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_25">
                                                                                                 <ui:AnchorBase.Action>
                                                                                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                     <ActivityAction.Argument>
@@ -1143,11 +1144,11 @@
                                                                                                       <sap:WorkflowViewStateService.ViewState>
                                                                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                           <av:Point x:Key="ShapeLocation">20.5,1704.5</av:Point>
-                                                                                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                                                           <av:PointCollection x:Key="ConnectorLocation">120.5,1755.5 120.5,1785.5 120,1785.5 120,1794.5</av:PointCollection>
                                                                                                         </scg:Dictionary>
                                                                                                       </sap:WorkflowViewStateService.ViewState>
-                                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Nombre titular Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_26">
+                                                                                                      <ui:AnchorBase AnchorPosition="Top" DisplayName="Nombre titular Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_26">
                                                                                                         <ui:AnchorBase.Action>
                                                                                                           <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                             <ActivityAction.Argument>
@@ -1202,11 +1203,11 @@
                                                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                                               <av:Point x:Key="ShapeLocation">20,1794.5</av:Point>
-                                                                                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                                                               <av:PointCollection x:Key="ConnectorLocation">150,1715.5 150,1745.5 150.5,1745.5 150.5,1754.5</av:PointCollection>
                                                                                                             </scg:Dictionary>
                                                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Nombre titular Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_27">
+                                                                                                          <ui:AnchorBase AnchorPosition="Top" DisplayName="Check Nombre titular Estado de cuenta" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_27">
                                                                                                             <ui:AnchorBase.Action>
                                                                                                               <ActivityAction x:TypeArguments="ui:Anchor">
                                                                                                                 <ActivityAction.Argument>

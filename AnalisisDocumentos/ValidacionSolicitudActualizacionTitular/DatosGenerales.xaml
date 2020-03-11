@@ -33,7 +33,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="15">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
@@ -49,6 +49,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Datos generales&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena." DisplayName="Datos generales" sap:VirtualizedContainerService.HintSize="718,2391" sap2010:WorkflowViewState.IdRef="Flowchart_2">
@@ -250,7 +251,7 @@
                                                   <OutArgument x:TypeArguments="x:String">[Rfc]</OutArgument>
                                                 </Assign.To>
                                                 <Assign.Value>
-                                                  <InArgument x:TypeArguments="x:String">[in_TextoDocumento.Split({"domicilio fiscal"},StringSplitOptions.None)(0).Split({"rfc"},StringSplitOptions.None)(1).Split({"tel. casa"},StringSplitOptions.None)(0).Replace(":","").Trim.ToUpper]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String">[in_TextoDocumento.Split({"domicilio fiscal"},StringSplitOptions.None)(0).Split({"rfc"},StringSplitOptions.None)(1).Split({"tel. casa"},StringSplitOptions.None)(0).Replace(":","").Replace(".","").Replace("?","").Replace(" ","").Trim.ToUpper]</InArgument>
                                                 </Assign.Value>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
