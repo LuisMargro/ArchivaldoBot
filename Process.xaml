@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="ProcessTransaction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ProcessTransaction" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_TransactionItem" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>792,2149</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>792,2147</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -65,7 +65,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked. If an application exception occurs, the current transaction can be retried. If a BRE is thrown, the transaction will be skipped. Can be a flowchart or sequence. " DisplayName="ProccessTransaction" sap:VirtualizedContainerService.HintSize="772,2089" sap2010:WorkflowViewState.IdRef="Flowchart_9">
+  <Flowchart sap2010:Annotation.AnnotationText="Description: In this file all other process specific files will be invoked. If an application exception occurs, the current transaction can be retried. If a BRE is thrown, the transaction will be skipped. Can be a flowchart or sequence. " DisplayName="ProccessTransaction" sap:VirtualizedContainerService.HintSize="772,2087" sap2010:WorkflowViewState.IdRef="Flowchart_9">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:String[]" Name="ArrayDocumentos" />
       <Variable x:TypeArguments="scg:List(x:String)" Default="[new List(of String)]" Name="StringListDoctos" />
@@ -133,12 +133,12 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID34" Condition="[ArrayDocumentos.Length&gt;0]" DisplayName="¿Hay Doctos?" sap:VirtualizedContainerService.HintSize="78,87" sap2010:WorkflowViewState.IdRef="FlowDecision_27">
+        <FlowDecision x:Name="__ReferenceID34" Condition="[ArrayDocumentos.Length&gt;0]" DisplayName="¿Hay Doctos?" sap:VirtualizedContainerService.HintSize="77,87" sap2010:WorkflowViewState.IdRef="FlowDecision_27">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">261,376.5</av:Point>
-              <av:Size x:Key="ShapeSize">78,87</av:Size>
+              <av:Size x:Key="ShapeSize">77,87</av:Size>
               <av:PointCollection x:Key="FalseConnector">339,420 500,420 500,504.5</av:PointCollection>
               <av:PointCollection x:Key="TrueConnector">261,420 130,420 130,494</av:PointCollection>
             </scg:Dictionary>
@@ -148,11 +148,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">30,494</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">130,546 130,576 210.5,576 210.5,616.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Extraer texto de documentos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[ArrayDocumentos]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Extraer texto de documentos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[ArrayDocumentos]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
@@ -182,7 +182,7 @@
                             <av:PointCollection x:Key="ConnectorLocation">300,166 300,196 300.5,196 300.5,216.5</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraerTexto workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Utilidades\ExtraerTexto.xaml">
+                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraerTexto workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="Utilidades\ExtraerTexto.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
                             <InArgument x:TypeArguments="x:String" x:Key="in_PathDocumento">[PathDocto]</InArgument>
                             <OutArgument x:TypeArguments="x:String" x:Key="out_TextoDocumento">[StringDocto]</OutArgument>
@@ -232,12 +232,12 @@
                 </ui:ForEach.Body>
               </ui:ForEach>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID36" Condition="[Cliente(10).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Solicitud ya validada?" sap:VirtualizedContainerService.HintSize="125,87" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
+                <FlowDecision x:Name="__ReferenceID36" Condition="[Cliente(10).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Solicitud ya validada?" sap:VirtualizedContainerService.HintSize="124,87" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">148,616.5</av:Point>
-                      <av:Size x:Key="ShapeSize">125,87</av:Size>
+                      <av:Size x:Key="ShapeSize">124,87</av:Size>
                       <av:PointCollection x:Key="FalseConnector">273,660 384,660 384,716.5</av:PointCollection>
                       <av:PointCollection x:Key="TrueConnector">148,660 110,660 110,944.5</av:PointCollection>
                     </scg:Dictionary>
@@ -247,11 +247,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">10,944.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">110,995.5 110,1025.5 10,1025.5 10,1360 40,1360</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BusquedaPF workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Shell\BusquedaPF.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BusquedaPF workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="Shell\BusquedaPF.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[Cliente(1).ToString]</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="in_Nombre" />
@@ -272,11 +272,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">40,1334.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">140,1386.5 140,1414.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer string del documento" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEach`1_14" Values="[StringListDoctos]">
+                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer string del documento" sap:VirtualizedContainerService.HintSize="415,221" sap2010:WorkflowViewState.IdRef="ForEach`1_14" Values="[StringListDoctos]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="x:String">
                                 <ActivityAction.Argument>
@@ -286,7 +286,7 @@
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[StringDocumento]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">[DataClienteBusqueda(0).ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_CURP">[DataClienteBusqueda(6).ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_CURP">[DataClienteBusqueda(4).ToString]</InArgument>
                                     <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[Cliente]</InOutArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_DireccionFiscal">[DataClienteBusqueda(7).ToString]</InArgument>
                                     <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial">[DataClienteBusqueda(8).ToString]</InArgument>
@@ -307,11 +307,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">40,1414.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                                   <av:PointCollection x:Key="ConnectorLocation">140,1466.5 140,1494.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MatrizTipificacion workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="Salesforce\MatrizTipificacion.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MatrizTipificacion workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="Salesforce\MatrizTipificacion.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[NumeroContrato]</InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_NombreCliente">[DataClienteBusqueda(0).ToString]</InArgument>
@@ -327,11 +327,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">40,1494.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                                       <av:PointCollection x:Key="ConnectorLocation">140,1546.5 140,1564.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainChecklist workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="Salesforce\LlenadoChecklist\MainChecklist.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainChecklist workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="Salesforce\LlenadoChecklist\MainChecklist.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataSolicitud">[Registro]</InArgument>
                                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="in_DataCliente">[Cliente]</InOutArgument>
@@ -347,11 +347,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">40,1564.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                                           <av:PointCollection x:Key="ConnectorLocation">140,1616.5 140,1646.5 320,1646.5 320,1714.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GuardarClienteLog workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\GuardarClienteLog.xaml">
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GuardarClienteLog workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="AnalisisDocumentos\Herramientas\GuardarClienteLog.xaml">
                                         <ui:InvokeWorkflowFile.Arguments>
                                           <InArgument x:TypeArguments="x:String" x:Key="in_PathLog">[in_Config("PathLog").ToString]</InArgument>
                                           <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Cliente">[Cliente]</InArgument>
@@ -493,12 +493,12 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID48" Condition="[StringListSolicitudActualizacion.Count=0]" DisplayName="¿Solicitudes vacias?" sap:VirtualizedContainerService.HintSize="109,87" sap2010:WorkflowViewState.IdRef="FlowDecision_46">
+                    <FlowDecision x:Name="__ReferenceID48" Condition="[StringListSolicitudActualizacion.Count=0]" DisplayName="¿Solicitudes vacias?" sap:VirtualizedContainerService.HintSize="108,87" sap2010:WorkflowViewState.IdRef="FlowDecision_46">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">329.5,716.5</av:Point>
-                          <av:Size x:Key="ShapeSize">109,87</av:Size>
+                          <av:Size x:Key="ShapeSize">108,87</av:Size>
                           <av:PointCollection x:Key="FalseConnector">438.5,760 530,760 530,924.5</av:PointCollection>
                           <av:PointCollection x:Key="TrueConnector">329.5,760 290,760 290,874</av:PointCollection>
                         </scg:Dictionary>
@@ -508,11 +508,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">190,874</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">290,925 290,955 310,955 310,964.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BuscarClienteLog sin solicitud" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="Utilidades/BuscarClienteLog.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BuscarClienteLog sin solicitud" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_46" UnSafe="False" WorkflowFileName="Utilidades/BuscarClienteLog.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                               <OutArgument x:TypeArguments="x:String" x:Key="out_NumeroContrato">[NumeroContrato]</OutArgument>
@@ -530,11 +530,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">210,964.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                                   <av:PointCollection x:Key="ConnectorLocation">310,1016.5 310,1046.5 501,1046.5 501,1066.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BusquedaPF para personas sin solicitud" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="Shell\BusquedaPF.xaml">
+                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke BusquedaPF para personas sin solicitud" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_48" UnSafe="False" WorkflowFileName="Shell\BusquedaPF.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_NumeroContrato">[Cliente(1).ToString]</InArgument>
                                   <InArgument x:TypeArguments="x:String" x:Key="in_Nombre" />
@@ -551,23 +551,23 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:InvokeWorkflowFile>
                               <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID33" Condition="[not String.IsNullOrEmpty(TipoContrato) and not String.IsNullOrEmpty(TipoFigura) and not String.IsNullOrEmpty(Entidad) and DataClienteBusqueda isnot Nothing]" DisplayName="¿Cliente encontrado?" sap:VirtualizedContainerService.HintSize="118,87" sap2010:WorkflowViewState.IdRef="FlowDecision_45">
+                                <FlowDecision x:Name="__ReferenceID33" Condition="[not String.IsNullOrEmpty(TipoContrato) and not String.IsNullOrEmpty(TipoFigura) and not String.IsNullOrEmpty(Entidad) and DataClienteBusqueda isnot Nothing]" DisplayName="¿Cliente encontrado?" sap:VirtualizedContainerService.HintSize="117,87" sap2010:WorkflowViewState.IdRef="FlowDecision_45">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <av:Point x:Key="ShapeLocation">471.5,1066.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">118,87</av:Size>
+                                      <av:Size x:Key="ShapeSize">117,87</av:Size>
                                       <av:PointCollection x:Key="TrueConnector">471.5,1110 350,1110 350,1146.5</av:PointCollection>
                                       <av:PointCollection x:Key="FalseConnector">589.5,1110 711.032972574609,1110 711.032972574609,1740.5 420,1740.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <FlowDecision.True>
-                                    <FlowDecision x:Name="__ReferenceID44" Condition="[not CasoHijoDetectado]" DisplayName="No es Caso hijo detectado" sap:VirtualizedContainerService.HintSize="145,87" sap2010:WorkflowViewState.IdRef="FlowDecision_40" True="{x:Reference __ReferenceID4}">
+                                    <FlowDecision x:Name="__ReferenceID44" Condition="[not CasoHijoDetectado]" DisplayName="No es Caso hijo detectado" sap:VirtualizedContainerService.HintSize="144,87" sap2010:WorkflowViewState.IdRef="FlowDecision_40" True="{x:Reference __ReferenceID4}">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <av:Point x:Key="ShapeLocation">278,1146.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">145,87</av:Size>
+                                          <av:Size x:Key="ShapeSize">144,87</av:Size>
                                           <av:PointCollection x:Key="TrueConnector">278,1190 140,1190 140,1334.5</av:PointCollection>
                                           <av:PointCollection x:Key="FalseConnector">422,1190 536.5,1190 536.5,1206.5</av:PointCollection>
                                         </scg:Dictionary>
@@ -588,11 +588,11 @@
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <av:Point x:Key="ShapeLocation">360,1334.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                                                   <av:PointCollection x:Key="ConnectorLocation">360,1360.5 330,1360.5 330,1440.5 240,1440.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Sales Force" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b7866c9a17e24682f93422016a6ebd5b" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
+                                              <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Sales Force" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b7866c9a17e24682f93422016a6ebd5b" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
                                                 <ui:BrowserScope.Body>
                                                   <ActivityAction x:TypeArguments="x:Object">
                                                     <ActivityAction.Argument>
@@ -709,11 +709,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">430,924.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">530,976.5 530,1006.5 530.5,1006.5 530.5,1066.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="706,1722" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[StringListSolicitudActualizacion]">
+                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Iterar solicitud" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[StringListSolicitudActualizacion]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="x:String">
                                 <ActivityAction.Argument>
@@ -1296,11 +1296,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">400,504.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">500,556.5 500,586.5 510,586.5 510,619</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Cerrar caso sin documentos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click Cerrar caso sin documentos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -1357,11 +1357,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,124</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,175 300,240</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraccionDocumentos workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Salesforce\ExtraccionDocumentos.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraccionDocumentos workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_24" UnSafe="False" WorkflowFileName="Salesforce\ExtraccionDocumentos.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_RutaDocumentos">[in_Config("PathDocumentosCliente").ToString]</InArgument>
           <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_Cliente">[Cliente]</OutArgument>
