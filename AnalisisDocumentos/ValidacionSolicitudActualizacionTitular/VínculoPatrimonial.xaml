@@ -518,7 +518,6 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">410.5,120</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">541.5,180 541.5,210 296.925,210 296.925,267.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign DisplayName="Falta razón social" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_122">
@@ -534,9 +533,6 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
-          <FlowStep.Next>
-            <x:Reference>__ReferenceID9</x:Reference>
-          </FlowStep.Next>
         </FlowStep>
       </FlowDecision.False>
     </FlowDecision>
