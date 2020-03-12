@@ -191,7 +191,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <FlowDecision.True>
-                <FlowDecision x:Name="__ReferenceID7" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;domicilio&quot;},StringSplitOptions.None)(1).Split({&quot;estado&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Entre calles?" sap:VirtualizedContainerService.HintSize="75,87" sap2010:WorkflowViewState.IdRef="FlowDecision_45">
+                <FlowDecision x:Name="__ReferenceID7" Condition="[Not String.IsNullOrEmpty(in_TextoDocumento.Split({&quot;domicilio residencial&quot;},StringSplitOptions.None)(0).Split({&quot;domicilio&quot;},StringSplitOptions.None)(1).Split({&quot;estado&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot;)&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim)]" DisplayName="¿Entre calles?" sap:VirtualizedContainerService.HintSize="75,87" sap2010:WorkflowViewState.IdRef="FlowDecision_45">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>

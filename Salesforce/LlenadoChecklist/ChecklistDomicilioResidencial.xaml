@@ -70,7 +70,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Flowchart DisplayName="DatosGeneralesTitular" sap:VirtualizedContainerService.HintSize="645,3542" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+          <Flowchart DisplayName="DomicilioResidencial" sap:VirtualizedContainerService.HintSize="645,3542" sap2010:WorkflowViewState.IdRef="Flowchart_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
