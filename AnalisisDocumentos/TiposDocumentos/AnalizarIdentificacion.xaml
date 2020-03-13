@@ -390,7 +390,7 @@
                                   <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String">["la curp de la credencial de elector es invalida o ilegible"]</InArgument>
+                                  <InArgument x:TypeArguments="x:String">["Identificacion ilegible o no se encuente vigente"]</InArgument>
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
