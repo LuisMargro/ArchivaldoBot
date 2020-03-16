@@ -6,11 +6,9 @@
     <x:Property Name="out_Entidad" Type="OutArgument(x:String)" />
     <x:Property Name="out_TipoContrato" Type="OutArgument(x:String)" />
     <x:Property Name="out_Cliente" Type="OutArgument(sd:DataRow)" />
-    <x:Property Name="out_CasoHijoDetectado" Type="OutArgument(x:Boolean)" />
-    <x:Property Name="out_CasoPadre" Type="OutArgument(x:String)" />
     <x:Property Name="in_CorreoSalesForce" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>707,1883</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>630,1678</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="18">
@@ -56,13 +54,13 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Recibe como parametro un correo electronico, lo busca en el excel del log" DisplayName="Buscar al cliente en el log sin solicitud" sap:VirtualizedContainerService.HintSize="687,1783" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" WorkbookPath="[in_Config(&quot;PathLog&quot;).ToString]">
+  <ui:ExcelApplicationScope Password="{x:Null}" sap2010:Annotation.AnnotationText="Recibe como parametro un correo electronico, lo busca en el excel del log" DisplayName="Buscar al cliente en el log sin solicitud" sap:VirtualizedContainerService.HintSize="610,1578" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" WorkbookPath="[in_Config(&quot;PathLog&quot;).ToString]">
     <ui:ExcelApplicationScope.Body>
       <ActivityAction x:TypeArguments="ui:WorkbookApplication">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
         </ActivityAction.Argument>
-        <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="653,1643" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="576,1438" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Int32" Name="QueryCliente" />
             <Variable x:TypeArguments="sd:DataTable" Name="DtLog" />
@@ -74,20 +72,20 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ExcelReadRange AddHeaders="True" DataTable="[DtLog]" DisplayName="Obtener log" sap:VirtualizedContainerService.HintSize="611,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="Clientes">
+          <ui:ExcelReadRange AddHeaders="True" DataTable="[DtLog]" DisplayName="Obtener log" sap:VirtualizedContainerService.HintSize="534,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range="A1" SheetName="Clientes">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ExcelReadRange>
-          <ui:ForEachRow CurrentIndex="[IndiceFila]" DataTable="[DtLog]" DisplayName="Buscar en el log" sap:VirtualizedContainerService.HintSize="611,511" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow CurrentIndex="[IndiceFila]" DataTable="[DtLog]" DisplayName="Buscar en el log" sap:VirtualizedContainerService.HintSize="534,508" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Fila" />
                 </ActivityAction.Argument>
-                <If Condition="[Fila(0).ToString.Contains(in_CorreoSalesForce)]" DisplayName="Se encuentra el cliente" sap:VirtualizedContainerService.HintSize="484,363" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[Fila(0).ToString.Contains(in_CorreoSalesForce)]" DisplayName="Se encuentra el cliente" sap:VirtualizedContainerService.HintSize="484,361" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
                     <Sequence DisplayName="Cliente encontrado" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_16">
                       <sap:WorkflowViewStateService.ViewState>
@@ -110,41 +108,15 @@
               </ActivityAction>
             </ui:ForEachRow.Body>
           </ui:ForEachRow>
-          <If Condition="[QueryCliente = -1]" DisplayName="¿Es un cliente nuevo?" sap:VirtualizedContainerService.HintSize="611,901" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[QueryCliente &gt; -1]" DisplayName="¿Es un cliente nuevo?" sap:VirtualizedContainerService.HintSize="534,699" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Assign DisplayName="No se encontro el caso hijo" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_40">
-                <Assign.To>
-                  <OutArgument x:TypeArguments="x:Boolean">[out_CasoHijoDetectado]</OutArgument>
-                </Assign.To>
-                <Assign.Value>
-                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                </Assign.Value>
-              </Assign>
-            </If.Then>
-            <If.Else>
-              <Sequence DisplayName="obtencion de caso padre" sap:VirtualizedContainerService.HintSize="304,752" sap2010:WorkflowViewState.IdRef="Sequence_13">
+              <Sequence DisplayName="obtencion de caso padre" sap:VirtualizedContainerService.HintSize="304,552" sap2010:WorkflowViewState.IdRef="Sequence_17">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="se encontro el caso hijo" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_34">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:Boolean">[out_CasoHijoDetectado]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <Assign DisplayName="Obtener caso padre" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_35">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[out_CasoPadre]</OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[DtLog.Rows(QueryCliente).Item(9).ToString]</InArgument>
-                  </Assign.Value>
-                </Assign>
-                <Assign DisplayName="numero de contrato" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_36">
+                <Assign DisplayName="numero de contrato" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_42">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[out_NumeroContrato]</OutArgument>
                   </Assign.To>
@@ -152,7 +124,7 @@
                     <InArgument x:TypeArguments="x:String">[DtLog.Rows(QueryCliente).item(1).ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Obtener tipo de figura" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_37">
+                <Assign DisplayName="Obtener tipo de figura" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_43">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[out_TipoFigura]</OutArgument>
                   </Assign.To>
@@ -160,7 +132,7 @@
                     <InArgument x:TypeArguments="x:String">[DtLog.Rows(QueryCliente).Item(14).ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Obtener entidad" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_38">
+                <Assign DisplayName="Obtener entidad" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_44">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[out_Entidad]</OutArgument>
                   </Assign.To>
@@ -168,7 +140,7 @@
                     <InArgument x:TypeArguments="x:String">[DtLog.Rows(QueryCliente).Item(12).ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Obtener tipo de contrato" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_39">
+                <Assign DisplayName="Obtener tipo de contrato" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_45">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[out_TipoContrato]</OutArgument>
                   </Assign.To>
@@ -176,7 +148,7 @@
                     <InArgument x:TypeArguments="x:String">[DtLog.Rows(QueryCliente).Item(13).ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Remplazar al cliente por el cliente ya validado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_33">
+                <Assign DisplayName="Remplazar al cliente por el cliente ya validado" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_46">
                   <Assign.To>
                     <OutArgument x:TypeArguments="sd:DataRow">[out_Cliente]</OutArgument>
                   </Assign.To>
@@ -185,7 +157,7 @@
                   </Assign.Value>
                 </Assign>
               </Sequence>
-            </If.Else>
+            </If.Then>
           </If>
         </Sequence>
       </ActivityAction>

@@ -1,12 +1,12 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="MainChecklist" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MainChecklist" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_DataSolicitud" Type="InArgument(sd:DataRow)" />
-    <x:Property Name="in_DataCliente" Type="InOutArgument(sd:DataRow)" />
+    <x:Property Name="in_DataCliente" Type="InArgument(sd:DataRow)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1044,1416</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1044,1376</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MainChecklist_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -55,6 +55,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Se encarga de verificar si la solicitud y los documentos son validos, en caso de que sea valido, reasigna el caso, en caso contrario manda un correo electronico" DisplayName="MainChecklist" sap:VirtualizedContainerService.HintSize="1024,1316" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -375,7 +376,7 @@
                                               <av:Size x:Key="ShapeSize">200,52</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach mandar mensaje" sap:VirtualizedContainerService.HintSize="560,5470" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="f3c3f790c25e3e663ed9bcb18f412627" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
+                                          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach mandar mensaje" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="f3c3f790c25e3e663ed9bcb18f412627" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
                                             <ui:BrowserScope.Body>
                                               <ActivityAction x:TypeArguments="x:Object">
                                                 <ActivityAction.Argument>

@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="ExtraccionDocumentos" this:ExtraccionDocumentos.in_NumeroCaso="00185504" this:ExtraccionDocumentos.in_PathLog="C:\Users\88891\Documents\UiPath\Archivaldo\Data\log.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtraccionDocumentos" this:ExtraccionDocumentos.in_NumeroCaso="00185504" this:ExtraccionDocumentos.in_PathLog="C:\Users\88891\Documents\UiPath\Archivaldo\Data\log.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_RutaDocumentos" Type="InArgument(x:String)" />
     <x:Property Name="out_Cliente" Type="OutArgument(sd:DataRow)" />
@@ -40,7 +40,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -120,7 +120,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">300,175 300,214.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="376,1523" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -395,7 +395,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:Click>
-                                    <Delay sap2010:Annotation.AnnotationText="Espera a que termine de cargar el datatable" DisplayName="Esperar carga completa " Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                    <Delay sap2010:Annotation.AnnotationText="Espera a que termine de cargar el datatable" DisplayName="Esperar carga completa " Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Delay_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -451,27 +451,52 @@
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                             </ActivityAction.Argument>
-                                            <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="376,278" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                            <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="576,699" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="x:Int32" Name="IndiceLog" />
+                                              </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:ExcelLookUpRange DisplayName="Buscar al cliente con el numero de caso" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelLookUpRange_3" Range="A1" Result="[QueryCliente]" SheetName="Clientes" Value="[in_NumeroCaso]">
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </ui:ExcelLookUpRange>
-                                              <ui:ExcelReadRange AddHeaders="True" DataTable="[DTLog]" DisplayName="Obtener log" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="Clientes">
+                                              <ui:ExcelReadRange AddHeaders="True" DataTable="[DTLog]" DisplayName="Obtener log" sap:VirtualizedContainerService.HintSize="534,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="A1" SheetName="Clientes">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:ExcelReadRange>
+                                              <ui:ForEachRow CurrentIndex="[IndiceLog]" DataTable="[DTLog]" DisplayName="Iterar log de clientes " sap:VirtualizedContainerService.HintSize="534,508" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                                <ui:ForEachRow.Body>
+                                                  <ActivityAction x:TypeArguments="sd:DataRow">
+                                                    <ActivityAction.Argument>
+                                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Fila" />
+                                                    </ActivityAction.Argument>
+                                                    <If Condition="[Fila(9).ToString.Contains(in_NumeroCaso)]" DisplayName="¿Se encontro al cliente?" sap:VirtualizedContainerService.HintSize="484,361" sap2010:WorkflowViewState.IdRef="If_1">
+                                                      <If.Then>
+                                                        <Sequence DisplayName="Mientras se encuentra al cliente" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign DisplayName="LLenar query cliente" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:String">[QueryCliente]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:String">["A"+(IndiceLog+1).ToString]</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                                                        </Sequence>
+                                                      </If.Then>
+                                                    </If>
+                                                  </ActivityAction>
+                                                </ui:ForEachRow.Body>
+                                              </ui:ForEachRow>
                                             </Sequence>
                                           </ActivityAction>
                                         </ui:ExcelApplicationScope.Body>
@@ -620,11 +645,11 @@
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <av:Point x:Key="ShapeLocation">50,1454.02</av:Point>
-                                                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                                                                       <av:PointCollection x:Key="ConnectorLocation">250,1479.52 360,1479.52 360,1520</av:PointCollection>
                                                                     </scg:Dictionary>
                                                                   </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click cerrar bandeja de correos electronicos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click cerrar bandeja de correos electronicos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                                                     <ui:Click.CursorPosition>
                                                                       <ui:CursorPosition Position="Center">
                                                                         <ui:CursorPosition.OffsetX>
@@ -750,7 +775,7 @@
                                                             <InArgument x:TypeArguments="s:String[]">[out_Cliente(8).toString.split({";"}, StringSplitOptions.None)]</InArgument>
                                                           </Assign.Value>
                                                         </Assign>
-                                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer correos leidos" sap:VirtualizedContainerService.HintSize="370,194" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CorreosLeidos]">
+                                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer correos leidos" sap:VirtualizedContainerService.HintSize="370,195" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CorreosLeidos]">
                                                           <ui:ForEach.Body>
                                                             <ActivityAction x:TypeArguments="x:String">
                                                               <ActivityAction.Argument>
@@ -845,11 +870,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">490,1394.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                                           <av:PointCollection x:Key="ConnectorLocation">590,1445.5 590,1475.5 360,1475.5 360,1520</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click Regresar a casos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click Regresar a casos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                         <ui:Click.CursorPosition>
                                           <ui:CursorPosition Position="Center">
                                             <ui:CursorPosition.OffsetX>
