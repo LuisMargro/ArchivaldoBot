@@ -329,11 +329,12 @@
                                       <av:PointCollection x:Key="ConnectorLocation">230,1416.5 230,1446.5 320,1446.5 320,1524.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Preparar respuesta del cliente" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/PrepararRespuestaCliente.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Preparar respuesta del cliente" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/PrepararRespuestaCliente.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
                                       <InArgument x:TypeArguments="x:String" x:Key="in_PathLog">[in_Config("PathLog").ToString]</InArgument>
                                       <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Cliente">[Cliente]</InArgument>
                                       <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataSolicitud">[Registro]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_CasoHijo">[CasoHijo]</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
