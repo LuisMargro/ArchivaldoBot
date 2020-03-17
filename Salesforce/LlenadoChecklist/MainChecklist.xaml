@@ -55,7 +55,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Se encarga de verificar si la solicitud y los documentos son validos, en caso de que sea valido, reasigna el caso, en caso contrario manda un correo electronico" DisplayName="MainChecklist" sap:VirtualizedContainerService.HintSize="1024,1316" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -526,7 +525,7 @@
                                                   </ui:Click>
                                                   <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" sap2010:Annotation.AnnotationText="Se usa un click de imagen ya que el elemento es un mainframe al cual se le enbebe html" ClickType="CLICK_SINGLE" DisplayName="Click en pdf" sap:VirtualizedContainerService.HintSize="484,150" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                     <ui:ClickImage.CursorPosition>
-                                                      <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition Position="TopRight">
                                                         <ui:CursorPosition.OffsetX>
                                                           <InArgument x:TypeArguments="x:Int32" />
                                                         </ui:CursorPosition.OffsetX>

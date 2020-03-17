@@ -116,11 +116,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,107</av:Point>
-                  <av:Size x:Key="ShapeSize">200,68</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,175 300,214.5</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,66</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,173 300,214.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -273,11 +273,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,214.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">300,265.5 300,306.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ImageFound sap2010:Annotation.AnnotationText="Se agrega una imagen como referencia, ya que los selectores siempre se encuentran abierto" DisplayName="Omni chanel abierto" Found="[OmniChanelAbierto]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                  <ui:ImageFound sap2010:Annotation.AnnotationText="Se agrega una imagen como referencia, ya que los selectores siempre se encuentran abierto" DisplayName="Omni chanel abierto" Found="[OmniChanelAbierto]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ImageFound_1">
                     <ui:ImageFound.Image>
                       <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAK8AAABMCAYAAAAbQudZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAhoSURBVHhe7Z3PTxtnGsd7M3/FcAzigsWhPhnfligHQD3UEodYe0BhtZtCtNudpZXqpRILbEtDdxVZq7ay0pbFUrcLq3VrtopqtCqts4oUmqYlamiN1EilVVK7QooPPXz3fd55x54Ze2zw2JQXno/0kpl555c9n3nmeSeSnyfAMJrC8jLawvIy2sLyMtrC8jLawvIy2sLyMtrC8jLa0jV5Hz16iN37X1bbgwffqB6G6Qxdk5dk/YP5O0w/82vZ/vqXZdXDMJ2hq2nDfRFxWV6mW3RN3sePH+OlxXkZfamxvEyn6Yq8TnEpfaD2+mt/U70M0xm6Iu9m/kOZKqy8/aZaYgmtHaUcpvunkCupeeZEEVjeLz6/i6tLL+HZ305j+ZWXsbPzhVxOaQIJTG8dOkH57hoWJoYRNkLoCYXQF41j+loe+z+pFbrBYeQt7WB97hJi/dZ59Q6OOs5rH5nxODIP5Joniv1MHPHMvprTk0Dy7n/7bXVAZrcrU7/B9999hzt3PpXzFIWDUrk5j5gxioXNIiq2rA+FNLPD6PvlKopq0bHzMA8zeg6T12+jXFHLKvvIL16CuUFisLzdJJC8G7n36uSl9sF/crKfpp2pQ3vcxvKTESzctO1wUkLusoHJdSs0lrNT6JldQ2EpYUXo/lGY2SLK91ZhjpwTkdFA+GIK2wdydSuyhpJY37qKxKBR348CFkLz4m9jtpciiCzdVnONUPJu5dTxxRNjxERuT3WL88/PxnH+wjDOi5ugLzqF9D37c9LnjiO1YZ+7d9tW/YKHBSxfHELsF8OIRcV3sV67zc+8vNl//6tOXGrvv5eVOS5N//Pdd9TabbJ9FZELad/oWrlhoudyDmWaERG6JzRUE30vjXgogtgVEZ1lxK6gMOsUjuQMITZXsLaXMon+V539fvJaN9XytpptCMlroG/CPj5QvB6vna+HylYSkRH7s9K2Ig2hJ0vDbVv1F5EecXwXP4n58aHq+Z55eb/+ardOXGp7xa+r73gDpw0k5PiquFQ+OPtp2iVGEZmnQ0huqVnCtT+S05PT1vX7yUt9rVICS96FW2qWeLAqbqhm+7T7aFvPzeHatkU/3fRPu1MqejL1Llo35pmXl9j66L94bub3UtTnZ0x8vPWRXN6xAdtRI6+IojWs6LRwU80SreT065diWIMyq/+wkdcjuEvACnYyJuKUNsg2hD6XnM22bdFPn8MYUPt1tGtnXF77Pe7fV95SS4AfHj1SU5CpAokbOGWQHD7n7aq8DZA572xBKOhHc8Eqm0n0imPVbkxv5A0g725ayOp/059Zeek/HEhOai/+8QU5cPvszqfyX5qn5cEHajUO/bbhmOXFgeiPGhhbzKNoD/IOisiLAePkCp1Vc8HkAHNiTR1LJDkrCfSKAaR1vIDyim8lPRKBuWHnRCXsvGFiWaUwZ1ZeSgWo0euwPy/+qSoyNZq/WfhErdk5DvWe97jlJere8w5jcimnZG4hWEXk5L8aQG//kHobkEPqgr1+UHkFpdtITYhUpH8AYXr/TK/0VBfnvAzzM8LyMtrC8jLawvIy2sLyMtrC8jLawvIy2sLyMtrC8jLawvIy2sLyMtrC8jLawvIy2sLyMtrC8jLawvIy2sLyMtryhID+cOOmY2u4kBu3k99UBGYY7WB5GW1heRltYXkZbWF5GW1heRltYXkZbWF5GW1heRltYXkZbWF5GW1heRltYXkZbWF5GW3pmLxUOHD3/pey0TRzOMq3Ukg827i0FdOcwPKSqB/e+ADr776DjfezstE0LWtPYuun+GXVHWer/tT+yaAwF2rvZ/EdpQfK61NILHW5BO0pJpC8JCeJ+r/CJ/jxx1rsoGlaRn1HF7hBHYkTSCfkZYIRSF6KriSpH9RH6xwNf3nrhfEWFSnJ0q2x6DDOR4cwNrNWrQ5pl2rNZE2M9Vv7Kd9IqhpoVHRkCNPXd3zLUhXXaTsD4cEhxCZSWL7iPpeKLBEr+sT+YtEEUrd8qm275HUWbAlWjrVyL41JVWst3D+Asbn8qU9F2pbXjrrOiOuF+o4efduXt/jGqCzFagtI5UxjrlKsBs4viova6DF9UEDyyVGkd9W8AyqlFYkKyapVoaiEleNcDvIw+xPI2KKV8khGp5BrVD/RV17rc7dbjtVNUezLQHLTv0LcaaBteWlgRvltK2gdWvfwWBfRm/OSzM3ltSJXVSCCoq0xD+v6kiie0k8eaP/1N00F+ZkQprPuSOo8F6tgtzsV2H41gsQ/nOeqaCpv++VYvZyGUlWtOLHyHj3yWpE1LB6p7pKlKYe8tigW8lE/XluXaqnVH7fx+TjPhUTpEWmH+7jDMLNHlddzcznlpe2alGOVKcWEY/mgwfL68XOkDduL3gsiHvXVaCoeo+KiNXrsW3jkrYhHu+GO1I0jL5WIDcG84X4EF2Zr8sr6xzP5JmVcHbQrb9NyrFa1y+RW7Qw48rbguAdsVq1ecQHtnHDlEvpIQHXBi9dHEZmpvTMt303DdOW8DnnlAO4S1u3ru7eKhOGpEK+Qj+fxFHZUiVY5OBKDt6oc6kZI3bPz0X3kZs3avp20K68StHE5VlWf2a4ub+fksoTs6SWQvHb0JUmdEZimadnRoy7hLy9dsPzcqBB2AGEabWcLYl1nnljC9jUqpXoO4UEx4r6cxnY1VfXIK+IkyR82zomRu/VmIndt2CdaVcR+E2JdQ5ZCHRM3SGHFE9n21mA+NYA+cdzwYAILGz7itC2voEk51vLmvPU2RHyW2MUU8hmRh1ePczoJJC9BclJ0JVEpv6VG07Ts6OIyzOEJLK8NiUoDM2osLXMcdExehjluWF5GW1heRltYXkZbWF5GW1heRltYXkZbWF5GU4D/Az6Nf+pTb3EGAAAAAElFTkSuQmCC" />
                     </ui:ImageFound.Image>
@@ -295,12 +295,12 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ImageFound>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID17" Condition="[OmniChanelAbierto]" DisplayName="¿Omni abierto?" sap:VirtualizedContainerService.HintSize="87,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                    <FlowDecision x:Name="__ReferenceID17" Condition="[OmniChanelAbierto]" DisplayName="¿Omni abierto?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">257,306.5</av:Point>
-                          <av:Size x:Key="ShapeSize">87,87</av:Size>
+                          <av:Size x:Key="ShapeSize">86,87</av:Size>
                           <av:PointCollection x:Key="FalseConnector">343,350 359.5,350 359.5,496.5 299.5,496.5 299.5,526.5</av:PointCollection>
                           <av:PointCollection x:Key="TrueConnector">257,350 100,350 100,384.5</av:PointCollection>
                         </scg:Dictionary>
@@ -310,11 +310,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">0,384.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">100,435.5 100,465.5 299.5,465.5 299.5,526.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar omni chanel" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar omni chanel" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -342,12 +342,12 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:Click>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="107,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                            <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">246.5,526.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">107,87</av:Size>
+                                  <av:Size x:Key="ShapeSize">106,87</av:Size>
                                   <av:PointCollection x:Key="TrueConnector">246.5,570 110,570 110,607</av:PointCollection>
                                   <av:PointCollection x:Key="FalseConnector">352.5,570 590,570 590,1324.5</av:PointCollection>
                                 </scg:Dictionary>
@@ -357,11 +357,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">10,607</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,68</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">110,675 110,704.5</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">110,673 110,704.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="376,741" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -395,13 +395,25 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:Click>
-                                    <Delay sap2010:Annotation.AnnotationText="Espera a que termine de cargar el datatable" DisplayName="Esperar carga completa " Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                    <Delay sap2010:Annotation.AnnotationText="Espera a que termine de cargar el datatable" DisplayName="Esperar carga completa " Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Delay_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </Delay>
+                                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Ir al fondo de la pagina" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+                                      <ui:SendHotkey.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="afadd18bda33f5bd566915de7ed73277" Selector="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='1' parentid='brandBand_*' tabindex='-1' tag='DIV' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:SendHotkey.Target>
+                                    </ui:SendHotkey>
                                     <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[CorreosDt]" DisplayName="Extraer tabla de correos" ExtractMetadata="&lt;extract&gt;&lt;row exact=&quot;1&quot;&gt;&lt;webctrl tag=&quot;tr&quot;/&gt;&lt;/row&gt;&lt;column exact='1' name='Asunto' attr='text'&gt;&lt;webctrl tag='tr'/&gt;&lt;webctrl tag='th' class='slds-cell-edit cellContainer'/&gt;&lt;webctrl tag='span' class='slds-grid slds-grid--align-spread'/&gt;&lt;webctrl tag='a'/&gt;&lt;/column&gt;&lt;column exact=&quot;1&quot; name=&quot;Fecha&quot; attr=&quot;text&quot;&gt;&lt;webctrl tag=&quot;tr&quot;/&gt;&lt;webctrl tag=&quot;td&quot;/&gt;&lt;webctrl tag=&quot;span&quot; class=&quot;slds-grid slds-grid--align-spread&quot;/&gt;&lt;webctrl tag=&quot;span&quot; class=&quot;slds-truncate uiOutputDateTime&quot;/&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_6" MaxNumberOfResults="100" SimulateClick="True">
                                       <ui:ExtractData.Target>
                                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9994de94d68240af0f2628025ebeeede" Selector="&lt;webctrl tag='TABLE' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' /&gt;&lt;webctrl tag='TBODY' /&gt;" WaitForReady="COMPLETE">
@@ -441,11 +453,11 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">10,704.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                                           <av:PointCollection x:Key="ConnectorLocation">210,730 280,730 280,766.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar al cliente en el log" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathLog]">
+                                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar al cliente en el log" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathLog]">
                                         <ui:ExcelApplicationScope.Body>
                                           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                             <ActivityAction.Argument>
@@ -754,11 +766,11 @@
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">320,1007</av:Point>
-                                                          <av:Size x:Key="ShapeSize">200,68</av:Size>
-                                                          <av:PointCollection x:Key="ConnectorLocation">420,1075 420,1105 150,1105 150,1120</av:PointCollection>
+                                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">420,1073 420,1103 150,1103 150,1120</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence DisplayName="Filtrar correos Ya leidos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                                      <Sequence DisplayName="Filtrar correos Ya leidos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                                         <Sequence.Variables>
                                                           <Variable x:TypeArguments="s:String[]" Name="CorreosLeidos" />
                                                         </Sequence.Variables>
