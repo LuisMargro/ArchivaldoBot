@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>971,1520</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1001,1515</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidarCedula_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -35,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -55,7 +55,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Validar que el número de cédula sea legible y que se encuentre en la página de validación de cedulas de gobierno" DisplayName="ValidarCedula" sap:VirtualizedContainerService.HintSize="981,1415" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -117,11 +116,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">70,467</av:Point>
-                      <av:Size x:Key="ShapeSize">200,68</av:Size>
+                      <av:Size x:Key="ShapeSize">200,66</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">270,500 350,500 350,564.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Interaccion con la plataforma" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Interaccion con la plataforma" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -216,11 +215,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">250,564.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,112</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">350,676.5 350,706.5 350.5,706.5 350.5,726.5</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,108</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">350,672.5 350,726.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ImageFound sap2010:Annotation.AnnotationText="Se hace uso de esta imagen debido a que el mensaje no cuenta con selectores" DisplayName="Image Exists no se encontraron resultados" Found="[Resultado]" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                      <ui:ImageFound sap2010:Annotation.AnnotationText="Se hace uso de esta imagen debido a que el mensaje no cuenta con selectores" DisplayName="Image Exists no se encontraron resultados" Found="[Resultado]" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="ImageFound_1">
                         <ui:ImageFound.Image>
                           <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMAAAAAfCAYAAACxtML9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOgSURBVHhe7ZhhjuIwDIU5IxIXQr0KHKUchB89RtZOmuY5dhIGRrszG38SUmkdx7H9ksIpOM7EuACcqXEBOFPjAnCmxgXgTI0LwJkaF4AzNS4AZ2pcAM7UuACct9nuS7g99y8fsl6XsO7XfxMlgPV6Cstj/wJs99s/CfBH8lzD+k2F/82gALbHGrZ0+RY/RwC0qOWig3EBAI/bt+18vxkUwEr98X8IIAayhuUqw6kFsN3P4XQ67Z9O8I8F7E7hfC9pEj4uvQRSPOCjnFBbuN0pWjq12n7k2DJ/6z7BDU6fMzzPc8p1n1MDREEUf9lWxIX5bNj3chrzL3K5z20QbZ85/mLXjOewlc+sVxxs1PScanCBsZD/5nxE/UwKoFMbrjnO1+u9F2gIgKBk46uQEAAXQiyIA7YCofvVwg9qH/RdLjTDC8Zi8/c8V0qGbF7004qr9snrO5dxHJsYh3OybdUYyp6hokL+1ivMZ9nzvU5OoziEuOl5Y9PQttX6CP6e6ktru7b8vCKAeGX4aK+/jkXmo18bK6ZPaAugukYBSLUmSkIlrHT7fu2jUQjanRZMFkMJaxcPRHfYVVg+eVxuGmMcJt4SgDkPgjaG/Sino2ZEtG0/T6ohd0ZzlueN2iHHmi1bupc3mFFt+LRqCP8dugKQScoCgGCRThMcxx3scOIIzB9rYfXxvH/ayXxBAHRfFxx8GeOwGVRjmPNwnqyYCWU/zumoGRFtq2OJH6gHiyDegxqM5izPrTq01m/Zgt9RbZijJ+RJ8Q4DARB7QO+eAALylZPeKp7C3BEyVjJfEMBolzHGYTOoxlD2XPyqOGhj+B/ldNSMiLa1m84EdtjRnOV57b+3fisWtt/9jmojMOb5ImMBEPz+tlDQx31ajHhfjYo0ikE/kGTQsjnlO2+L3iKtZMIcfG3uEtonn0jHzmM0KDaDEruyr+Pi+XonADHI6WcCSDFbrzkc2yZsIXaKSYzhGM2YeH0YS3/9Khbhl23btdmopxBrrV/hJQGkRpL3eRHleLPGMDyuHIH1kSV91L/2kdoPJKsrACI2UhlbGk/6rAtSN6hINPiMdoZ9Kmr2T+uO/yyVZ8qe6OX0UwEw9WtniiE1p76fEGNoF+a/O/OcOE+JfY+pt35C+KV6iT9Z6KpVm7pnjk2Da2KeEn2UABxnJlwAztS4AJypcQE4U+MCcKbGBeBMjQvAmRoXgDM1LgBnalwAztS4AJypcQE4ExPCHxAuW1fHJ+w9AAAAAElFTkSuQmCC" />
                         </ui:ImageFound.Image>
@@ -239,12 +238,12 @@
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:ImageFound>
                       <FlowStep.Next>
-                        <FlowDecision x:Name="__ReferenceID5" Condition="[Resultado]" DisplayName="¿Sin Resultados?" sap:VirtualizedContainerService.HintSize="93,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                        <FlowDecision x:Name="__ReferenceID5" Condition="[Resultado]" DisplayName="¿Sin Resultados?" sap:VirtualizedContainerService.HintSize="92,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <av:Point x:Key="ShapeLocation">304,726.5</av:Point>
-                              <av:Size x:Key="ShapeSize">93,87</av:Size>
+                              <av:Size x:Key="ShapeSize">92,87</av:Size>
                               <av:PointCollection x:Key="TrueConnector">304,770 140,770 140,814.5</av:PointCollection>
                               <av:PointCollection x:Key="FalseConnector">396,770 510,770 510,960</av:PointCollection>
                             </scg:Dictionary>
@@ -254,11 +253,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">40,814.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                                   <av:PointCollection x:Key="ConnectorLocation">140,865.5 140,895.5 141,895.5 141,950</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click cerrar mensaje" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click cerrar mensaje" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition Position="Center">
                                     <ui:CursorPosition.OffsetX>
@@ -345,11 +344,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,124.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">300,175.5 300,206.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Matches BuilderPattern="(\d+)" DisplayName="Extraer numero de cedula profesional" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[in_StringDocumento]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;+&quot;,&quot;QuantifierID&quot;:&quot;OOM&quot;,&quot;QuantifierName&quot;:&quot;At least one (1 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(\d+)" RegexOption="IgnoreCase" Result="[NumeroCedulaM]">
+              <ui:Matches BuilderPattern="(\d+)" DisplayName="Extraer numero de cedula profesional" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[in_StringDocumento]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;DIG&quot;,&quot;OperationName&quot;:&quot;Digit&quot;,&quot;OperationValue&quot;:&quot;\\d&quot;,&quot;QuantifierFirstValue&quot;:&quot;+&quot;,&quot;QuantifierID&quot;:&quot;OOM&quot;,&quot;QuantifierName&quot;:&quot;At least one (1 or more)&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="(\d+)" RegexOption="IgnoreCase" Result="[NumeroCedulaM]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -357,12 +356,12 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:Matches>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID1" Condition="[NumeroCedulaM isnot Nothing]" DisplayName="¿Collecion no vacia?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}">
+                <FlowDecision x:Name="__ReferenceID1" Condition="[NumeroCedulaM isnot Nothing]" DisplayName="¿Collecion no vacia?" sap:VirtualizedContainerService.HintSize="113,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">243.5,206.5</av:Point>
-                      <av:Size x:Key="ShapeSize">112,87</av:Size>
+                      <av:Size x:Key="ShapeSize">113,87</av:Size>
                       <av:PointCollection x:Key="FalseConnector">356.5,250 520,250 520,370</av:PointCollection>
                       <av:PointCollection x:Key="TrueConnector">243.5,250 140,250 140,340</av:PointCollection>
                     </scg:Dictionary>
@@ -380,7 +379,7 @@
                           <OutArgument x:TypeArguments="x:Object">[io_Cliente(2)]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
-                          <InArgument x:TypeArguments="x:Object">["cedula ilegible"]</InArgument>
+                          <InArgument x:TypeArguments="x:Object">["cedula no legible"]</InArgument>
                         </Assign.Value>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
