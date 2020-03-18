@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>650,1039</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>650,999</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GuardarClienteLog_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -97,7 +97,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="636,1215" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="636,1212" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd:DataTable" Name="DtLog" />
                 <Variable x:TypeArguments="s:Object[]" Name="ArrayItemsCliente" />
@@ -125,12 +125,12 @@
                   <InArgument x:TypeArguments="s:Object[]">[in_Cliente.ItemArray()]</InArgument>
                 </Assign.Value>
               </Assign>
-              <If Condition="[QueryCliente = -1]" DisplayName="¿Es un cliente nuevo?" sap:VirtualizedContainerService.HintSize="594,735" sap2010:WorkflowViewState.IdRef="If_2">
+              <If Condition="[QueryCliente = -1]" DisplayName="¿Es un cliente nuevo?" sap:VirtualizedContainerService.HintSize="594,732" sap2010:WorkflowViewState.IdRef="If_2">
                 <If.Then>
                   <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[ArrayItemsCliente]" DataTable="[DtLog]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
                 </If.Then>
                 <If.Else>
-                  <Sequence sap:VirtualizedContainerService.HintSize="349,586" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence sap:VirtualizedContainerService.HintSize="349,585" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,7 +160,7 @@
                         <InArgument x:TypeArguments="x:String">[DtLog.Rows(QueryCliente).Item(9).ToString.Split({";"},StringSplitOptions.None)(0).Trim]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[IndiceDato]" DisplayName="Recorrer datos del cliente" sap:VirtualizedContainerService.HintSize="307,194" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[ArrayItemsCliente]">
+                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="[IndiceDato]" DisplayName="Recorrer datos del cliente" sap:VirtualizedContainerService.HintSize="307,193" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[ArrayItemsCliente]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -470,10 +470,10 @@
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainChecklist workflow" sap:VirtualizedContainerService.HintSize="340,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\LlenadoChecklist\MainChecklist.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataSolicitud">
-                            <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_Cliente" />
+                            <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_DataSolicitud" />
                           </InArgument>
                           <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataCliente">
-                            <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_DataSolicitud" />
+                            <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_Cliente" />
                           </InArgument>
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
                             <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
