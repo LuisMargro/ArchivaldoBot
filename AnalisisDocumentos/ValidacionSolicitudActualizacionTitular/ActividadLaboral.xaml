@@ -4,7 +4,7 @@
     <x:Property Name="io_Registro" Type="InOutArgument(sd:DataRow)" />
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>859,3337</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>859,3377</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -63,7 +63,7 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID61</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID61" Condition="[in_TextoDocumento.Split({&quot;en caso de no ser empleado ni prestador de servicios&quot;},StringSplitOptions.None)(1).Split({&quot;siguientes opciones&quot;},StringSplitOptions.None)(1).Split({&quot;fuente de ingresos es&quot;},StringSplitOptions.None)(0).Split({&quot;vinculo&quot;},StringSplitOptions.None)(0).Replace(&quot;�&quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Trim.Length &gt; 58]" DisplayName="¿Se ha elegido otra fuente de ingresos?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_74">
+    <FlowDecision x:Name="__ReferenceID61" Condition="[in_TextoDocumento.Split({&quot;en caso de no ser empleado ni prestador de servicios&quot;},StringSplitOptions.None)(1).Split({&quot;siguientes opciones&quot;},StringSplitOptions.None)(1).Split({&quot;fuente de ingresos es&quot;},StringSplitOptions.None)(0).Replace(&quot;�&quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Trim.Length &gt; 58]" DisplayName="¿Se ha elegido otra fuente de ingresos?" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_74">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
