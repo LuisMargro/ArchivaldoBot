@@ -4,11 +4,12 @@
     <x:Property Name="in_Cliente" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_DataSolicitud" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_CasoHijo" Type="InArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>666,994</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>650,1039</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GuardarClienteLog_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -61,7 +62,6 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Preparar respuesta al cliente" sap:VirtualizedContainerService.HintSize="646,934" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -87,11 +87,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,164.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,216.5 300,246.5 301.5,246.5 301.5,266.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar y guardar al cliente en el log" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" WorkbookPath="[in_PathLog]">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar y guardar al cliente en el log" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" WorkbookPath="[in_PathLog]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
@@ -198,12 +198,12 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ExcelApplicationScope>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID6" Condition="[QueryCliente&gt;-1]" DisplayName="¿Cliente viejo?" sap:VirtualizedContainerService.HintSize="82,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID6" Condition="[QueryCliente&gt;-1]" DisplayName="¿Cliente viejo?" sap:VirtualizedContainerService.HintSize="81,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">260.5,266.5</av:Point>
-              <av:Size x:Key="ShapeSize">82,87</av:Size>
+              <av:Size x:Key="ShapeSize">81,87</av:Size>
               <av:PointCollection x:Key="FalseConnector">342.5,310 480,310 480,454</av:PointCollection>
               <av:PointCollection x:Key="TrueConnector">260.5,310 205.641666666667,310 205.641666666667,426.5</av:PointCollection>
             </scg:Dictionary>
@@ -224,11 +224,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">30,714</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">230,740 480,740 480,506</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Buscar caso padre" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="723428525ec9e33b96e80372bacb3063" Selector="&lt;html app='chrome.exe' title='*Salesforce*' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Buscar caso padre" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="723428525ec9e33b96e80372bacb3063" Selector="&lt;html app='chrome.exe' title='*Salesforce*' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
@@ -463,14 +463,21 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">380,454</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">230,1406.5 230,1434.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainChecklist workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\LlenadoChecklist\MainChecklist.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke MainChecklist workflow" sap:VirtualizedContainerService.HintSize="340,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce\LlenadoChecklist\MainChecklist.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataSolicitud">[in_Cliente]</InArgument>
-                          <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataCliente">[in_DataSolicitud]</InArgument>
+                          <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataSolicitud">
+                            <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_Cliente" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataCliente">
+                            <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="in_DataSolicitud" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                            <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -487,11 +494,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">220,604</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">320,656 320,686 130,686 130,714</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Sales Force" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b7866c9a17e24682f93422016a6ebd5b" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser Sales Force" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="b7866c9a17e24682f93422016a6ebd5b" Selector="&lt;html app='chrome.exe' title='*Salesforce' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>

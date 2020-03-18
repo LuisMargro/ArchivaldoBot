@@ -6,7 +6,7 @@
     <x:Property Name="in_PathBDBancos" Type="InArgument(x:String)" />
     <x:Property Name="in_ArregloNombre" Type="InArgument(s:String[])" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>780,1338</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>750,1345</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -41,7 +41,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg1:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="En el siguiente workflow se analiza que un estado de cuenta le pertenezca a una persona, en caso de que no le pertenezca se asigna a la variable de control el mensaje &quot;Encontrado&quot; y se retorna un mensaje" DisplayName="Analizar estado de cuenta" sap:VirtualizedContainerService.HintSize="760,1238" sap2010:WorkflowViewState.IdRef="Flowchart_4">
+  <Flowchart sap2010:Annotation.AnnotationText="En el siguiente workflow se analiza que un estado de cuenta le pertenezca a una persona, en caso de que no le pertenezca se asigna a la variable de control el mensaje &quot;Encontrado&quot; y se retorna un mensaje" DisplayName="Analizar estado de cuenta" sap:VirtualizedContainerService.HintSize="760,1240" sap2010:WorkflowViewState.IdRef="Flowchart_4">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="NombreEstadoCuentaCoincide" />
       <Variable x:TypeArguments="x:Boolean" Name="BanderaBancoCoincidencia" />
@@ -158,11 +158,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">30,524.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">130,575.5 130,605.5 290,605.5 290,626.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/ValidarNombre.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ValidarNombre workflow" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/ValidarNombre.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[in_StringDocumento]</InArgument>
           <OutArgument x:TypeArguments="x:Boolean" x:Key="out_CoincideNombre">[NombreEstadoCuentaCoincide]</OutArgument>
@@ -182,11 +182,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">360,264.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">460,315.5 460,345.5 300,345.5 300,386.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Attach bd bancos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathBDBancos]">
+      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Attach bd bancos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathBDBancos]">
         <ui:ExcelApplicationScope.Body>
           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
             <ActivityAction.Argument>
@@ -307,7 +307,7 @@
                   <OutArgument x:TypeArguments="x:Object">[io_Cliente(4)]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">["El estado de cuenta no se encuentra en la bd."]</InArgument>
+                  <InArgument x:TypeArguments="x:Object">["banco no admitido"]</InArgument>
                 </Assign.Value>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg1:Dictionary x:TypeArguments="x:String, x:Object">
@@ -320,12 +320,12 @@
         </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID10" Condition="[in_StringDocumento.Contains(&quot;estado de cuenta de la tarjeta&quot;)]" DisplayName="¿Edo. cuenta tarjeta?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
+    <FlowDecision x:Name="__ReferenceID10" Condition="[in_StringDocumento.Contains(&quot;estado de cuenta de la tarjeta&quot;)]" DisplayName="¿Edo. cuenta tarjeta?" sap:VirtualizedContainerService.HintSize="115,87" sap2010:WorkflowViewState.IdRef="FlowDecision_19">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">243,136.5</av:Point>
-          <av:Size x:Key="ShapeSize">114,87</av:Size>
+          <av:Size x:Key="ShapeSize">115,87</av:Size>
           <av:PointCollection x:Key="FalseConnector">357,180 460,180 460,264.5</av:PointCollection>
           <av:PointCollection x:Key="TrueConnector">243,180 131,180 131,240</av:PointCollection>
         </scg1:Dictionary>
