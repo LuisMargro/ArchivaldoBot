@@ -218,12 +218,12 @@
                 </ui:ForEach.Body>
               </ui:ForEach>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID36" Condition="[Cliente(10).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Solicitud ya validada?" sap:VirtualizedContainerService.HintSize="125,87" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
+                <FlowDecision x:Name="__ReferenceID36" Condition="[Cliente(10).ToString.Contains(&quot;validado&quot;)]" DisplayName="¿Solicitud ya validada?" sap:VirtualizedContainerService.HintSize="124,87" sap2010:WorkflowViewState.IdRef="FlowDecision_25">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">148,616.5</av:Point>
-                      <av:Size x:Key="ShapeSize">125,87</av:Size>
+                      <av:Size x:Key="ShapeSize">124,87</av:Size>
                       <av:PointCollection x:Key="FalseConnector">273,660 414,660 414,716.5</av:PointCollection>
                       <av:PointCollection x:Key="TrueConnector">148,660 110,660 110,944.5</av:PointCollection>
                     </scg:Dictionary>
@@ -262,7 +262,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">230,1226.5 230,1264.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer string del documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ForEach`1_14" Values="[StringListDoctos]">
+                          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer string del documento" sap:VirtualizedContainerService.HintSize="415,221" sap2010:WorkflowViewState.IdRef="ForEach`1_14" Values="[StringListDoctos]">
                             <ui:ForEach.Body>
                               <ActivityAction x:TypeArguments="x:String">
                                 <ActivityAction.Argument>
@@ -270,14 +270,30 @@
                                 </ActivityAction.Argument>
                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invocar Validar documentos correctos" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidarDocumentosCorrectos.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">[StringDocumento]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">[DataClienteBusqueda(0).ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_CURP">[DataClienteBusqueda(4).ToString]</InArgument>
-                                    <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">[Cliente]</InOutArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_DireccionFiscal">[DataClienteBusqueda(7).ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial">[DataClienteBusqueda(8).ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_PathBancos">[in_Config("PathBDBancos").ToString]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_Cuenta">[DataClienteBusqueda(12).ToString]</InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_StringDocumento">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="StringDocumento" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Nombre">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DataClienteBusqueda(0).ToString" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_CURP">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DataClienteBusqueda(6).ToString" />
+                                    </InArgument>
+                                    <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Cliente">
+                                      <mva:VisualBasicReference x:TypeArguments="sd:DataRow" ExpressionText="Cliente" />
+                                    </InOutArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_DireccionFiscal">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DataClienteBusqueda(7).ToString" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_DireccionResidencial">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DataClienteBusqueda(8).ToString" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_PathBancos">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;PathBDBancos&quot;).ToString" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_Cuenta">
+                                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DataClienteBusqueda(12).ToString" />
+                                    </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -317,23 +333,13 @@
                                       <av:PointCollection x:Key="ConnectorLocation">230,1416.5 230,1446.5 320,1446.5 320,1524.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Preparar respuesta del cliente" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/PrepararRespuestaCliente.xaml">
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Preparar respuesta del cliente" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="AnalisisDocumentos/Herramientas/PrepararRespuestaCliente.xaml">
                                     <ui:InvokeWorkflowFile.Arguments>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_PathLog">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;PathLog&quot;).ToString" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Cliente">
-                                        <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="Cliente" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataSolicitud">
-                                        <mva:VisualBasicValue x:TypeArguments="sd:DataRow" ExpressionText="Registro" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="x:String" x:Key="in_CasoHijo">
-                                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CasoHijo" />
-                                      </InArgument>
-                                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-                                        <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_PathLog">[in_Config("PathLog").ToString]</InArgument>
+                                      <InArgument x:TypeArguments="sd:DataRow" x:Key="in_Cliente">[Cliente]</InArgument>
+                                      <InArgument x:TypeArguments="sd:DataRow" x:Key="in_DataSolicitud">[Registro]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_CasoHijo">[CasoHijo]</InArgument>
+                                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
                                     </ui:InvokeWorkflowFile.Arguments>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -470,12 +476,12 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowDecision x:Name="__ReferenceID45" Condition="[StringListSolicitudActualizacion.Count=0]" DisplayName="¿Solicitudes vacias?" sap:VirtualizedContainerService.HintSize="109,87" sap2010:WorkflowViewState.IdRef="FlowDecision_46">
+                    <FlowDecision x:Name="__ReferenceID45" Condition="[StringListSolicitudActualizacion.Count=0]" DisplayName="¿Solicitudes vacias?" sap:VirtualizedContainerService.HintSize="108,87" sap2010:WorkflowViewState.IdRef="FlowDecision_46">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">359.5,716.5</av:Point>
-                          <av:Size x:Key="ShapeSize">109,87</av:Size>
+                          <av:Size x:Key="ShapeSize">108,87</av:Size>
                           <av:PointCollection x:Key="FalseConnector">468.5,760 550,760 550,924.5</av:PointCollection>
                           <av:PointCollection x:Key="TrueConnector">359.5,760 330,760 330,874</av:PointCollection>
                         </scg:Dictionary>
