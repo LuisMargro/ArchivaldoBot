@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,736</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>661,738</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidacionCartaAltaCuentaBancaria_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -56,7 +56,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Valida que el documento &quot;Carta de alta de cuenta bancaria&quot; esté completamente lleno.&#xD;&#xA;Recive el Path del documento y retorna un boleano con el resultado." DisplayName="ValidacionCartaAltaCuentaBancaria" sap:VirtualizedContainerService.HintSize="634,678" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Valida que el documento &quot;Carta de alta de cuenta bancaria&quot; esté completamente lleno.&#xA;Recive el Path del documento y retorna un boleano con el resultado." DisplayName="ValidacionCartaAltaCuentaBancaria" sap:VirtualizedContainerService.HintSize="641,678" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="TextoDocumento" />
       <Variable x:TypeArguments="s:String[]" Name="Cadenas" />
@@ -68,6 +68,7 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        <x:Double x:Key="Width">606.641666666667</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -76,7 +77,7 @@
     <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">334.641666666667,383</av:Point>
+          <av:Point x:Key="ShapeLocation">344.641666666667,393</av:Point>
           <av:Size x:Key="ShapeSize">262,60</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -97,7 +98,7 @@
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">20,383</av:Point>
+          <av:Point x:Key="ShapeLocation">30,393</av:Point>
           <av:Size x:Key="ShapeSize">262,60</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -115,50 +116,25 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
     </FlowStep>
-    <FlowDecision x:Name="__ReferenceID2" Condition="[Cadenas(5).Trim.Replace(&quot; &quot;,&quot;&quot;).Length &gt; 16 AND Cadenas(9).Trim.Replace(&quot; &quot;,&quot;&quot;).Length &gt; 32 AND Cadenas(12).Trim.Replace(&quot; &quot;,&quot;&quot;).Length &gt; 6 AND Cadenas(13).Trim.Replace(&quot; &quot;,&quot;&quot;).Length &gt; 12 AND Cadenas(14).Trim.Replace(&quot; &quot;,&quot;&quot;).Length &gt; 10 AND Cadenas(18).Trim.Replace(&quot; &quot;,&quot;&quot;).Length &gt; 8 AND Cadenas(19).Trim.Replace(&quot; &quot;,&quot;&quot;).Length &gt; 9]" DisplayName="¿Campos llenos?" sap:VirtualizedContainerService.HintSize="94,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
+    <FlowDecision x:Name="__ReferenceID2" Condition="[Not String.IsNullOrEmpty(TextoDocumento.Split({&quot;ciudad de mexico&quot;},StringSplitOptions.None)(1).Split({&quot;grupo bursatil mexicano&quot;},StringSplitOptions.None)(0).Replace(&quot; &quot;,&quot;&quot;).Trim) And Not String.IsNullOrEmpty(TextoDocumento.Split({&quot;mercantil&quot;},StringSplitOptions.None)(1).Split({&quot;, que tengo celebrado&quot;},StringSplitOptions.None)(0).Replace(&quot; &quot;,&quot;&quot;).Trim) And Not String.IsNullOrEmpty(TextoDocumento.Split({&quot;banco:&quot;},StringSplitOptions.None)(1).Split({&quot;cuenta clabe:&quot;},StringSplitOptions.None)(0).Replace(&quot; &quot;,&quot;&quot;).Trim) And Not String.IsNullOrEmpty(TextoDocumento.Split({&quot;cuenta clabe:&quot;},StringSplitOptions.None)(1).Split({&quot;a nombre de:&quot;},StringSplitOptions.None)(0).Replace(&quot; &quot;,&quot;&quot;).Trim) And Not String.IsNullOrEmpty(TextoDocumento.Split({&quot;titular:&quot;},StringSplitOptions.None)(1).Split({&quot;contrato:&quot;},StringSplitOptions.None)(0).Replace(&quot; &quot;,&quot;&quot;).Trim) And Not String.IsNullOrEmpty(TextoDocumento.Split({&quot;contrato:&quot;},StringSplitOptions.None)(1).Split({&quot;nota:&quot;},StringSplitOptions.None)(0).Replace(&quot; &quot;,&quot;&quot;).Trim)]" DisplayName="¿Campos llenos?" sap:VirtualizedContainerService.HintSize="94,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1" True="{x:Reference __ReferenceID0}" False="{x:Reference __ReferenceID1}">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">250.641666666667,289.5</av:Point>
+          <av:Point x:Key="ShapeLocation">260.641666666667,299.5</av:Point>
           <av:Size x:Key="ShapeSize">94,87</av:Size>
           <x:String x:Key="FalseLabel">No</x:String>
           <x:String x:Key="TrueLabel">Si</x:String>
-          <av:PointCollection x:Key="TrueConnector">250.641666666667,333 151,333 151,383</av:PointCollection>
-          <av:PointCollection x:Key="FalseConnector">344.641666666667,333 465.641666666667,333 465.641666666667,383</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">354.641666666667,343 475.641666666667,343 475.641666666667,393</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">260.641666666667,343 161,343 161,393</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </FlowDecision>
-    <FlowStep x:Name="__ReferenceID3">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">169,199.5</av:Point>
-          <av:Size x:Key="ShapeSize">262,60</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,259.5 297.641666666667,259.5 297.641666666667,289.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Dividir por salto de línea" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-        <Assign.To>
-          <OutArgument x:TypeArguments="s:String[]">[Cadenas]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="s:String[]">[TextoDocumento.Split(Environment.NewLine.ToArray,StringSplitOptions.RemoveEmptyEntries)]</InArgument>
-        </Assign.Value>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </Assign>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID2</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
     <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,107.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">300,158.5 300,199.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">300,158.5 300,188.5 310,188.5 310,218.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ExtraerTexto workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilidades\ExtraerTexto.xaml">
@@ -173,8 +149,31 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID3</x:Reference>
+        <FlowStep x:Name="__ReferenceID3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">210,218.5</av:Point>
+              <av:Size x:Key="ShapeSize">200,51</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">310,269.5 307.641666666667,269.5 307.641666666667,299.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SanitizarCadena workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Utilidades\SanitizarCadena.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_String">[TextoDocumento]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_StringLimpia">[TextoDocumento]</OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID2</x:Reference>
+          </FlowStep.Next>
+        </FlowStep>
       </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID3</x:Reference>
   </Flowchart>
 </Activity>
