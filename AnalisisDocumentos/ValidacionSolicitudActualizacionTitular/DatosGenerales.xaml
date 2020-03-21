@@ -55,7 +55,11 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:String[]" Name="ArregloNombre" />
       <Variable x:TypeArguments="x:Boolean" Name="NombreValido" />
-      <Variable x:TypeArguments="x:Boolean" Name="CurpValida" />
+      <Variable x:TypeArguments="x:Boolean" Name="CurpValida">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" Value="True" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:Boolean" Name="RfcValida" />
       <Variable x:TypeArguments="x:String" Name="Curp" />
       <Variable x:TypeArguments="x:String" Name="Rfc" />
