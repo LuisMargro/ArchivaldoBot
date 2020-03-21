@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="MainChecklist" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MainChecklist" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_DataSolicitud" Type="InArgument(sd:DataRow)" />
     <x:Property Name="in_DataCliente" Type="InArgument(sd:DataRow)" />
@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>924,1457</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>954,1452</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MainChecklist_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -56,6 +56,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Se encarga de verificar si la solicitud y los documentos son validos, en caso de que sea valido, reasigna el caso, en caso contrario manda un correo electronico" DisplayName="MainChecklist" sap:VirtualizedContainerService.HintSize="934,1352" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -885,7 +886,7 @@
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                               <FlowDecision.True>
-                                                                                <FlowDecision x:Name="__ReferenceID45" Condition="[not System.Convert.ToBoolean(in_DataSolicitud(69)) or  not (System.Convert.ToBoolean(in_DataSolicitud(48))and System.Convert.ToBoolean(in_DataSolicitud(49)) and System.Convert.ToBoolean(in_DataSolicitud(50)) and System.Convert.ToBoolean(in_DataSolicitud(51)) and System.Convert.ToBoolean(in_DataSolicitud(52)) and System.Convert.ToBoolean(in_DataSolicitud(53)) and System.Convert.ToBoolean(in_DataSolicitud(54)) and System.Convert.ToBoolean(in_DataSolicitud(55)) and System.Convert.ToBoolean(in_DataSolicitud(56)) and System.Convert.ToBoolean(in_DataSolicitud(57)) and System.Convert.ToBoolean(in_DataSolicitud(58))) or (System.Convert.ToBoolean(in_DataSolicitud(60)) and System.Convert.ToBoolean(in_DataSolicitud(61)) and System.Convert.ToBoolean(in_DataSolicitud(62)) and System.Convert.ToBoolean(in_DataSolicitud(63)) and System.Convert.ToBoolean(in_DataSolicitud(64)) and System.Convert.ToBoolean(in_DataSolicitud(65)) and System.Convert.ToBoolean(in_DataSolicitud(66)))]" DisplayName="Actividad laboral incompleta" sap:VirtualizedContainerService.HintSize="158,87" sap2010:WorkflowViewState.IdRef="FlowDecision_81">
+                                                                                <FlowDecision x:Name="__ReferenceID45" Condition="[not System.Convert.ToBoolean(in_DataSolicitud(69)) or  not (System.Convert.ToBoolean(in_DataSolicitud(48))and System.Convert.ToBoolean(in_DataSolicitud(49)) and System.Convert.ToBoolean(in_DataSolicitud(50)) and System.Convert.ToBoolean(in_DataSolicitud(51)) and System.Convert.ToBoolean(in_DataSolicitud(52)) and System.Convert.ToBoolean(in_DataSolicitud(53)) and System.Convert.ToBoolean(in_DataSolicitud(54)) and System.Convert.ToBoolean(in_DataSolicitud(55)) and System.Convert.ToBoolean(in_DataSolicitud(56)) and System.Convert.ToBoolean(in_DataSolicitud(57)) and System.Convert.ToBoolean(in_DataSolicitud(58))) or (System.Convert.ToBoolean(in_DataSolicitud(60)) and System.Convert.ToBoolean(in_DataSolicitud(61)) and System.Convert.ToBoolean(in_DataSolicitud(62)) and System.Convert.ToBoolean(in_DataSolicitud(63)) and System.Convert.ToBoolean(in_DataSolicitud(64)) and System.Convert.ToBoolean(in_DataSolicitud(65)) and System.Convert.ToBoolean(in_DataSolicitud(66)))  Or (Not System.Convert.ToBoolean(in_DataSolicitud(47)) And Not System.Convert.ToBoolean(in_DataSolicitud(59)) And Not System.Convert.ToBoolean(in_DataSolicitud(68)))]" DisplayName="Actividad laboral incompleta" sap:VirtualizedContainerService.HintSize="158,87" sap2010:WorkflowViewState.IdRef="FlowDecision_81">
                                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
