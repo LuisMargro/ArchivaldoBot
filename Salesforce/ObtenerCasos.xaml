@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>831,1753</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>864,1758</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -95,11 +95,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,97</av:Point>
-                  <av:Size x:Key="ShapeSize">200,68</av:Size>
+                  <av:Size x:Key="ShapeSize">200,66</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">300,165 300,187</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="526,2314" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="526,2307" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="CasosVisible" />
                 </Sequence.Variables>
@@ -143,7 +143,7 @@
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1d3add7f895e0a315b0767734870c153" Selector="&lt;webctrl aaname='Cerrar*' tag='BUTTON' type='button' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickType="CLICK_SINGLE" DelayBefore="1000" DisplayName="Click menu de navegacion" sap:VirtualizedContainerService.HintSize="484,150" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickType="CLICK_SINGLE" DelayBefore="1000" DisplayName="Click menu de navegacion" sap:VirtualizedContainerService.HintSize="484,148" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -176,7 +176,7 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[Not CasosVisible]" DisplayName="¿No estan visibles los casos?" sap:VirtualizedContainerService.HintSize="484,256" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[Not CasosVisible]" DisplayName="¿No estan visibles los casos?" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click abrir menuRapido" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
@@ -261,7 +261,7 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <Delay sap2010:Annotation.AnnotationText="Se agrego una pequeña espera para mitigar los errores en la escritura" DisplayName="Esperar despliegue de pantalla" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Delay_2">
+                <Delay sap2010:Annotation.AnnotationText="Se agrego una pequeña espera para mitigar los errores en la escritura" DisplayName="Esperar despliegue de pantalla" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="Delay_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -341,11 +341,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,187</av:Point>
-                      <av:Size x:Key="ShapeSize">200,68</av:Size>
+                      <av:Size x:Key="ShapeSize">200,66</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">300,255 300,287</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Obtener casos en tramite" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Obtener casos en tramite" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>

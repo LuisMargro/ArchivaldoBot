@@ -12,7 +12,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>654,1017</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>650,1022</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidarDocumentosCorrectos_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -61,6 +61,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="El presente workflow se encarga de recibir el texto plano de algunos documentos, clasificarlos, y validar que dichos documentos le pertenecen" DisplayName="ValidarDocumentosCorrectos" sap:VirtualizedContainerService.HintSize="634,917" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -82,7 +83,10 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID6</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID2" Condition="[((in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) and Not in_StringDocumento.Contains(&quot;idmex&quot;)) or (in_StringDocumento.Contains(&quot;instituto federal elec&quot;)and  Not in_StringDocumento.Contains(&quot;idmex&quot;)) or in_StringDocumento.Contains(&quot;pasaporte&quot;) or in_StringDocumento.Contains(&quot;cedula profesional&quot;)) and not io_Cliente(2).ToString.Equals(&quot;Validado&quot;)]" DisplayName="¿Es Iidentificaion?" sap:VirtualizedContainerService.HintSize="99,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+    <FlowDecision x:Name="__ReferenceID2" DisplayName="¿Es Iidentificaion?" sap:VirtualizedContainerService.HintSize="99,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+      <FlowDecision.Condition>
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="((in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) and Not in_StringDocumento.Contains(&quot;idmex&quot;)) or (in_StringDocumento.Contains(&quot;instituto federal elec&quot;)and  Not in_StringDocumento.Contains(&quot;idmex&quot;)) or in_StringDocumento.Contains(&quot;pasaporte&quot;) or in_StringDocumento.Contains(&quot;cedula profesional&quot;)) and not io_Cliente(2).ToString.contains(&quot;validado&quot;)" />
+      </FlowDecision.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
