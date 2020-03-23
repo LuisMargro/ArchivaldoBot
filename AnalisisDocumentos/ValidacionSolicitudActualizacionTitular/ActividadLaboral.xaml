@@ -162,7 +162,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowDecision x:Name="__ReferenceID8" Condition="[in_TextoDocumento.Split({&quot;en caso de ser empleado favor de contestar&quot;},StringSplitOptions.None)(1).Split({&quot;mando&quot;},StringSplitOptions.None)(1).Split({&quot;antiguedad en el empleo&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Trim.Length &gt; 19]" DisplayName="EE ¿Mando?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_104">
+                    <FlowDecision x:Name="__ReferenceID8" Condition="[in_TextoDocumento.Split({&quot;en caso de ser empleado favor de contestar&quot;},StringSplitOptions.None)(1).Split({&quot;mando&quot;},StringSplitOptions.None)(1).Split({&quot;antiguedad en el empleo&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Trim.Contains(&quot;x&quot;)]" DisplayName="EE ¿Mando?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_104">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -240,7 +240,7 @@
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <FlowDecision.True>
-                                            <FlowDecision x:Name="__ReferenceID2" Condition="[in_TextoDocumento.Split({&quot;en caso de ser empleado favor de contestar&quot;},StringSplitOptions.None)(1).Split({&quot;tipo de ingreso&quot;},StringSplitOptions.None)(1).Split({&quot;?cuenta con fuentes de ingreso adicionales?&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length &gt; 3]" DisplayName="EE ¿Tipo de ingreso?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_98">
+                                            <FlowDecision x:Name="__ReferenceID2" Condition="[in_TextoDocumento.Split({&quot;en caso de ser empleado favor de contestar&quot;},StringSplitOptions.None)(1).Split({&quot;tipo de ingreso&quot;},StringSplitOptions.None)(1).Split({&quot;cuenta con fuentes de ingreso adicionales?&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Replace(&quot;¿&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Length &gt; 3]" DisplayName="EE ¿Tipo de ingreso?" sap:VirtualizedContainerService.HintSize="112,87" sap2010:WorkflowViewState.IdRef="FlowDecision_98">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
