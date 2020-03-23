@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>731,1388</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>701,1353</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>MatrizTipificacion_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -276,7 +276,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">280,893 280,917</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Llenado de matriz RI" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                      <Sequence DisplayName="Llenado de matriz RI" sap:VirtualizedContainerService.HintSize="376,1220" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -332,7 +332,7 @@
                                             </ui:CursorPosition>
                                           </ui:Click.CursorPosition>
                                           <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2fb8bb9f0a26373f445d232f20889bab" Selector="&lt;webctrl aaname='Trámites' parentid='input-*' tag='SPAN' /&gt;&#xA;" WaitForReady="COMPLETE">
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2fb8bb9f0a26373f445d232f20889bab" Selector="&lt;webctrl aaname='Trámites' parentid='input-*' tag='SPAN' /&gt;" WaitForReady="COMPLETE">
                                               <ui:Target.TimeoutMS>
                                                 <InArgument x:TypeArguments="x:Int32" />
                                               </ui:Target.TimeoutMS>
@@ -565,7 +565,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">480,773 480,803 280,803 280,827</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Registrar cliente no existente" sap:VirtualizedContainerService.HintSize="418,1660" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                  <Sequence DisplayName="Registrar cliente no existente" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
