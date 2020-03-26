@@ -85,7 +85,7 @@
     </Flowchart.StartNode>
     <FlowDecision x:Name="__ReferenceID2" DisplayName="¿Es Iidentificaion?" sap:VirtualizedContainerService.HintSize="99,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
       <FlowDecision.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="((in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) and Not in_StringDocumento.Contains(&quot;idmex&quot;)) or (in_StringDocumento.Contains(&quot;instituto federal elec&quot;)and  Not in_StringDocumento.Contains(&quot;idmex&quot;)) or in_StringDocumento.Contains(&quot;pasaporte&quot;) or in_StringDocumento.Contains(&quot;cedula profesional&quot;)) and not io_Cliente(2).ToString.contains(&quot;validado&quot;)" />
+        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="((in_StringDocumento.Contains(&quot;instituto nacional elec&quot;) ) or (in_StringDocumento.Contains(&quot;instituto federal elec&quot;)) or in_StringDocumento.Contains(&quot;pasaporte&quot;) or in_StringDocumento.Contains(&quot;cedula profesional&quot;)) and not io_Cliente(2).ToString.contains(&quot;validado&quot;)" />
       </FlowDecision.Condition>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

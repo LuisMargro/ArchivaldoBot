@@ -11,10 +11,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>811,1990</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>864,1950</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="22">
+    <scg:List x:TypeArguments="x:String" Capacity="44">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -37,6 +37,7 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -62,6 +63,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -116,11 +118,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,107</av:Point>
-                  <av:Size x:Key="ShapeSize">200,66</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">300,173 300,214.5</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,68</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">300,175 300,214.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Buscar caso" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -273,11 +275,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,214.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">300,265.5 300,306.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ImageFound sap2010:Annotation.AnnotationText="Se agrega una imagen como referencia, ya que los selectores siempre se encuentran abierto" DisplayName="Omni chanel abierto" Found="[OmniChanelAbierto]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                  <ui:ImageFound sap2010:Annotation.AnnotationText="Se agrega una imagen como referencia, ya que los selectores siempre se encuentran abierto" DisplayName="Omni chanel abierto" Found="[OmniChanelAbierto]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ImageFound_1">
                     <ui:ImageFound.Image>
                       <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
                     </ui:ImageFound.Image>
@@ -295,12 +297,12 @@
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ImageFound>
                   <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID17" Condition="[OmniChanelAbierto]" DisplayName="¿Omni abierto?" sap:VirtualizedContainerService.HintSize="86,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                    <FlowDecision x:Name="__ReferenceID17" Condition="[OmniChanelAbierto]" DisplayName="¿Omni abierto?" sap:VirtualizedContainerService.HintSize="87,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <av:Point x:Key="ShapeLocation">257,306.5</av:Point>
-                          <av:Size x:Key="ShapeSize">86,87</av:Size>
+                          <av:Size x:Key="ShapeSize">87,87</av:Size>
                           <av:PointCollection x:Key="FalseConnector">343,350 359.5,350 359.5,496.5 299.5,496.5 299.5,526.5</av:PointCollection>
                           <av:PointCollection x:Key="TrueConnector">257,350 100,350 100,384.5</av:PointCollection>
                         </scg:Dictionary>
@@ -310,11 +312,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">0,384.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:Size x:Key="ShapeSize">200,52</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">100,435.5 100,465.5 299.5,465.5 299.5,526.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar omni chanel" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar omni chanel" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -342,12 +344,12 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:Click>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                            <FlowDecision x:Name="__ReferenceID2" Condition="[Not CorreoVacio]" DisplayName="¿Contiene correos?" sap:VirtualizedContainerService.HintSize="107,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <av:Point x:Key="ShapeLocation">246.5,526.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">106,87</av:Size>
+                                  <av:Size x:Key="ShapeSize">107,87</av:Size>
                                   <av:PointCollection x:Key="TrueConnector">246.5,570 110,570 110,607</av:PointCollection>
                                   <av:PointCollection x:Key="FalseConnector">352.5,570 590,570 590,1324.5</av:PointCollection>
                                 </scg:Dictionary>
@@ -357,11 +359,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">10,607</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,66</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">110,673 110,704.5</av:PointCollection>
+                                      <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">110,675 110,704.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="376,741" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                  <Sequence DisplayName="Extraer correos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -453,17 +455,17 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">10,704.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
                                           <av:PointCollection x:Key="ConnectorLocation">210,730 280,730 280,766.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar al cliente en el log" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathLog]">
+                                      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Buscar al cliente en el log" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathLog]">
                                         <ui:ExcelApplicationScope.Body>
                                           <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                             </ActivityAction.Argument>
-                                            <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="576,699" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                            <Sequence DisplayName="Busqueda del cliente" sap:VirtualizedContainerService.HintSize="576,702" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="x:Int32" Name="IndiceLog" />
                                               </Sequence.Variables>
@@ -480,13 +482,13 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:ExcelReadRange>
-                                              <ui:ForEachRow CurrentIndex="[IndiceLog]" DataTable="[DTLog]" DisplayName="Iterar log de clientes " sap:VirtualizedContainerService.HintSize="534,508" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                                              <ui:ForEachRow CurrentIndex="[IndiceLog]" DataTable="[DTLog]" DisplayName="Iterar log de clientes " sap:VirtualizedContainerService.HintSize="534,511" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                                                 <ui:ForEachRow.Body>
                                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                                     <ActivityAction.Argument>
                                                       <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Fila" />
                                                     </ActivityAction.Argument>
-                                                    <If Condition="[Fila(9).ToString.Contains(in_NumeroCaso)]" DisplayName="¿Se encontro al cliente?" sap:VirtualizedContainerService.HintSize="484,361" sap2010:WorkflowViewState.IdRef="If_1">
+                                                    <If Condition="[Fila(0).ToString.Contains(out_CorreoSalesForce)]" DisplayName="¿Se encontro al cliente?" sap:VirtualizedContainerService.HintSize="484,363" sap2010:WorkflowViewState.IdRef="If_1">
                                                       <If.Then>
                                                         <Sequence DisplayName="Mientras se encuentra al cliente" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                                           <sap:WorkflowViewStateService.ViewState>
@@ -596,7 +598,7 @@
                                                               </ui:InvokeWorkflowFile.Arguments>
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                             </ui:InvokeWorkflowFile>
@@ -732,7 +734,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">420,901 420,920</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:LookupDataTable CellValue="{x:Null}" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[DTLog]" DisplayName="Extraer Cliente" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnIndex="[9]" LookupValue="[in_NumeroCaso]" RowIndex="[NoRowCliente]">
+                                              <ui:LookupDataTable CellValue="{x:Null}" LookupColumnName="{x:Null}" LookupDataColumn="{x:Null}" TargetColumnIndex="{x:Null}" TargetColumnName="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[DTLog]" DisplayName="Extraer Cliente" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="LookupDataTable_1" LookupColumnIndex="[0]" LookupValue="[out_CorreoSalesForce]" RowIndex="[NoRowCliente]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -766,20 +768,21 @@
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <av:Point x:Key="ShapeLocation">320,1007</av:Point>
-                                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
-                                                          <av:PointCollection x:Key="ConnectorLocation">420,1073 420,1103 150,1103 150,1120</av:PointCollection>
+                                                          <av:Size x:Key="ShapeSize">200,68</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">420,1075 420,1105 150,1105 150,1120</av:PointCollection>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <Sequence DisplayName="Filtrar correos Ya leidos" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                                      <Sequence DisplayName="Filtrar correos Ya leidos" sap:VirtualizedContainerService.HintSize="925,1895" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                                         <Sequence.Variables>
                                                           <Variable x:TypeArguments="s:String[]" Name="CorreosLeidos" />
+                                                          <Variable x:TypeArguments="sd:DataTable" Name="DtTemporal" />
                                                         </Sequence.Variables>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <Assign DisplayName="Extraer correos ya leidos" sap:VirtualizedContainerService.HintSize="370,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                        <Assign DisplayName="Extraer correos ya leidos" sap:VirtualizedContainerService.HintSize="883,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                                                           <Assign.To>
                                                             <OutArgument x:TypeArguments="s:String[]">[CorreosLeidos]</OutArgument>
                                                           </Assign.To>
@@ -787,36 +790,104 @@
                                                             <InArgument x:TypeArguments="s:String[]">[out_Cliente(8).toString.split({";"}, StringSplitOptions.None)]</InArgument>
                                                           </Assign.Value>
                                                         </Assign>
-                                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer correos leidos" sap:VirtualizedContainerService.HintSize="370,195" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CorreosLeidos]">
+                                                        <Assign DisplayName="Guardar dt table temporal" sap:VirtualizedContainerService.HintSize="883,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="sd:DataTable">[DtTemporal]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="sd:DataTable">[CorreosDt.Clone]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[CorreosDt]" DisplayName="Guardar cambios en la Dt temporal" sap:VirtualizedContainerService.HintSize="883,363" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                                                          <ui:ForEachRow.Body>
+                                                            <ActivityAction x:TypeArguments="sd:DataRow">
+                                                              <ActivityAction.Argument>
+                                                                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                                              </ActivityAction.Argument>
+                                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,214" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                                                <Sequence.Variables>
+                                                                  <Variable x:TypeArguments="s:Object[]" Name="ArrayItemsCliente" />
+                                                                </Sequence.Variables>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                                <Assign DisplayName="Convertir datarow a un array" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                                  <Assign.To>
+                                                                    <OutArgument x:TypeArguments="s:Object[]">[ArrayItemsCliente]</OutArgument>
+                                                                  </Assign.To>
+                                                                  <Assign.Value>
+                                                                    <InArgument x:TypeArguments="s:Object[]">[row.ItemArray()]</InArgument>
+                                                                  </Assign.Value>
+                                                                </Assign>
+                                                                <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[ArrayItemsCliente]" DataTable="[DtTemporal]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                                                              </Sequence>
+                                                            </ActivityAction>
+                                                          </ui:ForEachRow.Body>
+                                                        </ui:ForEachRow>
+                                                        <ui:ClearDataTable DataTable="[CorreosDt]" DisplayName="Limpiar dt de correos" sap:VirtualizedContainerService.HintSize="883,22" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+                                                        <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="Recorrer correos leidos" sap:VirtualizedContainerService.HintSize="883,1038" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CorreosLeidos]">
                                                           <ui:ForEach.Body>
                                                             <ActivityAction x:TypeArguments="x:String">
                                                               <ActivityAction.Argument>
                                                                 <DelegateInArgument x:TypeArguments="x:String" Name="CorreoLeido" />
                                                               </ActivityAction.Argument>
-                                                              <ui:FilterDataTable DataTable="[CorreosDt]" DisplayName="Quitar correos extraidos ya leidos" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[CorreosDt]" SelectColumnsMode="Keep">
-                                                                <ui:FilterDataTable.Filters>
-                                                                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-                                                                    <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
-                                                                      <ui:FilterOperationArgument.Column>
-                                                                        <InArgument x:TypeArguments="x:Int32">[1]</InArgument>
-                                                                      </ui:FilterOperationArgument.Column>
-                                                                      <ui:FilterOperationArgument.Operand>
-                                                                        <InArgument x:TypeArguments="x:String">[CorreoLeido]</InArgument>
-                                                                      </ui:FilterOperationArgument.Operand>
-                                                                    </ui:FilterOperationArgument>
-                                                                  </scg:List>
-                                                                </ui:FilterDataTable.Filters>
-                                                                <ui:FilterDataTable.SelectColumns>
-                                                                  <scg:List x:TypeArguments="InArgument" Capacity="4">
-                                                                    <x:Null />
-                                                                  </scg:List>
-                                                                </ui:FilterDataTable.SelectColumns>
-                                                                <sap:WorkflowViewStateService.ViewState>
-                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                                  </scg:Dictionary>
-                                                                </sap:WorkflowViewStateService.ViewState>
-                                                              </ui:FilterDataTable>
+                                                              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DtTemporal]" DisplayName="Recorrer la dt temporal de correos" sap:VirtualizedContainerService.HintSize="847,903" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                                                                <ui:ForEachRow.Body>
+                                                                  <ActivityAction x:TypeArguments="sd:DataRow">
+                                                                    <ActivityAction.Argument>
+                                                                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                                                                    </ActivityAction.Argument>
+                                                                    <Sequence sap:VirtualizedContainerService.HintSize="797,754" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                                                      <Sequence.Variables>
+                                                                        <Variable x:TypeArguments="x:String" Name="CadenaOnliNumbers" />
+                                                                      </Sequence.Variables>
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                                        <Assign.To>
+                                                                          <OutArgument x:TypeArguments="x:String">[CadenaOnliNumbers]</OutArgument>
+                                                                        </Assign.To>
+                                                                        <Assign.Value>
+                                                                          <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(row(1).ToString, "([0-9])+").value]</InArgument>
+                                                                        </Assign.Value>
+                                                                      </Assign>
+                                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="755,59" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[CadenaOnliNumbers]" />
+                                                                      <If Condition="[not CadenaOnliNumbers.Contains(CorreoLeido)]" DisplayName="si la dt  de correo no tiene un correo ya leido, " sap:VirtualizedContainerService.HintSize="755,463" sap2010:WorkflowViewState.IdRef="If_3">
+                                                                        <If.Then>
+                                                                          <Sequence DisplayName="Agregar corros no leidos " sap:VirtualizedContainerService.HintSize="376,313" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                                                            <Sequence.Variables>
+                                                                              <Variable x:TypeArguments="s:Object[]" Name="ArrayItemsCliente" />
+                                                                            </Sequence.Variables>
+                                                                            <sap:WorkflowViewStateService.ViewState>
+                                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                              </scg:Dictionary>
+                                                                            </sap:WorkflowViewStateService.ViewState>
+                                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[CadenaOnliNumbers+&quot; -&quot;+CorreoLeido]" />
+                                                                            <Assign DisplayName="Convertir datarow a un array" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                                                              <Assign.To>
+                                                                                <OutArgument x:TypeArguments="s:Object[]">[ArrayItemsCliente]</OutArgument>
+                                                                              </Assign.To>
+                                                                              <Assign.Value>
+                                                                                <InArgument x:TypeArguments="s:Object[]">[row.ItemArray()]</InArgument>
+                                                                              </Assign.Value>
+                                                                            </Assign>
+                                                                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[ArrayItemsCliente]" DataTable="[CorreosDt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                                                                          </Sequence>
+                                                                        </If.Then>
+                                                                        <If.Else>
+                                                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[row(1).ToString.Replace(&quot; &quot;,&quot;&quot;)+&quot; -&quot;+CorreoLeido]" />
+                                                                        </If.Else>
+                                                                      </If>
+                                                                    </Sequence>
+                                                                  </ActivityAction>
+                                                                </ui:ForEachRow.Body>
+                                                              </ui:ForEachRow>
                                                             </ActivityAction>
                                                           </ui:ForEach.Body>
                                                           <sap:WorkflowViewStateService.ViewState>
@@ -825,6 +896,14 @@
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:ForEach>
+                                                        <Assign DisplayName="Limpiar DT temporal" sap:VirtualizedContainerService.HintSize="883,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="sd:DataTable">[DtTemporal]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="sd:DataTable">[nothing]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
                                                       </Sequence>
                                                       <FlowStep.Next>
                                                         <x:Reference>__ReferenceID0</x:Reference>
