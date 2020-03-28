@@ -125,11 +125,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">199.895,347.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">299.895,399.5 299.895,429.5 298.395,429.5 298.395,449.5</av:PointCollection>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">299.895,398.5 299.895,428.5 296.895,428.5 296.895,449.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Indice]" DisplayName="Validar cada beneficiario" sap:VirtualizedContainerService.HintSize="778,2831" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ArregloBeneficiarios]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[Indice]" DisplayName="Validar cada beneficiario" sap:VirtualizedContainerService.HintSize="778,2830" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[ArregloBeneficiarios]">
                 <ui:ForEach.Body>
                   <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
@@ -192,12 +192,12 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <FlowDecision.True>
-                                  <FlowDecision x:Name="__ReferenceID10" Condition="[texto.Split({&quot;pais y estado de nacimiento&quot;},StringSplitOptions.None)(1).Split({&quot;parentesco con el titular&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 3]" DisplayName="¿País y estado?" sap:VirtualizedContainerService.HintSize="85,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                  <FlowDecision x:Name="__ReferenceID10" Condition="[texto.Split({&quot;pais y estado de nacimiento&quot;},StringSplitOptions.None)(1).Split({&quot;parentesco con el titular&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 3]" DisplayName="¿País y estado?" sap:VirtualizedContainerService.HintSize="84,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <av:Point x:Key="ShapeLocation">55,506.5</av:Point>
-                                        <av:Size x:Key="ShapeSize">85,87</av:Size>
+                                        <av:Size x:Key="ShapeSize">84,87</av:Size>
                                         <av:PointCollection x:Key="FalseConnector">140,550 189,550</av:PointCollection>
                                         <x:String x:Key="TrueLabel">Si</x:String>
                                         <x:String x:Key="FalseLabel">No</x:String>
@@ -231,7 +231,7 @@
                                                 <OutArgument x:TypeArguments="x:String">[TmpAsignado]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">[texto.Split({"asignado"},StringSplitOptions.None)(1).Split({"indicar si vive en el mismo"},StringSplitOptions.None)(0).Replace(":","").Trim.Replace(" ","").Replace(".","").Trim]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">[texto.Split({"asignado"},StringSplitOptions.None)(1).Split({"indicar si vive en el mismo"},StringSplitOptions.None)(0).Replace(":","").Trim.Replace(" ","").Replace(".","").Replace("%","").Trim]</InArgument>
                                               </Assign.Value>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -240,12 +240,12 @@
                                               </sap:WorkflowViewStateService.ViewState>
                                             </Assign>
                                             <FlowStep.Next>
-                                              <FlowDecision x:Name="__ReferenceID18" Condition="[TmpAsignado.IsNumeric]" DisplayName="¿% Asignado es número?" sap:VirtualizedContainerService.HintSize="139,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
+                                              <FlowDecision x:Name="__ReferenceID18" Condition="[TmpAsignado.IsNumeric]" DisplayName="¿% Asignado es número?" sap:VirtualizedContainerService.HintSize="138,87" sap2010:WorkflowViewState.IdRef="FlowDecision_6">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <av:Point x:Key="ShapeLocation">45,886.5</av:Point>
-                                                    <av:Size x:Key="ShapeSize">139,87</av:Size>
+                                                    <av:Size x:Key="ShapeSize">138,87</av:Size>
                                                     <av:PointCollection x:Key="FalseConnector">184,930 244,930</av:PointCollection>
                                                     <x:String x:Key="TrueLabel">Si</x:String>
                                                     <x:String x:Key="FalseLabel">No</x:String>
@@ -275,12 +275,12 @@
                                                       </sap:WorkflowViewStateService.ViewState>
                                                     </Assign>
                                                     <FlowStep.Next>
-                                                      <FlowDecision x:Name="__ReferenceID7" Condition="[texto.Split({&quot;indicar si vive en el mismo domicilio registrado en el contrato&quot;},StringSplitOptions.None)(1).Split({&quot;calle&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;(sieselmismoqueeltitularfavordeindicarloaqui)&quot;)]" DisplayName="¿Diferente domicilio?" sap:VirtualizedContainerService.HintSize="118,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
+                                                      <FlowDecision x:Name="__ReferenceID7" Condition="[texto.Split({&quot;indicar si vive en el mismo domicilio registrado en el contrato&quot;},StringSplitOptions.None)(1).Split({&quot;calle&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Contains(&quot;(sieselmismoqueeltitularfavordeindicarloaqui)&quot;)]" DisplayName="¿Diferente domicilio?" sap:VirtualizedContainerService.HintSize="117,87" sap2010:WorkflowViewState.IdRef="FlowDecision_7">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             <av:Point x:Key="ShapeLocation">100.5,1136.5</av:Point>
-                                                            <av:Size x:Key="ShapeSize">118,87</av:Size>
+                                                            <av:Size x:Key="ShapeSize">117,87</av:Size>
                                                             <x:String x:Key="TrueLabel">Si</x:String>
                                                             <x:String x:Key="FalseLabel">No</x:String>
                                                             <av:PointCollection x:Key="TrueConnector">100.5,1180 90,1180 90,1246.5 150,1246.5 150,1276.5</av:PointCollection>
@@ -301,12 +301,12 @@
                                                               </scg:Dictionary>
                                                             </sap:WorkflowViewStateService.ViewState>
                                                             <FlowDecision.True>
-                                                              <FlowDecision x:Name="__ReferenceID5" Condition="[texto.Split({&quot;num exterior&quot;},StringSplitOptions.None)(1).Split({&quot;num interior&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 0]" DisplayName="¿Número exterior?" sap:VirtualizedContainerService.HintSize="104,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
+                                                              <FlowDecision x:Name="__ReferenceID5" Condition="[texto.Split({&quot;num exterior&quot;},StringSplitOptions.None)(1).Split({&quot;num interior&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 0]" DisplayName="¿Número exterior?" sap:VirtualizedContainerService.HintSize="103,87" sap2010:WorkflowViewState.IdRef="FlowDecision_9">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     <av:Point x:Key="ShapeLocation">105,1416.5</av:Point>
-                                                                    <av:Size x:Key="ShapeSize">104,87</av:Size>
+                                                                    <av:Size x:Key="ShapeSize">103,87</av:Size>
                                                                     <av:PointCollection x:Key="FalseConnector">209,1460 258,1460</av:PointCollection>
                                                                     <x:String x:Key="TrueLabel">Si</x:String>
                                                                     <x:String x:Key="FalseLabel">No</x:String>
@@ -314,12 +314,12 @@
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                 <FlowDecision.True>
-                                                                  <FlowDecision x:Name="__ReferenceID4" Condition="[texto.Split({&quot;num interior&quot;},StringSplitOptions.None)(1).Split({&quot;entre calles&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 0]" DisplayName="¿Número interior?" sap:VirtualizedContainerService.HintSize="102,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
+                                                                  <FlowDecision x:Name="__ReferenceID4" Condition="[texto.Split({&quot;num interior&quot;},StringSplitOptions.None)(1).Split({&quot;entre calles&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 0]" DisplayName="¿Número interior?" sap:VirtualizedContainerService.HintSize="101,87" sap2010:WorkflowViewState.IdRef="FlowDecision_10">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                         <av:Point x:Key="ShapeLocation">108.5,1566.5</av:Point>
-                                                                        <av:Size x:Key="ShapeSize">102,87</av:Size>
+                                                                        <av:Size x:Key="ShapeSize">101,87</av:Size>
                                                                         <x:String x:Key="TrueLabel">Si</x:String>
                                                                         <x:String x:Key="FalseLabel">No</x:String>
                                                                         <av:PointCollection x:Key="TrueConnector">108.5,1610 84,1610 84,1676.5 144,1676.5 144,1706.5</av:PointCollection>
@@ -327,12 +327,12 @@
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                     <FlowDecision.True>
-                                                                      <FlowDecision x:Name="__ReferenceID3" Condition="[texto.Split({&quot;cercanas al domicilio&quot;},StringSplitOptions.None)(1).Split({&quot;estado&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot;)&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 2]" DisplayName="¿Entre calles?" sap:VirtualizedContainerService.HintSize="76,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
+                                                                      <FlowDecision x:Name="__ReferenceID3" Condition="[texto.Split({&quot;cercanas al domicilio&quot;},StringSplitOptions.None)(1).Split({&quot;estado&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot;)&quot;,&quot;&quot;).Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &gt; 2]" DisplayName="¿Entre calles?" sap:VirtualizedContainerService.HintSize="75,87" sap2010:WorkflowViewState.IdRef="FlowDecision_11">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                             <av:Point x:Key="ShapeLocation">125,1706.5</av:Point>
-                                                                            <av:Size x:Key="ShapeSize">76,87</av:Size>
+                                                                            <av:Size x:Key="ShapeSize">75,87</av:Size>
                                                                             <av:PointCollection x:Key="FalseConnector">201,1750 250,1750</av:PointCollection>
                                                                             <x:String x:Key="TrueLabel">Si</x:String>
                                                                             <x:String x:Key="FalseLabel">No</x:String>
@@ -379,7 +379,7 @@
                                                                                       </scg:Dictionary>
                                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                                     <FlowDecision.True>
-                                                                                      <FlowDecision x:Name="__ReferenceID29" Condition="[texto.Split({&quot;cp&quot;},StringSplitOptions.None)(1).Split({&quot;actividad laboral&quot;},StringSplitOptions.None)(0).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &lt; 5]" DisplayName="¿CP Vacío?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
+                                                                                      <FlowDecision x:Name="__ReferenceID29" Condition="[texto.Split({&quot;cp&quot;},StringSplitOptions.None)(1).Replace(&quot;:&quot;,&quot;&quot;).Trim.Replace(&quot; &quot;,&quot;&quot;).Replace(&quot;.&quot;,&quot;&quot;).Trim.Length &lt; 5]" DisplayName="¿CP Vacío?" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_15">
                                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -830,12 +830,12 @@
                 </ui:ForEach.Body>
               </ui:ForEach>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID33" Condition="[PorcAsignado &lt; 100]" DisplayName="¿% Asginado &lt; 100?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
+                <FlowDecision x:Name="__ReferenceID33" Condition="[PorcAsignado &lt; 100]" DisplayName="¿% Asginado &lt; 100?" sap:VirtualizedContainerService.HintSize="111,87" sap2010:WorkflowViewState.IdRef="FlowDecision_16">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <av:Point x:Key="ShapeLocation">241.395,449.5</av:Point>
-                      <av:Size x:Key="ShapeSize">114,87</av:Size>
+                      <av:Size x:Key="ShapeSize">111,87</av:Size>
                       <av:PointCollection x:Key="TrueConnector">241.395,493 230,493 230,560 290,560 290,590</av:PointCollection>
                       <x:String x:Key="FalseLabel">No</x:String>
                       <x:String x:Key="TrueLabel">Si</x:String>
