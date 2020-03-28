@@ -4,7 +4,7 @@
     <x:Property Name="in_TextoDocumento" Type="InArgument(x:String)" />
     <x:Property Name="in_DomicilioFiscal" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>723,2087</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>693,2052</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="17">
@@ -46,7 +46,6 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap2010:Annotation.AnnotationText="Validar que la sección &quot;Domicilio fiscal&quot; del documento &quot;Solicitud de actualización de contrato&quot; esté llena." DisplayName="Domicilio fiscal" sap:VirtualizedContainerService.HintSize="703,1987" sap2010:WorkflowViewState.IdRef="Flowchart_3">
