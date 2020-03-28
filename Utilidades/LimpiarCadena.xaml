@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>582,694</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>650,739</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PRuebas_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,6 +53,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="LimpiarCadena" sap:VirtualizedContainerService.HintSize="562,634" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -87,7 +88,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Char" Name="Caracter" />
           </ActivityAction.Argument>
-          <If Condition="[Asc(Caracter) &gt; 46 And Asc(Caracter) &lt; 128]" DisplayName="¿Caracter valido?" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[Asc(Caracter) &gt; 45 And Asc(Caracter) &lt; 128]" DisplayName="¿Caracter valido?" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Assign DisplayName="Asignar caracter" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                 <Assign.To>
