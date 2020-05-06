@@ -1,0 +1,166 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="IniciarSesionShell" this:IniciarSesionShell.in_Password=".*Arch1v0+20" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Password" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>863,1725</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>IniciarSesionShell_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="22">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.CV</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="17">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="IniciarSesionShell" sap:VirtualizedContainerService.HintSize="873,1560" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'iexplore.exe GBM'" sap:VirtualizedContainerService.HintSize="831,1468" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="19e09bcff7d26085b7e67bb93e3ab931" Selector="&lt;html title='GBM Shell Clientes' /&gt;">
+      <ui:BrowserScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Proceso de inicio de sesion" sap:VirtualizedContainerService.HintSize="797,1322" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Boolean" Name="SesionShell" />
+              <Variable x:TypeArguments="s:Exception" Name="ErrorLogin" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Sesion Shell" sap:VirtualizedContainerService.HintSize="755,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciando sesión en Shell&quot;]" />
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV  MousePointerDiv'" EmptyField="True" sap:VirtualizedContainerService.HintSize="755,155" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="[in_Password]" KeyModifiers="None">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6af139f2e79cda9e2c24ac7caf72037c" Selector="&lt;webctrl id='MousePointerDiv' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'DIV  MousePointerDiv'" sap:VirtualizedContainerService.HintSize="755,155" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+              <ui:SendHotkey.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="81474f537a9ca632bc92074eecb41f82" Selector="&lt;webctrl id='MousePointerDiv' tag='DIV' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SendHotkey.Target>
+            </ui:SendHotkey>
+            <ui:ImageFound DisplayName="Se inicio sesion correctamente" Found="[SesionShell]" sap:VirtualizedContainerService.HintSize="755,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+              <ui:ImageFound.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAABKCAYAAADOgMgpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATGSURBVHhe7ZfbaxRZEIfzd/ggiE+CLy5RVCJZjBeI8RIEkx03JI6jUaImomiyK/EuS5RVEATFF+dBH7z9icepPlPTv66cme6eTiVnTD18mD7XOt+prh6HXjZ/OkMHk6uIyVXE5CpichUxuYqYXEVMriImV5EtlTs0NFSJ0JoxYXIVGWi5/RKKRQOTq0g0crF96spNN3zkaKaNqCqn6vyyRCeXpIba5fgq4JqaRCcX27Ad+7CtDFXnlyU6ubOLy8F2Ob4KuKYmUdZc4vaz/9e14fgqyHW1iEqurLfYh+P5uSxV55clKrm79+zNtGGfHF8FXk+bgZTLz2WpOr8sUcndsXNXpg37Qu39gjFoEo3czSQUiwYmV5GoyoI221buZhKKRQPLXEUscxUxuYpsqdzfHZOriMlVxOQqYnIVMbmKmFxFTK4iJlcRk6uIyVWksNzl1f/cH6drCfsmLrp/mj+C4zaSteZ3d2aq7iaWVoP9sVNI7uPX791hEErP9dVXyd8kfaSxlBlfhLXmV3c055Jon+ONxdxxmw3FNTp11T3JiamQ3F4CNeVeX1pxF1uXWGvcSP4NjdkKNlSuFzG97vXMloq/3MLrj8E2GkuiJpYeJOuMJNk43RkXeu19SbiSyA9dIO5zoH1QLiPczhfSLSYpCZ95T7pYP88nAo05DLH3uvTCNRcDxwVDBw/1kVys1XmZi3PlWH/A9XNJRCgBcF+cmycXz4pry3ndKCyX4SzGrEC5Mns4q3zmpgfPkytLAT7LtYhu63FpwTZeK08unguf1eQSuBH+zWL5MBhEGbl8gXxBDO8jxRPdDhy9XFoYA6SAw3JJSrbO9pO58mAErk398ucgX6zMaDmWxHBZ6BWvjAGfN1Rut1fd9/ks4w8FBcjj6GcUByHlEpRBNC7ULrON23ks7pN+0Hws3M5r4Fj8oMk+jLeX3G7fH0lfZcEohslVxOQqYnIVKSyXinitfsMdrM27Z4Gv5NXF5a5925XSckdb/yW99fZTpu/5u0/uxNRlNza7sC3k+vM23MqHL8F+prTc8cYtd3L+jnsBEm8/eOHOLNx34yY3Q2m5tZXnmYXXmt/c6Qt1d7n1O/DPdlnwbXOd34/H2pfBQdXvPXL727+NZ5++SdahvrHJvztzzt590tmbLo/G81rjrf347Xn46p071O4bPj+XxIWx0pq8D5UuGrdvopZ5+7id16dYaV06z5yY0ytOSWm5HCQvSkGcagX0bzsYmbksHwPjA5C0kcAczAwvL5XhRftnFsDzqc+/VT5Wls0XwDFT/BwDngXP2GsOxkd93ehLbnqoUFt6UM42zhwZlHzGDOJMSYX5dfGycA/Gf1TTuEL7yEvA+QQJlefBZ1W5+NpxncXNKXjOSJzXSy5mBgrEzPJxZOXK+u/HlJPL45Atk0vPnDV8cNxcvkJjkzM5cj8na+NaXAro75H2653um/ZhyWCKy/Wxhn5C4nnks7pcyqBzM9c6G8jNuegPn7/kxmfmc+SmdZHm0GFPwkcLywVdGn7Q+JK5ny6ojFwey/O5HPWSi3PwrZIUlhsLRbMmBgZOLpacUH9MRC8XSwwxSP/FHrjMHSRMriImVxGTq4jJVcTkKmJyFTG5iphcNX66X5ORRe3tXj+fAAAAAElFTkSuQmCC" />
+              </ui:ImageFound.Image>
+              <ui:ImageFound.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;webctrl id='MousePointerDiv' tag='DIV' /&gt;" TimeoutMS="50000">
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ImageFound.Target>
+            </ui:ImageFound>
+            <If Condition="[SesionShell]" DisplayName="Se inicio sesion en shell" sap:VirtualizedContainerService.HintSize="755,561" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click Abrir modulo de busqueda" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="0d8a2dce758717b2d17e076e04c4bb4c" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='GBM Escritorio de Aplicaciones v2.0' /&gt;&lt;ctrl automationid='mnuAccountManagement' /&gt;&lt;ctrl automationid='Preopening' /&gt;&lt;ctrl name='Microsoft.Windows.Controls.Ribbon.RibbonButton' role='list item' /&gt;&lt;ctrl name='Start Account Management' role='push button' /&gt;" TimeoutMS="120000" WaitForReady="INTERACTIVE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Notificando el error" sap:VirtualizedContainerService.HintSize="376,412" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Error iniciando sesion en shell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilidades\EnviarCorreoError.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Mensaje">["Saludos cordiales"+System.Environment.NewLine+"he tenido un error tratando de abrir el programa shell, es posible que las credenciales son incorrectas o debido a un fallo en la app"]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_Persona">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <ui:LogMessage DisplayName="Sesion shell no iniciada" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Fatal" Message="[&quot;Sesión no iniciada en Shell&quot;]" />
+                  <Assign DisplayName="Error al iniciar sesion" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="s:Exception">[ErrorLogin]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="s:Exception">[New Exception("Error iniciando sesion")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:BrowserScope.Body>
+    </ui:BrowserScope>
+  </Sequence>
+</Activity>

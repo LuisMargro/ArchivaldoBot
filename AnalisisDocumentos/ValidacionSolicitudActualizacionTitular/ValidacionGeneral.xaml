@@ -17,7 +17,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>743,1532</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>766,1696</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ValidarSolicitudActualizacionTitular_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -68,10 +68,9 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="Examina que los campos de el archivo Actualización de contrato sean correctos o que estén llenos.&#xA;Retornanará como argumento de salida una datarow con todos los campos, indicando si son o no son válidos." DisplayName="Validación general" sap:VirtualizedContainerService.HintSize="753,1427" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Examina que los campos de el archivo Actualización de contrato sean correctos o que estén llenos.&#xA;Retornanará como argumento de salida una datarow con todos los campos, indicando si son o no son válidos." DisplayName="Validación general" sap:VirtualizedContainerService.HintSize="776,1531" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="s:String[]" Name="Cadenas" />
       <Variable x:TypeArguments="sd:DataTable" Name="DtRegistro" />
@@ -82,24 +81,24 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,114.5</av:PointCollection>
-        <x:Double x:Key="Width">719</x:Double>
-        <x:Double x:Key="Height">1349</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">330,40 510,40 510,54.5</av:PointCollection>
+        <x:Double x:Key="Width">742.43309801661928</x:Double>
+        <x:Double x:Key="Height">1451.0243253472436</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID15</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID10">
+    <FlowStep x:Name="__ReferenceID12">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,114.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,165.5 299.895,165.5 299.895,195.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BuildDataTable DataTable="[DtRegistro]" DisplayName="Crear tabla de registro" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;NumeroContrato&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NombreCompleto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;FechaNacimiento&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PaisyEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Nacionalidad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PaisTributacion&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Curp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rfc&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TelCasa&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TelCel&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Profesion&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EstadoCivil&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfCalle&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfNumExterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfNumInterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfEntreCalles&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfMunicipio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfColonia&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfCp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrCalle&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrNumExterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrNumInterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrEntreCalles&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrMunicipio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrColonia&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrCp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OtraNacionalidad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ResidenteExtranjero&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ContribuyenteResidenteOtroPais&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;IdentificacionFiscal&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenNombreCompleto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenFechaNacimiento&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenPaisyEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenParentesco&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenAsignado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenMismoDomicilio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenCalle&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenNumExterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenNumeroInterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenEntreCalles&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenMunicipio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenColonia&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenCp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpNombreEmpresa&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpPuesto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpMando&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpAntiguedad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpPagina&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpTel&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpExtension&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpSectorEconomico&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpActividad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpTipoIngreso&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpIngresosAdicionales&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpFuenteIngresos&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresPersona&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresPaginaInternet&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresTelOficina&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresExtension&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresSectorEconomico&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresActividad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresTipoIngreso&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresIngresosAdicionales&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresFueneIngresos&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OtroTipo&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OtroFuenteIngresos&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoRazonSocial&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoPais&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoFechaRegistro&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoRfc&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoPaginaInternet&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoSector&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoActividad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoTelOficina&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoPorcentaje&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoConsejero&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Banco&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Cuenta&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NombreBanco&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DomicilioFiscal&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;1000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DomicilioResidencial&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;1000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;NacionalidadExtranjera&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DomicilioBeneficiario&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PorcentajeAsignadoCompleto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable DataTable="[DtRegistro]" DisplayName="Crear tabla de registro" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;NumeroContrato&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NombreCompleto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;FechaNacimiento&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PaisyEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Nacionalidad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PaisTributacion&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Curp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Rfc&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TelCasa&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TelCel&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Profesion&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EstadoCivil&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfCalle&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfNumExterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfNumInterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfEntreCalles&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfMunicipio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfColonia&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DfCp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrCalle&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrNumExterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrNumInterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrEntreCalles&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrMunicipio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrColonia&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DrCp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OtraNacionalidad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ResidenteExtranjero&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;ContribuyenteResidenteOtroPais&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;IdentificacionFiscal&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenNombreCompleto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenFechaNacimiento&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenPaisyEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenParentesco&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenAsignado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenMismoDomicilio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenCalle&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenNumExterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenNumeroInterior&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenEntreCalles&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenEstado&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenMunicipio&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenColonia&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;BenCp&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpNombreEmpresa&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpPuesto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpMando&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpAntiguedad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpPagina&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpTel&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpExtension&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpSectorEconomico&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpActividad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpTipoIngreso&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpIngresosAdicionales&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;EmpFuenteIngresos&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresPersona&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresPaginaInternet&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresTelOficina&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresExtension&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresSectorEconomico&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresActividad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresTipoIngreso&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresIngresosAdicionales&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PresFueneIngresos&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OtroTipo&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;OtroFuenteIngresos&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoRazonSocial&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoPais&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoFechaRegistro&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoRfc&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoPaginaInternet&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoSector&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoActividad&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoTelOficina&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoPorcentaje&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;VinculoConsejero&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Banco&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Cuenta&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NombreBanco&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;DomicilioFiscal&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;1000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DomicilioResidencial&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;1000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;NacionalidadExtranjera&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;20&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DomicilioBeneficiario&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;PorcentajeAsignadoCompleto&quot; type=&quot;xs:boolean&quot; default=&quot;true&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -107,7 +106,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID0">
+        <FlowStep x:Name="__ReferenceID1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">168.895,195.5</av:Point>
@@ -129,12 +128,12 @@
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID1">
+            <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">168.895,290</av:Point>
                   <av:Size x:Key="ShapeSize">262,60</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">299.895,350 299.895,380 300,380 300,444.02</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">299.895,350 299.895,380 300,380 300,384.02</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_28">
@@ -154,12 +153,12 @@
                 <FlowStep x:Name="__ReferenceID9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">200,444.02</av:Point>
-                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">300,496.02 300,594.5</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">200,384.02</av:Point>
+                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">300,435.02 300,464.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -197,15 +196,15 @@
                     </TryCatch.Catches>
                   </TryCatch>
                   <FlowStep.Next>
-                    <FlowStep x:Name="__ReferenceID2">
+                    <FlowStep x:Name="__ReferenceID3">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">200,594.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">300,646.5 300,704.5</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">200,464.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">300,515.5 300,554.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <TryCatch DisplayName="Validar domicilio fiscal" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                      <TryCatch DisplayName="Validar domicilio fiscal" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -238,15 +237,15 @@
                         </TryCatch.Catches>
                       </TryCatch>
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID3">
+                        <FlowStep x:Name="__ReferenceID4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">200,704.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">300,755.5 300,794.5</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">200,554.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">300,605.5 300,634.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <TryCatch DisplayName="Validar domicilio residencial" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                          <TryCatch DisplayName="Validar domicilio residencial" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -279,15 +278,15 @@
                             </TryCatch.Catches>
                           </TryCatch>
                           <FlowStep.Next>
-                            <FlowStep x:Name="__ReferenceID4">
+                            <FlowStep x:Name="__ReferenceID5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">200,794.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">300,845.5 300,884.5</av:PointCollection>
+                                  <av:Point x:Key="ShapeLocation">200,634.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">300,685.5 300,734.5</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Validar FatcsCrs del titular" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                              <TryCatch DisplayName="Validar FatcsCrs del titular" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -319,58 +318,30 @@
                                 </TryCatch.Catches>
                               </TryCatch>
                               <FlowStep.Next>
-                                <FlowStep x:Name="__ReferenceID5">
+                                <FlowStep x:Name="__ReferenceID6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">200,884.5</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">300,935.5 300,974.5</av:PointCollection>
+                                      <av:Point x:Key="ShapeLocation">200,734.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">300,785.5 300,815.5 330,815.5 330,816.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch DisplayName="Validar Datos del beneficiario" sap:VirtualizedContainerService.HintSize="537,703" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                                  <TryCatch DisplayName="Validar Datos del beneficiario" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_4">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <TryCatch.Try>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="499,476" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="457,257" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                                          <ui:CommentOut.Body>
-                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="421,179" sap2010:WorkflowViewState.IdRef="Sequence_1">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelBeneficiario workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_28" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelBeneficiario.xaml">
-                                                <ui:InvokeWorkflowFile.Arguments>
-                                                  <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
-                                                  <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
-                                                </ui:InvokeWorkflowFile.Arguments>
-                                              </ui:InvokeWorkflowFile>
-                                            </Sequence>
-                                          </ui:CommentOut.Body>
-                                        </ui:CommentOut>
-                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelBeneficiarioPruebas workflow" sap:VirtualizedContainerService.HintSize="457,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\DatosdelBeneficiarioPruebas.xaml">
-                                          <ui:InvokeWorkflowFile.Arguments>
-                                            <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">
-                                              <mva:VisualBasicReference x:TypeArguments="sd:DataRow" ExpressionText="out_Registro" />
-                                            </InOutArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">
-                                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_TextoDocumento" />
-                                            </InArgument>
-                                          </ui:InvokeWorkflowFile.Arguments>
-                                        </ui:InvokeWorkflowFile>
-                                      </Sequence>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelBeneficiario workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_34" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelBeneficiario.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
                                     </TryCatch.Try>
                                     <TryCatch.Catches>
-                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="503,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -387,71 +358,42 @@
                                     </TryCatch.Catches>
                                   </TryCatch>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID6">
+                                    <FlowDecision x:Name="__ReferenceID10" Condition="[System.Convert.ToBoolean(out_Registro(33)) and System.Convert.ToBoolean(out_Registro(34)) and System.Convert.ToBoolean(out_Registro(35)) and System.Convert.ToBoolean(out_Registro(36)) and System.Convert.ToBoolean(out_Registro(37)) and System.Convert.ToBoolean(out_Registro(38)) and System.Convert.ToBoolean(out_Registro(39)) and System.Convert.ToBoolean(out_Registro(40)) and System.Convert.ToBoolean(out_Registro(41)) and System.Convert.ToBoolean(out_Registro(42)) and System.Convert.ToBoolean(out_Registro(43))]" DisplayName="Beneficiario" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">200,974.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">300,1025.5 300,1074.5</av:PointCollection>
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <av:Point x:Key="ShapeLocation">295,816.5</av:Point>
+                                          <av:Size x:Key="ShapeSize">70,87</av:Size>
+                                          <av:PointCollection x:Key="TrueConnector">295,860 270,860 270,944.5 300,944.5 300,974.5</av:PointCollection>
+                                          <av:PointCollection x:Key="FalseConnector">365,860 540,860 540,874.5</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <TryCatch DisplayName="Validar Actividad laboral" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_5">
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                        <TryCatch.Try>
-                                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ActividadLaboral workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/ActividadLaboral.xaml">
-                                            <ui:InvokeWorkflowFile.Arguments>
-                                              <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
-                                              <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
-                                            </ui:InvokeWorkflowFile.Arguments>
-                                          </ui:InvokeWorkflowFile>
-                                        </TryCatch.Try>
-                                        <TryCatch.Catches>
-                                          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,130" sap2010:WorkflowViewState.IdRef="Catch`1_5">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <ActivityAction x:TypeArguments="s:Exception">
-                                              <ActivityAction.Argument>
-                                                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                                              </ActivityAction.Argument>
-                                              <WriteLine DisplayName="Actividad laboral con formato invalido" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Actividad laboral con formato invalido" />
-                                            </ActivityAction>
-                                          </Catch>
-                                        </TryCatch.Catches>
-                                      </TryCatch>
-                                      <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID7">
+                                      <FlowDecision.True>
+                                        <FlowStep x:Name="__ReferenceID0">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">200,1074.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">300,1125.5 300,1154.5</av:PointCollection>
+                                              <av:Point x:Key="ShapeLocation">200,974.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">300,1025.5 300,1074.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <TryCatch DisplayName="Validar vinculo patrimonial" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                                          <TryCatch DisplayName="Validar Actividad laboral" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_5">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <TryCatch.Try>
-                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VínculoPatrimonial workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/VínculoPatrimonial.xaml">
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ActividadLaboral workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_29" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/ActividadLaboral.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
+                                                  <InOutArgument x:TypeArguments="s:String[]" x:Key="io_Cadenas">[Cadenas]</InOutArgument>
                                                   <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                                                   <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
                                                 </ui:InvokeWorkflowFile.Arguments>
                                               </ui:InvokeWorkflowFile>
                                             </TryCatch.Try>
                                             <TryCatch.Catches>
-                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,130" sap2010:WorkflowViewState.IdRef="Catch`1_6">
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,130" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -462,39 +404,39 @@
                                                   <ActivityAction.Argument>
                                                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                   </ActivityAction.Argument>
-                                                  <WriteLine DisplayName="Vinculo patrimonial con formato invalido" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Vinculo patrimonial con formato invalido" />
+                                                  <WriteLine DisplayName="Actividad laboral con formato invalido" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="Actividad laboral con formato invalido" />
                                                 </ActivityAction>
                                               </Catch>
                                             </TryCatch.Catches>
                                           </TryCatch>
                                           <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID8">
+                                            <FlowStep x:Name="__ReferenceID7">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">200,1154.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                                  <av:Point x:Key="ShapeLocation">200,1074.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">300,1125.5 300,1154.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <TryCatch DisplayName="Validar Datos de la cuenta bancaria" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                                              <TryCatch DisplayName="Validar vinculo patrimonial" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <TryCatch.Try>
-                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelaCuentaBancaria workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelaCuentaBancaria.xaml">
+                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke VínculoPatrimonial workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/VínculoPatrimonial.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
-                                                      <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[in_NombreCompleto]</InArgument>
                                                       <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
                                                       <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                   </ui:InvokeWorkflowFile>
                                                 </TryCatch.Try>
                                                 <TryCatch.Catches>
-                                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                                  <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,130" sap2010:WorkflowViewState.IdRef="Catch`1_6">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
@@ -502,16 +444,139 @@
                                                       <ActivityAction.Argument>
                                                         <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                                                       </ActivityAction.Argument>
-                                                      <WriteLine DisplayName="Cuenta bancaria con formato invalido" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="formato invalido cuenta bancaria" />
+                                                      <WriteLine DisplayName="Vinculo patrimonial con formato invalido" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="Vinculo patrimonial con formato invalido" />
                                                     </ActivityAction>
                                                   </Catch>
                                                 </TryCatch.Catches>
                                               </TryCatch>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID8">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">200,1154.5</av:Point>
+                                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">300,1206.5 300,1269</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <TryCatch DisplayName="Validar Datos de la cuenta bancaria" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <TryCatch.Try>
+                                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelaCuentaBancaria workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_31" UnSafe="False" WorkflowFileName="AnalisisDocumentos/ValidacionSolicitudActualizacionTitular/DatosdelaCuentaBancaria.xaml">
+                                                        <ui:InvokeWorkflowFile.Arguments>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_NombreCompleto">[in_NombreCompleto]</InArgument>
+                                                          <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+                                                          <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
+                                                        </ui:InvokeWorkflowFile.Arguments>
+                                                      </ui:InvokeWorkflowFile>
+                                                    </TryCatch.Try>
+                                                    <TryCatch.Catches>
+                                                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ActivityAction x:TypeArguments="s:Exception">
+                                                          <ActivityAction.Argument>
+                                                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                          </ActivityAction.Argument>
+                                                          <WriteLine DisplayName="Cuenta bancaria con formato invalido" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="formato invalido cuenta bancaria" />
+                                                        </ActivityAction>
+                                                      </Catch>
+                                                    </TryCatch.Catches>
+                                                  </TryCatch>
+                                                  <FlowStep.Next>
+                                                    <FlowStep x:Name="__ReferenceID13">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">200,1269</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,22</av:Size>
+                                                          <av:PointCollection x:Key="ConnectorLocation">300,1291 300,1324.02</av:PointCollection>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[out_Registro]" DataTable="[DtRegistro]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:AddDataRow>
+                                                      <FlowStep.Next>
+                                                        <FlowStep x:Name="__ReferenceID14">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <av:Point x:Key="ShapeLocation">200,1324.02</av:Point>
+                                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:AppendRange DataTable="[DtRegistro]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="AppendRange_1" SheetName="Solicitud" WorkbookPath="Data\LogSolititud.xlsx">
+                                                            <sap:WorkflowViewStateService.ViewState>
+                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                              </scg:Dictionary>
+                                                            </sap:WorkflowViewStateService.ViewState>
+                                                          </ui:AppendRange>
+                                                        </FlowStep>
+                                                      </FlowStep.Next>
+                                                    </FlowStep>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
                                             </FlowStep>
                                           </FlowStep.Next>
                                         </FlowStep>
-                                      </FlowStep.Next>
-                                    </FlowStep>
+                                      </FlowDecision.True>
+                                      <FlowDecision.False>
+                                        <FlowStep x:Name="__ReferenceID11">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">440,874.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">540,925.5 540,1000 400,1000</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <TryCatch DisplayName="Validar Datos del beneficiario multiple" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="TryCatch_9">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <TryCatch.Try>
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke DatosdelBeneficiarioPruebas workflow" sap:VirtualizedContainerService.HintSize="379,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_37" UnSafe="False" WorkflowFileName="AnalisisDocumentos\ValidacionSolicitudActualizacionTitular\DatosdelBeneficiarioPruebas.xaml">
+                                                <ui:InvokeWorkflowFile.Arguments>
+                                                  <InOutArgument x:TypeArguments="sd:DataRow" x:Key="io_Registro">[out_Registro]</InOutArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="in_TextoDocumento">[in_TextoDocumento]</InArgument>
+                                                </ui:InvokeWorkflowFile.Arguments>
+                                              </ui:InvokeWorkflowFile>
+                                            </TryCatch.Try>
+                                            <TryCatch.Catches>
+                                              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ActivityAction x:TypeArguments="s:Exception">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                  </ActivityAction.Argument>
+                                                  <WriteLine DisplayName="Datos del beneficiario invalido" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="Datos del beneficiario con formato invalido" />
+                                                </ActivityAction>
+                                              </Catch>
+                                            </TryCatch.Catches>
+                                          </TryCatch>
+                                          <FlowStep.Next>
+                                            <x:Reference>__ReferenceID0</x:Reference>
+                                          </FlowStep.Next>
+                                        </FlowStep>
+                                      </FlowDecision.False>
+                                    </FlowDecision>
                                   </FlowStep.Next>
                                 </FlowStep>
                               </FlowStep.Next>
@@ -528,15 +593,38 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
+    <FlowStep x:Name="__ReferenceID15">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">410,54.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">510,105.5 510,140 400,140</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log validando solicitud" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Validando solicitud de actualización de contrato&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID12</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID13</x:Reference>
+    <x:Reference>__ReferenceID14</x:Reference>
   </Flowchart>
 </Activity>

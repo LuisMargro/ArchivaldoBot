@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>893,1560</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>863,1871</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -34,7 +34,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="16">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -51,22 +51,25 @@
       <AssemblyReference>System.Xaml</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Iniciar la aplicación Shell e inciar sesión" DisplayName="IniciarShell" sap:VirtualizedContainerService.HintSize="873,1460" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Iniciar la aplicación Shell e inciar sesión" DisplayName="IniciarShell" sap:VirtualizedContainerService.HintSize="873,1706" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Shell" FileName="C:\Program Files\GBM\Distributed Environment\v2.0\ApplicationPlatform\GBMShell.exe" sap:VirtualizedContainerService.HintSize="831,1337" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="a770e2926f1909ca9ae430638dfb2b72" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='Credenciales' /&gt;">
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Shell" FileName="C:\Program Files\GBM\Distributed Environment\v2.0\ApplicationPlatform\GBMShell.exe" sap:VirtualizedContainerService.HintSize="831,1583" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="a770e2926f1909ca9ae430638dfb2b72" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='Credenciales' /&gt;">
       <ui:OpenApplication.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="proceso de inicio del shell" sap:VirtualizedContainerService.HintSize="797,1191" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="proceso de inicio del shell" sap:VirtualizedContainerService.HintSize="797,1437" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="SesionShell" />
               <Variable x:TypeArguments="s:Exception" Name="ErrorLogin" />
@@ -76,6 +79,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Sesion Shell" sap:VirtualizedContainerService.HintSize="755,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciando sesión en Shell&quot;]" />
             <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Ingresar usuario" EmptyField="True" sap:VirtualizedContainerService.HintSize="755,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="True" Text="[in_Usuario]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="69e281cfe7848e5687f3a3c51fae45d3" Selector="&lt;ctrl automationid='GBMUserLoginTxt' /&gt;" WaitForReady="INTERACTIVE">
@@ -105,14 +109,14 @@
             </ui:SendHotkey>
             <ui:UiElementExists DisplayName="¿Se inicio en Shell?" Exists="[SesionShell]" sap:VirtualizedContainerService.HintSize="755,68" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='GBM Escritorio de Aplicaciones v2.0' /&gt;&#xD;&#xA;&lt;ctrl automationid='mnuAccountManagement' /&gt;&#xD;&#xA;&lt;ctrl automationid='Preopening' /&gt;&#xD;&#xA;&lt;ctrl name='Microsoft.Windows.Controls.Ribbon.RibbonButton' role='list item' /&gt;&#xD;&#xA;&lt;ctrl name='Start Account Management' role='push button' /&gt;" TimeoutMS="60000">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='gbmshell.exe' cls='HwndWrapper*' title='GBM Escritorio de Aplicaciones v2.0' /&gt;&#xA;&lt;ctrl automationid='mnuAccountManagement' /&gt;&#xA;&lt;ctrl automationid='Preopening' /&gt;&#xA;&lt;ctrl name='Microsoft.Windows.Controls.Ribbon.RibbonButton' role='list item' /&gt;&#xA;&lt;ctrl name='Start Account Management' role='push button' /&gt;" TimeoutMS="60000">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[SesionShell]" DisplayName="Se inicio sesion en shell" sap:VirtualizedContainerService.HintSize="755,448" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[SesionShell]" DisplayName="Se inicio sesion en shell" sap:VirtualizedContainerService.HintSize="755,561" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click Abrir modulo de busqueda" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                   <ui:Click.CursorPosition>
@@ -131,7 +135,7 @@
                 </ui:Click>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Notificando el error" sap:VirtualizedContainerService.HintSize="376,279" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Notificando el error" sap:VirtualizedContainerService.HintSize="376,412" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -145,6 +149,7 @@
                       </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
+                  <ui:LogMessage DisplayName="Sesion shell no iniciada" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Fatal" Message="[&quot;Sesión no iniciada en Shell&quot;]" />
                   <Assign DisplayName="Error al iniciar sesion" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="s:Exception">[ErrorLogin]</OutArgument>

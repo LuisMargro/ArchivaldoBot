@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>864,1758</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>801,1818</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -35,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="40">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -56,6 +56,7 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Obtiene todos los casos de Salesforce que están asignados al bot" DisplayName="ObtenerCasos" sap:VirtualizedContainerService.HintSize="811,1653" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -89,17 +90,17 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <Flowchart.StartNode>
-              <x:Reference>__ReferenceID11</x:Reference>
+              <x:Reference>__ReferenceID12</x:Reference>
             </Flowchart.StartNode>
-            <FlowStep x:Name="__ReferenceID11">
+            <FlowStep x:Name="__ReferenceID12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">200,97</av:Point>
-                  <av:Size x:Key="ShapeSize">200,66</av:Size>
+                  <av:Size x:Key="ShapeSize">200,68</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">300,165 300,187</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="526,2307" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence DisplayName="Navegar a mis casos" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="x:Boolean" Name="CasosVisible" />
                 </Sequence.Variables>
@@ -109,6 +110,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log navega" sap:VirtualizedContainerService.HintSize="484,93" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Navegando a seccion mis casos abiertos&quot;]" />
                 <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SimulateClick="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click activar pagina" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
@@ -143,7 +145,7 @@
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="1d3add7f895e0a315b0767734870c153" Selector="&lt;webctrl aaname='Cerrar*' tag='BUTTON' type='button' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickType="CLICK_SINGLE" DelayBefore="1000" DisplayName="Click menu de navegacion" sap:VirtualizedContainerService.HintSize="484,148" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                <ui:Click DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickType="CLICK_SINGLE" DelayBefore="1000" DisplayName="Click menu de navegacion" sap:VirtualizedContainerService.HintSize="484,150" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -176,7 +178,7 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[Not CasosVisible]" DisplayName="¿No estan visibles los casos?" sap:VirtualizedContainerService.HintSize="484,254" sap2010:WorkflowViewState.IdRef="If_1">
+                <If Condition="[Not CasosVisible]" DisplayName="¿No estan visibles los casos?" sap:VirtualizedContainerService.HintSize="484,256" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
                     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Click abrir menuRapido" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                       <ui:Click.CursorPosition>
@@ -261,7 +263,7 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <Delay sap2010:Annotation.AnnotationText="Se agrego una pequeña espera para mitigar los errores en la escritura" DisplayName="Esperar despliegue de pantalla" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="Delay_2">
+                <Delay sap2010:Annotation.AnnotationText="Se agrego una pequeña espera para mitigar los errores en la escritura" DisplayName="Esperar despliegue de pantalla" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Delay_2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -341,16 +343,17 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">200,187</av:Point>
-                      <av:Size x:Key="ShapeSize">200,66</av:Size>
+                      <av:Size x:Key="ShapeSize">200,68</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">300,255 300,287</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Obtener casos en tramite" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Obtener casos en tramite" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Cargar casos en tramite" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Obteniendo casos en tramite&quot;]" />
                     <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Filtrar en tramite" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SimulateType="True" Text="En trámite">
                       <ui:TypeInto.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8747591bd0432d9226ee12de22a8c9a3" Selector="&lt;webctrl parentid='split-left' tag='DIV' /&gt;&lt;webctrl id='input-*' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
@@ -392,7 +395,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:Click>
-                    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickBeforeTyping="False" DelayMS="2000" DisplayName="Buscar en tramite" sap:VirtualizedContainerService.HintSize="334,196" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickBeforeTyping="False" DelayMS="2000" DisplayName="Buscar en tramite" sap:VirtualizedContainerService.HintSize="334,199" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                       <ui:SendHotkey.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c4aacace667e9cf80ba96f5d48c0803b" Selector="&lt;webctrl parentid='split-left' tag='DIV' /&gt;&lt;webctrl id='input-*' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
                           <ui:Target.TimeoutMS>
@@ -431,6 +434,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log casos nuevos" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Obteniendo casos nuevos&quot;]" />
                         <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Filtrar Nuevos" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SimulateType="True" Text="Nuevo">
                           <ui:TypeInto.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="8747591bd0432d9226ee12de22a8c9a3" Selector="&lt;webctrl parentid='split-left' tag='DIV' /&gt;&lt;webctrl id='input-*' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
@@ -472,7 +476,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:Click>
-                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickBeforeTyping="False" DelayMS="2000" DisplayName="Buscar en nuevo" sap:VirtualizedContainerService.HintSize="334,196" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Se da tiempo a que la pagina reaccione, no se puede usar un selector porque siempre estan presentes" ClickBeforeTyping="False" DelayMS="2000" DisplayName="Buscar en nuevo" sap:VirtualizedContainerService.HintSize="334,199" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
                           <ui:SendHotkey.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="c4aacace667e9cf80ba96f5d48c0803b" Selector="&lt;webctrl parentid='split-left' tag='DIV' /&gt;&lt;webctrl id='input-*' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
                               <ui:Target.TimeoutMS>
@@ -538,11 +542,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">0,554.02</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
+                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
                                       <av:PointCollection x:Key="ConnectorLocation">100,605.02 100,635.02 300,635.02 300,646.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar omni chanel" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Cerrar omni chanel" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                                     <ui:Click.CursorPosition>
                                       <ui:CursorPosition Position="Center">
                                         <ui:CursorPosition.OffsetX>
@@ -570,12 +574,12 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:Click>
                                   <FlowStep.Next>
-                                    <FlowDecision x:Name="__ReferenceID1" Condition="[TablaTmp isnot Nothing]" DisplayName="¿Tabla Tmp no vacia?" sap:VirtualizedContainerService.HintSize="116,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                    <FlowDecision x:Name="__ReferenceID1" Condition="[TablaTmp isnot Nothing]" DisplayName="¿Tabla Tmp no vacia?" sap:VirtualizedContainerService.HintSize="117,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <av:Point x:Key="ShapeLocation">242,646.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">116,87</av:Size>
+                                          <av:Size x:Key="ShapeSize">117,87</av:Size>
                                           <av:PointCollection x:Key="TrueConnector">242,690 139.895,690 139.895,790</av:PointCollection>
                                           <av:PointCollection x:Key="FalseConnector">358,690 400,690 400,846.5</av:PointCollection>
                                         </scg:Dictionary>
@@ -603,14 +607,14 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                           </Assign>
                                           <FlowStep.Next>
-                                            <FlowDecision x:Name="__ReferenceID0" Condition="[out_TransactionData isnot Nothing and TablaTmp2 isnot Nothing]" DisplayName="¿Merge aprobado?" sap:VirtualizedContainerService.HintSize="104,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                            <FlowDecision x:Name="__ReferenceID0" Condition="[out_TransactionData isnot Nothing and TablaTmp2 isnot Nothing]" DisplayName="¿Merge aprobado?" sap:VirtualizedContainerService.HintSize="106,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <av:Point x:Key="ShapeLocation">348,846.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">104,87</av:Size>
+                                                  <av:Size x:Key="ShapeSize">106,87</av:Size>
                                                   <av:PointCollection x:Key="TrueConnector">348,890 250,890 250,1009</av:PointCollection>
-                                                  <av:PointCollection x:Key="FalseConnector">452,890 510,890 510,976.5</av:PointCollection>
+                                                  <av:PointCollection x:Key="FalseConnector">454,890 510,890 510,976.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <FlowDecision.True>
@@ -638,6 +642,7 @@
                                                       <av:Point x:Key="ShapeLocation">464.5,976.5</av:Point>
                                                       <av:Size x:Key="ShapeSize">91,87</av:Size>
                                                       <av:PointCollection x:Key="TrueConnector">464.5,1020 420,1020 420,1110</av:PointCollection>
+                                                      <av:PointCollection x:Key="FalseConnector">555.5,1020 580,1020 580,1254.02</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <FlowDecision.True>
@@ -663,6 +668,23 @@
                                                       </Assign>
                                                     </FlowStep>
                                                   </FlowDecision.True>
+                                                  <FlowDecision.False>
+                                                    <FlowStep x:Name="__ReferenceID11">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">480,1254.02</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:LogMessage DisplayName="Sin casos" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;No se obtuvieron casos&quot;]">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:LogMessage>
+                                                    </FlowStep>
+                                                  </FlowDecision.False>
                                                 </FlowDecision>
                                               </FlowDecision.False>
                                             </FlowDecision>
@@ -699,6 +721,7 @@
             <x:Reference>__ReferenceID8</x:Reference>
             <x:Reference>__ReferenceID9</x:Reference>
             <x:Reference>__ReferenceID10</x:Reference>
+            <x:Reference>__ReferenceID11</x:Reference>
           </Flowchart>
         </ActivityAction>
       </ui:BrowserScope.Body>

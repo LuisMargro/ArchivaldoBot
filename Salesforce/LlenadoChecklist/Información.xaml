@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>744,2184</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>714,2378</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Información_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -53,16 +53,17 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Llena el apartado de información en el checklist" DisplayName="Información" sap:VirtualizedContainerService.HintSize="724,2084" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Llena el apartado de información en el checklist" DisplayName="Información" sap:VirtualizedContainerService.HintSize="724,2213" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1500" DelayMS="1500" DisplayName="ir al principio de la pagina" sap:VirtualizedContainerService.HintSize="682,155" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="home" KeyModifiers="None" SpecialKey="True">
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayBefore="1500" DelayMS="1500" DisplayName="ir al principio de la pagina" sap:VirtualizedContainerService.HintSize="682,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="home" KeyModifiers="None" SpecialKey="True">
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="fc68bf6f4a3bca1c51cc71abdc0bd797" Selector="&lt;html app='chrome.exe' title='*Salesforce*' /&gt;&lt;webctrl parentid='brandBand_*' parentname='main' tag='DIV' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
       </ui:SendHotkey.Target>
@@ -86,7 +87,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="bajar en la pagina" sap:VirtualizedContainerService.HintSize="682,155" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="bajar en la pagina" sap:VirtualizedContainerService.HintSize="682,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="pgdn" KeyModifiers="None" SpecialKey="True">
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="fc68bf6f4a3bca1c51cc71abdc0bd797" Selector="&lt;html app='chrome.exe' title='*Salesforce*' /&gt;&lt;webctrl parentid='brandBand_*' parentname='main' tag='DIV' /&gt;" TimeoutMS="60000" WaitForReady="COMPLETE" />
       </ui:SendHotkey.Target>
@@ -153,11 +154,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,154.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">100,205.5 100,244.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Contrato información " sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+              <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Contrato información " sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
                 <ui:AnchorBase.Action>
                   <ActivityAction x:TypeArguments="ui:Anchor">
                     <ActivityAction.Argument>
@@ -212,11 +213,11 @@
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">0,244.5</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                       <av:PointCollection x:Key="ConnectorLocation">100,295.5 100,344.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Check Contrato información" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_8">
+                  <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Check Contrato información" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_8">
                     <ui:AnchorBase.Action>
                       <ActivityAction x:TypeArguments="ui:Anchor">
                         <ActivityAction.Argument>
@@ -276,11 +277,11 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">0,344.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">100,395.5 100,434.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Contrato Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_34">
+                      <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Contrato Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_34">
                         <ui:AnchorBase.Action>
                           <ActivityAction x:TypeArguments="ui:Anchor">
                             <ActivityAction.Argument>
@@ -335,11 +336,11 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">0,434.5</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                               <av:PointCollection x:Key="ConnectorLocation">100,485.5 100,525.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Check Shell" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_35">
+                          <ui:AnchorBase AnchorPosition="Bottom" DisplayName="Check Shell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_35">
                             <ui:AnchorBase.Action>
                               <ActivityAction x:TypeArguments="ui:Anchor">
                                 <ActivityAction.Argument>
@@ -399,11 +400,11 @@
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <av:Point x:Key="ShapeLocation">0,525.5</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                                   <av:PointCollection x:Key="ConnectorLocation">100,576.5 100,606.5 108.5,606.5 108.5,624.02</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:AnchorBase AnchorPosition="Top" DisplayName="Word o PDF" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_36">
+                              <ui:AnchorBase AnchorPosition="Top" DisplayName="Word o PDF" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_36">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -458,11 +459,11 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">8.5,624.02</av:Point>
-                                      <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                      <av:Size x:Key="ShapeSize">200,51</av:Size>
                                       <av:PointCollection x:Key="ConnectorLocation">208.5,649.52 310,649.52 310,756.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Estatus" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="AnchorBase_33">
+                                  <ui:AnchorBase AnchorPosition="Top" DisplayName="Estatus" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="AnchorBase_33">
                                     <ui:AnchorBase.Action>
                                       <ActivityAction x:TypeArguments="ui:Anchor">
                                         <ActivityAction.Argument>
@@ -513,12 +514,12 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:AnchorBase>
                                   <FlowStep.Next>
-                                    <FlowDecision x:Name="__ReferenceID6" Condition="[in_RegistroCompleto]" DisplayName="¿Registro completo?" sap:VirtualizedContainerService.HintSize="114,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                                    <FlowDecision x:Name="__ReferenceID6" Condition="[in_RegistroCompleto]" DisplayName="¿Registro completo?" sap:VirtualizedContainerService.HintSize="113,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <av:Point x:Key="ShapeLocation">253.5,756.5</av:Point>
-                                          <av:Size x:Key="ShapeSize">114,87</av:Size>
+                                          <av:Size x:Key="ShapeSize">113,87</av:Size>
                                           <av:PointCollection x:Key="TrueConnector">253.5,800 120,800 120,844.5</av:PointCollection>
                                           <av:PointCollection x:Key="FalseConnector">366.5,800 450,800 450,864.5</av:PointCollection>
                                         </scg:Dictionary>
@@ -528,11 +529,11 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">20,844.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                                               <av:PointCollection x:Key="ConnectorLocation">210,260 333.641666666667,260 333.641666666667,306.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Seleccionar registro completo" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_33" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Seleccionar registro completo" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_33" KeyModifiers="None" MouseButton="BTN_LEFT">
                                             <ui:Click.CursorPosition>
                                               <ui:CursorPosition Position="Center">
                                                 <ui:CursorPosition.OffsetX>
@@ -566,11 +567,11 @@
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">350,864.5</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                              <av:Size x:Key="ShapeSize">200,51</av:Size>
                                               <av:PointCollection x:Key="ConnectorLocation">220,270 343.641666666667,270 343.641666666667,316.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Seleccionar registro incompleto" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Seleccionar registro incompleto" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT">
                                             <ui:Click.CursorPosition>
                                               <ui:CursorPosition Position="Center">
                                                 <ui:CursorPosition.OffsetX>
@@ -624,5 +625,6 @@
         </ActivityAction>
       </ui:BrowserScope.Body>
     </ui:BrowserScope>
+    <ui:LogMessage DisplayName="Log checklis" sap:VirtualizedContainerService.HintSize="682,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;LLenando checklist del cliente&quot;]" />
   </Sequence>
 </Activity>

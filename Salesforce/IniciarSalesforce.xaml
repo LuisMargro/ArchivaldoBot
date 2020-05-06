@@ -7,10 +7,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>700,1207</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>680,1448</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="52">
+    <scg:List x:TypeArguments="x:String" Capacity="104">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -66,7 +66,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>PresentationFramework</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
@@ -90,15 +90,18 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:OpenBrowser CommunicationMethod="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Abrir la página de salesforce y asegurarse de que la sesión está abierta" BrowserType="Chrome" DisplayName="Open salesforce" Hidden="False" sap:VirtualizedContainerService.HintSize="680,1107" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[in_Url]">
+  <ui:OpenBrowser CommunicationMethod="{x:Null}" UiBrowser="{x:Null}" sap2010:Annotation.AnnotationText="Abrir la página de salesforce y asegurarse de que la sesión está abierta" BrowserType="Chrome" DisplayName="Open salesforce" Hidden="False" sap:VirtualizedContainerService.HintSize="690,1283" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[in_Url]">
     <ui:OpenBrowser.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
         </ActivityAction.Argument>
-        <Flowchart DisplayName="proceso de iniciar sesion" sap:VirtualizedContainerService.HintSize="634,1063" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+        <Flowchart DisplayName="proceso de iniciar sesion" sap:VirtualizedContainerService.HintSize="656,1153" sap2010:WorkflowViewState.IdRef="Flowchart_1">
           <Flowchart.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="ExisteSesionIniciada" />
             <Variable x:TypeArguments="x:Boolean" Name="ExisteRegistrarTelefono" />
@@ -111,18 +114,19 @@
               <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
               <av:Size x:Key="ShapeSize">60,75</av:Size>
               <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 320,107.5 320,119</av:PointCollection>
-              <x:Double x:Key="Height">1027.2353523324346</x:Double>
+              <x:Double x:Key="Height">1116.954930505538</x:Double>
+              <x:Double x:Key="Width">622.003329111414</x:Double>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Flowchart.StartNode>
-            <x:Reference>__ReferenceID9</x:Reference>
+            <x:Reference>__ReferenceID11</x:Reference>
           </Flowchart.StartNode>
           <FlowStep x:Name="__ReferenceID5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">200,174.5</av:Point>
                 <av:Size x:Key="ShapeSize">200,52</av:Size>
-                <av:PointCollection x:Key="ConnectorLocation">300,225.5 300,255.5 298.5,255.5 298.5,256.5</av:PointCollection>
+                <av:PointCollection x:Key="ConnectorLocation">300,226.5 300,254.02</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:UiElementExists DisplayName="Existe sesión iniciada" Exists="[ExisteSesionIniciada]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
@@ -136,201 +140,237 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
             <FlowStep.Next>
-              <FlowDecision x:Name="__ReferenceID1" Condition="[Not ExisteSesionIniciada]" DisplayName="¿sesion no iniciada?" sap:VirtualizedContainerService.HintSize="111,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+              <FlowStep x:Name="__ReferenceID9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <av:Point x:Key="ShapeLocation">243.5,256.5</av:Point>
-                    <av:Size x:Key="ShapeSize">111,87</av:Size>
-                    <av:PointCollection x:Key="TrueConnector">243.5,300 150,300 150,364.5</av:PointCollection>
+                    <av:Point x:Key="ShapeLocation">200,254.02</av:Point>
+                    <av:Size x:Key="ShapeSize">200,52</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">300,306.02 300,336.5</av:PointCollection>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <FlowDecision.True>
-                  <FlowStep x:Name="__ReferenceID2">
+                <ui:LogMessage DisplayName="Iniciando salesforce" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Iniciando sesión en salesforce&quot;]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <FlowStep.Next>
+                  <FlowDecision x:Name="__ReferenceID1" Condition="[Not ExisteSesionIniciada]" DisplayName="¿sesion no iniciada?" sap:VirtualizedContainerService.HintSize="111,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <av:Point x:Key="ShapeLocation">50,364.5</av:Point>
-                        <av:Size x:Key="ShapeSize">200,68</av:Size>
-                        <av:PointCollection x:Key="ConnectorLocation">250,398.5 301,398.5 301,446.5</av:PointCollection>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">244.5,336.5</av:Point>
+                        <av:Size x:Key="ShapeSize">111,87</av:Size>
+                        <av:PointCollection x:Key="TrueConnector">244.5,380 150,380 150,446</av:PointCollection>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="iniciar sesion" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Escribir usuario" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[in_Usuario]">
-                        <ui:TypeInto.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="805d980e8f1afed3439034c83b1e3167" Selector="&lt;webctrl id='username' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                          </ui:Target>
-                        </ui:TypeInto.Target>
-                      </ui:TypeInto>
-                      <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Escribir contraseña" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[in_Contrasena]">
-                        <ui:TypeInto.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="95d5a92c9b97fb57035479f4b82b23d6" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                          </ui:Target>
-                        </ui:TypeInto.Target>
-                      </ui:TypeInto>
-                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Iniciar sesión" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                        <ui:Click.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:Click.CursorPosition>
-                        <ui:Click.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7d6e0dc6dc648d524f351dfd8abba33e" Selector="&lt;webctrl id='Login' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                          </ui:Target>
-                        </ui:Click.Target>
-                      </ui:Click>
-                      <ui:UiElementExists DisplayName="ExisteRegistrarTelefono" Exists="[ExisteRegistrarTelefono]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
-                        <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6f62b5c4398d95734458ea23a8c944bb" Selector="&lt;webctrl tag='H2' aaname='Registrar su teléfono móvil' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
-                        </ui:UiElementExists.Target>
-                      </ui:UiElementExists>
-                    </Sequence>
-                    <FlowStep.Next>
-                      <FlowDecision x:Name="__ReferenceID3" Condition="[ExisteRegistrarTelefono]" DisplayName="¿Registrar telefono?" sap:VirtualizedContainerService.HintSize="111,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            <av:Point x:Key="ShapeLocation">245.5,446.5</av:Point>
-                            <av:Size x:Key="ShapeSize">111,87</av:Size>
-                            <av:PointCollection x:Key="TrueConnector">245.5,490 130,490 130,544.5</av:PointCollection>
-                            <av:PointCollection x:Key="FalseConnector">356.5,490 380,490 380,634.5 320,634.5 320,664.5</av:PointCollection>
+                            <av:Point x:Key="ShapeLocation">50,446</av:Point>
+                            <av:Size x:Key="ShapeSize">200,68</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">250,480 300,480 300,506.5</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <FlowDecision.True>
-                          <FlowStep x:Name="__ReferenceID4">
+                        <Sequence DisplayName="iniciar sesion" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Escribir usuario" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[in_Usuario]">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="805d980e8f1afed3439034c83b1e3167" Selector="&lt;webctrl id='username' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Escribir contraseña" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[in_Contrasena]">
+                            <ui:TypeInto.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="95d5a92c9b97fb57035479f4b82b23d6" Selector="&lt;webctrl id='password' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:TypeInto.Target>
+                          </ui:TypeInto>
+                          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Iniciar sesión" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7d6e0dc6dc648d524f351dfd8abba33e" Selector="&lt;webctrl id='Login' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:UiElementExists DisplayName="ExisteRegistrarTelefono" Exists="[ExisteRegistrarTelefono]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="6f62b5c4398d95734458ea23a8c944bb" Selector="&lt;webctrl tag='H2' aaname='Registrar su teléfono móvil' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowDecision x:Name="__ReferenceID3" Condition="[ExisteRegistrarTelefono]" DisplayName="¿Registrar telefono?" sap:VirtualizedContainerService.HintSize="111,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <av:Point x:Key="ShapeLocation">30,544.5</av:Point>
-                                <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                <av:PointCollection x:Key="ConnectorLocation">130,595.5 130,625.5 320,625.5 320,664.5</av:PointCollection>
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <av:Point x:Key="ShapeLocation">244.5,506.5</av:Point>
+                                <av:Size x:Key="ShapeSize">111,87</av:Size>
+                                <av:PointCollection x:Key="TrueConnector">244.5,550 130,550 130,584</av:PointCollection>
+                                <av:PointCollection x:Key="FalseConnector">355.5,550 385.5,550 385.5,684 300,684 300,714</av:PointCollection>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Registrar mas tarde" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                              <ui:Click.CursorPosition>
-                                <ui:CursorPosition Position="Center">
-                                  <ui:CursorPosition.OffsetX>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetX>
-                                  <ui:CursorPosition.OffsetY>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:CursorPosition.OffsetY>
-                                </ui:CursorPosition>
-                              </ui:Click.CursorPosition>
-                              <ui:Click.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2ef742b7d60308d864f9f9a2c8681666" Selector="&lt;webctrl aaname='Recordarme más tarde' tag='A' /&gt;" WaitForReady="INTERACTIVE">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                </ui:Target>
-                              </ui:Click.Target>
-                            </ui:Click>
-                            <FlowStep.Next>
-                              <FlowStep x:Name="__ReferenceID0">
+                            <FlowDecision.True>
+                              <FlowStep x:Name="__ReferenceID4">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <av:Point x:Key="ShapeLocation">220,664.5</av:Point>
+                                    <av:Point x:Key="ShapeLocation">30,584</av:Point>
                                     <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                    <av:PointCollection x:Key="ConnectorLocation">320,716.5 318.5,716.5 318.5,746.5</av:PointCollection>
+                                    <av:PointCollection x:Key="ConnectorLocation">130,636 130,666 300,666 300,714</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <ui:UiElementExists DisplayName="Esperar el inicio de sesion" Exists="[ExisteSesionIniciada]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
-                                  <ui:UiElementExists.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="265ac4857705ee7c300fda4dd5cd5c52" Selector="&lt;webctrl aaname=' Sandbox: gbmte' parentid='oneHeader' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_SINGLE" DisplayName="Registrar mas tarde" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                  <ui:Click.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:Click.CursorPosition>
+                                  <ui:Click.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2ef742b7d60308d864f9f9a2c8681666" Selector="&lt;webctrl aaname='Recordarme más tarde' tag='A' /&gt;" WaitForReady="INTERACTIVE">
                                       <ui:Target.TimeoutMS>
                                         <InArgument x:TypeArguments="x:Int32" />
                                       </ui:Target.TimeoutMS>
                                     </ui:Target>
-                                  </ui:UiElementExists.Target>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:UiElementExists>
+                                  </ui:Click.Target>
+                                </ui:Click>
                                 <FlowStep.Next>
-                                  <FlowDecision x:Name="__ReferenceID6" Condition="[not ExisteSesionIniciada]" DisplayName="SalesForce no iniciada?" sap:VirtualizedContainerService.HintSize="128,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                                  <FlowStep x:Name="__ReferenceID0">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        <av:Point x:Key="ShapeLocation">254.5,746.5</av:Point>
-                                        <av:Size x:Key="ShapeSize">128,87</av:Size>
-                                        <av:PointCollection x:Key="TrueConnector">254.5,790 120,790 120,864</av:PointCollection>
+                                        <av:Point x:Key="ShapeLocation">200,714</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">300,766 300,796.5</av:PointCollection>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <FlowDecision.True>
-                                      <FlowStep x:Name="__ReferenceID7">
+                                    <ui:UiElementExists DisplayName="Esperar el inicio de sesion" Exists="[ExisteSesionIniciada]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                                      <ui:UiElementExists.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="265ac4857705ee7c300fda4dd5cd5c52" Selector="&lt;webctrl aaname=' Sandbox: gbmte' parentid='oneHeader' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:UiElementExists.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:UiElementExists>
+                                    <FlowStep.Next>
+                                      <FlowDecision x:Name="__ReferenceID6" Condition="[not ExisteSesionIniciada]" DisplayName="SalesForce no iniciada?" sap:VirtualizedContainerService.HintSize="128,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <av:Point x:Key="ShapeLocation">20,864</av:Point>
-                                            <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                            <av:PointCollection x:Key="ConnectorLocation">120,916 120,946 140,946 140,960</av:PointCollection>
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <av:Point x:Key="ShapeLocation">236,796.5</av:Point>
+                                            <av:Size x:Key="ShapeSize">128,87</av:Size>
+                                            <av:PointCollection x:Key="TrueConnector">236,840 120,840 120,864</av:PointCollection>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Error iniciando sesion en salesforce" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilidades\EnviarCorreoError.xaml">
-                                          <ui:InvokeWorkflowFile.Arguments>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_Mensaje">["Saludos cordiales"+System.Environment.NewLine+"he tenido un error tratando de iniciar sesion en SalesForce, es posible que las credenciales son incorrectas o debido a un fallo en la app"]</InArgument>
-                                            <InArgument x:TypeArguments="x:String" x:Key="in_Persona">
-                                              <Literal x:TypeArguments="x:String" Value="" />
-                                            </InArgument>
-                                          </ui:InvokeWorkflowFile.Arguments>
-                                        </ui:InvokeWorkflowFile>
-                                        <FlowStep.Next>
-                                          <FlowStep x:Name="__ReferenceID8">
+                                        <FlowDecision.True>
+                                          <FlowStep x:Name="__ReferenceID7">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <av:Point x:Key="ShapeLocation">8.99999999999999,960</av:Point>
-                                                <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                <av:Point x:Key="ShapeLocation">20,864</av:Point>
+                                                <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                <av:PointCollection x:Key="ConnectorLocation">120,916 120,938.04 140,938.04</av:PointCollection>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Assign DisplayName="Error en la sesion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
-                                              <Assign.To>
-                                                <OutArgument x:TypeArguments="s:Exception">[ErrorSalesforce]</OutArgument>
-                                              </Assign.To>
-                                              <Assign.Value>
-                                                <InArgument x:TypeArguments="s:Exception">[new System.Exception("Error iniciando sesion en salesforce")]</InArgument>
-                                              </Assign.Value>
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                            </Assign>
+                                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Error iniciando sesion en salesforce" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilidades\EnviarCorreoError.xaml">
+                                              <ui:InvokeWorkflowFile.Arguments>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_Mensaje">["Saludos cordiales"+System.Environment.NewLine+"he tenido un error tratando de iniciar sesion en SalesForce, es posible que las credenciales son incorrectas o debido a un fallo en la app"]</InArgument>
+                                                <InArgument x:TypeArguments="x:String" x:Key="in_Persona">
+                                                  <Literal x:TypeArguments="x:String" Value="" />
+                                                </InArgument>
+                                              </ui:InvokeWorkflowFile.Arguments>
+                                            </ui:InvokeWorkflowFile>
+                                            <FlowStep.Next>
+                                              <FlowStep x:Name="__ReferenceID10">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <av:Point x:Key="ShapeLocation">40,938.04</av:Point>
+                                                    <av:Size x:Key="ShapeSize">200,52</av:Size>
+                                                    <av:PointCollection x:Key="ConnectorLocation">140,990.04 140,1030</av:PointCollection>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:LogMessage DisplayName="Error iniciando sesion" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Fatal" Message="[&quot;Sesion no iniciada en Salesforce&quot;]">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:LogMessage>
+                                                <FlowStep.Next>
+                                                  <FlowStep x:Name="__ReferenceID8">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <av:Point x:Key="ShapeLocation">9,1030</av:Point>
+                                                        <av:Size x:Key="ShapeSize">262,60</av:Size>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign DisplayName="Error en la sesion" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="s:Exception">[ErrorSalesforce]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="s:Exception">[new System.Exception("Error iniciando sesion en salesforce")]</InArgument>
+                                                      </Assign.Value>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Assign>
+                                                  </FlowStep>
+                                                </FlowStep.Next>
+                                              </FlowStep>
+                                            </FlowStep.Next>
                                           </FlowStep>
-                                        </FlowStep.Next>
-                                      </FlowStep>
-                                    </FlowDecision.True>
-                                  </FlowDecision>
+                                        </FlowDecision.True>
+                                      </FlowDecision>
+                                    </FlowStep.Next>
+                                  </FlowStep>
                                 </FlowStep.Next>
                               </FlowStep>
-                            </FlowStep.Next>
-                          </FlowStep>
-                        </FlowDecision.True>
-                        <FlowDecision.False>
-                          <x:Reference>__ReferenceID0</x:Reference>
-                        </FlowDecision.False>
-                      </FlowDecision>
-                    </FlowStep.Next>
-                  </FlowStep>
-                </FlowDecision.True>
-              </FlowDecision>
+                            </FlowDecision.True>
+                            <FlowDecision.False>
+                              <x:Reference>__ReferenceID0</x:Reference>
+                            </FlowDecision.False>
+                          </FlowDecision>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.True>
+                  </FlowDecision>
+                </FlowStep.Next>
+              </FlowStep>
             </FlowStep.Next>
           </FlowStep>
           <x:Reference>__ReferenceID1</x:Reference>
@@ -338,7 +378,7 @@
           <x:Reference>__ReferenceID3</x:Reference>
           <x:Reference>__ReferenceID4</x:Reference>
           <x:Reference>__ReferenceID0</x:Reference>
-          <FlowStep x:Name="__ReferenceID9">
+          <FlowStep x:Name="__ReferenceID11">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <av:Point x:Key="ShapeLocation">220,119</av:Point>
@@ -360,6 +400,8 @@
           <x:Reference>__ReferenceID6</x:Reference>
           <x:Reference>__ReferenceID7</x:Reference>
           <x:Reference>__ReferenceID8</x:Reference>
+          <x:Reference>__ReferenceID9</x:Reference>
+          <x:Reference>__ReferenceID10</x:Reference>
         </Flowchart>
       </ActivityAction>
     </ui:OpenBrowser.Body>

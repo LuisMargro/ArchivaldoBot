@@ -1,14 +1,14 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:uca="clr-namespace:UiPath.Cryptography.Activities;assembly=UiPath.Cryptography.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>498,1287</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>468,3575</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="46">
       <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>System.Activities.Validation</x:String>
       <x:String>System.Activities</x:String>
@@ -31,10 +31,12 @@
       <x:String>UiPath.Core</x:String>
       <x:String>System.Security</x:String>
       <x:String>UiPath.Core.Activities</x:String>
-    </sco:Collection>
+      <x:String>System.Text</x:String>
+      <x:String>UiPath.Excel</x:String>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -57,23 +59,84 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
-    </sco:Collection>
+      <AssemblyReference>UiPath.Cryptography</AssemblyReference>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Open and initialize application as needed.&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications opened" DisplayName="Initialization Sequence" sap:VirtualizedContainerService.HintSize="478,1187" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Open and initialize application as needed.&#xA;&#xA;Pre Condition: N/A&#xA;Post Condtion: Applications opened" DisplayName="Initialization Sequence" sap:VirtualizedContainerService.HintSize="478,3410" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="UsuarioSalesforce" />
+      <Variable x:TypeArguments="x:String" Name="ContrasenaSalesforce" />
+      <Variable x:TypeArguments="x:String" Name="UsuarioShell" />
+      <Variable x:TypeArguments="x:String" Name="ContrasenaShell" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log App Initialization message" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Opening applications...&quot;]" />
+    <ui:LogMessage DisplayName="Descifrando contraseñas" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Descifrando archivo de contraseñas&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <uca:DecryptFile Algorithm="AES" DisplayName="Desencriptar archivo de credenciales" sap:VirtualizedContainerService.HintSize="436,128" sap2010:WorkflowViewState.IdRef="DecryptFile_1" InputFilePath="[in_Config(&quot;RutaCredenciales&quot;).ToString]" Key="Mi super cadena de cifrado #$%QW" KeyEncoding="[System.Text.Encoding.UTF8]" OutputFilePath="[in_Config(&quot;RutaCredencialesDecifradas&quot;).ToString]" Overwrite="True" />
+    <ui:ReadCell Cell="B2" DisplayName="Obtener usuario salesforce" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadCell_1" SheetName="Hoja1" WorkbookPath="[in_Config(&quot;RutaCredencialesDecifradas&quot;).ToString]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[UsuarioSalesforce]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
+    <ui:ReadCell Cell="B3" DisplayName="Obtener Contraseña salesforce" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadCell_2" SheetName="Hoja1" WorkbookPath="[in_Config(&quot;RutaCredencialesDecifradas&quot;).ToString]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[ContrasenaSalesforce]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke IniciarSalesforce workflow" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Salesforce/IniciarSalesforce.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Usuario">[in_Config("UsuarioSalesforce").ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_Contrasena">[in_Config("ContrasenaSalesforce").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Usuario">[UsuarioSalesforce]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_Contrasena">[ContrasenaSalesforce]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">[in_Config("Salesforce").ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <Assign DisplayName="Limpiar variable de salesforce" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[UsuarioSalesforce]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Eliminar contrasena de salesforce" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[ContrasenaSalesforce]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Desechando contraseñas salesforce" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Desechando credenciales salesforce&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:ReadCell Cell="B4" DisplayName="Obtener usuario shell" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadCell_3" SheetName="Hoja1" WorkbookPath="[in_Config(&quot;RutaCredencialesDecifradas&quot;).ToString]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[UsuarioShell]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
+    <ui:ReadCell Cell="B5" DisplayName="Obtener Contraseña shell" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadCell_4" SheetName="Hoja1" WorkbookPath="[in_Config(&quot;RutaCredencialesDecifradas&quot;).ToString]">
+      <ui:ReadCell.Result>
+        <OutArgument x:TypeArguments="x:String">[ContrasenaShell]</OutArgument>
+      </ui:ReadCell.Result>
+    </ui:ReadCell>
     <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,257" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_10">
@@ -84,28 +147,76 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke IniciarShell workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Shell/IniciarShell.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Usuario">[in_Config("UsuarioShell").ToString]</InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Contrasena">[in_Config("ContrasenaShell").ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Usuario">[UsuarioShell]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Contrasena">[ContrasenaShell]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,257" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke IniciarSesionShell workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="ShellRemoto\IniciarSesionShell.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Password">[ContrasenaShell]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <Assign DisplayName="Limpiar variable de shell" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[UsuarioShell]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Eliminar contrasena de shell" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[ContrasenaShell]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Desechando contraseñas shell" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Desechando credenciales shell&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:Delete ContinueOnError="{x:Null}" DisplayName="Borrar archivo" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="Delete_1" Path="[in_Config(&quot;RutaCredencialesDecifradas&quot;).ToString]" />
+    <ui:LogMessage DisplayName="Abriendo pagina de consulta de rfc" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Abriendo pagina de consulta de RFC&quot;]" />
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NavegarASitios abrir consulta de RFC" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Utilidades\NavegarASitios.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">https://www.consultarfc.mx/VALIDA/interiores/RFC.php</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Abriendo pagina de correo" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Abriendo pagina de correos de mexico&quot;]" />
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NavegarASitios abrir consulta de correo" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Utilidades\NavegarASitios.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">https://www.correosdemexico.gob.mx/SSLServicios/ConsultaCP/Descarga.aspx</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Abriendo pagina de cedula" sap:VirtualizedContainerService.HintSize="436,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Abriendo pagina cedulaprofesional.sep &quot;]" />
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NavegarASitios consulta de cedula" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Utilidades\NavegarASitios.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">https://cedulaprofesional.sep.gob.mx/cedula/presidencia/indexAvanzada.action</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Abriendo pagina curp" sap:VirtualizedContainerService.HintSize="436,93" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Abriendo pagina consulta unica de CURP&quot;]" />
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke NavegarASitios constulta de Curp" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Utilidades\NavegarASitios.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_Url">https://consultaunica.mx/consulta-tu-curp</InArgument>

@@ -6,7 +6,7 @@
     <x:Property Name="in_PathBDBancos" Type="InArgument(x:String)" />
     <x:Property Name="in_ArregloNombre" Type="InArgument(s:String[])" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>780,1338</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>750,1403</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <mva:VisualBasic.Settings>Assembly references and imported namespaces for internal implementation</mva:VisualBasic.Settings>
   <TextExpression.NamespacesForImplementation>
@@ -51,14 +51,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,136.5</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,104.5</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         <x:Double x:Key="Width">726.5</x:Double>
         <x:Double x:Key="Height">1160</x:Double>
       </scg1:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID10</x:Reference>
+      <x:Reference>__ReferenceID11</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
@@ -181,9 +181,9 @@
     <FlowStep x:Name="__ReferenceID4">
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">360,264.5</av:Point>
+          <av:Point x:Key="ShapeLocation">360,294.5</av:Point>
           <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">460,315.5 460,345.5 300,345.5 300,386.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">460,345.5 460,375.5 300,375.5 300,386.5</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Attach bd bancos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[in_PathBDBancos]">
@@ -324,17 +324,17 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg1:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">243,136.5</av:Point>
+          <av:Point x:Key="ShapeLocation">243,196.5</av:Point>
           <av:Size x:Key="ShapeSize">114,87</av:Size>
-          <av:PointCollection x:Key="FalseConnector">357,180 460,180 460,264.5</av:PointCollection>
-          <av:PointCollection x:Key="TrueConnector">243,180 131,180 131,240</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">357,240 460,240 460,294.5</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">243,240 140,240 140,300</av:PointCollection>
         </scg1:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
         <FlowStep x:Name="__ReferenceID9">
           <sap:WorkflowViewStateService.ViewState>
             <scg1:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">0,240</av:Point>
+              <av:Point x:Key="ShapeLocation">9,300</av:Point>
               <av:Size x:Key="ShapeSize">262,60</av:Size>
             </scg1:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -362,5 +362,24 @@
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
+    <FlowStep x:Name="__ReferenceID11">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">200,104.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,155.5 300,196.5</av:PointCollection>
+        </scg1:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:LogMessage DisplayName="Log texto extraido del documento" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Validando estado de cuenta&quot;]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg1:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg1:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:LogMessage>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID10</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
   </Flowchart>
 </Activity>
